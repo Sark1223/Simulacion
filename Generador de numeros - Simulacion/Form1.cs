@@ -21,20 +21,64 @@ namespace Generador_de_numeros___Simulacion
         {
             //, a = 9, c = 13, m = 32, N;
             //float Ri;
+            //valor semilla de la que se basaran nuestros numeros
             int x0 = 8;
-            Semilla semilla = new Semilla();
+            Semilla g;
             List<Semilla> lista = new List<Semilla>();
            
-            for(int i =0; i<10; i++)
+            for(int i =0; i<100; i++)
             {
-                semilla.N = i + 1;
-                semilla.Xn = x0;
-                semilla.a = 9;
-                semilla.c = 13;
-                semilla.m = 32;
-                semilla.Res = (semilla.a * semilla.Xn) + semilla.c;
-                semilla.modulo = semilla.Res % semilla.m;
+                //si es el primero numero generado entonces 
+                if(i== 0)
+                {
+                    g = new Semilla();
+                    //contador inicia en 1
+                    g.N = i + 1;
+                    //se recibe nuestra semilla
+                    g.Xn = x0;
+                    //valores constantes
+                    g.a = 9;
+                    g.c = 13;
+                    g.m = 32;
+                    //formula de nuestro metodo congruencial mixto
+                    g.Res = (g.a * g.Xn) + g.c;
+                    //obtenemos el modulo del resultado anterior
+                    g.modulo = g.Res % g.m;
+                    //lo dividimos entre nuestra constante m y le restamos 1 al resultado
+                    g.Ri = ((g.modulo / g.m) - 1F) * -1;
+
+                    lista.Add(g);
+
+                    tablaResultados.Text = $"{lista[i].N}\t{lista[i].Xn}\t{lista[i].a}\t{lista[i].c}\t{lista[i].m}" +
+                        $"\t{lista[i].Res}\t{lista[i].modulo}\t{lista[i].Ri}";
+                }
+                else
+                {
+                    g = new Semilla();
+                    //contador inicia en 1
+                    g.N = i + 1;
+                    //se recibe nuestra semilla
+                    g.Xn = lista[i-1].modulo;
+                    //valores constantes
+                    g.a = 9;
+                    g.c = 13;
+                    g.m = 32;
+                    //formula de nuestro metodo congruencial mixto
+                    g.Res = (g.a * g.Xn) + g.c;
+                    //obtenemos el modulo del resultado anterior
+                    g.modulo = g.Res % g.m;
+                    //lo dividimos entre nuestra constante m y le restamos 1 al resultado
+                    g.Ri = (((g.modulo / g.m) - 1F)*-1);
+
+                    lista.Add(g);
+
+                    tablaResultados.Text = tablaResultados.Text + $"\r\n{lista[i].N}\t{lista[i].Xn}\t{lista[i].a}\t{lista[i].c}\t{lista[i].m}" +
+                        $"\t{lista[i].Res}\t{lista[i].modulo}\t{lista[i].Ri}";
+                }
+                
             }
+
+            tablaResultados.ScrollBars = ScrollBars.Both;
 
         }
     }
