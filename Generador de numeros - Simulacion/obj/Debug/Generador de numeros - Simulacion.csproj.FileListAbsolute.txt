@@ -1,0 +1,11 @@
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\bin\Debug\Generador de numeros - Simulacion.exe.config
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\bin\Debug\Generador de numeros - Simulacion.exe
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\bin\Debug\Generador de numeros - Simulacion.pdb
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador de numeros - Simulacion.csproj.AssemblyReference.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador de numeros - Simulacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmGenerador.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.Properties.Resources.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador de numeros - Simulacion.csproj.GenerateResource.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador de numeros - Simulacion.csproj.CoreCompileInputs.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador de numeros - Simulacion.exe
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador de numeros - Simulacion.pdb
