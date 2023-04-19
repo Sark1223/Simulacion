@@ -22,11 +22,11 @@ namespace Generador_de_numeros___Simulacion
             //, a = 9, c = 13, m = 32, N;
             //float Ri;
             //valor semilla de la que se basaran nuestros numeros
-            int x0 = 8;
+            int x0 = 17;
             Semilla g;
             List<Semilla> lista = new List<Semilla>();
            
-            for(int i =0; i<100; i++)
+            for(int i =0; i<325; i++)
             {
                 //si es el primero numero generado entonces 
                 if(i== 0)
@@ -36,16 +36,12 @@ namespace Generador_de_numeros___Simulacion
                     g.N = i + 1;
                     //se recibe nuestra semilla
                     g.Xn = x0;
-                    //valores constantes
-                    g.a = 9;
-                    g.c = 13;
-                    g.m = 32;
                     //formula de nuestro metodo congruencial mixto
                     g.Res = (g.a * g.Xn) + g.c;
                     //obtenemos el modulo del resultado anterior
                     g.modulo = g.Res % g.m;
                     //lo dividimos entre nuestra constante m y le restamos 1 al resultado
-                    g.Ri = ((g.modulo / g.m) - 1F) * -1;
+                    g.Ri = /*((*/g.modulo / g.m/*) - 1F) * -1*/;
 
                     lista.Add(g);
 
@@ -59,16 +55,12 @@ namespace Generador_de_numeros___Simulacion
                     g.N = i + 1;
                     //se recibe nuestra semilla
                     g.Xn = lista[i-1].modulo;
-                    //valores constantes
-                    g.a = 9;
-                    g.c = 13;
-                    g.m = 32;
                     //formula de nuestro metodo congruencial mixto
                     g.Res = (g.a * g.Xn) + g.c;
                     //obtenemos el modulo del resultado anterior
                     g.modulo = g.Res % g.m;
                     //lo dividimos entre nuestra constante m y le restamos 1 al resultado
-                    g.Ri = (((g.modulo / g.m) - 1F)*-1);
+                    g.Ri = g.modulo / g.m;
 
                     lista.Add(g);
 
