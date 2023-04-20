@@ -21,6 +21,44 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtSemilla_OnValueChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void txtSemilla_KeyDown(object sender, KeyEventArgs e)
+        {      
+        }
+
+
+        private void bunifuMaterialTextbox1_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void txtA_OnValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtC_OnValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtM_OnValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSemilla_TextChanged(object sender, EventArgs e)
+        {
+            ForeColor = Color.Black;
             bool error = false;
 
             //ciclo para recorrer caracter por caracter 
@@ -35,25 +73,16 @@ namespace Generador_de_numeros___Simulacion
             }
             if (error)
             {
-                errorProvider1.SetError(txtSemilla, "No se admiten letras\nFavor de ingresar numeros solamente");
+                error1.SetError(txtSemilla, "No se admiten letras\nFavor de ingresar numeros solamente");
             }
             else
             {
-                errorProvider1.Clear();
+                error1.Clear();
             }
         }
-
-        private void txtSemilla_KeyDown(object sender, KeyEventArgs e)
-        {      
-        }
-
-
-        private void bunifuMaterialTextbox1_KeyDown(object sender, KeyEventArgs e)
+        private void txtA_TextChanged(object sender, EventArgs e)
         {
-        }
-
-        private void txtA_OnValueChanged(object sender, EventArgs e)
-        {
+            ForeColor = Color.Black;
             bool error = false;
 
             //ciclo para recorrer caracter por caracter 
@@ -68,16 +97,16 @@ namespace Generador_de_numeros___Simulacion
             }
             if (error)
             {
-                errorProvider1.SetError(txtA, "No se admiten letras\nFavor de ingresar numeros solamente");
+                error1.SetError(txtA, "No se admiten letras\nFavor de ingresar numeros solamente");
             }
             else
             {
-                errorProvider1.Clear();
+                error1.Clear();
             }
         }
-
-        private void txtC_OnValueChanged(object sender, EventArgs e)
+        private void txtC_TextChanged(object sender, EventArgs e)
         {
+            ForeColor = Color.Black;
             bool error = false;
 
             //ciclo para recorrer caracter por caracter 
@@ -92,16 +121,16 @@ namespace Generador_de_numeros___Simulacion
             }
             if (error)
             {
-                errorProvider1.SetError(txtC, "No se admiten letras\nFavor de ingresar numeros solamente");
+                error1.SetError(txtC, "No se admiten letras\nFavor de ingresar numeros solamente");
             }
             else
             {
-                errorProvider1.Clear();
+                error1.Clear();
             }
         }
-
-        private void txtM_OnValueChanged(object sender, EventArgs e)
+        private void txtM_TextChanged(object sender, EventArgs e)
         {
+            ForeColor = Color.Black;
             bool error = false;
 
             //ciclo para recorrer caracter por caracter 
@@ -116,17 +145,12 @@ namespace Generador_de_numeros___Simulacion
             }
             if (error)
             {
-                errorProvider1.SetError(txtM, "No se admiten letras\nFavor de ingresar numeros solamente");
+                error1.SetError(txtM, "No se admiten letras\nFavor de ingresar numeros solamente");
             }
             else
             {
-                errorProvider1.Clear();
+                error1.Clear();
             }
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
