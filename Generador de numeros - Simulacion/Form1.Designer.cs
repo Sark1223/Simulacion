@@ -37,12 +37,11 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.LightCoral;
-            this.lblTitulo.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitulo.Location = new System.Drawing.Point(250, 23);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(167, 15);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(690, 36);
+            this.lblTitulo.Size = new System.Drawing.Size(528, 25);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "GENERADOR DE NUMEROS PSEUDO-ALEATORIOS";
             // 
@@ -51,10 +50,9 @@
             this.btnGenerar.BackColor = System.Drawing.Color.YellowGreen;
             this.btnGenerar.FlatAppearance.BorderSize = 0;
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerar.Location = new System.Drawing.Point(956, 106);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGenerar.Location = new System.Drawing.Point(637, 69);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(171, 37);
+            this.btnGenerar.Size = new System.Drawing.Size(114, 24);
             this.btnGenerar.TabIndex = 2;
             this.btnGenerar.Text = "&GENERAR";
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -63,25 +61,24 @@
             // tablaResultados
             // 
             this.tablaResultados.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablaResultados.Location = new System.Drawing.Point(68, 143);
-            this.tablaResultados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tablaResultados.Location = new System.Drawing.Point(45, 93);
             this.tablaResultados.Multiline = true;
             this.tablaResultados.Name = "tablaResultados";
-            this.tablaResultados.Size = new System.Drawing.Size(1057, 490);
+            this.tablaResultados.Size = new System.Drawing.Size(706, 320);
             this.tablaResultados.TabIndex = 3;
             // 
             // frmGenerador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tablaResultados);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmGenerador";
             this.Text = "Metodo congruencial mixto";
+            this.Load += new System.EventHandler(this.frmGenerador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

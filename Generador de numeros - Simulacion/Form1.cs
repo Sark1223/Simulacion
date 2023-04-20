@@ -73,5 +73,10 @@ namespace Generador_de_numeros___Simulacion
             tablaResultados.ScrollBars = ScrollBars.Both;
 
         }
+
+        private void frmGenerador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
