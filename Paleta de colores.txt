@@ -1,0 +1,5 @@
+Azul orcuro: 49,148,168
+Azul cielo: 96,219,245
+rosa fuerte: 245,120,172
+Amarillo: 245,228,71
+mordo: 178,84,142

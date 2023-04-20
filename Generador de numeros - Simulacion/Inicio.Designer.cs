@@ -36,12 +36,12 @@
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
+            this.lblTitulo = new ns1.BunifuCustomLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnCerrar = new ns1.BunifuImageButton();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.lblLogo = new ns1.BunifuCustomLabel();
-            this.lblTitulo = new ns1.BunifuCustomLabel();
             this.btnDatos = new ns1.BunifuThinButton2();
             this.txtSemilla = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,33 +71,33 @@
             // lblSemilla
             // 
             this.lblSemilla.AutoSize = true;
-            this.lblSemilla.Font = new System.Drawing.Font("Myanmar Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemilla.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.lblSemilla.Location = new System.Drawing.Point(58, 189);
+            this.lblSemilla.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSemilla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
+            this.lblSemilla.Location = new System.Drawing.Point(34, 179);
             this.lblSemilla.Name = "lblSemilla";
-            this.lblSemilla.Size = new System.Drawing.Size(94, 37);
+            this.lblSemilla.Size = new System.Drawing.Size(75, 22);
             this.lblSemilla.TabIndex = 7;
             this.lblSemilla.Text = "Semilla:";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Myanmar Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(259, 189);
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(170, 179);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(34, 37);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(28, 22);
             this.bunifuCustomLabel1.TabIndex = 8;
             this.bunifuCustomLabel1.Text = "a:";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Myanmar Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(60, 261);
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(36, 241);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(33, 37);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(27, 22);
             this.bunifuCustomLabel2.TabIndex = 11;
             this.bunifuCustomLabel2.Text = "c:";
             this.toolTip1.SetToolTip(this.bunifuCustomLabel2, "Sugerencia: \r\nIngresar un valor\r\ndivisble entre 200 con un residuo\r\nigual a 21\r\n\r" +
@@ -106,11 +106,11 @@
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Myanmar Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(261, 261);
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(172, 241);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(42, 37);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(32, 22);
             this.bunifuCustomLabel3.TabIndex = 12;
             this.bunifuCustomLabel3.Text = "m:";
             // 
@@ -121,6 +121,17 @@
             this.bunifuDragControl1.TargetControl = this.lblTitulo;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTitulo.Location = new System.Drawing.Point(16, 8);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(242, 23);
+            this.lblTitulo.TabIndex = 5;
+            this.lblTitulo.Text = "GENERADOR DE NUMEROS ";
+            // 
             // error1
             // 
             this.error1.ContainerControl = this;
@@ -130,7 +141,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(406, 9);
+            this.btnCerrar.Location = new System.Drawing.Point(275, 4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(27, 28);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,9 +153,9 @@
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(67, 49);
+            this.Logo.Location = new System.Drawing.Point(51, 43);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(81, 58);
+            this.Logo.Size = new System.Drawing.Size(49, 43);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 11;
             this.Logo.TabStop = false;
@@ -152,30 +163,19 @@
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Cascadia Code", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Font = new System.Drawing.Font("Bahnschrift SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogo.ForeColor = System.Drawing.Color.Black;
-            this.lblLogo.Location = new System.Drawing.Point(166, 64);
+            this.lblLogo.Location = new System.Drawing.Point(106, 58);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(192, 28);
+            this.lblLogo.Size = new System.Drawing.Size(139, 23);
             this.lblLogo.TabIndex = 6;
             this.lblLogo.Text = "K.E. Laboratory";
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Cascadia Code", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(74, 9);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(264, 28);
-            this.lblTitulo.TabIndex = 5;
-            this.lblTitulo.Text = "GENERADOR DE NUMEROS ";
             // 
             // btnDatos
             // 
             this.btnDatos.ActiveBorderThickness = 1;
             this.btnDatos.ActiveCornerRadius = 20;
-            this.btnDatos.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDatos.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(219)))), ((int)(((byte)(245)))));
             this.btnDatos.ActiveForecolor = System.Drawing.Color.White;
             this.btnDatos.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.btnDatos.BackColor = System.Drawing.Color.White;
@@ -186,10 +186,10 @@
             this.btnDatos.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnDatos.IdleBorderThickness = 1;
             this.btnDatos.IdleCornerRadius = 20;
-            this.btnDatos.IdleFillColor = System.Drawing.Color.Cyan;
+            this.btnDatos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDatos.IdleForecolor = System.Drawing.Color.Black;
             this.btnDatos.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnDatos.Location = new System.Drawing.Point(144, 371);
+            this.btnDatos.Location = new System.Drawing.Point(72, 311);
             this.btnDatos.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnDatos.Name = "btnDatos";
             this.btnDatos.Size = new System.Drawing.Size(149, 50);
@@ -199,119 +199,119 @@
             // txtSemilla
             // 
             this.txtSemilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSemilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSemilla.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtSemilla.Location = new System.Drawing.Point(65, 223);
+            this.txtSemilla.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSemilla.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSemilla.Location = new System.Drawing.Point(41, 201);
             this.txtSemilla.Name = "txtSemilla";
-            this.txtSemilla.Size = new System.Drawing.Size(116, 24);
+            this.txtSemilla.Size = new System.Drawing.Size(94, 26);
             this.txtSemilla.TabIndex = 0;
             this.txtSemilla.Text = "17";
             this.txtSemilla.TextChanged += new System.EventHandler(this.txtSemilla_TextChanged);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.panel1.Location = new System.Drawing.Point(65, 248);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panel1.Location = new System.Drawing.Point(41, 229);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(116, 2);
+            this.panel1.Size = new System.Drawing.Size(92, 1);
             this.panel1.TabIndex = 9;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.panel2.Location = new System.Drawing.Point(266, 248);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panel2.Location = new System.Drawing.Point(177, 229);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(116, 2);
+            this.panel2.Size = new System.Drawing.Size(92, 1);
             this.panel2.TabIndex = 10;
             // 
             // txtA
             // 
             this.txtA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtA.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtA.Location = new System.Drawing.Point(266, 223);
+            this.txtA.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtA.ForeColor = System.Drawing.Color.DimGray;
+            this.txtA.Location = new System.Drawing.Point(177, 201);
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(116, 24);
+            this.txtA.Size = new System.Drawing.Size(92, 26);
             this.txtA.TabIndex = 1;
             this.txtA.Text = "101";
             this.txtA.TextChanged += new System.EventHandler(this.txtA_TextChanged);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.panel3.Location = new System.Drawing.Point(67, 321);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panel3.Location = new System.Drawing.Point(43, 294);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(116, 2);
+            this.panel3.Size = new System.Drawing.Size(92, 1);
             this.panel3.TabIndex = 13;
             // 
             // txtC
             // 
             this.txtC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtC.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtC.Location = new System.Drawing.Point(67, 296);
+            this.txtC.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtC.ForeColor = System.Drawing.Color.DimGray;
+            this.txtC.Location = new System.Drawing.Point(43, 266);
             this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(116, 24);
+            this.txtC.Size = new System.Drawing.Size(92, 26);
             this.txtC.TabIndex = 2;
             this.txtC.Text = "221";
             this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.panel4.Location = new System.Drawing.Point(266, 321);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panel4.Location = new System.Drawing.Point(177, 294);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(116, 2);
+            this.panel4.Size = new System.Drawing.Size(92, 1);
             this.panel4.TabIndex = 14;
             // 
             // txtM
             // 
             this.txtM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtM.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtM.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtM.Location = new System.Drawing.Point(266, 296);
+            this.txtM.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtM.ForeColor = System.Drawing.Color.DimGray;
+            this.txtM.Location = new System.Drawing.Point(177, 266);
             this.txtM.Name = "txtM";
-            this.txtM.Size = new System.Drawing.Size(116, 24);
+            this.txtM.Size = new System.Drawing.Size(92, 26);
             this.txtM.TabIndex = 3;
             this.txtM.Text = "17001";
             this.txtM.TextChanged += new System.EventHandler(this.txtM_TextChanged);
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 456);
+            this.panel5.Location = new System.Drawing.Point(0, 366);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(445, 3);
+            this.panel5.Size = new System.Drawing.Size(313, 4);
             this.panel5.TabIndex = 15;
             // 
             // panTop
             // 
-            this.panTop.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
             this.panTop.Controls.Add(this.lblTitulo);
             this.panTop.Controls.Add(this.btnCerrar);
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(0, 0);
             this.panTop.Name = "panTop";
-            this.panTop.Size = new System.Drawing.Size(445, 45);
+            this.panTop.Size = new System.Drawing.Size(313, 39);
             this.panTop.TabIndex = 16;
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 45);
+            this.panel7.Location = new System.Drawing.Point(0, 39);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(3, 411);
+            this.panel7.Size = new System.Drawing.Size(3, 327);
             this.panel7.TabIndex = 17;
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(442, 45);
+            this.panel8.Location = new System.Drawing.Point(309, 39);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(3, 411);
+            this.panel8.Size = new System.Drawing.Size(4, 327);
             this.panel8.TabIndex = 18;
             // 
             // bunifuDragControl2
@@ -324,19 +324,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(141, 145);
+            this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(5, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 26);
+            this.label1.Size = new System.Drawing.Size(304, 76);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Generador de numeros pseudoaleatorios con los\r\nque se realizara la simulacion del" +
-    " problema";
+            this.label1.Text = "Generador de numeros pseudoaleatorios \r\ncon los que se realizara la simulacion de" +
+    "l \r\nproblema de los mantos freaticos para el \r\nconsumo animal.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(445, 459);
+            this.ClientSize = new System.Drawing.Size(313, 370);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
