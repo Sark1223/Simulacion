@@ -1,0 +1,14 @@
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\bin\Debug\Generador de numeros - Simulacion.exe.config
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\bin\Debug\Generador de numeros - Simulacion.exe
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\bin\Debug\Generador de numeros - Simulacion.pdb
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.AssemblyReference.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.Inicio.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.Properties.Resources.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.GenerateResource.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.CoreCompileInputs.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.CopyComplete
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador de numeros - Simulacion.exe
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador de numeros - Simulacion.pdb
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmNumeros.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmOpciones.resources

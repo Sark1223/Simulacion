@@ -73,7 +73,7 @@
             this.lblSemilla.AutoSize = true;
             this.lblSemilla.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSemilla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.lblSemilla.Location = new System.Drawing.Point(34, 179);
+            this.lblSemilla.Location = new System.Drawing.Point(34, 182);
             this.lblSemilla.Name = "lblSemilla";
             this.lblSemilla.Size = new System.Drawing.Size(75, 22);
             this.lblSemilla.TabIndex = 7;
@@ -84,7 +84,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(170, 179);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(170, 182);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(28, 22);
             this.bunifuCustomLabel1.TabIndex = 8;
@@ -95,7 +95,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(36, 241);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(36, 244);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(27, 22);
             this.bunifuCustomLabel2.TabIndex = 11;
@@ -108,7 +108,7 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(172, 241);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(172, 244);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(32, 22);
             this.bunifuCustomLabel3.TabIndex = 12;
@@ -148,7 +148,7 @@
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
             // Logo
             // 
@@ -192,18 +192,19 @@
             this.btnDatos.Location = new System.Drawing.Point(72, 311);
             this.btnDatos.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnDatos.Name = "btnDatos";
-            this.btnDatos.Size = new System.Drawing.Size(149, 50);
+            this.btnDatos.Size = new System.Drawing.Size(149, 47);
             this.btnDatos.TabIndex = 4;
             this.btnDatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDatos.Click += new System.EventHandler(this.btnDatos_Click);
             // 
             // txtSemilla
             // 
             this.txtSemilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSemilla.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSemilla.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSemilla.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSemilla.Location = new System.Drawing.Point(41, 201);
+            this.txtSemilla.Location = new System.Drawing.Point(41, 204);
             this.txtSemilla.Name = "txtSemilla";
-            this.txtSemilla.Size = new System.Drawing.Size(94, 26);
+            this.txtSemilla.Size = new System.Drawing.Size(94, 23);
             this.txtSemilla.TabIndex = 0;
             this.txtSemilla.Text = "17";
             this.txtSemilla.TextChanged += new System.EventHandler(this.txtSemilla_TextChanged);
@@ -227,11 +228,11 @@
             // txtA
             // 
             this.txtA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtA.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtA.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtA.ForeColor = System.Drawing.Color.DimGray;
-            this.txtA.Location = new System.Drawing.Point(177, 201);
+            this.txtA.Location = new System.Drawing.Point(177, 204);
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(92, 26);
+            this.txtA.Size = new System.Drawing.Size(92, 23);
             this.txtA.TabIndex = 1;
             this.txtA.Text = "101";
             this.txtA.TextChanged += new System.EventHandler(this.txtA_TextChanged);
@@ -247,11 +248,11 @@
             // txtC
             // 
             this.txtC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtC.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtC.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC.ForeColor = System.Drawing.Color.DimGray;
-            this.txtC.Location = new System.Drawing.Point(43, 266);
+            this.txtC.Location = new System.Drawing.Point(43, 269);
             this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(92, 26);
+            this.txtC.Size = new System.Drawing.Size(92, 23);
             this.txtC.TabIndex = 2;
             this.txtC.Text = "221";
             this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
@@ -267,11 +268,11 @@
             // txtM
             // 
             this.txtM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtM.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtM.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtM.ForeColor = System.Drawing.Color.DimGray;
-            this.txtM.Location = new System.Drawing.Point(177, 266);
+            this.txtM.Location = new System.Drawing.Point(177, 269);
             this.txtM.Name = "txtM";
-            this.txtM.Size = new System.Drawing.Size(92, 26);
+            this.txtM.Size = new System.Drawing.Size(92, 23);
             this.txtM.TabIndex = 3;
             this.txtM.Text = "17001";
             this.txtM.TextChanged += new System.EventHandler(this.txtM_TextChanged);
@@ -295,6 +296,7 @@
             this.panTop.Name = "panTop";
             this.panTop.Size = new System.Drawing.Size(313, 39);
             this.panTop.TabIndex = 16;
+            this.panTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // panel7
             // 

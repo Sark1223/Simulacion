@@ -1,6 +1,6 @@
 ﻿namespace Generador_de_numeros___Simulacion
 {
-    partial class frmGenerador
+    partial class frmNumeros
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -67,7 +67,7 @@
             this.tablaResultados.Size = new System.Drawing.Size(706, 320);
             this.tablaResultados.TabIndex = 3;
             // 
-            // frmGenerador
+            // frmNumeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -76,7 +76,7 @@
             this.Controls.Add(this.tablaResultados);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.lblTitulo);
-            this.Name = "frmGenerador";
+            this.Name = "frmNumeros";
             this.Text = "Metodo congruencial mixto";
             this.Load += new System.EventHandler(this.frmGenerador_Load);
             this.ResumeLayout(false);
@@ -86,9 +86,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.TextBox tablaResultados;
+        public System.Windows.Forms.Label lblTitulo;
+        public System.Windows.Forms.Button btnGenerar;
+        public System.Windows.Forms.TextBox tablaResultados;
     }
 }
 
