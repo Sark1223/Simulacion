@@ -34,7 +34,7 @@
             this.btnCerrar = new ns1.BunifuImageButton();
             this.bordeForma = new ns1.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMesajeDatos = new System.Windows.Forms.TextBox();
             this.cmdVerNumeros = new ns1.BunifuThinButton2();
             this.cmdVerPruebas = new ns1.BunifuThinButton2();
             this.cmdContinuar = new ns1.BunifuThinButton2();
@@ -86,21 +86,21 @@
             this.label2.Text = "Numeros pseudoaleatorios generados exitosamente.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtMesajeDatos
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
-            this.textBox1.Location = new System.Drawing.Point(39, 83);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(403, 44);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtMesajeDatos.BackColor = System.Drawing.SystemColors.Control;
+            this.txtMesajeDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMesajeDatos.Enabled = false;
+            this.txtMesajeDatos.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtMesajeDatos.Location = new System.Drawing.Point(39, 83);
+            this.txtMesajeDatos.Multiline = true;
+            this.txtMesajeDatos.Name = "txtMesajeDatos";
+            this.txtMesajeDatos.ReadOnly = true;
+            this.txtMesajeDatos.Size = new System.Drawing.Size(403, 44);
+            this.txtMesajeDatos.TabIndex = 23;
+            this.txtMesajeDatos.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
+            this.txtMesajeDatos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMesajeDatos.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // cmdVerNumeros
             // 
@@ -222,7 +222,7 @@
             this.Controls.Add(this.cmdContinuar);
             this.Controls.Add(this.cmdVerPruebas);
             this.Controls.Add(this.cmdVerNumeros);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMesajeDatos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -247,6 +247,6 @@
         public ns1.BunifuThinButton2 cmdContinuar;
         public ns1.BunifuThinButton2 cmdVerPruebas;
         public ns1.BunifuThinButton2 cmdVerNumeros;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtMesajeDatos;
     }
 }

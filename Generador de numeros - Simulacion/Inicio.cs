@@ -33,11 +33,23 @@ namespace Generador_de_numeros___Simulacion
         frmOpciones opciones = new frmOpciones();
         Semilla g;
 
+        float ValorDeTablas = 0;
+
         public void btnDatos_Click(object sender, EventArgs e)
         {
             GenerarObjeto();
+            if(rb10.Checked == true)
+            {
+                ValorDeTablas = 1.645F;
+            }
+            else if(rb5.Checked == true)
+            {
+                ValorDeTablas = 1.96F;
+            }
             GenerarNumeros();
             opciones.RecibirLista(numeros);
+
+            
 
             Realizar_PruebaPromedios();
             opciones.ShowDialog();
@@ -119,10 +131,21 @@ namespace Generador_de_numeros___Simulacion
             }
 
             promedio = (promedio / lista.Count);
-            opciones.label2.Text = "Promedio: "+ promedio;
+            Zo = (((promedio - 0.50F) * Math.Sqrt(lista.Count)) / Math.Sqrt(1F / 12F));
 
-            Zo = ((promedio - 0.50) * Math.Pow(lista.Count,1/2);
+            if(Zo < 0) { Zo *= -1; }
 
+            if (Zo <= ValorDeTablas)
+            {
+                opciones.txtMesajeDatos.Text = "Los numeros que se generaron se encuentran distribuidos uniformemente.";
+            }
+            else
+            {
+                opciones.txtMesajeDatos.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
+
+            }
+
+            //opciones.label2.Text = "Promedio: " + promedio + "\r\nZo = " + Zo;
         }
 
         private void Cerrar_Click(object sender, EventArgs e)
@@ -132,7 +155,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio,pero pueden ser modificados","ATENCION");
+            //MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio,pero pueden ser modificados","ATENCION");
         }
 
         private void Mover(object sender, MouseEventArgs e)

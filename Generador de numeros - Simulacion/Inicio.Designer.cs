@@ -57,10 +57,15 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.bunifuDragControl2 = new ns1.BunifuDragControl(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.rb5 = new System.Windows.Forms.RadioButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.rb10 = new System.Windows.Forms.RadioButton();
+            this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panTop.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -71,33 +76,33 @@
             // lblSemilla
             // 
             this.lblSemilla.AutoSize = true;
-            this.lblSemilla.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSemilla.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSemilla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.lblSemilla.Location = new System.Drawing.Point(34, 182);
+            this.lblSemilla.Location = new System.Drawing.Point(28, 182);
             this.lblSemilla.Name = "lblSemilla";
-            this.lblSemilla.Size = new System.Drawing.Size(75, 22);
+            this.lblSemilla.Size = new System.Drawing.Size(67, 21);
             this.lblSemilla.TabIndex = 7;
             this.lblSemilla.Text = "Semilla:";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(170, 182);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(28, 239);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(28, 22);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(25, 21);
             this.bunifuCustomLabel1.TabIndex = 8;
             this.bunifuCustomLabel1.Text = "a:";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(36, 244);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(28, 296);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(27, 22);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(24, 21);
             this.bunifuCustomLabel2.TabIndex = 11;
             this.bunifuCustomLabel2.Text = "c:";
             this.toolTip1.SetToolTip(this.bunifuCustomLabel2, "Sugerencia: \r\nIngresar un valor\r\ndivisble entre 200 con un residuo\r\nigual a 21\r\n\r" +
@@ -106,11 +111,11 @@
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(172, 244);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(161, 182);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(32, 22);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(29, 21);
             this.bunifuCustomLabel3.TabIndex = 12;
             this.bunifuCustomLabel3.Text = "m:";
             // 
@@ -189,7 +194,7 @@
             this.btnDatos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDatos.IdleForecolor = System.Drawing.Color.Black;
             this.btnDatos.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnDatos.Location = new System.Drawing.Point(72, 311);
+            this.btnDatos.Location = new System.Drawing.Point(79, 373);
             this.btnDatos.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnDatos.Name = "btnDatos";
             this.btnDatos.Size = new System.Drawing.Size(149, 47);
@@ -202,7 +207,7 @@
             this.txtSemilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSemilla.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSemilla.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSemilla.Location = new System.Drawing.Point(41, 204);
+            this.txtSemilla.Location = new System.Drawing.Point(35, 204);
             this.txtSemilla.Name = "txtSemilla";
             this.txtSemilla.Size = new System.Drawing.Size(94, 23);
             this.txtSemilla.TabIndex = 0;
@@ -212,7 +217,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
-            this.panel1.Location = new System.Drawing.Point(41, 229);
+            this.panel1.Location = new System.Drawing.Point(35, 229);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(92, 1);
             this.panel1.TabIndex = 9;
@@ -220,7 +225,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
-            this.panel2.Location = new System.Drawing.Point(177, 229);
+            this.panel2.Location = new System.Drawing.Point(35, 286);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(92, 1);
             this.panel2.TabIndex = 10;
@@ -230,7 +235,7 @@
             this.txtA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtA.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtA.ForeColor = System.Drawing.Color.DimGray;
-            this.txtA.Location = new System.Drawing.Point(177, 204);
+            this.txtA.Location = new System.Drawing.Point(35, 261);
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(92, 23);
             this.txtA.TabIndex = 1;
@@ -240,7 +245,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
-            this.panel3.Location = new System.Drawing.Point(43, 294);
+            this.panel3.Location = new System.Drawing.Point(35, 346);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(92, 1);
             this.panel3.TabIndex = 13;
@@ -250,7 +255,7 @@
             this.txtC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtC.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC.ForeColor = System.Drawing.Color.DimGray;
-            this.txtC.Location = new System.Drawing.Point(43, 269);
+            this.txtC.Location = new System.Drawing.Point(35, 321);
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(92, 23);
             this.txtC.TabIndex = 2;
@@ -260,7 +265,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
-            this.panel4.Location = new System.Drawing.Point(177, 294);
+            this.panel4.Location = new System.Drawing.Point(166, 232);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(92, 1);
             this.panel4.TabIndex = 14;
@@ -270,7 +275,7 @@
             this.txtM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtM.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtM.ForeColor = System.Drawing.Color.DimGray;
-            this.txtM.Location = new System.Drawing.Point(177, 269);
+            this.txtM.Location = new System.Drawing.Point(166, 207);
             this.txtM.Name = "txtM";
             this.txtM.Size = new System.Drawing.Size(92, 23);
             this.txtM.TabIndex = 3;
@@ -281,7 +286,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 366);
+            this.panel5.Location = new System.Drawing.Point(0, 430);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(313, 4);
             this.panel5.TabIndex = 15;
@@ -304,7 +309,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 39);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(3, 327);
+            this.panel7.Size = new System.Drawing.Size(3, 391);
             this.panel7.TabIndex = 17;
             // 
             // panel8
@@ -313,7 +318,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(309, 39);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(4, 327);
+            this.panel8.Size = new System.Drawing.Size(4, 391);
             this.panel8.TabIndex = 18;
             // 
             // bunifuDragControl2
@@ -336,12 +341,72 @@
     "l \r\nproblema de los mantos freaticos para el \r\nconsumo animal.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // rb5
+            // 
+            this.rb5.AutoSize = true;
+            this.rb5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.rb5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.rb5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rb5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.rb5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb5.ForeColor = System.Drawing.Color.Black;
+            this.rb5.Location = new System.Drawing.Point(13, 74);
+            this.rb5.Name = "rb5";
+            this.rb5.Size = new System.Drawing.Size(50, 25);
+            this.rb5.TabIndex = 0;
+            this.rb5.TabStop = true;
+            this.rb5.Text = "5%";
+            this.rb5.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.bunifuCustomLabel4);
+            this.panel6.Controls.Add(this.rb10);
+            this.panel6.Controls.Add(this.rb5);
+            this.panel6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.Location = new System.Drawing.Point(153, 242);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(122, 110);
+            this.panel6.TabIndex = 20;
+            // 
+            // rb10
+            // 
+            this.rb10.AutoSize = true;
+            this.rb10.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.rb10.FlatAppearance.BorderSize = 2;
+            this.rb10.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.rb10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Magenta;
+            this.rb10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.rb10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rb10.Location = new System.Drawing.Point(13, 45);
+            this.rb10.Name = "rb10";
+            this.rb10.Size = new System.Drawing.Size(61, 25);
+            this.rb10.TabIndex = 0;
+            this.rb10.TabStop = true;
+            this.rb10.Text = "10%";
+            this.rb10.UseVisualStyleBackColor = true;
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(9, -3);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(100, 42);
+            this.bunifuCustomLabel4.TabIndex = 21;
+            this.bunifuCustomLabel4.Text = "Nivel de \r\nsignificacia:";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(313, 370);
+            this.ClientSize = new System.Drawing.Size(313, 434);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -372,6 +437,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,5 +473,9 @@
         private System.Windows.Forms.Panel panel5;
         private ns1.BunifuDragControl bunifuDragControl2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel6;
+        private ns1.BunifuCustomLabel bunifuCustomLabel4;
+        private System.Windows.Forms.RadioButton rb10;
+        private System.Windows.Forms.RadioButton rb5;
     }
 }
