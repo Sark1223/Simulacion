@@ -53,7 +53,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio,pero pueden ser modificados","ATENCION");
         }
 
         private void txtSemilla_TextChanged(object sender, EventArgs e)
