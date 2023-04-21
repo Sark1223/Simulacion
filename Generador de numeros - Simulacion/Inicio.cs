@@ -38,6 +38,8 @@ namespace Generador_de_numeros___Simulacion
             GenerarObjeto();
             GenerarNumeros();
             opciones.RecibirLista(numeros);
+
+            Realizar_PruebaPromedios();
             opciones.ShowDialog();
         }
 
@@ -105,7 +107,24 @@ namespace Generador_de_numeros___Simulacion
             //numeros.ShowDialog();
             //opciones.ShowDialog();
         }
-        
+
+        public void Realizar_PruebaPromedios()
+        {
+            float promedio = 0;
+            double Zo;
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                promedio += lista[i].Ri;
+            }
+
+            promedio = (promedio / lista.Count);
+            opciones.label2.Text = "Promedio: "+ promedio;
+
+            Zo = ((promedio - 0.50) * Math.Pow(lista.Count,1/2);
+
+        }
+
         private void Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();

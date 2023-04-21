@@ -238,15 +238,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panTop;
-        private ns1.BunifuImageButton btnCerrar;
-        private ns1.BunifuElipse bordeForma;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private ns1.BunifuThinButton2 cmdCancelar;
-        private ns1.BunifuThinButton2 cmdContinuar;
-        private ns1.BunifuThinButton2 cmdVerPruebas;
-        private ns1.BunifuThinButton2 cmdVerNumeros;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Panel panTop;
+        public ns1.BunifuImageButton btnCerrar;
+        public ns1.BunifuElipse bordeForma;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Panel panel1;
+        public ns1.BunifuThinButton2 cmdCancelar;
+        public ns1.BunifuThinButton2 cmdContinuar;
+        public ns1.BunifuThinButton2 cmdVerPruebas;
+        public ns1.BunifuThinButton2 cmdVerNumeros;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }
