@@ -48,5 +48,10 @@ namespace Generador_de_numeros___Simulacion
         {
             Close();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

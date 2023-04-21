@@ -100,6 +100,7 @@
             this.textBox1.TabIndex = 23;
             this.textBox1.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // cmdVerNumeros
             // 
@@ -112,7 +113,7 @@
             this.cmdVerNumeros.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdVerNumeros.BackgroundImage")));
             this.cmdVerNumeros.ButtonText = "Ver Números";
             this.cmdVerNumeros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdVerNumeros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdVerNumeros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdVerNumeros.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdVerNumeros.IdleBorderThickness = 1;
             this.cmdVerNumeros.IdleCornerRadius = 20;
@@ -138,7 +139,7 @@
             this.cmdVerPruebas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdVerPruebas.BackgroundImage")));
             this.cmdVerPruebas.ButtonText = "Ver Pruebas";
             this.cmdVerPruebas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdVerPruebas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdVerPruebas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdVerPruebas.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdVerPruebas.IdleBorderThickness = 1;
             this.cmdVerPruebas.IdleCornerRadius = 20;
@@ -163,7 +164,7 @@
             this.cmdContinuar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdContinuar.BackgroundImage")));
             this.cmdContinuar.ButtonText = "Continuar";
             this.cmdContinuar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdContinuar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdContinuar.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdContinuar.IdleBorderThickness = 1;
             this.cmdContinuar.IdleCornerRadius = 20;
@@ -188,7 +189,7 @@
             this.cmdCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdCancelar.BackgroundImage")));
             this.cmdCancelar.ButtonText = "Cancelar";
             this.cmdCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdCancelar.IdleBorderThickness = 1;
             this.cmdCancelar.IdleCornerRadius = 20;
