@@ -1,5 +1,7 @@
-Azul orcuro: 49,148,168
-Azul cielo: 96,219,245
-rosa fuerte: 245,120,172
-Amarillo: 245,228,71
-mordo: 178,84,142
+Azul orcuro:  49,148,168
+Azul cielo:   96,219,245
+rosa fuerte:  245,120,172
+		  255, 104, 165
+Amarillo:     245,228,71
+morado: 	  178,84,142
+rojoNaranja:  224,106,75
