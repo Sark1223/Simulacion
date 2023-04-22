@@ -148,6 +148,35 @@ namespace Generador_de_numeros___Simulacion
             //opciones.label2.Text = "Promedio: " + promedio + "\r\nZo = " + Zo;
         }
 
+        public void Realizar_PruebaFrecuencia()
+        {
+            int N1 = 0, N2 = 0, N3 = 0, N4 = 0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Ri == 0 && lista[i].Ri < 0.25)
+                {
+                    N1++;
+                }
+                else if(lista[i].Ri == 0.25 && lista[i].Ri < 0.50)
+                {
+                    N2++;
+                }
+                else if (lista[i].Ri == 0.50 && lista[i].Ri < 0.75)
+                {
+                    N3++;
+                }
+                else if (lista[i].Ri == 0.75 && lista[i].Ri <= 1.00)
+                {
+                    N4++;
+                }
+            }
+
+            float FE = lista.Count / 4F;
+
+            double Xo = (Math.Pow(N1 - FE, 2)/FE) + (Math.Pow(N2 - FE, 2) / FE) +
+                (Math.Pow(N3 - FE, 2) / FE) + (Math.Pow(N4 - FE, 2) / FE);
+        }
+
         private void Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
