@@ -40,6 +40,7 @@
             this.cmdContinuar = new ns1.BunifuThinButton2();
             this.cmdCancelar = new ns1.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPruevasSuperadas = new System.Windows.Forms.TextBox();
             this.panTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
@@ -50,8 +51,9 @@
             this.panTop.Controls.Add(this.btnCerrar);
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(0, 0);
+            this.panTop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panTop.Name = "panTop";
-            this.panTop.Size = new System.Drawing.Size(490, 28);
+            this.panTop.Size = new System.Drawing.Size(735, 43);
             this.panTop.TabIndex = 21;
             this.panTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
@@ -60,9 +62,10 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(456, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(684, 5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
+            this.btnCerrar.Size = new System.Drawing.Size(33, 31);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.TabStop = false;
@@ -79,9 +82,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(42, 46);
+            this.label2.Location = new System.Drawing.Point(63, 61);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(401, 21);
+            this.label2.Size = new System.Drawing.Size(593, 33);
             this.label2.TabIndex = 22;
             this.label2.Text = "Numeros pseudoaleatorios generados exitosamente.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,11 +96,12 @@
             this.txtMesajeDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMesajeDatos.Enabled = false;
             this.txtMesajeDatos.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
-            this.txtMesajeDatos.Location = new System.Drawing.Point(39, 83);
+            this.txtMesajeDatos.Location = new System.Drawing.Point(58, 106);
+            this.txtMesajeDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMesajeDatos.Multiline = true;
             this.txtMesajeDatos.Name = "txtMesajeDatos";
             this.txtMesajeDatos.ReadOnly = true;
-            this.txtMesajeDatos.Size = new System.Drawing.Size(403, 44);
+            this.txtMesajeDatos.Size = new System.Drawing.Size(604, 68);
             this.txtMesajeDatos.TabIndex = 23;
             this.txtMesajeDatos.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
             this.txtMesajeDatos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -120,10 +125,10 @@
             this.cmdVerNumeros.IdleFillColor = System.Drawing.Color.White;
             this.cmdVerNumeros.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.cmdVerNumeros.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.cmdVerNumeros.Location = new System.Drawing.Point(14, 157);
-            this.cmdVerNumeros.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdVerNumeros.Location = new System.Drawing.Point(21, 242);
+            this.cmdVerNumeros.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.cmdVerNumeros.Name = "cmdVerNumeros";
-            this.cmdVerNumeros.Size = new System.Drawing.Size(113, 37);
+            this.cmdVerNumeros.Size = new System.Drawing.Size(170, 57);
             this.cmdVerNumeros.TabIndex = 24;
             this.cmdVerNumeros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdVerNumeros.Click += new System.EventHandler(this.VerNumeros_Click);
@@ -146,10 +151,10 @@
             this.cmdVerPruebas.IdleFillColor = System.Drawing.Color.White;
             this.cmdVerPruebas.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
             this.cmdVerPruebas.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
-            this.cmdVerPruebas.Location = new System.Drawing.Point(143, 157);
-            this.cmdVerPruebas.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdVerPruebas.Location = new System.Drawing.Point(214, 242);
+            this.cmdVerPruebas.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.cmdVerPruebas.Name = "cmdVerPruebas";
-            this.cmdVerPruebas.Size = new System.Drawing.Size(107, 37);
+            this.cmdVerPruebas.Size = new System.Drawing.Size(160, 57);
             this.cmdVerPruebas.TabIndex = 25;
             this.cmdVerPruebas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -171,10 +176,10 @@
             this.cmdContinuar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
             this.cmdContinuar.IdleForecolor = System.Drawing.Color.White;
             this.cmdContinuar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.cmdContinuar.Location = new System.Drawing.Point(266, 157);
-            this.cmdContinuar.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdContinuar.Location = new System.Drawing.Point(399, 242);
+            this.cmdContinuar.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.cmdContinuar.Name = "cmdContinuar";
-            this.cmdContinuar.Size = new System.Drawing.Size(97, 37);
+            this.cmdContinuar.Size = new System.Drawing.Size(146, 57);
             this.cmdContinuar.TabIndex = 26;
             this.cmdContinuar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -196,10 +201,10 @@
             this.cmdCancelar.IdleFillColor = System.Drawing.Color.White;
             this.cmdCancelar.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
             this.cmdCancelar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
-            this.cmdCancelar.Location = new System.Drawing.Point(377, 157);
-            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdCancelar.Location = new System.Drawing.Point(566, 242);
+            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(97, 37);
+            this.cmdCancelar.Size = new System.Drawing.Size(146, 57);
             this.cmdCancelar.TabIndex = 27;
             this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -207,16 +212,33 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 209);
+            this.panel1.Location = new System.Drawing.Point(0, 321);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(490, 5);
+            this.panel1.Size = new System.Drawing.Size(735, 8);
             this.panel1.TabIndex = 28;
+            // 
+            // txtPruevasSuperadas
+            // 
+            this.txtPruevasSuperadas.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPruevasSuperadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPruevasSuperadas.Enabled = false;
+            this.txtPruevasSuperadas.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtPruevasSuperadas.Location = new System.Drawing.Point(69, 178);
+            this.txtPruevasSuperadas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPruevasSuperadas.Name = "txtPruevasSuperadas";
+            this.txtPruevasSuperadas.ReadOnly = true;
+            this.txtPruevasSuperadas.Size = new System.Drawing.Size(604, 33);
+            this.txtPruevasSuperadas.TabIndex = 29;
+            this.txtPruevasSuperadas.Text = "No. de pruebas superadas:";
+            this.txtPruevasSuperadas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmOpciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 214);
+            this.ClientSize = new System.Drawing.Size(735, 329);
+            this.Controls.Add(this.txtPruevasSuperadas);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdContinuar);
@@ -226,6 +248,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmOpciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOpciones";
@@ -248,5 +271,6 @@
         public ns1.BunifuThinButton2 cmdVerPruebas;
         public ns1.BunifuThinButton2 cmdVerNumeros;
         public System.Windows.Forms.TextBox txtMesajeDatos;
+        public System.Windows.Forms.TextBox txtPruevasSuperadas;
     }
 }
