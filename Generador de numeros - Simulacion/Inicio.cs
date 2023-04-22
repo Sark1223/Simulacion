@@ -159,7 +159,7 @@ namespace Generador_de_numeros___Simulacion
             int N1 = 0, N2 = 0, N3 = 0, N4 = 0;
             for (int i = 0; i < lista.Count; i++)
             {
-                if (lista[i].Ri == 0 && lista[i].Ri < 0.25)
+                if (lista[i].Ri >= 0 && lista[i].Ri < 0.25)
                 {
                     N1++;
                 }
