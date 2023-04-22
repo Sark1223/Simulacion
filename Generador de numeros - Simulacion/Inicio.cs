@@ -33,12 +33,32 @@ namespace Generador_de_numeros___Simulacion
         frmOpciones opciones = new frmOpciones();
         Semilla g;
 
+        float Z2 = 0, Za = 0;
+        int no_pruebas = 0;
+
         public void btnDatos_Click(object sender, EventArgs e)
         {
             GenerarObjeto();
+            if(rb10.Checked == true)
+            {
+                Za = 1.645F;
+                Z2 = 6.2514F;
+            }
+            else if(rb5.Checked == true)
+            {
+                Za = 1.96F;
+                Z2 = 7.8147F;
+            }
+
             GenerarNumeros();
             opciones.RecibirLista(numeros);
+
+            Realizar_PruebaPromedios();
+            Realizar_PruebaFrecuencia();
+            opciones.txtPruevasSuperadas.Text = "No. de pruebas superadas: " + no_pruebas;
             opciones.ShowDialog();
+
+            no_pruebas = 0;
         }
 
         public void GenerarObjeto()
@@ -105,7 +125,75 @@ namespace Generador_de_numeros___Simulacion
             //numeros.ShowDialog();
             //opciones.ShowDialog();
         }
-        
+
+        public void Realizar_PruebaPromedios()
+        {
+            float promedio = 0;
+            double Zo;
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                promedio += lista[i].Ri;
+            }
+
+            promedio = (promedio / lista.Count);
+            Zo = (((promedio - 0.50F) * Math.Sqrt(lista.Count)) / Math.Sqrt(1F / 12F));
+
+            if(Zo < 0) { Zo *= -1; }
+
+
+            if (Zo <= Za)
+            {
+                opciones.txtMesajeDatos.Text = "Los numeros que se generaron se encuentran distribuidos uniformemente.";
+                no_pruebas++;
+            }
+            else
+            {
+                opciones.txtMesajeDatos.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
+
+            }
+        }
+
+        public void Realizar_PruebaFrecuencia()
+        {
+            int N1 = 0, N2 = 0, N3 = 0, N4 = 0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Ri == 0 && lista[i].Ri < 0.25)
+                {
+                    N1++;
+                }
+                else if(lista[i].Ri >= 0.25 && lista[i].Ri < 0.50)
+                {
+                    N2++;
+                }
+                else if (lista[i].Ri >= 0.50 && lista[i].Ri < 0.75)
+                {
+                    N3++;
+                }
+                else if (lista[i].Ri >= 0.75 && lista[i].Ri <= 1.00)
+                {
+                    N4++;
+                }
+            }
+
+            float FE = lista.Count / 4F;
+
+            double Xo = (Math.Pow(N1 - FE, 2)/FE) + (Math.Pow(N2 - FE, 2) / FE) +
+                (Math.Pow(N3 - FE, 2) / FE) + (Math.Pow(N4 - FE, 2) / FE);
+
+            if (Xo <= Z2)
+            {
+                opciones.txtMesajeDatos.Text = "Los numeros que se generaron se encuentran distribuidos uniformemente.";
+                no_pruebas++;
+            }
+            else
+            {
+                opciones.txtMesajeDatos.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
+
+            }
+        }
+
         private void Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -113,7 +201,8 @@ namespace Generador_de_numeros___Simulacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio,pero pueden ser modificados","ATENCION");
+            //MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio,pero pueden ser modificados","ATENCION");
+            rb5.Checked = true;
         }
 
         private void Mover(object sender, MouseEventArgs e)
