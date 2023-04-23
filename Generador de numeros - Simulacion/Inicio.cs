@@ -72,11 +72,12 @@ namespace Generador_de_numeros___Simulacion
 
         public void GenerarNumeros()
         {
-            numeros.tablaResultados.Clear();
+            //numeros.tablaResultados.Clear();
+            //numeros.tblPseudo.Dispose();
             lista.Clear();
             //valor semilla de la que se basaran nuestros numeros
             float x0 = g.X0;
-            
+            int n = 0;
             for (int i = 0; i < 325; i++)
             {
                 //si es el primero numero generado entonces 
@@ -95,8 +96,13 @@ namespace Generador_de_numeros___Simulacion
 
                     lista.Add(g);
 
-                    numeros.tablaResultados.Text = $"{lista[i].N}\t{lista[i].Xn}\t{lista[i].a}\t{lista[i].c}\t{lista[i].m}" +
-                        $"\t{lista[i].Res}\t{lista[i].modulo}\t{lista[i].Ri}";
+                    //numeros.tablaResultados.Text = $"{lista[i].N}\t{lista[i].Xn}\t{lista[i].a}\t{lista[i].c}\t{lista[i].m}" +
+                    //    $"\t{lista[i].Res}\t{lista[i].modulo}\t{lista[i].Ri}";
+
+                    //Agrega valores a las filas de la tabla
+                    n = numeros.tblPseudo.Rows.Add();
+                    numeros.tblPseudo.Rows[n].Cells[0].Value = n + 1;
+                    numeros.tblPseudo.Rows[n].Cells[1].Value = lista[n].Ri;
                 }
                 else
                 {
@@ -114,13 +120,17 @@ namespace Generador_de_numeros___Simulacion
 
                     lista.Add(g);
 
-                    numeros.tablaResultados.Text = numeros.tablaResultados.Text + $"\r\n{lista[i].N}\t{lista[i].Xn}\t{lista[i].a}\t{lista[i].c}\t{lista[i].m}" +
-                        $"\t{lista[i].Res}\t{lista[i].modulo}\t{lista[i].Ri}";
-                }
+                    //numeros.tablaResultados.Text = numeros.tablaResultados.Text + $"\r\n{lista[i].N}\t{lista[i].Xn}\t{lista[i].a}\t{lista[i].c}\t{lista[i].m}" +
+                    //    $"\t{lista[i].Res}\t{lista[i].modulo}\t{lista[i].Ri}";
 
+                    //Agrega valores a las filas de la tabla
+                    n = numeros.tblPseudo.Rows.Add();
+                    numeros.tblPseudo.Rows[n].Cells[0].Value = n + 1;
+                    numeros.tblPseudo.Rows[n].Cells[1].Value = lista[n].Ri;
+                }
             }
 
-            numeros.tablaResultados.ScrollBars = ScrollBars.Both;
+            //numeros.tablaResultados.ScrollBars = ScrollBars.Both;
 
             //numeros.ShowDialog();
             //opciones.ShowDialog();

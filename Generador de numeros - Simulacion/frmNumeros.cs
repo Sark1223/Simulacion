@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,6 +78,21 @@ namespace Generador_de_numeros___Simulacion
         private void frmGenerador_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void tblPseudo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tablaResultados_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
