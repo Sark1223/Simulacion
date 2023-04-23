@@ -35,6 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tblPseudo = new ns1.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -44,10 +46,11 @@
             this.panEncabezado = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new ns1.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.arrastrar1 = new ns1.BunifuDragControl(this.components);
             this.arrastrar2 = new ns1.BunifuDragControl(this.components);
+            this.redondear1 = new ns1.BunifuElipse(this.components);
+            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.bunifuElipse2 = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tblPseudo)).BeginInit();
             this.panEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -69,7 +72,7 @@
             // tblPseudo
             // 
             this.tblPseudo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(158)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             this.tblPseudo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.tblPseudo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(151)))));
             this.tblPseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -107,7 +110,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tblPseudo.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.tblPseudo.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(106)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(158)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
             this.tblPseudo.RowsDefaultCellStyle = dataGridViewCellStyle8;
@@ -115,6 +118,20 @@
             this.tblPseudo.Size = new System.Drawing.Size(250, 299);
             this.tblPseudo.TabIndex = 4;
             this.tblPseudo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblPseudo_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Numero";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 120;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ri";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 130;
             // 
             // panel1
             // 
@@ -199,20 +216,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Numero";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 120;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ri";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 130;
-            // 
             // arrastrar1
             // 
             this.arrastrar1.Fixed = true;
@@ -226,6 +229,21 @@
             this.arrastrar2.Horizontal = true;
             this.arrastrar2.TargetControl = this.lblTitulo;
             this.arrastrar2.Vertical = true;
+            // 
+            // redondear1
+            // 
+            this.redondear1.ElipseRadius = 10;
+            this.redondear1.TargetControl = this.tblPseudo;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this.tblPseudo;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 20;
+            this.bunifuElipse2.TargetControl = this;
             // 
             // frmNumeros
             // 
@@ -273,6 +291,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private ns1.BunifuDragControl arrastrar1;
         private ns1.BunifuDragControl arrastrar2;
+        private ns1.BunifuElipse redondear1;
+        private ns1.BunifuElipse bunifuElipse1;
+        private ns1.BunifuElipse bunifuElipse2;
     }
 }
 
