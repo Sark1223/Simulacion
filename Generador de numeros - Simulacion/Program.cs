@@ -18,6 +18,7 @@ namespace Generador_de_numeros___Simulacion
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmGenerador());
             Application.Run(new Inicio());
+            //Application.Run(new frmPruebas());
         }
     }
 }

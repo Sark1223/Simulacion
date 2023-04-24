@@ -63,9 +63,29 @@ namespace Generador_de_numeros___Simulacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap desviacion {
+            get {
+                object obj = ResourceManager.GetObject("desviacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dinosaurio {
             get {
                 object obj = ResourceManager.GetObject("dinosaurio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frecuencia {
+            get {
+                object obj = ResourceManager.GetObject("frecuencia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +106,16 @@ namespace Generador_de_numeros___Simulacion.Properties {
         internal static System.Drawing.Bitmap icons8_distributed_counter_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-distributed-counter-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap promedio {
+            get {
+                object obj = ResourceManager.GetObject("promedio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
