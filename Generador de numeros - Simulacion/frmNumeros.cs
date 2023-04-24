@@ -92,7 +92,8 @@ namespace Generador_de_numeros___Simulacion
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            Close();
+            //tblPseudo.
+            this.Close();
         }
     }
 }

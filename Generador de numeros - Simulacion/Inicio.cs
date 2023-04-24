@@ -75,7 +75,8 @@ namespace Generador_de_numeros___Simulacion
         public void GenerarNumeros()
         {
             //numeros.tablaResultados.Clear();
-            //numeros.tblPseudo.Dispose();
+            numeros.tblPseudo.Rows.Clear();
+            //numeros.tblPseudo.ClearSelection();
             lista.Clear();
             //valor semilla de la que se basaran nuestros numeros
             float x0 = g.X0;
