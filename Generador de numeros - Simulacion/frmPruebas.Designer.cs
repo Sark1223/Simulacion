@@ -606,7 +606,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 295);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(2, 283);
+            this.panel7.Size = new System.Drawing.Size(2, 288);
             this.panel7.TabIndex = 26;
             // 
             // panel8
@@ -615,14 +615,14 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(654, 295);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(4, 283);
+            this.panel8.Size = new System.Drawing.Size(4, 288);
             this.panel8.TabIndex = 27;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(2, 575);
+            this.panel11.Location = new System.Drawing.Point(2, 580);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(652, 3);
             this.panel11.TabIndex = 28;
@@ -1114,7 +1114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 578);
+            this.ClientSize = new System.Drawing.Size(658, 583);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.lblResFrecuencia);
             this.Controls.Add(this.label43);
@@ -1154,6 +1154,7 @@
             this.Controls.Add(this.label32);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPruebas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPruebas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

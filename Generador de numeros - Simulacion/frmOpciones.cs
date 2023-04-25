@@ -18,24 +18,6 @@ namespace Generador_de_numeros___Simulacion
             InitializeComponent();
         }
 
-        frmNumeros frmNumeros = new frmNumeros();
-        frmPruebas frmPruebas = new frmPruebas();
-
-        public void RecibirNumeros(frmNumeros numeros)
-        {
-            frmNumeros = numeros;
-        }
-
-        public void RecibirValoresPrueba(frmPruebas prueba)
-        {
-            frmPruebas = prueba;
-        }
-
-        private void VerNumeros_Click(object sender, EventArgs e)
-        {
-           frmNumeros.ShowDialog();
-        }
-
         ///Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -50,19 +32,55 @@ namespace Generador_de_numeros___Simulacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        //Objetos de clases
+        frmNumeros frmNumeros = new frmNumeros();
+        frmPruebas frmPruebas = new frmPruebas();
+        frmProblema frmProblema = new frmProblema();
+
+        public void RecibirNumeros(frmNumeros numeros)
         {
-            Close();
+            frmNumeros = numeros;
         }
+
+        public void RecibirValoresPrueba(frmPruebas prueba)
+        {
+            frmPruebas = prueba;
+        }
+
+        private void VerNumeros_Click(object sender, EventArgs e)
+        {
+           this.Hide();
+           frmNumeros.ShowDialog();
+           this.Show();
+        }
+
+        private void cmdVerPruebas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPruebas.ShowDialog();
+            this.Show();
+        }
+
+        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void cmdVerPruebas_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            frmPruebas.ShowDialog();
+            Close();
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cmdContinuar_Click(object sender, EventArgs e)
+        {
+            frmProblema.ShowDialog();
         }
     }
 }

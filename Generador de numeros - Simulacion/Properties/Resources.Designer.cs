@@ -83,6 +83,16 @@ namespace Generador_de_numeros___Simulacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap estanque {
+            get {
+                object obj = ResourceManager.GetObject("estanque", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap frecuencia {
             get {
                 object obj = ResourceManager.GetObject("frecuencia", resourceCulture);
@@ -106,6 +116,26 @@ namespace Generador_de_numeros___Simulacion.Properties {
         internal static System.Drawing.Bitmap icons8_distributed_counter_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-distributed-counter-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap la_contaminacion_del_agua__1_ {
+            get {
+                object obj = ResourceManager.GetObject("la-contaminacion-del-agua (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap la_contaminacion_del_agua__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("la-contaminacion-del-agua (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

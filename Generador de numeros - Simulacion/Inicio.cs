@@ -58,7 +58,10 @@ namespace Generador_de_numeros___Simulacion
             opciones.RecibirValoresPrueba(pruebas);
             Realizar_PruebaFrecuencia();
             opciones.txtPruevasSuperadas.Text = "No. de pruebas superadas: " + no_pruebas;
+
+            this.Hide();
             opciones.ShowDialog();
+            this.Show();
 
             no_pruebas = 0;
         }
@@ -132,11 +135,6 @@ namespace Generador_de_numeros___Simulacion
                     numeros.tblPseudo.Rows[n].Cells[1].Value = lista[n].Ri;
                 }
             }
-
-            //numeros.tablaResultados.ScrollBars = ScrollBars.Both;
-
-            //numeros.ShowDialog();
-            //opciones.ShowDialog();
         }
 
         public void Realizar_PruebaPromedios()
@@ -178,12 +176,15 @@ namespace Generador_de_numeros___Simulacion
                 pruebas.lblSigPromedios.Text = $"Significancia\r\nZa = {Za}";
                 opciones.txtMesajeDatos.Text = "Los numeros que se generaron se encuentran distribuidos uniformemente.";
                 no_pruebas++;
+                pruebas.lblResProme.Text = "La prueba a sido acreditada";
             }
             else
             {
                 opciones.txtMesajeDatos.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
-
+                pruebas.lblResProme.Text = "Los números pseudo-aleaorios han fracasado la prueba";
             }
+
+            pruebas.lblResProme.Location = new Point((pruebas.Width / 2) - pruebas.lblResProme.Width / 2, 164);
         }
 
         public void Realizar_PruebaFrecuencia()
@@ -241,12 +242,15 @@ namespace Generador_de_numeros___Simulacion
                 pruebas.lblSigFrecuencia.Text = $"Significancia\r\nZa = {Z2}";
                 opciones.txtMesajeDatos.Text = "Los numeros que se generaron se encuentran distribuidos uniformemente.";
                 no_pruebas++;
+                pruebas.lblResFrecuencia.Text = "La prueba a sido acreditada";
             }
             else
             {
                 opciones.txtMesajeDatos.Text = "Los numeros que se generaron pueden generar resultados ambiguos.";
-
+                pruebas.lblResFrecuencia.Text = "Los números pseudo-aleaorios han fracasado la prueba";
             }
+
+            pruebas.lblResFrecuencia.Location = new Point((pruebas.Width / 2) - pruebas.lblResFrecuencia.Width/2 , 545);
         }
 
         private void Cerrar_Click(object sender, EventArgs e)
