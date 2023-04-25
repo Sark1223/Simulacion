@@ -143,6 +143,26 @@ namespace Generador_de_numeros___Simulacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap marca_de_verificacion__1_ {
+            get {
+                object obj = ResourceManager.GetObject("marca-de-verificacion (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marca_de_verificacion__2_ {
+            get {
+                object obj = ResourceManager.GetObject("marca-de-verificacion (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap promedio {
             get {
                 object obj = ResourceManager.GetObject("promedio", resourceCulture);

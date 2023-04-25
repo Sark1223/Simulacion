@@ -54,10 +54,6 @@
             this.txtAOxidos = new System.Windows.Forms.TextBox();
             this.txtAfosfato = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.cmdVerIntervalor = new ns1.BunifuThinButton2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new ns1.BunifuImageButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,7 +62,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cmdIngresarAgua = new ns1.BunifuImageButton();
+            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new ns1.BunifuImageButton();
             this.panTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -111,6 +115,7 @@
             // rdTitulo
             // 
             this.rdTitulo.ElipseRadius = 27;
+            this.rdTitulo.TargetControl = this;
             // 
             // label2
             // 
@@ -337,65 +342,6 @@
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.estanque;
-            this.pictureBox2.Location = new System.Drawing.Point(561, 57);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(186, 117);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 55;
-            this.pictureBox2.TabStop = false;
-            // 
-            // cmdVerIntervalor
-            // 
-            this.cmdVerIntervalor.ActiveBorderThickness = 1;
-            this.cmdVerIntervalor.ActiveCornerRadius = 20;
-            this.cmdVerIntervalor.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            this.cmdVerIntervalor.ActiveForecolor = System.Drawing.Color.White;
-            this.cmdVerIntervalor.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            this.cmdVerIntervalor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cmdVerIntervalor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdVerIntervalor.BackgroundImage")));
-            this.cmdVerIntervalor.ButtonText = "Mostrar intervalos";
-            this.cmdVerIntervalor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdVerIntervalor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdVerIntervalor.ForeColor = System.Drawing.Color.SeaGreen;
-            this.cmdVerIntervalor.IdleBorderThickness = 1;
-            this.cmdVerIntervalor.IdleCornerRadius = 20;
-            this.cmdVerIntervalor.IdleFillColor = System.Drawing.Color.White;
-            this.cmdVerIntervalor.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
-            this.cmdVerIntervalor.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
-            this.cmdVerIntervalor.Location = new System.Drawing.Point(41, 482);
-            this.cmdVerIntervalor.Margin = new System.Windows.Forms.Padding(5);
-            this.cmdVerIntervalor.Name = "cmdVerIntervalor";
-            this.cmdVerIntervalor.Size = new System.Drawing.Size(262, 37);
-            this.cmdVerIntervalor.TabIndex = 41;
-            this.cmdVerIntervalor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.la_contaminacion_del_agua__1_1;
-            this.pictureBox1.Location = new System.Drawing.Point(117, 405);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 40;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(856, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
@@ -479,12 +425,101 @@
             this.panel5.Size = new System.Drawing.Size(1, 470);
             this.panel5.TabIndex = 63;
             // 
+            // cmdIngresarAgua
+            // 
+            this.cmdIngresarAgua.BackColor = System.Drawing.Color.Transparent;
+            this.cmdIngresarAgua.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__2_;
+            this.cmdIngresarAgua.ImageActive = null;
+            this.cmdIngresarAgua.Location = new System.Drawing.Point(322, 320);
+            this.cmdIngresarAgua.Name = "cmdIngresarAgua";
+            this.cmdIngresarAgua.Size = new System.Drawing.Size(39, 34);
+            this.cmdIngresarAgua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdIngresarAgua.TabIndex = 65;
+            this.cmdIngresarAgua.TabStop = false;
+            this.cmdIngresarAgua.Zoom = 10;
+            this.cmdIngresarAgua.Click += new System.EventHandler(this.cmdIngresarAgua_Click);
+            // 
+            // cmdIngresarAnimales
+            // 
+            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
+            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
+            this.cmdIngresarAnimales.ImageActive = null;
+            this.cmdIngresarAnimales.Location = new System.Drawing.Point(322, 143);
+            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
+            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
+            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdIngresarAnimales.TabIndex = 64;
+            this.cmdIngresarAnimales.TabStop = false;
+            this.cmdIngresarAnimales.Zoom = 10;
+            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.estanque;
+            this.pictureBox2.Location = new System.Drawing.Point(561, 57);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(186, 117);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 55;
+            this.pictureBox2.TabStop = false;
+            // 
+            // cmdMostrarIntervalos
+            // 
+            this.cmdMostrarIntervalos.ActiveBorderThickness = 1;
+            this.cmdMostrarIntervalos.ActiveCornerRadius = 20;
+            this.cmdMostrarIntervalos.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            this.cmdMostrarIntervalos.ActiveForecolor = System.Drawing.Color.White;
+            this.cmdMostrarIntervalos.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            this.cmdMostrarIntervalos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cmdMostrarIntervalos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdMostrarIntervalos.BackgroundImage")));
+            this.cmdMostrarIntervalos.ButtonText = "Mostrar intervalos";
+            this.cmdMostrarIntervalos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdMostrarIntervalos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdMostrarIntervalos.ForeColor = System.Drawing.Color.SeaGreen;
+            this.cmdMostrarIntervalos.IdleBorderThickness = 1;
+            this.cmdMostrarIntervalos.IdleCornerRadius = 20;
+            this.cmdMostrarIntervalos.IdleFillColor = System.Drawing.Color.White;
+            this.cmdMostrarIntervalos.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
+            this.cmdMostrarIntervalos.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
+            this.cmdMostrarIntervalos.Location = new System.Drawing.Point(41, 482);
+            this.cmdMostrarIntervalos.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdMostrarIntervalos.Name = "cmdMostrarIntervalos";
+            this.cmdMostrarIntervalos.Size = new System.Drawing.Size(262, 37);
+            this.cmdMostrarIntervalos.TabIndex = 41;
+            this.cmdMostrarIntervalos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.la_contaminacion_del_agua__1_1;
+            this.pictureBox1.Location = new System.Drawing.Point(117, 405);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(856, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // frmProblema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(890, 533);
+            this.Controls.Add(this.cmdIngresarAgua);
+            this.Controls.Add(this.cmdIngresarAnimales);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -506,7 +541,7 @@
             this.Controls.Add(this.txtNormal);
             this.Controls.Add(this.txtGlucosa);
             this.Controls.Add(this.txtAcidez);
-            this.Controls.Add(this.cmdVerIntervalor);
+            this.Controls.Add(this.cmdMostrarIntervalos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.label6);
@@ -523,6 +558,8 @@
             this.Text = "frmProblema";
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -545,7 +582,7 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public ns1.BunifuThinButton2 cmdVerIntervalor;
+        public ns1.BunifuThinButton2 cmdMostrarIntervalos;
         public System.Windows.Forms.TextBox txtAOxidos;
         public System.Windows.Forms.TextBox txtAfosfato;
         public System.Windows.Forms.TextBox txtAAcido;
@@ -568,5 +605,7 @@
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
+        private ns1.BunifuImageButton cmdIngresarAnimales;
+        private ns1.BunifuImageButton cmdIngresarAgua;
     }
 }
