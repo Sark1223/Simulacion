@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new ns1.BunifuCustomLabel();
             this.panTop = new System.Windows.Forms.Panel();
+            this.btnCerrar = new ns1.BunifuImageButton();
             this.rdTitulo = new ns1.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,13 +68,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new ns1.BunifuImageButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSuma1 = new System.Windows.Forms.TextBox();
             this.panTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // rdForma
@@ -112,6 +114,20 @@
             this.panTop.Size = new System.Drawing.Size(890, 32);
             this.panTop.TabIndex = 22;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(856, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // rdTitulo
             // 
             this.rdTitulo.ElipseRadius = 27;
@@ -133,11 +149,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Location = new System.Drawing.Point(12, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 21);
+            this.label1.Size = new System.Drawing.Size(322, 20);
             this.label1.TabIndex = 33;
             this.label1.Text = "Resultados de análisis similares en animales";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,11 +174,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(12, 228);
+            this.label6.Location = new System.Drawing.Point(12, 231);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(349, 21);
+            this.label6.Size = new System.Drawing.Size(305, 20);
             this.label6.TabIndex = 37;
             this.label6.Text = "Concentración de contaminantes en agua";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -498,19 +514,29 @@
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
-            // btnCerrar
+            // textBox1
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(856, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.textBox1.Location = new System.Drawing.Point(41, 212);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(56, 22);
+            this.textBox1.TabIndex = 66;
+            this.textBox1.Text = "Total: ";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSuma1
+            // 
+            this.txtSuma1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtSuma1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSuma1.Enabled = false;
+            this.txtSuma1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtSuma1.Location = new System.Drawing.Point(261, 211);
+            this.txtSuma1.Name = "txtSuma1";
+            this.txtSuma1.Size = new System.Drawing.Size(56, 22);
+            this.txtSuma1.TabIndex = 67;
+            this.txtSuma1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmProblema
             // 
@@ -518,6 +544,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(890, 533);
+            this.Controls.Add(this.txtSuma1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.cmdIngresarAgua);
             this.Controls.Add(this.cmdIngresarAnimales);
             this.Controls.Add(this.label10);
@@ -556,13 +584,14 @@
             this.Name = "frmProblema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProblema";
+            this.Load += new System.EventHandler(this.frmProblema_Load);
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,5 +636,7 @@
         private System.Windows.Forms.Panel panel5;
         private ns1.BunifuImageButton cmdIngresarAnimales;
         private ns1.BunifuImageButton cmdIngresarAgua;
+        public System.Windows.Forms.TextBox txtSuma1;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

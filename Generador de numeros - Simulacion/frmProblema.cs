@@ -18,8 +18,23 @@ namespace Generador_de_numeros___Simulacion
         }
 
         //variables de animales
-        float Ani_acidez, Ani_anemia, Ani_normal, Ani_glucosa, Ani_Alcalinindad; 
-        
+        float Ani_acidez, Ani_anemia, Ani_normal, Ani_glucosa, Ani_Alcalinindad;
+
+        private void frmProblema_Load(object sender, EventArgs e)
+        {
+            float suma = 0F;
+
+            Ani_acidez = float.Parse(txtAcidez.Text);
+            Ani_anemia = float.Parse(txtAnemia.Text);
+            Ani_normal = float.Parse(txtNormal.Text);
+            Ani_glucosa = float.Parse(txtGlucosa.Text);
+            Ani_Alcalinindad = float.Parse(txtalcalinidad.Text);
+
+            suma = Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad;
+            txtSuma1.Text = "" + suma;
+
+        }
+
         //variables de agua
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -55,8 +70,7 @@ namespace Generador_de_numeros___Simulacion
                 {
                     MessageBox.Show("La suma de la distribucion es menor a 1, Favor de verificar los datos", "Error al ingresar datos");
                 }
-            }
-            
+            }            
         }
 
         private void cmdIngresarAgua_Click(object sender, EventArgs e)
@@ -68,7 +82,6 @@ Exceso de glucosa
 Alto grado de alcalinidad*/
 
             float suma = 0F;
-
 
             //Recuperacion de datos ingresados por el usuario
             Ani_acidez = float.Parse(txtAcidez.Text);
@@ -94,8 +107,6 @@ Alto grado de alcalinidad*/
                     MessageBox.Show("La suma de la distribucion es menor a 1, Favor de verificar los datos", "Error al ingresar datos");
                 }
             }
-
-
         }
     }
 }
