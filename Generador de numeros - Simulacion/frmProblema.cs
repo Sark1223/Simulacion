@@ -19,6 +19,18 @@ namespace Generador_de_numeros___Simulacion
             InitializeComponent();
         }
 
+        public class Intervals
+        {
+            public string nombre;
+            public float distribucion;
+            public float limInf;
+            public float limSup;
+        }
+
+        List<Intervals> animales = new List<Intervals>();
+        List<Intervals> agua = new List<Intervals>();
+        Intervals ag;
+        Intervals an;
         frmIntervalos frmIntervalos = new frmIntervalos();
 
         //variables de animales
@@ -28,10 +40,67 @@ namespace Generador_de_numeros___Simulacion
         float Agua_coloidales, Agua_mercurio, Agua_residuos, 
             Agua_sulfato, Agua_acido, Agua_fosfato, Agua_oxidos;
 
+        //Asigna valores en la lista
+        public void AsignarVal()
+        {
+            an = new Intervals();
+            an.nombre = "Acidez";
+            an.distribucion = Ani_acidez;
+            an.limInf = 0;
+            an.limSup = an.limInf + an.distribucion;
+            animales.Add(an);
+
+            an = new Intervals();
+            an.nombre = "Anemia";
+            an.distribucion = Ani_anemia;
+            an.limInf = an.limSup;
+            an.limSup = an.limInf + an.distribucion;
+
+            an = new Intervals();
+            an.nombre = "Normal";
+            an.distribucion = float.Parse(txtNormal.Text);
+            an.limInf = an.limSup;
+            an.limSup = an.limInf + an.distribucion;
+
+            an = new Intervals();
+            an.nombre = "Glucosa";
+            an.distribucion = float.Parse(txtGlucosa.Text);
+            an.limInf = an.limSup;
+            an.limSup = an.limInf + an.distribucion;
+
+            an = new Intervals();
+            an.nombre = "Alcalinidad";
+            an.distribucion = float.Parse(txtalcalinidad.Text);
+            an.limInf = an.limSup;
+            an.limSup = an.limInf + an.distribucion;
+
+            ag.nombre = "Coloidales";
+            agua[0].distribucion = float.Parse(txtAcoloidales.Text);
+            agua[1].nombre = "Mercurio";
+            agua[1].distribucion = float.Parse(txtAmercurio.Text);
+            agua[2].nombre = "Residuos";
+            agua[3].distribucion = float.Parse(txtAresiduos.Text);
+            agua[4].nombre = "Sulfato";
+            agua[4].distribucion = float.Parse(txtASulfato.Text);
+            agua[5].nombre = "Acido";
+            agua[5].distribucion = float.Parse(txtAAcido.Text);
+            agua[6].nombre = "Fosfato";
+            agua[6].distribucion = float.Parse(txtAfosfato.Text);
+            agua[7].nombre = "Oxido";
+            agua[7].distribucion = float.Parse(txtAOxidos.Text);
+        }
+
         private void btnIntervalos_Click(object sender, EventArgs e)
         {
-
-
+            AsignarVal();
+            int n = 0;
+          for(int i = 0; i <= 4; i++)
+            {
+                //n = frmIntervalos.tblAnimales.Rows.Add();
+                //frmIntervalos.tblAnimales.Rows[n].Cells[1].Value = Ani_Coloidales;
+                //frmIntervalos.tblAnimales.Rows[n].Cells[2].Value = ;
+                //frmIntervalos.tblAnimales.Rows[n].Cells[3].Value = ;
+            }
             MostrarIntervalos(sender, e);
         }
 
