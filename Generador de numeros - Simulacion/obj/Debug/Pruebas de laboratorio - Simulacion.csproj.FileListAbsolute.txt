@@ -31,3 +31,4 @@ C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simu
 C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmProblema.resources
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmProblema.resources
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmPruebas.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmIntervalos.resources

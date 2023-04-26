@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmIntervalos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntervalos.Designer.cs">
+      <DependentUpon>frmIntervalos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNumeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Semilla.cs" />
+    <EmbeddedResource Include="frmIntervalos.resx">
+      <DependentUpon>frmIntervalos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNumeros.resx">
       <DependentUpon>frmNumeros.cs</DependentUpon>
     </EmbeddedResource>
