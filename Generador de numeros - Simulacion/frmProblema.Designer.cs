@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new ns1.BunifuCustomLabel();
             this.panTop = new System.Windows.Forms.Panel();
+            this.btnCerrar = new ns1.BunifuImageButton();
             this.rdTitulo = new ns1.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,13 +84,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new ns1.BunifuImageButton();
             this.panTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // rdForma
@@ -128,6 +128,21 @@
             this.panTop.Size = new System.Drawing.Size(890, 32);
             this.panTop.TabIndex = 22;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(856, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // rdTitulo
             // 
             this.rdTitulo.ElipseRadius = 27;
@@ -138,6 +153,7 @@
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label2.Location = new System.Drawing.Point(40, 258);
             this.label2.Name = "label2";
@@ -152,6 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Location = new System.Drawing.Point(12, 80);
             this.label1.Name = "label1";
@@ -165,6 +182,7 @@
             this.label5.AutoSize = true;
             this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label5.Location = new System.Drawing.Point(40, 107);
             this.label5.Name = "label5";
@@ -179,6 +197,7 @@
             this.label6.AutoSize = true;
             this.label6.Enabled = false;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label6.Location = new System.Drawing.Point(12, 231);
             this.label6.Name = "label6";
@@ -211,6 +230,7 @@
             this.txtAcidez.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAcidez.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcidez.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtAcidez.ForeColor = System.Drawing.Color.Black;
             this.txtAcidez.Location = new System.Drawing.Point(269, 107);
             this.txtAcidez.Name = "txtAcidez";
             this.txtAcidez.Size = new System.Drawing.Size(56, 22);
@@ -224,6 +244,7 @@
             this.txtAAcido.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAAcido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAAcido.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtAAcido.ForeColor = System.Drawing.Color.Black;
             this.txtAAcido.Location = new System.Drawing.Point(278, 341);
             this.txtAAcido.Name = "txtAAcido";
             this.txtAAcido.Size = new System.Drawing.Size(56, 22);
@@ -236,6 +257,7 @@
             this.txtAmercurio.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAmercurio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAmercurio.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtAmercurio.ForeColor = System.Drawing.Color.Black;
             this.txtAmercurio.Location = new System.Drawing.Point(278, 279);
             this.txtAmercurio.Name = "txtAmercurio";
             this.txtAmercurio.Size = new System.Drawing.Size(56, 22);
@@ -248,6 +270,7 @@
             this.txtAresiduos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAresiduos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAresiduos.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtAresiduos.ForeColor = System.Drawing.Color.Black;
             this.txtAresiduos.Location = new System.Drawing.Point(278, 300);
             this.txtAresiduos.Name = "txtAresiduos";
             this.txtAresiduos.Size = new System.Drawing.Size(56, 22);
@@ -260,6 +283,7 @@
             this.txtASulfato.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtASulfato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtASulfato.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtASulfato.ForeColor = System.Drawing.Color.Black;
             this.txtASulfato.Location = new System.Drawing.Point(278, 320);
             this.txtASulfato.Name = "txtASulfato";
             this.txtASulfato.Size = new System.Drawing.Size(56, 22);
@@ -272,6 +296,7 @@
             this.txtAcoloidales.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAcoloidales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcoloidales.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtAcoloidales.ForeColor = System.Drawing.Color.Black;
             this.txtAcoloidales.Location = new System.Drawing.Point(278, 258);
             this.txtAcoloidales.Name = "txtAcoloidales";
             this.txtAcoloidales.Size = new System.Drawing.Size(56, 22);
@@ -284,6 +309,7 @@
             this.txtAOxidos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAOxidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAOxidos.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtAOxidos.ForeColor = System.Drawing.Color.Black;
             this.txtAOxidos.Location = new System.Drawing.Point(278, 382);
             this.txtAOxidos.Name = "txtAOxidos";
             this.txtAOxidos.Size = new System.Drawing.Size(56, 22);
@@ -296,6 +322,7 @@
             this.txtAfosfato.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAfosfato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAfosfato.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtAfosfato.ForeColor = System.Drawing.Color.Black;
             this.txtAfosfato.Location = new System.Drawing.Point(278, 361);
             this.txtAfosfato.Name = "txtAfosfato";
             this.txtAfosfato.Size = new System.Drawing.Size(56, 22);
@@ -404,6 +431,7 @@
             this.txtTotal1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal1.Enabled = false;
             this.txtTotal1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal1.ForeColor = System.Drawing.Color.Black;
             this.txtTotal1.Location = new System.Drawing.Point(41, 212);
             this.txtTotal1.Name = "txtTotal1";
             this.txtTotal1.Size = new System.Drawing.Size(56, 22);
@@ -418,6 +446,7 @@
             this.txtSuma1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuma1.Enabled = false;
             this.txtSuma1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtSuma1.ForeColor = System.Drawing.Color.Black;
             this.txtSuma1.Location = new System.Drawing.Point(261, 211);
             this.txtSuma1.Name = "txtSuma1";
             this.txtSuma1.Size = new System.Drawing.Size(56, 22);
@@ -430,6 +459,7 @@
             this.fijo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo1.Enabled = false;
             this.fijo1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fijo1.ForeColor = System.Drawing.Color.Black;
             this.fijo1.Location = new System.Drawing.Point(266, 107);
             this.fijo1.Name = "fijo1";
             this.fijo1.Size = new System.Drawing.Size(20, 22);
@@ -443,6 +473,7 @@
             this.fijo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo2.Enabled = false;
             this.fijo2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.fijo2.ForeColor = System.Drawing.Color.Black;
             this.fijo2.Location = new System.Drawing.Point(267, 127);
             this.fijo2.Name = "fijo2";
             this.fijo2.Size = new System.Drawing.Size(20, 22);
@@ -455,6 +486,7 @@
             this.txtAnemia.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAnemia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAnemia.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtAnemia.ForeColor = System.Drawing.Color.Black;
             this.txtAnemia.Location = new System.Drawing.Point(270, 127);
             this.txtAnemia.Name = "txtAnemia";
             this.txtAnemia.Size = new System.Drawing.Size(56, 22);
@@ -468,6 +500,7 @@
             this.fijo4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo4.Enabled = false;
             this.fijo4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.fijo4.ForeColor = System.Drawing.Color.Black;
             this.fijo4.Location = new System.Drawing.Point(267, 170);
             this.fijo4.Name = "fijo4";
             this.fijo4.Size = new System.Drawing.Size(20, 22);
@@ -480,6 +513,7 @@
             this.txtGlucosa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtGlucosa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGlucosa.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtGlucosa.ForeColor = System.Drawing.Color.Black;
             this.txtGlucosa.Location = new System.Drawing.Point(268, 170);
             this.txtGlucosa.Name = "txtGlucosa";
             this.txtGlucosa.Size = new System.Drawing.Size(56, 22);
@@ -493,6 +527,7 @@
             this.fijo3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo3.Enabled = false;
             this.fijo3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.fijo3.ForeColor = System.Drawing.Color.Black;
             this.fijo3.Location = new System.Drawing.Point(267, 149);
             this.fijo3.Name = "fijo3";
             this.fijo3.Size = new System.Drawing.Size(20, 22);
@@ -505,6 +540,7 @@
             this.txtNormal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtNormal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNormal.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtNormal.ForeColor = System.Drawing.Color.Black;
             this.txtNormal.Location = new System.Drawing.Point(270, 149);
             this.txtNormal.Name = "txtNormal";
             this.txtNormal.Size = new System.Drawing.Size(56, 22);
@@ -518,6 +554,7 @@
             this.fijo5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo5.Enabled = false;
             this.fijo5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.fijo5.ForeColor = System.Drawing.Color.Black;
             this.fijo5.Location = new System.Drawing.Point(267, 190);
             this.fijo5.Name = "fijo5";
             this.fijo5.Size = new System.Drawing.Size(20, 22);
@@ -530,6 +567,7 @@
             this.txtalcalinidad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtalcalinidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtalcalinidad.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtalcalinidad.ForeColor = System.Drawing.Color.Black;
             this.txtalcalinidad.Location = new System.Drawing.Point(268, 190);
             this.txtalcalinidad.Name = "txtalcalinidad";
             this.txtalcalinidad.Size = new System.Drawing.Size(56, 22);
@@ -543,6 +581,7 @@
             this.txtTotal2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal2.Enabled = false;
             this.txtTotal2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal2.ForeColor = System.Drawing.Color.Black;
             this.txtTotal2.Location = new System.Drawing.Point(41, 405);
             this.txtTotal2.Name = "txtTotal2";
             this.txtTotal2.Size = new System.Drawing.Size(56, 22);
@@ -557,6 +596,7 @@
             this.txtSuma2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuma2.Enabled = false;
             this.txtSuma2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.txtSuma2.ForeColor = System.Drawing.Color.Black;
             this.txtSuma2.Location = new System.Drawing.Point(261, 410);
             this.txtSuma2.Name = "txtSuma2";
             this.txtSuma2.Size = new System.Drawing.Size(56, 22);
@@ -569,6 +609,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(275, 341);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(20, 22);
@@ -582,6 +623,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
             this.textBox2.Location = new System.Drawing.Point(275, 321);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(20, 22);
@@ -595,6 +637,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
             this.textBox3.Location = new System.Drawing.Point(275, 300);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(20, 22);
@@ -608,6 +651,7 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.textBox4.ForeColor = System.Drawing.Color.Black;
             this.textBox4.Location = new System.Drawing.Point(275, 279);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(20, 22);
@@ -621,6 +665,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.textBox5.ForeColor = System.Drawing.Color.Black;
             this.textBox5.Location = new System.Drawing.Point(275, 258);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(20, 22);
@@ -634,6 +679,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Enabled = false;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.textBox6.ForeColor = System.Drawing.Color.Black;
             this.textBox6.Location = new System.Drawing.Point(275, 381);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(20, 22);
@@ -647,6 +693,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
             this.textBox7.Location = new System.Drawing.Point(275, 361);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(20, 22);
@@ -730,21 +777,6 @@
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(856, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // frmProblema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -808,11 +840,11 @@
             this.Load += new System.EventHandler(this.frmProblema_Load);
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,12 +13,13 @@ using System.Windows.Forms;
 namespace Generador_de_numeros___Simulacion
 {
     public partial class frmProblema : Form
-    {
-        frmIntervalos intervalos = new frmIntervalos();
+    {   
         public frmProblema()
         {
             InitializeComponent();
         }
+
+        frmIntervalos frmIntervalos = new frmIntervalos();
 
         //variables de animales
         float Ani_acidez, Ani_anemia, Ani_normal, Ani_glucosa, Ani_Alcalinindad;
@@ -28,8 +30,16 @@ namespace Generador_de_numeros___Simulacion
 
         private void btnIntervalos_Click(object sender, EventArgs e)
         {
+
+
+            MostrarIntervalos(sender, e);
+        }
+
+        //Metodo para mostrar forma de Intervalos
+        private void MostrarIntervalos(object sender, EventArgs e)
+        {
             this.Hide();
-            intervalos.ShowDialog();
+            frmIntervalos.ShowDialog();
             this.Show();
         }
 
@@ -57,13 +67,13 @@ namespace Generador_de_numeros___Simulacion
 
 
             //Recuperacion de datos ingresados por el usuario
-            Ani_acidez= float.Parse(txtAcidez.Text);
-            Ani_anemia = float.Parse(txtAnemia.Text);
-            Ani_normal = float.Parse(txtNormal.Text);
-            Ani_glucosa = float.Parse(txtGlucosa.Text);
-            Ani_Alcalinindad = float.Parse(txtalcalinidad.Text);
+            Ani_acidez= float.Parse(txtAcidez.Text) * 0.01F;
+            Ani_anemia = float.Parse(txtAnemia.Text) * 0.01F;
+            Ani_normal = float.Parse(txtNormal.Text) * 0.01F;
+            Ani_glucosa = float.Parse(txtGlucosa.Text) * 0.01F;
+            Ani_Alcalinindad = float.Parse(txtalcalinidad.Text) * 0.01F;
 
-            suma = (Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad) / 100;
+            suma = (Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad);
 
             txtSuma1.Text = "" + suma;
 
@@ -98,16 +108,16 @@ Alto grado de alcalinidad*/
             float suma = 0F;
 
             //Recuperacion de datos ingresados por el usuario
-            Agua_coloidales = float.Parse(txtAcoloidales.Text);
-            Agua_mercurio = float.Parse(txtAmercurio.Text);
-            Agua_residuos = float.Parse(txtAresiduos.Text);
-            Agua_sulfato = float.Parse(txtASulfato.Text);
-            Agua_acido = float.Parse(txtAAcido.Text);
-            Agua_fosfato = float.Parse(txtAfosfato.Text);
-            Agua_oxidos = float.Parse(txtAOxidos.Text);
+            Agua_coloidales = float.Parse(txtAcoloidales.Text) * 0.01F;
+            Agua_mercurio = float.Parse(txtAmercurio.Text) * 0.01F;
+            Agua_residuos = float.Parse(txtAresiduos.Text) * 0.01F;
+            Agua_sulfato = float.Parse(txtASulfato.Text) * 0.01F;
+            Agua_acido = float.Parse(txtAAcido.Text) * 0.01F;
+            Agua_fosfato = float.Parse(txtAfosfato.Text) * 0.01F;
+            Agua_oxidos = float.Parse(txtAOxidos.Text) * 0.01F;
 
             suma = (Agua_coloidales + Agua_mercurio + Agua_residuos + 
-                Agua_sulfato + Agua_acido + Agua_fosfato + Agua_oxidos) / 100;
+                Agua_sulfato + Agua_acido + Agua_fosfato + Agua_oxidos);
 
             txtSuma2.Text = "" + suma;
 
