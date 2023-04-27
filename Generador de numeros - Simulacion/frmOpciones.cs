@@ -42,6 +42,11 @@ namespace Generador_de_numeros___Simulacion
             frmNumeros = numeros;
         }
 
+        public void RecibirNumerosPrueba(frmProblema numerosp)
+        {
+            frmProblema = numerosp;
+        }
+
         public void RecibirValoresPrueba(frmPruebas prueba)
         {
             frmPruebas = prueba;

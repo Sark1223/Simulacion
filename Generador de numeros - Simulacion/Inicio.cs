@@ -32,7 +32,11 @@ namespace Generador_de_numeros___Simulacion
         frmNumeros numeros = new frmNumeros();
         frmOpciones opciones = new frmOpciones();
         frmPruebas pruebas = new frmPruebas();
+        frmProblema problema = new frmProblema();
         Semilla g;
+
+        //Arreglo para guardar numeros
+        public float[] Ri = new float[1180];
 
         float Z2 = 0, Za = 0;
         int no_pruebas = 0;
@@ -63,6 +67,11 @@ namespace Generador_de_numeros___Simulacion
                 opciones.RecibirValoresPrueba(pruebas);
                 Realizar_PruebaFrecuencia();
                 opciones.txtPruevasSuperadas.Text = "No. de pruebas superadas: " + no_pruebas;
+                
+                //Compartir arreglo de numeos
+                problema.ObtenerNumero(Ri);
+                //Compartir objeto con numeros 
+                opciones.RecibirNumerosPrueba(problema);
 
                 this.Hide();
                 opciones.ShowDialog();
@@ -87,6 +96,7 @@ namespace Generador_de_numeros___Simulacion
             numeros.tblPseudo.Rows.Clear();
             //numeros.tblPseudo.ClearSelection();
             lista.Clear();
+
             //valor semilla de la que se basaran nuestros numeros
             float x0 = g.X0;
             int n = 0;
@@ -115,6 +125,8 @@ namespace Generador_de_numeros___Simulacion
                     n = numeros.tblPseudo.Rows.Add();
                     numeros.tblPseudo.Rows[n].Cells[0].Value = n + 1;
                     numeros.tblPseudo.Rows[n].Cells[1].Value = lista[n].Ri;
+
+                    Ri[i] = g.Ri;
                 }
                 else
                 {
@@ -139,10 +151,13 @@ namespace Generador_de_numeros___Simulacion
                     n = numeros.tblPseudo.Rows.Add();
                     numeros.tblPseudo.Rows[n].Cells[0].Value = n + 1;
                     numeros.tblPseudo.Rows[n].Cells[1].Value = lista[n].Ri;
+
+                    Ri[i] = g.Ri;
                 }
             }
         }
 
+        //PRUEBAS ---------------------------------------------------------------------------
         public void Realizar_PruebaPromedios()
         {
             float promedio = 0;

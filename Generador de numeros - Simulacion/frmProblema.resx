@@ -121,15 +121,36 @@
     <value>17, 9</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>51</value>
+    <value>25</value>
   </metadata>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="lblResultado.Text" xml:space="preserve">
     <value> - 20 muestras diarias de agua por un lapso de 2 semanas.
  - Muestras de sangre de 5 animales diferentes al inicio del 
    monitoreo, a las 2 semanas y al mes.
 Los dos puntos anteriores se repiten por cada sector.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmdResolver.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAInSURBVHhe7d2/S1tBAMDx/n+dunRy6iII4uCSpYIgQnGo
+        QxeXUgouTg5dxMlFBzuIUAqCpZr+SFXUokaTVq98z9yjySXZk/t+4EDij+19ubv37vkkSFIPwyApYxgk
+        ZQyDpIxhkJQxDJIyQ8Pw0G6F692tcPr2VWgs18K3ly/C16mnDodjBAfXL9fxycpCuNrZDPfN686VnhsY
+        huanj/EPEQXicHuwH/6cNTrflTRquH65jm/2tsPZ+9fx+iYQ/WRhoCL80q83c+Hv7/POp5LGzbBrvSsM
+        /OCPxemBFZE0flgd/Fya7VoRdIWBehgFqTwsMdh/SKowUA2mFJLKdLH+LlxurMWvYxi4+8BGhHsKUrno
+        AFsJ7Ub9MQwsH1hGSCobMwZmDjEM3NfkFoaksrXqh3HWEMPwfX4yTh8klY3lxNHMs8cwHM8+H/oUlKRy
+        8JRkDANfSBIMg6SMYZCUMQySMlUY2IVkN1KSqjDw1KNHqiWhCgNnJDgrIalsPM/Ec00xDOkxSEllS8cj
+        YhhYRlAJ9xmksqXjETEMuPiwGoekMqX3u6IKA7MFXtRw9+Vz5xNJpeCVC6wa0tGIKgxg4yGdx5ZUBqLA
+        pIC3OCVdYQAzBuKQ3uQiaXyxn8BM4f8oIAsDWFZwl4KKsEvpm52k8cFyIe0nsNnY72R13zAkVIRbF/Xa
+        RHzoweFwjP7gNQvp/8UMMjQMkspkGCRlDIOkjGGQlDEMknqE8A/F3ejSI78YdAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value> - 20 muestras diarias de agua por un lapso de 2 semanas.
+ - Muestras de sangre de 5 animales diferentes al inicio del 
+   monitoreo, a las 2 semanas y al mes.
+Los dos puntos anteriores se repiten por cada sector.</value>
+  </data>
   <data name="cmdMostrarIntervalos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

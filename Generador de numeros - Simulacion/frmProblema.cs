@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace Generador_de_numeros___Simulacion
 {
     public partial class frmProblema : Form
-    {   
+    {
         public frmProblema()
         {
             InitializeComponent();
@@ -34,6 +34,14 @@ namespace Generador_de_numeros___Simulacion
         Intervals an;
         frmIntervalos frmIntervalos = new frmIntervalos();
 
+        public float[] Ri = new float[1180];
+
+        //Recibir numeo de la pantalla de inicio
+        public void ObtenerNumero(float[] numeros)
+        {
+            Ri = numeros;
+        }
+
         //variables de animales
         float Ani_acidez, Ani_anemia, Ani_normal, Ani_glucosa, Ani_Alcalinindad;
 
@@ -46,6 +54,16 @@ namespace Generador_de_numeros___Simulacion
             //MessageBox.Show("Ingresar solo números", "ALERTA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //e.Handled = true;
             //return;
+        }
+
+        private void cmdResolver_Click(object sender, EventArgs e)
+        {
+            lblResultado.Text = "Ultimo numer del arreglo: " + Ri[1179];
+
+            for(int i = 0; i< Ri.Length; i++)
+            {
+
+            }
         }
 
         //Asigna valores en la lista
@@ -217,17 +235,16 @@ namespace Generador_de_numeros___Simulacion
 
         private void cmdIngresarAnimales_Click(object sender, EventArgs e)
         {
-            float suma = 0F;
 
 
             //Recuperacion de datos ingresados por el usuario
-            Ani_acidez= float.Parse(txtAcidez.Text) * 0.01F;
+            Ani_acidez = float.Parse(txtAcidez.Text) * 0.01F;
             Ani_anemia = float.Parse(txtAnemia.Text) * 0.01F;
             Ani_normal = float.Parse(txtNormal.Text) * 0.01F;
             Ani_glucosa = float.Parse(txtGlucosa.Text) * 0.01F;
             Ani_Alcalinindad = float.Parse(txtalcalinidad.Text) * 0.01F;
 
-            suma = (Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad);
+            float suma = Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad;
 
             txtSuma1.Text = "" + suma;
 

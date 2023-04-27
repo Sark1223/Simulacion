@@ -160,5 +160,20 @@
   <ItemGroup>
     <None Include="Resources\marca-de-verificacion %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polluelo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polluelo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajolote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tortuga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vaca.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
