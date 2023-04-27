@@ -35,16 +35,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCerrar = new ns1.BunifuImageButton();
             this.tblAnimales = new ns1.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblAgua = new ns1.BunifuCustomDataGrid();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAgua)).BeginInit();
@@ -68,11 +68,12 @@
             // 
             // tblAnimales
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.tblAnimales.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tblAnimales.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.tblAnimales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tblAnimales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tblAnimales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.tblAnimales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumOrchid;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,36 +96,18 @@
             this.tblAnimales.Name = "tblAnimales";
             this.tblAnimales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.tblAnimales.RowHeadersVisible = false;
-            this.tblAnimales.Size = new System.Drawing.Size(407, 207);
+            this.tblAnimales.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.tblAnimales.Size = new System.Drawing.Size(400, 166);
             this.tblAnimales.TabIndex = 12;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Analisis";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Probabilidad";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Limite Inferior";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Limite Superior";
-            this.Column4.Name = "Column4";
             // 
             // tblAgua
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             this.tblAgua.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tblAgua.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.tblAgua.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tblAgua.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tblAgua.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.tblAgua.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSeaGreen;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,7 +130,8 @@
             this.tblAgua.Name = "tblAgua";
             this.tblAgua.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.tblAgua.RowHeadersVisible = false;
-            this.tblAgua.Size = new System.Drawing.Size(407, 207);
+            this.tblAgua.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.tblAgua.Size = new System.Drawing.Size(400, 207);
             this.tblAgua.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn1
@@ -180,6 +164,26 @@
             this.panel1.Size = new System.Drawing.Size(488, 40);
             this.panel1.TabIndex = 14;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Probabilidad";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Limite Inferior";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Limite Superior";
+            this.Column4.Name = "Column4";
+            // 
             // frmIntervalos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,10 +209,6 @@
         #endregion
 
         public ns1.BunifuImageButton btnCerrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -216,5 +216,9 @@
         private System.Windows.Forms.Panel panel1;
         public ns1.BunifuCustomDataGrid tblAgua;
         public ns1.BunifuCustomDataGrid tblAnimales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

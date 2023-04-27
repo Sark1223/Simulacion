@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,8 +41,15 @@ namespace Generador_de_numeros___Simulacion
         float Agua_coloidales, Agua_mercurio, Agua_residuos, 
             Agua_sulfato, Agua_acido, Agua_fosfato, Agua_oxidos;
 
+        private void ValidarAcidez_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //MessageBox.Show("Ingresar solo números", "ALERTA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //e.Handled = true;
+            //return;
+        }
+
         //Asigna valores en la lista
-        public void AsignarVal()
+        public void AsignarValAnimales()
         {
             an = new Intervals();
             an.nombre = "Acidez";
@@ -53,55 +61,131 @@ namespace Generador_de_numeros___Simulacion
             an = new Intervals();
             an.nombre = "Anemia";
             an.distribucion = Ani_anemia;
-            an.limInf = an.limSup;
+            an.limInf = animales[0].limSup;
             an.limSup = an.limInf + an.distribucion;
+            animales.Add(an);
 
             an = new Intervals();
             an.nombre = "Normal";
-            an.distribucion = float.Parse(txtNormal.Text);
-            an.limInf = an.limSup;
+            an.distribucion = Ani_normal;
+            an.limInf = animales[1].limSup;
             an.limSup = an.limInf + an.distribucion;
+            animales.Add(an);
 
             an = new Intervals();
             an.nombre = "Glucosa";
-            an.distribucion = float.Parse(txtGlucosa.Text);
-            an.limInf = an.limSup;
+            an.distribucion = Ani_glucosa;
+            an.limInf = animales[2].limSup;
             an.limSup = an.limInf + an.distribucion;
+            animales.Add(an);
 
             an = new Intervals();
             an.nombre = "Alcalinidad";
-            an.distribucion = float.Parse(txtalcalinidad.Text);
-            an.limInf = an.limSup;
+            an.distribucion = Ani_Alcalinindad;
+            an.limInf = animales[3].limSup;
             an.limSup = an.limInf + an.distribucion;
+            animales.Add(an);
+        }
 
+        public void AsignarValAgua()
+        {
+            ag = new Intervals();
             ag.nombre = "Coloidales";
-            agua[0].distribucion = float.Parse(txtAcoloidales.Text);
-            agua[1].nombre = "Mercurio";
-            agua[1].distribucion = float.Parse(txtAmercurio.Text);
-            agua[2].nombre = "Residuos";
-            agua[3].distribucion = float.Parse(txtAresiduos.Text);
-            agua[4].nombre = "Sulfato";
-            agua[4].distribucion = float.Parse(txtASulfato.Text);
-            agua[5].nombre = "Acido";
-            agua[5].distribucion = float.Parse(txtAAcido.Text);
-            agua[6].nombre = "Fosfato";
-            agua[6].distribucion = float.Parse(txtAfosfato.Text);
-            agua[7].nombre = "Oxido";
-            agua[7].distribucion = float.Parse(txtAOxidos.Text);
+            ag.distribucion = Agua_coloidales;
+            ag.limInf = 0;
+            ag.limSup = ag.limInf + ag.distribucion;
+            agua.Add(ag);
+
+            ag = new Intervals();
+            ag.nombre = "Mercurio";
+            ag.distribucion = Agua_mercurio;
+            ag.limInf = agua[0].limSup;
+            ag.limSup = ag.limInf + ag.distribucion;
+            agua.Add(ag);
+
+            ag = new Intervals();
+            ag.nombre = "Residuos";
+            ag.distribucion = Agua_residuos;
+            ag.limInf = agua[1].limSup;
+            ag.limSup = ag.limInf + ag.distribucion;
+            agua.Add(ag);
+
+            ag = new Intervals();
+            ag.nombre = "Sulfato";
+            ag.distribucion = Agua_sulfato;
+            ag.limInf = agua[2].limSup;
+            ag.limSup = ag.limInf + ag.distribucion;
+            agua.Add(ag);
+
+            ag = new Intervals();
+            ag.nombre = "Acido";
+            ag.distribucion = Agua_acido;
+            ag.limInf = agua[3].limSup;
+            ag.limSup = ag.limInf + ag.distribucion;
+            agua.Add(ag);
+
+            ag = new Intervals();
+            ag.nombre = "Fosfato";
+            ag.distribucion = Agua_fosfato;
+            ag.limInf = agua[4].limSup;
+            ag.limSup = ag.limInf + ag.distribucion;
+            agua.Add(ag);
+
+            ag = new Intervals();
+            ag.nombre = "Oxido";
+            ag.distribucion = Agua_oxidos;
+            ag.limInf = agua[5].limSup;
+            ag.limSup = ag.limInf + ag.distribucion;
+            agua.Add(ag);
         }
 
         private void btnIntervalos_Click(object sender, EventArgs e)
         {
-            AsignarVal();
-            int n = 0;
-          for(int i = 0; i <= 4; i++)
+            if(aproba1 && aproba2)
             {
-                //n = frmIntervalos.tblAnimales.Rows.Add();
-                //frmIntervalos.tblAnimales.Rows[n].Cells[1].Value = Ani_Coloidales;
-                //frmIntervalos.tblAnimales.Rows[n].Cells[2].Value = ;
-                //frmIntervalos.tblAnimales.Rows[n].Cells[3].Value = ;
+                //Limpia las filas de las tablas de animales y de agua
+                frmIntervalos.tblAnimales.Rows.Clear();
+                frmIntervalos.tblAgua.Rows.Clear();
+
+                //Limpiar las listas de animales y agua
+                animales.Clear();
+                agua.Clear();
+
+                AsignarValAnimales();
+                AsignarValAgua();
+
+                int n = 0;
+                int m = 0;
+                for (int i = 0; i < animales.Count; i++)
+                {
+                    n = frmIntervalos.tblAnimales.Rows.Add();
+                    frmIntervalos.tblAnimales.Rows[n].Cells[0].Value = animales[i].nombre;
+                    frmIntervalos.tblAnimales.Rows[n].Cells[1].Value = animales[i].distribucion;
+                    frmIntervalos.tblAnimales.Rows[n].Cells[2].Value = animales[i].limInf;
+                    frmIntervalos.tblAnimales.Rows[n].Cells[3].Value = animales[i].limSup;
+                }
+                for (int i = 0; i < agua.Count; i++)
+                {
+                    m = frmIntervalos.tblAgua.Rows.Add();
+                    frmIntervalos.tblAgua.Rows[m].Cells[0].Value = agua[i].nombre;
+                    frmIntervalos.tblAgua.Rows[m].Cells[1].Value = agua[i].distribucion;
+                    frmIntervalos.tblAgua.Rows[m].Cells[2].Value = agua[i].limInf;
+                    frmIntervalos.tblAgua.Rows[m].Cells[3].Value = agua[i].limSup;
+                }
+                MostrarIntervalos(sender, e);
             }
-            MostrarIntervalos(sender, e);
+            else if(aproba1 == false && aproba2)
+            {
+                MessageBox.Show("La suma de la distribución de los analisis en animales es diferente de 1, Verifique los datos", "Error al ingresar datos");
+            }
+            else if(aproba1 && aproba2 == false)
+            {
+                MessageBox.Show("La suma de la distribución de los analisis de agua es diferente de 1, Verifique los datos", "Error al ingresar datos");
+            }
+            else
+            {
+                MessageBox.Show("La suma de ambas distribuciones es diferente de 1, Verifique los datos", "Error al ingresar datos");
+            }
         }
 
         //Metodo para mostrar forma de Intervalos
@@ -116,11 +200,12 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtAcidez_TextChanged(object sender, EventArgs e)
         {
-            frmProblema_Load(sender, e);
+            //frmProblema_Load(sender, e);
         }
 
         private void frmProblema_Load(object sender, EventArgs e)
         {
+            txtAcidez.Focus();
         }
 
         //variables de agua
@@ -156,11 +241,11 @@ namespace Generador_de_numeros___Simulacion
                 aproba1 = false;
                 if(suma > 1)
                 {
-                    MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Favor de verificar los datos", "Error al ingresar datos");
+                    MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Verifique los datos", "Error al ingresar datos");
                 }
                 else
                 {
-                    MessageBox.Show("La suma de la distribucion es menor a 1, Favor de verificar los datos", "Error al ingresar datos");
+                    MessageBox.Show("La suma de la distribucion es menor a 1, Verifique los datos", "Error al ingresar datos");
                 }
             }
             txtTotal1.Visible = true;

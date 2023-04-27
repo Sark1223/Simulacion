@@ -39,31 +39,37 @@ namespace Generador_de_numeros___Simulacion
 
         public void btnDatos_Click(object sender, EventArgs e)
         {
-            GenerarObjeto();
-            if(rb10.Checked == true)
+            if(error)
             {
-                Za = 1.645F;
-                Z2 = 6.2514F;
-            }
-            else if(rb5.Checked == true)
+                cmdGenerar.Enabled = false;            }
+            else
             {
-                Za = 1.96F;
-                Z2 = 7.8147F;
-            }
+                GenerarObjeto();
+                if (rb10.Checked == true)
+                {
+                    Za = 1.645F;
+                    Z2 = 6.2514F;
+                }
+                else if (rb5.Checked == true)
+                {
+                    Za = 1.96F;
+                    Z2 = 7.8147F;
+                }
 
-            GenerarNumeros();
-            opciones.RecibirNumeros(numeros);
+                GenerarNumeros();
+                opciones.RecibirNumeros(numeros);
 
-            Realizar_PruebaPromedios();
-            opciones.RecibirValoresPrueba(pruebas);
-            Realizar_PruebaFrecuencia();
-            opciones.txtPruevasSuperadas.Text = "No. de pruebas superadas: " + no_pruebas;
+                Realizar_PruebaPromedios();
+                opciones.RecibirValoresPrueba(pruebas);
+                Realizar_PruebaFrecuencia();
+                opciones.txtPruevasSuperadas.Text = "No. de pruebas superadas: " + no_pruebas;
 
-            this.Hide();
-            opciones.ShowDialog();
-            this.Show();
+                this.Hide();
+                opciones.ShowDialog();
+                this.Show();
 
-            no_pruebas = 0;
+                no_pruebas = 0;
+            }           
         }
 
         public void GenerarObjeto()
@@ -84,7 +90,7 @@ namespace Generador_de_numeros___Simulacion
             //valor semilla de la que se basaran nuestros numeros
             float x0 = g.X0;
             int n = 0;
-            for (int i = 0; i < 325; i++)
+            for (int i = 0; i < 1180; i++)
             {
                 //si es el primero numero generado entonces 
                 if (i == 0)
@@ -269,10 +275,12 @@ namespace Generador_de_numeros___Simulacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        bool error = false;
+
         private void txtSemilla_TextChanged(object sender, EventArgs e)
         {
             ForeColor = Color.Black;
-            bool error = false;
+          
 
             //ciclo para recorrer caracter por caracter 
             foreach (char caracter in txtSemilla.Text)
@@ -296,7 +304,7 @@ namespace Generador_de_numeros___Simulacion
         private void txtA_TextChanged(object sender, EventArgs e)
         {
             ForeColor = Color.Black;
-            bool error = false;
+            //bool error = false;
 
             //ciclo para recorrer caracter por caracter 
             foreach (char caracter in txtA.Text)
@@ -344,7 +352,7 @@ namespace Generador_de_numeros___Simulacion
         private void txtM_TextChanged(object sender, EventArgs e)
         {
             ForeColor = Color.Black;
-            bool error = false;
+            //bool error = false;
 
             //ciclo para recorrer caracter por caracter 
             foreach (char caracter in txtM.Text)
