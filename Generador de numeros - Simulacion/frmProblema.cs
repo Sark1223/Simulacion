@@ -58,14 +58,203 @@ namespace Generador_de_numeros___Simulacion
 
         private void cmdResolver_Click(object sender, EventArgs e)
         {
-            lblResultado.Text = "Ultimo numer del arreglo: " + Ri[1179];
-
-            for(int i = 0; i< Ri.Length; i++)
+            if(aproba1 && aproba2)
             {
+                //Limpiar las listas de animales y agua
+                animales.Clear();
+                agua.Clear();
+
+                CargarLimitesEnListas();
+
+                lblResultado.Text = "Ultimo numer del arreglo: " + Ri[1179];
+                int TotalNumers = Ri.Length;
+                int num_actual = 0;
+                int dia_agua = 1;
+                do
+                {
+                    while (num_actual >= 0 && num_actual < 20)
+                    {
+                        LimitesSangreAnimales(Ri[num_actual]);
+                        num_actual++;
+                    }
+
+                    if (dia_agua <= 14)
+                    {
+                        for (int i = 0; i < 60; i++)
+                        {
+                            LimitesAgua(Ri[num_actual]);
+                            num_actual++;
+                        }
+
+                        if (dia_agua == 14)
+                        {
+                            for (int i = 0; i < 20; i++)
+                            {
+                                LimitesSangreAnimales(Ri[num_actual]);
+                                num_actual++;
+                            }
+                        }
+
+                        dia_agua++;
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 20; i++)
+                        {
+                            LimitesSangreAnimales(Ri[num_actual]);
+                            num_actual++;
+                        }
+                        lblResultado.Text = "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1];
+                    }
+
+                } while (num_actual < 1180);
+
+                
+            }
+            else
+            {
+                MessageBox.Show("Debe confirmar primero la distribucion de probabilidad", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
 
+        //Variables globales para acumular los valores
+        int op_ani_acidez = 0, op_ani_anemia = 0, op_ani_normal = 0, op_ani_glucosa = 0, op_ani_alcalinidad = 0;
+        int op_coloidales = 0, op_mercurio = 0, op_residuos = 0, op_sulfato = 0,
+            op_acido = 0, op_fosfato = 0, op_oxidos = 0;
+       
+        //Resultados Del problema
+        private void ResAgua()
+        {
+            int resultado = 0;
+            string Componente = "";
+
+            if(op_coloidales > resultado)
+            {
+                resultado = op_coloidales;
+                Componente = "Coloidales";
+            }
+            if (op_mercurio > resultado)
+            {
+                resultado = op_mercurio;
+                Componente = "Mercurio";
+            }
+            if (op_residuos > resultado)
+            {
+                resultado = op_residuos;
+                Componente = "Residuos";
+            }
+            if (op_sulfato > resultado)
+            {
+                resultado = op_sulfato;
+                Componente = "Sulfato";
+            }
+            if (op_acido > resultado)
+            {
+                resultado = op_acido;
+                Componente = "Acido";
+            }
+            if (op_fosfato > resultado)
+            {
+                resultado = op_fosfato;
+                Componente = "Fosfato";
+            }
+            if (op_oxidos > resultado)
+            {
+                resultado = op_oxidos;
+                Componente = "Oxido";
+            }
+        }
+
+        private void ResAnimales()
+        {
+            int resultado = 0;
+            string Componente = "";
+
+            if (op_ani_acidez > resultado)
+            {
+                resultado = op_ani_acidez;
+                Componente = "Acides";
+            }
+            if (op_ani_anemia > resultado)
+            {
+                resultado = op_ani_anemia;
+                Componente = "Anemia";
+            }
+            if (op_ani_normal > resultado)
+            {
+                resultado = op_ani_normal;
+                Componente = "Normal";
+            }
+            if (op_ani_glucosa > resultado)
+            {
+                resultado = op_ani_glucosa;
+                Componente = "Sulfato";
+            }
+            if (op_ani_alcalinidad > resultado)
+            {
+                resultado = op_ani_alcalinidad;
+                Componente = "Acido";
+            }
+        }
+
+        //Intervalos para resolver el ejercicio
+        private void LimitesSangreAnimales(float num_muestra)
+        {
+            if (num_muestra >= animales[0].limInf && num_muestra <= animales[0].limSup)
+            {
+                op_ani_acidez++;
+            }
+            else if (num_muestra >= animales[1].limInf && num_muestra <= animales[1].limSup)
+            {
+                op_ani_anemia++;
+            }
+            else if (num_muestra >= animales[2].limInf && num_muestra <= animales[2].limSup)
+            {
+                op_ani_normal++;
+            }
+            else if (num_muestra >= animales[3].limInf && num_muestra <= animales[3].limSup)
+            {
+                op_ani_glucosa++;
+            }
+            else
+            {
+                op_ani_alcalinidad++;
+            }
+        }
+
+        private void LimitesAgua(float num_muestra)
+        {
+            if (num_muestra >= agua[0].limInf && num_muestra <= agua[0].limSup)
+            {
+                op_coloidales++;
+            }
+            else if (num_muestra >= agua[1].limInf && num_muestra <= agua[1].limSup)
+            {
+                op_mercurio++;
+            }
+            else if (num_muestra >= agua[2].limInf && num_muestra <= agua[2].limSup)
+            {
+                op_residuos++;
+            }
+            else if (num_muestra >= agua[3].limInf && num_muestra <= agua[3].limSup)
+            {
+                op_sulfato++;
+            }
+            else if (num_muestra >= agua[4].limInf && num_muestra <= agua[4].limSup)
+            {
+                op_acido++;
+            }
+            else if (num_muestra >= agua[5].limInf && num_muestra <= agua[5].limSup)
+            {
+                op_fosfato++;
+            }
+            else
+            {
+                op_oxidos++;
+            }
+        }
+        
         //Asigna valores en la lista
         public void AsignarValAnimales()
         {
@@ -157,6 +346,12 @@ namespace Generador_de_numeros___Simulacion
             agua.Add(ag);
         }
 
+        public void CargarLimitesEnListas()
+        {
+            AsignarValAnimales();
+            AsignarValAgua();
+        }
+
         private void btnIntervalos_Click(object sender, EventArgs e)
         {
             if(aproba1 && aproba2)
@@ -169,8 +364,7 @@ namespace Generador_de_numeros___Simulacion
                 animales.Clear();
                 agua.Clear();
 
-                AsignarValAnimales();
-                AsignarValAgua();
+                CargarLimitesEnListas();
 
                 int n = 0;
                 int m = 0;
@@ -235,8 +429,6 @@ namespace Generador_de_numeros___Simulacion
 
         private void cmdIngresarAnimales_Click(object sender, EventArgs e)
         {
-
-
             //Recuperacion de datos ingresados por el usuario
             Ani_acidez = float.Parse(txtAcidez.Text) * 0.01F;
             Ani_anemia = float.Parse(txtAnemia.Text) * 0.01F;
