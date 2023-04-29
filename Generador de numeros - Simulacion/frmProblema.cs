@@ -66,7 +66,7 @@ namespace Generador_de_numeros___Simulacion
 
                 CargarLimitesEnListas();
 
-                lblResultado.Text = "Ultimo numer del arreglo: " + Ri[1179];
+                lblResultado.Text = "Ultimo numero del arreglo: " + Ri[1179];
                 int TotalNumers = Ri.Length;
                 int num_actual = 0;
                 int dia_agua = 1;
@@ -109,7 +109,7 @@ namespace Generador_de_numeros___Simulacion
                 } while (num_actual < 1180);
                 lblResultado.Text = "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1]+
                                     "\r\n El elemento mas encontrado fue: " + ResAgua()+
-                                    "\r\n Los resulados mas repetidos en animales fueron: "+ResAnimales();
+                                    "\r\n Los resultados mas repetidos en animales fueron: "+ ResAnimales();
 
 
             }
