@@ -104,12 +104,14 @@ namespace Generador_de_numeros___Simulacion
                             LimitesSangreAnimales(Ri[num_actual]);
                             num_actual++;
                         }
-                        lblResultado.Text = "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1];
                     }
 
                 } while (num_actual < 1180);
+                lblResultado.Text = "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1]+
+                                    "\r\n El elemento mas encontrado fue: " + ResAgua()+
+                                    "\r\n Los resulados mas repetidos en animales fueron: "+ResAnimales();
 
-                
+
             }
             else
             {
@@ -124,7 +126,7 @@ namespace Generador_de_numeros___Simulacion
             op_acido = 0, op_fosfato = 0, op_oxidos = 0;
        
         //Resultados Del problema
-        private void ResAgua()
+        private string ResAgua()
         {
             int resultado = 0;
             string Componente = "";
@@ -164,9 +166,11 @@ namespace Generador_de_numeros___Simulacion
                 resultado = op_oxidos;
                 Componente = "Oxido";
             }
+
+            return Componente;
         }
 
-        private void ResAnimales()
+        private string ResAnimales()
         {
             int resultado = 0;
             string Componente = "";
@@ -196,6 +200,8 @@ namespace Generador_de_numeros___Simulacion
                 resultado = op_ani_alcalinidad;
                 Componente = "Acido";
             }
+
+            return Componente;
         }
 
         //Intervalos para resolver el ejercicio
