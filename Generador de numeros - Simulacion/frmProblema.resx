@@ -123,12 +123,6 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <data name="lblResultado.Text" xml:space="preserve">
-    <value> - 20 muestras diarias de agua por un lapso de 2 semanas.
- - Muestras de sangre de 5 animales diferentes al inicio del 
-   monitoreo, a las 2 semanas y al mes.
-Los dos puntos anteriores se repiten por cada sector.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmdResolver.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -237,7 +237,7 @@ namespace Generador_de_numeros___Simulacion
             }
             else if (num_muestra >= agua[1].limInf && num_muestra <= agua[1].limSup)
             {
-                op_mercurio++;
+                op_mercurio++; //mas peligroso
             }
             else if (num_muestra >= agua[2].limInf && num_muestra <= agua[2].limSup)
             {
