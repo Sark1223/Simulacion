@@ -386,25 +386,25 @@
         #endregion
 
         public ns1.BunifuImageButton btnCerrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        public System.Windows.Forms.Panel panel1;
         public ns1.BunifuCustomDataGrid tblAgua;
         public ns1.BunifuCustomDataGrid tblAnimales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private ns1.BunifuElipse rdForma;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        public ns1.BunifuElipse rdForma;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.PictureBox pictureBox6;
+        public System.Windows.Forms.PictureBox pictureBox11;
         public System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Panel panel3;
     }

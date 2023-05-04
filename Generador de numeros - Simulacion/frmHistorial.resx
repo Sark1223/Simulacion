@@ -117,52 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="rdForma.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 9</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cmdResolver.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAInSURBVHhe7d2/S1tBAMDx/n+dunRy6iII4uCSpYIgQnGo
-        QxeXUgouTg5dxMlFBzuIUAqCpZr+SFXUokaTVq98z9yjySXZk/t+4EDij+19ubv37vkkSFIPwyApYxgk
-        ZQyDpIxhkJQxDJIyQ8Pw0G6F692tcPr2VWgs18K3ly/C16mnDodjBAfXL9fxycpCuNrZDPfN686VnhsY
-        huanj/EPEQXicHuwH/6cNTrflTRquH65jm/2tsPZ+9fx+iYQ/WRhoCL80q83c+Hv7/POp5LGzbBrvSsM
-        /OCPxemBFZE0flgd/Fya7VoRdIWBehgFqTwsMdh/SKowUA2mFJLKdLH+LlxurMWvYxi4+8BGhHsKUrno
-        AFsJ7Ub9MQwsH1hGSCobMwZmDjEM3NfkFoaksrXqh3HWEMPwfX4yTh8klY3lxNHMs8cwHM8+H/oUlKRy
-        8JRkDANfSBIMg6SMYZCUMQySMlUY2IVkN1KSqjDw1KNHqiWhCgNnJDgrIalsPM/Ec00xDOkxSEllS8cj
-        YhhYRlAJ9xmksqXjETEMuPiwGoekMqX3u6IKA7MFXtRw9+Vz5xNJpeCVC6wa0tGIKgxg4yGdx5ZUBqLA
-        pIC3OCVdYQAzBuKQ3uQiaXyxn8BM4f8oIAsDWFZwl4KKsEvpm52k8cFyIe0nsNnY72R13zAkVIRbF/Xa
-        RHzoweFwjP7gNQvp/8UMMjQMkspkGCRlDIOkjGGQlDEMknqE8A/F3ejSI78YdAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value> - 20 muestras diarias de agua por un lapso de 2 semanas.
- - Muestras de sangre de 5 animales diferentes al inicio del 
-   monitoreo, a las 2 semanas y al mes.
-Los dos puntos anteriores se repiten por cada sector.</value>
-  </data>
-  <data name="cmdMostrarIntervalos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVHhe7d09SwNBFEZhf26aNBY2NmksbGxsLGwsAgFB
-        hYAoCCKIFjZB0lgoQhAFRQhIQBGueTN3Ezc32T4754EBiR/dHmZmd8c1A4A5hAFAQBgABIQBQEAYAASE
-        AUBQHYafX7O7Z7P9a7OdC7PNE7NGm8FgrOLQ9avreO/K7ObRbPTtF3q0PAz9l/SHFAXF4eHN7OPLvwlg
-        5ej61XXcG5gd3KbrW4FYIIZBFdEv7V6aDUf+IYDaqbjWy2HQD26dLq0IgBrS6mD7vLQiKIdB9SAKQH60
-        xND+g5uFQdXQlAJAno57Zmf9yZcpDLr7oI0I9hSAfKkD2kp4HXoYtHzQMgJA3jRjGM8cUhh0X1O3MADk
-        bfA5mTWkMLS6k+kDgMxpOdHseBjWDyufggKQkUbbw6DHJQFACAOAgDAACAgDgGAahmYn7UYCwDQMeuqR
-        V6oByDQMekdC70oAyJueZ2p1PQz+GCSAzPnrESkMWkbo6Uf2GYC8+esRKQzSvU8DQJ6K813HZmHQbEEH
-        NTy9+wcAsqEjF7Rq8FcjZmEQbTz4+9gAMqEoaFKgU5xcOQyiGYPi4Ce5AKgxHbegmcK/KEgMg2hZobsU
-        qoh2KTnZCagPLReK/QRtNi54s3pxGAqqiE522jhKj00zGIzVHzpmofh/MUtUhwFAlggDgIAwAAgIA4CA
-        MACYY/YHbC/m3cYjag0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="rdTitulo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>130, 8</value>
-  </metadata>
   <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAP
@@ -315,4 +270,22 @@ Los dos puntos anteriores se repiten por cada sector.</value>
         44/m5/rfyDfkHZNzvZ3m/bNbOp3/D5ilCJpvynj3AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="DatosNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Probabilidad_animales.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Res_Ani.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Probabilidad_agua.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Res_agua.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="conclusion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

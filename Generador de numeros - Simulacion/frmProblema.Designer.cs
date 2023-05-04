@@ -34,7 +34,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new ns1.BunifuCustomLabel();
             this.panTop = new System.Windows.Forms.Panel();
-            this.btnCerrar = new ns1.BunifuImageButton();
             this.rdTitulo = new ns1.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,20 +80,23 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.lblResultado = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmdHistorial = new System.Windows.Forms.PictureBox();
+            this.cmdResolver = new ns1.BunifuThinButton2();
             this.cmdIngresarAgua = new ns1.BunifuImageButton();
             this.cmdIngresarAnimales = new ns1.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmdResolver = new ns1.BunifuThinButton2();
-            this.lblResultado = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnCerrar = new ns1.BunifuImageButton();
             this.panTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // rdForma
@@ -132,21 +134,6 @@
             this.panTop.Name = "panTop";
             this.panTop.Size = new System.Drawing.Size(890, 32);
             this.panTop.TabIndex = 26;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(856, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // rdTitulo
             // 
@@ -719,6 +706,65 @@
             this.label12.Text = "Ingresar\r\nDatos";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblResultado.Location = new System.Drawing.Point(408, 387);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(311, 23);
+            this.lblResultado.TabIndex = 72;
+            this.lblResultado.Text = "Elemento mas encontrado en el agua:";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.Location = new System.Drawing.Point(408, 415);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(311, 23);
+            this.label13.TabIndex = 73;
+            this.label13.Text = "Elemento mas encontrado en el agua:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmdHistorial
+            // 
+            this.cmdHistorial.Location = new System.Drawing.Point(815, 57);
+            this.cmdHistorial.Name = "cmdHistorial";
+            this.cmdHistorial.Size = new System.Drawing.Size(50, 54);
+            this.cmdHistorial.TabIndex = 74;
+            this.cmdHistorial.TabStop = false;
+            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
+            // 
+            // cmdResolver
+            // 
+            this.cmdResolver.ActiveBorderThickness = 1;
+            this.cmdResolver.ActiveCornerRadius = 20;
+            this.cmdResolver.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
+            this.cmdResolver.ActiveForecolor = System.Drawing.Color.White;
+            this.cmdResolver.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
+            this.cmdResolver.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cmdResolver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdResolver.BackgroundImage")));
+            this.cmdResolver.ButtonText = "Resolver Problema";
+            this.cmdResolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdResolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdResolver.ForeColor = System.Drawing.Color.SeaGreen;
+            this.cmdResolver.IdleBorderThickness = 1;
+            this.cmdResolver.IdleCornerRadius = 20;
+            this.cmdResolver.IdleFillColor = System.Drawing.Color.White;
+            this.cmdResolver.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
+            this.cmdResolver.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
+            this.cmdResolver.Location = new System.Drawing.Point(527, 331);
+            this.cmdResolver.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdResolver.Name = "cmdResolver";
+            this.cmdResolver.Size = new System.Drawing.Size(262, 37);
+            this.cmdResolver.TabIndex = 71;
+            this.cmdResolver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmdResolver.Click += new System.EventHandler(this.cmdResolver_Click);
+            // 
             // cmdIngresarAgua
             // 
             this.cmdIngresarAgua.BackColor = System.Drawing.Color.Transparent;
@@ -795,55 +841,20 @@
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
-            // cmdResolver
+            // btnCerrar
             // 
-            this.cmdResolver.ActiveBorderThickness = 1;
-            this.cmdResolver.ActiveCornerRadius = 20;
-            this.cmdResolver.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
-            this.cmdResolver.ActiveForecolor = System.Drawing.Color.White;
-            this.cmdResolver.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
-            this.cmdResolver.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cmdResolver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdResolver.BackgroundImage")));
-            this.cmdResolver.ButtonText = "Resolver Problema";
-            this.cmdResolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdResolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdResolver.ForeColor = System.Drawing.Color.SeaGreen;
-            this.cmdResolver.IdleBorderThickness = 1;
-            this.cmdResolver.IdleCornerRadius = 20;
-            this.cmdResolver.IdleFillColor = System.Drawing.Color.White;
-            this.cmdResolver.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
-            this.cmdResolver.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
-            this.cmdResolver.Location = new System.Drawing.Point(527, 331);
-            this.cmdResolver.Margin = new System.Windows.Forms.Padding(5);
-            this.cmdResolver.Name = "cmdResolver";
-            this.cmdResolver.Size = new System.Drawing.Size(262, 37);
-            this.cmdResolver.TabIndex = 71;
-            this.cmdResolver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cmdResolver.Click += new System.EventHandler(this.cmdResolver_Click);
-            // 
-            // lblResultado
-            // 
-            this.lblResultado.AutoSize = true;
-            this.lblResultado.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblResultado.Location = new System.Drawing.Point(408, 387);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(311, 23);
-            this.lblResultado.TabIndex = 72;
-            this.lblResultado.Text = "Elemento mas encontrado en el agua:";
-            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(408, 415);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(311, 23);
-            this.label13.TabIndex = 73;
-            this.label13.Text = "Elemento mas encontrado en el agua:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(856, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmProblema
             // 
@@ -851,6 +862,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(890, 533);
+            this.Controls.Add(this.cmdHistorial);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.cmdResolver);
@@ -913,11 +925,12 @@
             this.Load += new System.EventHandler(this.frmProblema_Load);
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -983,5 +996,6 @@
         public ns1.BunifuThinButton2 cmdResolver;
         public System.Windows.Forms.Label lblResultado;
         public System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox cmdHistorial;
     }
 }

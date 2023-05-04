@@ -19,6 +19,8 @@ namespace Generador_de_numeros___Simulacion
             //Application.Run(new frmGenerador());
             Application.Run(new Inicio());
             //Application.Run(new frmPruebas());
+            //Application.Run(new frmHistorial());
+
         }
     }
 }

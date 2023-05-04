@@ -69,7 +69,7 @@ namespace Generador_de_numeros___Simulacion
                 opciones.txtPruevasSuperadas.Text = "No. de pruebas superadas: " + no_pruebas;
                 
                 //Compartir arreglo de numeos
-                problema.ObtenerNumero(Ri);
+                problema.ObtenerNumero(Ri,g);
                 //Compartir objeto con numeros 
                 opciones.RecibirNumerosPrueba(problema);
 

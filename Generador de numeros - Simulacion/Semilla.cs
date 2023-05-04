@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generador_de_numeros___Simulacion
 {
-    internal class Semilla
+    public class Semilla
     {
         //creacion de campos
         public float X0, Xn, a, c, m, N, Res, modulo;

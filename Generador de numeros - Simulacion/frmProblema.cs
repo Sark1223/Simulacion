@@ -32,14 +32,21 @@ namespace Generador_de_numeros___Simulacion
         List<Intervals> agua = new List<Intervals>();
         Intervals ag;
         Intervals an;
+        
+        //Objeto de clases
+        Semilla g;
+
+        //Objetos de formas
         frmIntervalos frmIntervalos = new frmIntervalos();
+        frmHistorial historial = new frmHistorial();
 
         public float[] Ri = new float[1180];
 
         //Recibir numeo de la pantalla de inicio
-        public void ObtenerNumero(float[] numeros)
+        public void ObtenerNumero(float[] numeros, Semilla g)
         {
             Ri = numeros;
+            this.g = g;
         }
 
         //variables de animales
@@ -72,10 +79,16 @@ namespace Generador_de_numeros___Simulacion
                 int dia_agua = 1;
                 do
                 {
+                    int animal = 1;
                     while (num_actual >= 0 && num_actual < 20)
                     {
                         LimitesSangreAnimales(Ri[num_actual]);
                         num_actual++;
+                        animal++;
+                        if(animal >= 5)
+                        {
+                            animal = 1;
+                        }
                     }
 
                     if (dia_agua <= 14)
@@ -118,13 +131,20 @@ namespace Generador_de_numeros___Simulacion
                 MessageBox.Show("Debe confirmar primero la distribucion de probabilidad", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+
+            GuardarHisto();
         }
 
         //Variables globales para acumular los valores
         int op_ani_acidez = 0, op_ani_anemia = 0, op_ani_normal = 0, op_ani_glucosa = 0, op_ani_alcalinidad = 0;
         int op_coloidales = 0, op_mercurio = 0, op_residuos = 0, op_sulfato = 0,
             op_acido = 0, op_fosfato = 0, op_oxidos = 0;
-       
+
+        private void cmdHistorial_Click(object sender, EventArgs e)
+        {
+            historial.ShowDialog();
+        }
+
         //Resultados Del problema
         private string ResAgua()
         {
@@ -264,36 +284,41 @@ namespace Generador_de_numeros___Simulacion
         //Asigna valores en la lista
         public void AsignarValAnimales()
         {
+            /*Alto grado de acidez
+            Estado de anemia aguda
+            Estado en rango normal
+            Exceso de glucosa
+            Alto grado de alcalinidad*/
             an = new Intervals();
-            an.nombre = "Acidez";
+            an.nombre = "Alto grado de acidez";
             an.distribucion = Ani_acidez;
             an.limInf = 0;
             an.limSup = an.limInf + an.distribucion;
             animales.Add(an);
 
             an = new Intervals();
-            an.nombre = "Anemia";
+            an.nombre = "Estado de anemia aguda";
             an.distribucion = Ani_anemia;
             an.limInf = animales[0].limSup;
             an.limSup = an.limInf + an.distribucion;
             animales.Add(an);
 
             an = new Intervals();
-            an.nombre = "Normal";
+            an.nombre = "Estado en rango normal";
             an.distribucion = Ani_normal;
             an.limInf = animales[1].limSup;
             an.limSup = an.limInf + an.distribucion;
             animales.Add(an);
 
             an = new Intervals();
-            an.nombre = "Glucosa";
+            an.nombre = "Exceso de glucosa";
             an.distribucion = Ani_glucosa;
             an.limInf = animales[2].limSup;
             an.limSup = an.limInf + an.distribucion;
             animales.Add(an);
 
             an = new Intervals();
-            an.nombre = "Alcalinidad";
+            an.nombre = "Alto grado de alcalinidad";
             an.distribucion = Ani_Alcalinindad;
             an.limInf = animales[3].limSup;
             an.limSup = an.limInf + an.distribucion;
@@ -303,21 +328,21 @@ namespace Generador_de_numeros___Simulacion
         public void AsignarValAgua()
         {
             ag = new Intervals();
-            ag.nombre = "Coloidales";
+            ag.nombre = "Substancias coloidales";
             ag.distribucion = Agua_coloidales;
             ag.limInf = 0;
             ag.limSup = ag.limInf + ag.distribucion;
             agua.Add(ag);
 
             ag = new Intervals();
-            ag.nombre = "Mercurio";
+            ag.nombre = "Exceso de mercurio";
             ag.distribucion = Agua_mercurio;
             ag.limInf = agua[0].limSup;
             ag.limSup = ag.limInf + ag.distribucion;
             agua.Add(ag);
 
             ag = new Intervals();
-            ag.nombre = "Residuos";
+            ag.nombre = "Residuos petroquímicos";
             ag.distribucion = Agua_residuos;
             ag.limInf = agua[1].limSup;
             ag.limSup = ag.limInf + ag.distribucion;
@@ -331,7 +356,7 @@ namespace Generador_de_numeros___Simulacion
             agua.Add(ag);
 
             ag = new Intervals();
-            ag.nombre = "Acido";
+            ag.nombre = "Acido clorhídrico";
             ag.distribucion = Agua_acido;
             ag.limInf = agua[3].limSup;
             ag.limSup = ag.limInf + ag.distribucion;
@@ -356,6 +381,71 @@ namespace Generador_de_numeros___Simulacion
         {
             AsignarValAnimales();
             AsignarValAgua();
+        }
+
+        public void GuardarHisto()
+        {
+            //Agrega nueva fila
+            int n = historial.dgvHistorial.Rows.Add();
+
+            //Agregar datos de numeros pseudo
+            string datos = $"Xo = {g.X0}\r\n" +
+                           $"a = {g.a}\r\n" +
+                           $"c = {g.c}\r\n" +
+                           $"m = {g.m}\r\n";
+            historial.dgvHistorial.Rows[n].Cells[0].Value = datos;
+
+            /*Alto grado de acidez
+            Estado de anemia aguda
+            Estado en rango normal
+            Exceso de glucosa
+            animales[i].nombre;
+            animales[i].distribucion;
+            Alto grado de alcalinidad*/
+            string probAni = "";
+            for (int i = 0; i < animales.Count; i++)
+            {
+                probAni += $"{animales[i].nombre} = {animales[i].distribucion}\r\n";
+            }
+            //string probAni = $"Alto grado de acidez = {animales[0].distribucion}\r\n" +
+            //           $"Estado de anemia aguda = {g.a}\r\n" +
+            //           $"Estado en rango normal = {g.c}\r\n" +
+            //           $"Exceso de glucosa = {g.m}\r\n" +
+            //           $"Alto grado de alcalinidad = {g.m}\r\n";
+            historial.dgvHistorial.Rows[n].Cells[1].Value = probAni;
+
+
+            string ResAni = $"Alto grado de acidez = {op_ani_acidez}\r\n" +
+                       $"Estado de anemia aguda = {op_ani_anemia}\r\n" +
+                       $"Estado en rango normal = {op_ani_normal}\r\n" +
+                       $"Exceso de glucosa = {op_ani_glucosa}\r\n" +
+                       $"Alto grado de alcalinidad = {op_ani_alcalinidad}\r\n";
+            historial.dgvHistorial.Rows[n].Cells[2].Value = ResAni;
+
+            string probAgua = "";
+            for (int i = 0; i < agua.Count; i++)
+            {
+                probAgua += $"{agua[i].nombre} = {agua[i].distribucion}\r\n";
+            }
+            historial.dgvHistorial.Rows[n].Cells[3].Value = probAgua;
+
+            string ResAgua = $"Substancias coloidales = {op_coloidales}\r\n" +
+                       $"Exceso de mercurio = {op_mercurio}\r\n" +
+                       $"Residuos petroquímicos = {op_residuos}\r\n" +
+                       $"Sulfatos = {op_sulfato}\r\n" +
+                       $"Acido clorhídrico = {op_acido}\r\n" +
+                       $"Fosfato = {op_fosfato}\r\n" +
+                       $"Óxidos = {op_oxidos}\r\n";
+            historial.dgvHistorial.Rows[n].Cells[4].Value = ResAgua;
+
+
+            /*Substancias coloidales
+Exceso de mercurio
+Residuos petroquímicos
+Sulfatos
+Acido clorhídrico
+Fosfato
+Óxidos*/
         }
 
         private void btnIntervalos_Click(object sender, EventArgs e)
