@@ -29,6 +29,7 @@ namespace Generador_de_numeros___Simulacion
             public float limSup;
         }
 
+
         //Objeto de clases
         Semilla g;
         Intervals ag;
@@ -37,6 +38,7 @@ namespace Generador_de_numeros___Simulacion
         //Objetos de formas
         frmIntervalos frmIntervalos = new frmIntervalos();
         frmHistorial historial = new frmHistorial();
+        Resultados resulta = new Resultados();
 
         //Lista para guardar los intervalos y datos del AGUA y ANIMALES
         List<Intervals> animales = new List<Intervals>();
@@ -59,27 +61,37 @@ namespace Generador_de_numeros___Simulacion
         int op_coloidales = 0, op_mercurio = 0, op_residuos = 0, op_sulfato = 0, op_acido = 0, op_fosfato = 0, op_oxidos = 0;
 
         //asignacion de resultados al problema
-        private void LimitesSangreAnimales(float num_muestra)
+        private string LimitesSangreAnimales(float num_muestra)
         {
             if (num_muestra >= animales[0].limInf && num_muestra <= animales[0].limSup)
             {
                 op_ani_acidez++;
+                //return 1;
+                return "alto grado de acidez";
             }
             else if (num_muestra >= animales[1].limInf && num_muestra <= animales[1].limSup)
             {
                 op_ani_anemia++;
+                return "estado de anemia aguda";
+                //return 2;
             }
             else if (num_muestra >= animales[2].limInf && num_muestra <= animales[2].limSup)
             {
                 op_ani_normal++;
+                return "estado de rango normal";
+                //return 3;
             }
             else if (num_muestra >= animales[3].limInf && num_muestra <= animales[3].limSup)
             {
                 op_ani_glucosa++;
+                return "exceso de glucosa";
+                //return 4;
             }
             else
             {
                 op_ani_alcalinidad++;
+                return "alto grado de alcalinidad";
+                //return 5;
             }
         }
         private void LimitesAgua(float num_muestra)
@@ -191,10 +203,30 @@ namespace Generador_de_numeros___Simulacion
 
             return Componente;
         }
-        
+
+        private string Sector(int num)
+        {
+            if (num >= 0 && num < 5)
+            {
+                return "A";
+            }
+            else if (num >= 5 && num < 10)
+            {
+                return "B";
+            }
+            else if (num >= 10 && num <= 15)
+            {
+                return "C";
+            }
+            else 
+            {
+                return "D";
+            }
+        }
+
         private void cmdResolver_Click(object sender, EventArgs e)
         {
-            if(aproba1 && aproba2)
+            if (aproba1 && aproba2)
             {
                 //Limpiar las listas de animales y agua
                 animales.Clear();
@@ -203,55 +235,117 @@ namespace Generador_de_numeros___Simulacion
                 CargarLimitesEnListas();
 
                 lblResultado.Text = "Ultimo numero del arreglo: " + Ri[1179];
-                int TotalNumers = Ri.Length;
                 int num_actual = 0;
-                int dia_agua = 1;
-                do
+
+                int animal = 1;
+                int normal = 0;
+                int n;
+                //DIA UNO
+                for (int i = 0; i < 20; i++)
                 {
-                    int animal = 1;
-                    while (num_actual >= 0 && num_actual < 20)
+                    string Salud = LimitesSangreAnimales(Ri[num_actual]);
+                    if ( Salud == "estado de rango normal")
                     {
-                        LimitesSangreAnimales(Ri[num_actual]);
-                        num_actual++;
-                        animal++;
-                        if(animal >= 5)
-                        {
-                            animal = 1;
-                        }
+                        normal++;
+                        
                     }
 
-                    if (dia_agua <= 14)
+                    n = resulta.dgvResAni.Rows.Add();
+                    resulta.dgvResAni.Rows[n].Cells[0].Value = i;
+                    resulta.dgvResAni.Rows[n].Cells[1].Value = Salud;
+                    num_actual++;
+                    if (animal >= 5)
+                    {
+                        animal = 1;
+                    }
+                }
+
+                if(normal> 16)
+                {
+                    lblResultado.Text = "Dia 1: más del 80% de los animales se encuentran en estado normal\r\n";
+                }
+                else
+                {
+                    lblResultado.Text = "Dia 1: más del 20% de los animales se encuentran en peligro\r\n";
+                }
+
+                //DIA 14
+                normal = 0;
+                for (int i = 0; i < 20; i++)
+                {
+                    string Salud = LimitesSangreAnimales(Ri[num_actual]);
+                    if (Salud == "estado de rango normal")
+                    {
+                        normal++;
+
+                    }
+
+                    n = resulta.dgvResAni.Rows.Add();
+                    resulta.dgvResAni.Rows[n].Cells[0].Value = i;
+                    resulta.dgvResAni.Rows[n].Cells[1].Value = Salud;
+                    num_actual++;
+                    if (animal >= 5)
+                    {
+                        animal = 1;
+                    }
+                }
+
+                if (normal > 16)
+                {
+                    lblResultado.Text += "Dia 2: más del 80% de los animales se encuentran en estado normal\r\n";
+                }
+                else
+                {
+                    lblResultado.Text += "Dia 2: más del 20% de los animales se encuentran en peligro\r\n";
+                }
+
+                //fin de mes
+                normal = 0;
+                for (int i = 0; i < 20; i++)
+                {
+                    string Salud = LimitesSangreAnimales(Ri[num_actual]);
+                    if (Salud == "estado de rango normal")
+                    {
+                        normal++;
+
+                    }
+
+                    n = resulta.dgvResAni.Rows.Add();
+                    resulta.dgvResAni.Rows[n].Cells[0].Value = i;
+                    resulta.dgvResAni.Rows[n].Cells[1].Value = Salud;
+                    num_actual++;
+                    if (animal >= 5)
+                    {
+                        animal = 1;
+                    }
+                }
+
+                if (normal > 16)
+                {
+                    lblResultado.Text += "Dia 3: más del 80% de los animales se encuentran en estado normal\r\n";
+                }
+                else
+                {
+                    lblResultado.Text += "Dia 3: más del 20% de los animales se encuentran en peligro\r\n";
+                }
+
+
+                if (ResAnimales() != "Normal")
+                {
+                    for (int x = 0; x < 14; x++) 
                     {
                         for (int i = 0; i < 60; i++)
                         {
                             LimitesAgua(Ri[num_actual]);
                             num_actual++;
                         }
-
-                        if (dia_agua == 14)
-                        {
-                            for (int i = 0; i < 20; i++)
-                            {
-                                LimitesSangreAnimales(Ri[num_actual]);
-                                num_actual++;
-                            }
-                        }
-
-                        dia_agua++;
                     }
-                    else
-                    {
-                        for (int i = 0; i < 20; i++)
-                        {
-                            LimitesSangreAnimales(Ri[num_actual]);
-                            num_actual++;
-                        }
-                    }
+                }
 
-                } while (num_actual < 1180);
-                lblResultado.Text = "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1]+
-                                    "\r\n El elemento mas encontrado fue: " + ResAgua()+
-                                    "\r\n Los resultados mas repetidos en animales fueron: "+ ResAnimales();
+
+                lblResultado.Text += "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1] +
+                                    "\r\n El elemento mas encontrado fue: " + ResAgua() +
+                                    "\r\n Los resultados mas repetidos en animales fueron: " + ResAnimales();
 
 
             }
@@ -264,7 +358,114 @@ namespace Generador_de_numeros___Simulacion
             GuardarHisto();
         }
 
-        
+        //private void cmdResolver_Click(object sender, EventArgs e)
+        //{
+        //    if (aproba1 && aproba2)
+        //    {
+        //        //Limpiar las listas de animales y agua
+        //        animales.Clear();
+        //        agua.Clear();
+
+        //        CargarLimitesEnListas();
+
+        //        lblResultado.Text = "Ultimo numero del arreglo: " + Ri[1179];
+        //        int TotalNumers = Ri.Length;
+        //        int num_actual = 0;
+        //        int dia_agua = 1;
+        //        do
+        //        {
+        //            int animal = 1;
+        //            //DIA UNO
+        //            for (int i = 0; i < 20; i++)
+        //            {
+        //                LimitesSangreAnimales(Ri[num_actual]);
+        //                num_actual++;
+        //                if (animal >= 5)
+        //                {
+        //                    animal = 1;
+        //                }
+        //            }
+
+        //            //DIA 14
+        //            for (int i = 0; i < 20; i++)
+        //            {
+        //                LimitesSangreAnimales(Ri[num_actual]);
+        //                num_actual++;
+        //            }
+
+        //            //fin de mes
+        //            for (int i = 0; i < 20; i++)
+        //            {
+        //                LimitesSangreAnimales(Ri[num_actual]);
+        //                num_actual++;
+        //            }
+
+
+        //            if (ResAnimales() != "Normal")
+        //            {
+
+        //                for (int i = 0; i < 60; i++)
+        //                {
+        //                    LimitesAgua(Ri[num_actual]);
+        //                    num_actual++;
+        //                }
+        //            }
+
+        //            while (num_actual >= 0 && num_actual < 20)
+        //            {
+        //                //txtResAnimales.Text += ""+  LimitesSangreAnimales(Ri[num_actual]+"\r\n");
+        //                num_actual++;
+        //                animal++;
+        //                if (animal >= 5)
+        //                {
+        //                    animal = 1;
+        //                }
+
+        //            }
+
+        //            if (dia_agua <= 14)
+        //            {
+        //                for (int i = 0; i < 60; i++)
+        //                {
+        //                    LimitesAgua(Ri[num_actual]);
+        //                    num_actual++;
+        //                }
+
+        //                if (dia_agua == 14)
+        //                {
+        //                    for (int i = 0; i < 20; i++)
+        //                    {
+        //                        LimitesSangreAnimales(Ri[num_actual]);
+        //                        num_actual++;
+        //                    }
+        //                }
+
+        //                dia_agua++;
+        //            }
+        //            else
+        //            {
+        //                for (int i = 0; i < 20; i++)
+        //                {
+        //                    LimitesSangreAnimales(Ri[num_actual]);
+        //                    num_actual++;
+        //                }
+        //            }
+
+        //        } while (num_actual < 1180);
+        //        lblResultado.Text = "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1] +
+        //                            "\r\n El elemento mas encontrado fue: " + ResAgua() +
+        //                            "\r\n Los resultados mas repetidos en animales fueron: " + ResAnimales();
+
+
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Debe confirmar primero la distribucion de probabilidad", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        //    }
+
+        //    GuardarHisto();
+        //}
 
         //METODOS DE INTERVALOS ------------------------------------------------------------------------
         private void MostrarIntervalos(object sender, EventArgs e)
@@ -418,6 +619,10 @@ namespace Generador_de_numeros___Simulacion
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            resulta.ShowDialog();
+        }
 
 
         //HISTORIAL de Experimentos ----------------------------------------------------------------------
@@ -492,6 +697,8 @@ namespace Generador_de_numeros___Simulacion
         {
             Close();
         }
+
+        
 
 
 
@@ -587,6 +794,20 @@ Alto grado de alcalinidad*/
         private void txtAcidez_TextChanged(object sender, EventArgs e)
         {
             //frmProblema_Load(sender, e);
+        }
+
+        ///Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
+        private void Mover(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

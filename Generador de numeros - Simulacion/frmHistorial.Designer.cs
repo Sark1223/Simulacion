@@ -56,6 +56,7 @@
             this.panTop.Name = "panTop";
             this.panTop.Size = new System.Drawing.Size(800, 32);
             this.panTop.TabIndex = 27;
+            this.panTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTop_MouseDown);
             // 
             // lblTitulo
             // 
