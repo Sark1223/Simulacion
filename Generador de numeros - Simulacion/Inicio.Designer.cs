@@ -220,7 +220,7 @@
             this.txtSemilla.Name = "txtSemilla";
             this.txtSemilla.Size = new System.Drawing.Size(141, 34);
             this.txtSemilla.TabIndex = 0;
-            this.txtSemilla.Text = "17";
+            this.txtSemilla.Text = "12";
             this.txtSemilla.TextChanged += new System.EventHandler(this.txtSemilla_TextChanged);
             // 
             // panel1
