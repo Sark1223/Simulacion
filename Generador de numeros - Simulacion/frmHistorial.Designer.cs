@@ -86,7 +86,7 @@
             // 
             // dgvHistorial
             // 
-            this.dgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvHistorial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvHistorial.BackgroundColor = System.Drawing.Color.White;
             this.dgvHistorial.BorderStyle = System.Windows.Forms.BorderStyle.None;

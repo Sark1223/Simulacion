@@ -20,6 +20,7 @@ namespace Generador_de_numeros___Simulacion
             InitializeComponent();
         }
 
+        //CLASE INTERVALOS 
         public class Intervals
         {
             public string nombre;
@@ -28,19 +29,22 @@ namespace Generador_de_numeros___Simulacion
             public float limSup;
         }
 
-        List<Intervals> animales = new List<Intervals>();
-        List<Intervals> agua = new List<Intervals>();
-        Intervals ag;
-        Intervals an;
-        
         //Objeto de clases
         Semilla g;
+        Intervals ag;
+        Intervals an;
 
         //Objetos de formas
         frmIntervalos frmIntervalos = new frmIntervalos();
         frmHistorial historial = new frmHistorial();
 
+        //Lista para guardar los intervalos y datos del AGUA y ANIMALES
+        List<Intervals> animales = new List<Intervals>();
+        List<Intervals> agua = new List<Intervals>();
+
+        //Areglo para obtener numeros PSEUDOALEARTORIOS
         public float[] Ri = new float[1180];
+
 
         //Recibir numeo de la pantalla de inicio
         public void ObtenerNumero(float[] numeros, Semilla g)
@@ -49,20 +53,145 @@ namespace Generador_de_numeros___Simulacion
             this.g = g;
         }
 
-        //variables de animales
-        float Ani_acidez, Ani_anemia, Ani_normal, Ani_glucosa, Ani_Alcalinindad;
+        
+        //METODOS para RESOLVER el ejercicio ------------------------------------------------------------------
+        int op_ani_acidez = 0, op_ani_anemia = 0, op_ani_normal = 0, op_ani_glucosa = 0, op_ani_alcalinidad = 0;
+        int op_coloidales = 0, op_mercurio = 0, op_residuos = 0, op_sulfato = 0, op_acido = 0, op_fosfato = 0, op_oxidos = 0;
 
-        //variables de aguas
-        float Agua_coloidales, Agua_mercurio, Agua_residuos, 
-            Agua_sulfato, Agua_acido, Agua_fosfato, Agua_oxidos;
-
-        private void ValidarAcidez_KeyPress(object sender, KeyPressEventArgs e)
+        //asignacion de resultados al problema
+        private void LimitesSangreAnimales(float num_muestra)
         {
-            //MessageBox.Show("Ingresar solo números", "ALERTA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //e.Handled = true;
-            //return;
+            if (num_muestra >= animales[0].limInf && num_muestra <= animales[0].limSup)
+            {
+                op_ani_acidez++;
+            }
+            else if (num_muestra >= animales[1].limInf && num_muestra <= animales[1].limSup)
+            {
+                op_ani_anemia++;
+            }
+            else if (num_muestra >= animales[2].limInf && num_muestra <= animales[2].limSup)
+            {
+                op_ani_normal++;
+            }
+            else if (num_muestra >= animales[3].limInf && num_muestra <= animales[3].limSup)
+            {
+                op_ani_glucosa++;
+            }
+            else
+            {
+                op_ani_alcalinidad++;
+            }
         }
+        private void LimitesAgua(float num_muestra)
+        {
+            if (num_muestra >= agua[0].limInf && num_muestra <= agua[0].limSup)
+            {
+                op_coloidales++;
+            }
+            else if (num_muestra >= agua[1].limInf && num_muestra <= agua[1].limSup)
+            {
+                op_mercurio++; //mas peligroso
+            }
+            else if (num_muestra >= agua[2].limInf && num_muestra <= agua[2].limSup)
+            {
+                op_residuos++;
+            }
+            else if (num_muestra >= agua[3].limInf && num_muestra <= agua[3].limSup)
+            {
+                op_sulfato++;
+            }
+            else if (num_muestra >= agua[4].limInf && num_muestra <= agua[4].limSup)
+            {
+                op_acido++;
+            }
+            else if (num_muestra >= agua[5].limInf && num_muestra <= agua[5].limSup)
+            {
+                op_fosfato++;
+            }
+            else
+            {
+                op_oxidos++;
+            }
+        }
+        
+        //Resultados Del problema
+        private string ResAgua()
+        {
+            int resultado = 0;
+            string Componente = "";
 
+            if(op_coloidales > resultado)
+            {
+                resultado = op_coloidales;
+                Componente = "Coloidales";
+            }
+            if (op_mercurio > resultado)
+            {
+                resultado = op_mercurio;
+                Componente = "Mercurio";
+            }
+            if (op_residuos > resultado)
+            {
+                resultado = op_residuos;
+                Componente = "Residuos";
+            }
+            if (op_sulfato > resultado)
+            {
+                resultado = op_sulfato;
+                Componente = "Sulfato";
+            }
+            if (op_acido > resultado)
+            {
+                resultado = op_acido;
+                Componente = "Acido";
+            }
+            if (op_fosfato > resultado)
+            {
+                resultado = op_fosfato;
+                Componente = "Fosfato";
+            }
+            if (op_oxidos > resultado)
+            {
+                resultado = op_oxidos;
+                Componente = "Oxido";
+            }
+
+            return Componente;
+        }
+        private string ResAnimales()
+        {
+            int resultado = 0;
+            string Componente = "";
+
+            if (op_ani_acidez > resultado)
+            {
+                resultado = op_ani_acidez;
+                Componente = "Acides";
+            }
+            if (op_ani_anemia > resultado)
+            {
+                resultado = op_ani_anemia;
+                Componente = "Anemia";
+            }
+            if (op_ani_normal > resultado)
+            {
+                resultado = op_ani_normal;
+                Componente = "Normal";
+            }
+            if (op_ani_glucosa > resultado)
+            {
+                resultado = op_ani_glucosa;
+                Componente = "Sulfato";
+            }
+            if (op_ani_alcalinidad > resultado)
+            {
+                resultado = op_ani_alcalinidad;
+                Componente = "Acido";
+            }
+
+            return Componente;
+        }
+        
         private void cmdResolver_Click(object sender, EventArgs e)
         {
             if(aproba1 && aproba2)
@@ -135,160 +264,18 @@ namespace Generador_de_numeros___Simulacion
             GuardarHisto();
         }
 
-        //Variables globales para acumular los valores
-        int op_ani_acidez = 0, op_ani_anemia = 0, op_ani_normal = 0, op_ani_glucosa = 0, op_ani_alcalinidad = 0;
-        int op_coloidales = 0, op_mercurio = 0, op_residuos = 0, op_sulfato = 0,
-            op_acido = 0, op_fosfato = 0, op_oxidos = 0;
-
-        private void cmdHistorial_Click(object sender, EventArgs e)
-        {
-            historial.ShowDialog();
-        }
-
-        //Resultados Del problema
-        private string ResAgua()
-        {
-            int resultado = 0;
-            string Componente = "";
-
-            if(op_coloidales > resultado)
-            {
-                resultado = op_coloidales;
-                Componente = "Coloidales";
-            }
-            if (op_mercurio > resultado)
-            {
-                resultado = op_mercurio;
-                Componente = "Mercurio";
-            }
-            if (op_residuos > resultado)
-            {
-                resultado = op_residuos;
-                Componente = "Residuos";
-            }
-            if (op_sulfato > resultado)
-            {
-                resultado = op_sulfato;
-                Componente = "Sulfato";
-            }
-            if (op_acido > resultado)
-            {
-                resultado = op_acido;
-                Componente = "Acido";
-            }
-            if (op_fosfato > resultado)
-            {
-                resultado = op_fosfato;
-                Componente = "Fosfato";
-            }
-            if (op_oxidos > resultado)
-            {
-                resultado = op_oxidos;
-                Componente = "Oxido";
-            }
-
-            return Componente;
-        }
-
-        private string ResAnimales()
-        {
-            int resultado = 0;
-            string Componente = "";
-
-            if (op_ani_acidez > resultado)
-            {
-                resultado = op_ani_acidez;
-                Componente = "Acides";
-            }
-            if (op_ani_anemia > resultado)
-            {
-                resultado = op_ani_anemia;
-                Componente = "Anemia";
-            }
-            if (op_ani_normal > resultado)
-            {
-                resultado = op_ani_normal;
-                Componente = "Normal";
-            }
-            if (op_ani_glucosa > resultado)
-            {
-                resultado = op_ani_glucosa;
-                Componente = "Sulfato";
-            }
-            if (op_ani_alcalinidad > resultado)
-            {
-                resultado = op_ani_alcalinidad;
-                Componente = "Acido";
-            }
-
-            return Componente;
-        }
-
-        //Intervalos para resolver el ejercicio
-        private void LimitesSangreAnimales(float num_muestra)
-        {
-            if (num_muestra >= animales[0].limInf && num_muestra <= animales[0].limSup)
-            {
-                op_ani_acidez++;
-            }
-            else if (num_muestra >= animales[1].limInf && num_muestra <= animales[1].limSup)
-            {
-                op_ani_anemia++;
-            }
-            else if (num_muestra >= animales[2].limInf && num_muestra <= animales[2].limSup)
-            {
-                op_ani_normal++;
-            }
-            else if (num_muestra >= animales[3].limInf && num_muestra <= animales[3].limSup)
-            {
-                op_ani_glucosa++;
-            }
-            else
-            {
-                op_ani_alcalinidad++;
-            }
-        }
-
-        private void LimitesAgua(float num_muestra)
-        {
-            if (num_muestra >= agua[0].limInf && num_muestra <= agua[0].limSup)
-            {
-                op_coloidales++;
-            }
-            else if (num_muestra >= agua[1].limInf && num_muestra <= agua[1].limSup)
-            {
-                op_mercurio++; //mas peligroso
-            }
-            else if (num_muestra >= agua[2].limInf && num_muestra <= agua[2].limSup)
-            {
-                op_residuos++;
-            }
-            else if (num_muestra >= agua[3].limInf && num_muestra <= agua[3].limSup)
-            {
-                op_sulfato++;
-            }
-            else if (num_muestra >= agua[4].limInf && num_muestra <= agua[4].limSup)
-            {
-                op_acido++;
-            }
-            else if (num_muestra >= agua[5].limInf && num_muestra <= agua[5].limSup)
-            {
-                op_fosfato++;
-            }
-            else
-            {
-                op_oxidos++;
-            }
-        }
         
-        //Asigna valores en la lista
-        public void AsignarValAnimales()
+
+        //METODOS DE INTERVALOS ------------------------------------------------------------------------
+        private void MostrarIntervalos(object sender, EventArgs e)
         {
-            /*Alto grado de acidez
-            Estado de anemia aguda
-            Estado en rango normal
-            Exceso de glucosa
-            Alto grado de alcalinidad*/
+            this.Hide();
+            frmIntervalos.ShowDialog();
+            this.Show();
+        }
+
+        public void RellenarListaAnimales()
+        {
             an = new Intervals();
             an.nombre = "Alto grado de acidez";
             an.distribucion = Ani_acidez;
@@ -325,7 +312,7 @@ namespace Generador_de_numeros___Simulacion
             animales.Add(an);
         }
 
-        public void AsignarValAgua()
+        public void RellenarListaAgua()
         {
             ag = new Intervals();
             ag.nombre = "Substancias coloidales";
@@ -379,78 +366,13 @@ namespace Generador_de_numeros___Simulacion
 
         public void CargarLimitesEnListas()
         {
-            AsignarValAnimales();
-            AsignarValAgua();
-        }
-
-        public void GuardarHisto()
-        {
-            //Agrega nueva fila
-            int n = historial.dgvHistorial.Rows.Add();
-
-            //Agregar datos de numeros pseudo
-            string datos = $"Xo = {g.X0}\r\n" +
-                           $"a = {g.a}\r\n" +
-                           $"c = {g.c}\r\n" +
-                           $"m = {g.m}\r\n";
-            historial.dgvHistorial.Rows[n].Cells[0].Value = datos;
-
-            /*Alto grado de acidez
-            Estado de anemia aguda
-            Estado en rango normal
-            Exceso de glucosa
-            animales[i].nombre;
-            animales[i].distribucion;
-            Alto grado de alcalinidad*/
-            string probAni = "";
-            for (int i = 0; i < animales.Count; i++)
-            {
-                probAni += $"{animales[i].nombre} = {animales[i].distribucion}\r\n";
-            }
-            //string probAni = $"Alto grado de acidez = {animales[0].distribucion}\r\n" +
-            //           $"Estado de anemia aguda = {g.a}\r\n" +
-            //           $"Estado en rango normal = {g.c}\r\n" +
-            //           $"Exceso de glucosa = {g.m}\r\n" +
-            //           $"Alto grado de alcalinidad = {g.m}\r\n";
-            historial.dgvHistorial.Rows[n].Cells[1].Value = probAni;
-
-
-            string ResAni = $"Alto grado de acidez = {op_ani_acidez}\r\n" +
-                       $"Estado de anemia aguda = {op_ani_anemia}\r\n" +
-                       $"Estado en rango normal = {op_ani_normal}\r\n" +
-                       $"Exceso de glucosa = {op_ani_glucosa}\r\n" +
-                       $"Alto grado de alcalinidad = {op_ani_alcalinidad}\r\n";
-            historial.dgvHistorial.Rows[n].Cells[2].Value = ResAni;
-
-            string probAgua = "";
-            for (int i = 0; i < agua.Count; i++)
-            {
-                probAgua += $"{agua[i].nombre} = {agua[i].distribucion}\r\n";
-            }
-            historial.dgvHistorial.Rows[n].Cells[3].Value = probAgua;
-
-            string ResAgua = $"Substancias coloidales = {op_coloidales}\r\n" +
-                       $"Exceso de mercurio = {op_mercurio}\r\n" +
-                       $"Residuos petroquímicos = {op_residuos}\r\n" +
-                       $"Sulfatos = {op_sulfato}\r\n" +
-                       $"Acido clorhídrico = {op_acido}\r\n" +
-                       $"Fosfato = {op_fosfato}\r\n" +
-                       $"Óxidos = {op_oxidos}\r\n";
-            historial.dgvHistorial.Rows[n].Cells[4].Value = ResAgua;
-
-
-            /*Substancias coloidales
-Exceso de mercurio
-Residuos petroquímicos
-Sulfatos
-Acido clorhídrico
-Fosfato
-Óxidos*/
+            RellenarListaAnimales();
+            RellenarListaAgua();
         }
 
         private void btnIntervalos_Click(object sender, EventArgs e)
         {
-            if(aproba1 && aproba2)
+            if (aproba1 && aproba2)
             {
                 //Limpia las filas de las tablas de animales y de agua
                 frmIntervalos.tblAnimales.Rows.Clear();
@@ -482,11 +404,11 @@ Fosfato
                 }
                 MostrarIntervalos(sender, e);
             }
-            else if(aproba1 == false && aproba2)
+            else if (aproba1 == false && aproba2)
             {
                 MessageBox.Show("La suma de la distribución de los analisis en animales es diferente de 1, Verifique los datos", "Error al ingresar datos");
             }
-            else if(aproba1 && aproba2 == false)
+            else if (aproba1 && aproba2 == false)
             {
                 MessageBox.Show("La suma de la distribución de los analisis de agua es diferente de 1, Verifique los datos", "Error al ingresar datos");
             }
@@ -496,33 +418,88 @@ Fosfato
             }
         }
 
-        //Metodo para mostrar forma de Intervalos
-        private void MostrarIntervalos(object sender, EventArgs e)
+
+
+        //HISTORIAL de Experimentos ----------------------------------------------------------------------
+        public void GuardarHisto()
         {
-            this.Hide();
-            frmIntervalos.ShowDialog();
-            this.Show();
+            //Agrega nueva fila
+            int n = historial.dgvHistorial.Rows.Add();
+
+            //Agregar datos de numeros pseudo
+            string datos = $"Xo = {g.X0}\r\n" +
+                           $"a = {g.a}\r\n" +
+                           $"c = {g.c}\r\n" +
+                           $"m = {g.m}\r\n";
+            historial.dgvHistorial.Rows[n].Cells[0].Value = datos;
+
+            //AGREGAR datos de los ANIMALES -----------------
+            {
+                string probAni = "";
+                for (int i = 0; i < animales.Count; i++)
+                {
+                    probAni += $"{animales[i].nombre} = {animales[i].distribucion}\r\n";
+                }
+                historial.dgvHistorial.Rows[n].Cells[1].Value = probAni;
+
+                //Mostrar la cantidad de cada de resultados de cada opcion ANIMALES
+
+                string ResAni = $"Alto grado de acidez = {op_ani_acidez}\r\n" +
+                           $"Estado de anemia aguda = {op_ani_anemia}\r\n" +
+                           $"Estado en rango normal = {op_ani_normal}\r\n" +
+                           $"Exceso de glucosa = {op_ani_glucosa}\r\n" +
+                           $"Alto grado de alcalinidad = {op_ani_alcalinidad}\r\n";
+                historial.dgvHistorial.Rows[n].Cells[2].Value = ResAni;
+            }
+
+            //AGREGAR datos del AGUA a la tabla------------------------
+            {
+                string probAgua = "";
+                for (int i = 0; i < agua.Count; i++)
+                {
+                    probAgua += $"{agua[i].nombre} = {agua[i].distribucion}\r\n";
+                }
+                historial.dgvHistorial.Rows[n].Cells[3].Value = probAgua;
+
+                //Mostrar la cantidad de cada de resultados de cada opcion AGUA
+
+                string ResAgua = $"Substancias coloidales = {op_coloidales}\r\n" +
+                           $"Exceso de mercurio = {op_mercurio}\r\n" +
+                           $"Residuos petroquímicos = {op_residuos}\r\n" +
+                           $"Sulfatos = {op_sulfato}\r\n" +
+                           $"Acido clorhídrico = {op_acido}\r\n" +
+                           $"Fosfato = {op_fosfato}\r\n" +
+                           $"Óxidos = {op_oxidos}\r\n";
+                historial.dgvHistorial.Rows[n].Cells[4].Value = ResAgua;
+            }
+
         }
 
-        bool aproba1 = false, aproba2 = false;
-
-        private void txtAcidez_TextChanged(object sender, EventArgs e)
+        private void cmdHistorial_Click(object sender, EventArgs e)
         {
-            //frmProblema_Load(sender, e);
+            historial.ShowDialog();
         }
 
+
+
+        //Metodos de la ventanas -------------------------------------------------------------------------
         private void frmProblema_Load(object sender, EventArgs e)
         {
             txtAcidez.Focus();
         }
-
-        //variables de agua
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+
+
+        //OBTENCION DE DATOS INGRESADOS POR EL USUARIO -----------------------------------------------------
+        float Ani_acidez, Ani_anemia, Ani_normal, Ani_glucosa, Ani_Alcalinindad;
+        float Agua_coloidales, Agua_mercurio, Agua_residuos, Agua_sulfato, Agua_acido, Agua_fosfato, Agua_oxidos;
+        
+        bool aproba1 = false, aproba2 = false;
         private void cmdIngresarAnimales_Click(object sender, EventArgs e)
         {
             //Recuperacion de datos ingresados por el usuario
@@ -598,6 +575,18 @@ Alto grado de alcalinidad*/
                 }
             }
             txtTotal2.Visible = true;
+        }
+        
+        private void ValidarAcidez_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //MessageBox.Show("Ingresar solo números", "ALERTA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //e.Handled = true;
+            //return;
+        }
+
+        private void txtAcidez_TextChanged(object sender, EventArgs e)
+        {
+            //frmProblema_Load(sender, e);
         }
     }
 }
