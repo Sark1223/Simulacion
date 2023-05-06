@@ -186,10 +186,10 @@ namespace Generador_de_numeros___Simulacion
 
             Zo = (((promedio - 0.50F) * Math.Sqrt(lista.Count)) / Math.Sqrt(1F / 12F));
 
+            if (Zo < 0) { Zo *= -1; }
+
             pruebas.lblZoRes1.Text = $"= {Zo:N5}";
             pruebas.lblZoRes1.Location = new Point(pruebas.lblZoSuperior.Location.X + pruebas.lblZoSuperior.Width, 121);
-
-            if (Zo < 0) { Zo *= -1; }
 
 
             if (Zo <= Za)
@@ -247,9 +247,9 @@ namespace Generador_de_numeros___Simulacion
 
             //DATOS DE PRUEBA
             pruebas.lblNo_valores.Text = lista.Count.ToString();
-            pruebas.lblNo_grupos.Text = "4";
+            pruebas.lblNo_grupos.Text = "n = 4";
 
-            pruebas.lblNformula.Text = lista.Count.ToString();
+            pruebas.lblNo_valores.Text = "N = "+lista.Count.ToString();
             pruebas.pnformulaFe.Size = new Size(pruebas.lblNformula.Width, 1);
             pruebas.lblgruposFormula.Location = new Point((pruebas.lblNformula.Right - pruebas.lblNformula.Width / 2) - (pruebas.lblgruposFormula.Width / 2), 360);
 
@@ -281,7 +281,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio,pero pueden ser modificados","ATENCION");
+            MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio,pero pueden ser modificados", "ATENCION");
             rb5.Checked = true;
         }
 

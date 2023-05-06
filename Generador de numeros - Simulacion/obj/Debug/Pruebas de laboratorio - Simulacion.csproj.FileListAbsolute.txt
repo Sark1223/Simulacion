@@ -35,3 +35,4 @@ C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simul
 C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmIntervalos.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.frmHistorial.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.Resultados.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Generador de numeros - Simulacion\obj\Debug\Generador_de_numeros___Simulacion.PantallaPrincipal.resources

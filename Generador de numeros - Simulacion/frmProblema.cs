@@ -594,7 +594,7 @@ namespace Generador_de_numeros___Simulacion
                 else
                 {
                     txtConclusionGeneral.Location = new Point(14, 19);
-                    txtConclusionGeneral.Text = "ES INDISPENSABLE CAMBIAR de distribuidor.";
+                    txtConclusionGeneral.Text = "ES INDISPENSABLE CAMBIAR el estado del agua.";
                     calcularAgua = true;
                 }
 
@@ -1030,7 +1030,7 @@ namespace Generador_de_numeros___Simulacion
                            $"Óxidos = {op_oxidos}\r\n";
                 historial.dgvHistorial.Rows[n].Cells[4].Value = ResAgua;
             }
-
+            historial.dgvHistorial.Rows[n].Cells[5].Value = txtConclusionGeneral.Text +"\r\n"+txtConclusionAgua.Text;
         }
 
         private void cmdHistorial_Click(object sender, EventArgs e)
