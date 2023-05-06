@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -94,35 +95,44 @@ namespace Generador_de_numeros___Simulacion
                 //return 5;
             }
         }
-        private void LimitesAgua(float num_muestra)
+        private string LimitesAgua(float num_muestra)
         {
+            
             if (num_muestra >= agua[0].limInf && num_muestra <= agua[0].limSup)
             {
                 op_coloidales++;
+                return "Substancias coloidales";
             }
             else if (num_muestra >= agua[1].limInf && num_muestra <= agua[1].limSup)
             {
                 op_mercurio++; //mas peligroso
+                return "Exceso de mercurio";
+
             }
             else if (num_muestra >= agua[2].limInf && num_muestra <= agua[2].limSup)
             {
                 op_residuos++;
+                return "Residuos petroquímicos";
             }
             else if (num_muestra >= agua[3].limInf && num_muestra <= agua[3].limSup)
             {
                 op_sulfato++;
+                return "Sulfatos";
             }
             else if (num_muestra >= agua[4].limInf && num_muestra <= agua[4].limSup)
             {
                 op_acido++;
+                return "Acido clorhídrico";
             }
             else if (num_muestra >= agua[5].limInf && num_muestra <= agua[5].limSup)
             {
                 op_fosfato++;
+                return "Fosfato";
             }
             else
             {
                 op_oxidos++;
+                return "Óxidos";
             }
         }
         
@@ -204,149 +214,487 @@ namespace Generador_de_numeros___Simulacion
             return Componente;
         }
 
-        private string Sector(int num)
+        private bool ConclusionSector(bool[] sector, string X, System.Windows.Forms.Label label)
         {
-            if (num >= 0 && num < 5)
+            if (sector[2])
             {
-                return "A";
+                if (sector[1])
+                {
+                    if (sector[0])
+                    {
+                        label.Text = $"En el Sector {X} el ganado: " +
+                                                    "PERMANECIO SALUDABLE todo " +
+                                                    "el experimento.";
+                        return true;
+                    }
+                    else
+                    {
+                        label.Text = $"En el Sector {X} el ganado: " +
+                            "El dia 1 se encontraba enfermo, " +
+                            "el dia 14  saludable y " +
+                            "30 dias despues saludable.";
+                        return true;
+                    }
+                }
+                else
+                {
+                    if (sector[0])
+                    {
+                        label.Text = $"En el Sector {X} el ganado: " +
+                            "El dia 1 se encontraba Saludable, " +
+                            "el dia 14  Enfermo y " +
+                            "30 dias despues saludable.";
+                        return true;
+                    }
+                    else
+                    {
+                        label.Text = $"En el Sector {X} el ganado: " +
+                            "El dia 1 se encontraba Enfermo, " +
+                            "el dia 14  Enfermo y " +
+                            "30 dias despues Saludable.";
+                        return true;
+                    }
+                }
             }
-            else if (num >= 5 && num < 10)
+            else
             {
-                return "B";
-            }
-            else if (num >= 10 && num <= 15)
-            {
-                return "C";
-            }
-            else 
-            {
-                return "D";
+                if (sector[1])
+                {
+                    if (sector[0])
+                    {
+                        label.Text = $"En el Sector {X} el ganado: " +
+                            "El dia 1 se encontraba Saludable, " +
+                            "el dia 14  Saludable y " +
+                            "30 dias despues Enfermo.";
+                        return false;
+                    }
+                    else
+                    {
+                        label.Text = $"En el Sector {X} el ganado: " +
+                            "El dia 1 se encontraba Enfermo, " +
+                            "el dia 14  Saludable y " +
+                            "30 dias despues Enfermo.";
+                        return false;
+                    }
+                }
+                else
+                {
+                    if (sector[0])
+                    {
+                        label.Text = $"En el Sector {X} el ganado: " +
+                            "El dia 1 se encontraba Saludable, " +
+                            "el dia 14  Enfermo y " +
+                            "30 dias despues Enfermo.";
+                        return false;
+                    }
+                    else
+                    {
+                        label.Text = $"En el Sector {X} el ganado: " +
+                                                     "PERMANECIO ENFERMO todo " +
+                                                     "el experimento.";
+                        return false;
+                    }
+
+                }
             }
         }
+        int fila;
+        private bool Evaluar(int dia, string sector)
+        {
+            //Variables para almacenar la informacion que se agregara a la tabla
+            
+            string EstadoAnimal ="";
+            string[] EstadosNegativosArg = new string[5];
+            string EstadosNegativos = "Se encontraron:";
+            int w = 0;
+            //Se agrega una nueva fila cada que cambia de sector
+            fila = dgvResAni.Rows.Add();
+            
+            /*El dia y sector solo se mostraran una vez,
+            por lo que se agrega fuera del ciclo*/
+            dgvResAni.Rows[fila].Cells[0].Value = dia;
+            dgvResAni.Rows[fila].Cells[1].Value = sector;
+
+            int sano = 0;
+
+            //El ciclo recorre los 5 animales de los que se toma muestra
+            for (int i = 0; i < 5; i++)
+            {
+                string Salud = LimitesSangreAnimales(Ri[num_actual]);
+
+                if (Salud == "estado de rango normal")
+                {
+                    sano++;
+                }
+                else
+                {
+                    EstadosNegativosArg[w] = Salud;
+                    w++;
+                }
+
+                EstadoAnimal += $"Animal {i+1} - {Salud}\r\n";
+                num_actual++;
+            }
+
+            //Imprime los Resultados de todos los animales
+            dgvResAni.Rows[fila].Cells[2].Value = EstadoAnimal;
+
+            //Evaluar Resultados de salud de los animales
+            int aa = 0, eg = 0, eaa = 0, aga = 0;
+
+            //El ciclo verifica cuantos animales de cada estado existen
+            for (w = 0; w < EstadosNegativosArg.Length; w++)
+            {
+                if (EstadosNegativosArg[w] == "alto grado de alcalinidad")
+                {
+                    aa++;
+                }
+                else if(EstadosNegativosArg[w] == "exceso de glucosa")
+                {
+                    eg++;
+                }
+                else if (EstadosNegativosArg[w] == "estado de anemia aguda")
+                {
+                    eaa++;
+                }
+                else if (EstadosNegativosArg[w] == "alto grado de acidez")
+                {
+                    aga++;
+                }
+                
+            }
+
+            //si hay 1 o más es importante imprimirlo
+            {
+                if (aa > 0)
+                {
+                    EstadosNegativos += "\r\nAlto grado de alcalinidad: " + aa;
+                }
+                if (eg > 0)
+                {
+                    EstadosNegativos += "\r\nExceso de glucosa: " + eg;
+                }
+                if (eaa > 0)
+                {
+                    EstadosNegativos += "\r\nEstado de anemia aguda: " + eaa;
+                }
+                if (aga > 0)
+                {
+                    EstadosNegativos += "\r\nAlto grado de acidez: " + aga;
+                }
+            }
+
+            
+            if(sano >= 3)
+            {
+                dgvResAni.Rows[fila].Cells[3].Value = "Aunque "+EstadosNegativos + 
+                                                   "\r\nel 50% o más del ganado esta SALUDABLES.";
+              
+                return true;
+            }
+            else
+            {
+                dgvResAni.Rows[fila].Cells[3].Value = "Los animales estan en PELIGRO\r\n" + 
+                                                    EstadosNegativos +
+                                                    "\r\nmás del 50% del ganado puede morir.";
+                return false;
+            }
+                
+            
+        }
+
+        //bool Animales_Saludables = false;
+        int num_actual = 0;
+
+        private void RecorrerResultadosAgua(string[] arg, string sector)
+        {
+            int sc = 0, em = 0, rp = 0, s = 0, ac = 0, f = 0, o = 0;
+
+            for(int i=0; i< arg.Length; i++)
+            {
+                if (arg[i] == "Substancias coloidales")
+                {
+                    sc++;
+                }
+                if (arg[i] == "Exceso de mercurio")
+                {
+                    em++;
+                }
+                if (arg[i] == "Residuos petroquímicos")
+                {
+                    rp++;
+                }
+                if (arg[i] == "Sulfatos")
+                {
+                    s++;
+                }
+                if (arg[i] == "Acido clorhídrico")
+                {
+                    ac++;
+                }
+                if (arg[i] == "Fosfato")
+                {
+                    f++;
+                }
+                if (arg[i] == "Óxidos")
+                {
+                    o++;
+                }
+            }
+
+            int[] FO = { sc, em, rp, s, ac, f, o };
+
+            for (int x = 0; x < FO.Length; x++)
+            {
+                // Recuerda que el -1 es porque no queremos llegar al final ya que hacemos
+                // un indiceActual + 1 y si fuéramos hasta el final, intentaríamos acceder a un valor fuera de los límites
+                // del arreglo
+                for (int indiceActual = 0; indiceActual < FO.Length - 1; indiceActual++)
+                {
+                    int indiceSiguienteElemento = indiceActual + 1;
+                    // Si el actual es mayor que el que le sigue a la derecha...
+                    if (FO[indiceActual] > FO[indiceSiguienteElemento])
+                    {
+                        int temporal = FO[indiceActual];
+                        FO[indiceActual] = FO[indiceSiguienteElemento];
+                        FO[indiceSiguienteElemento] = temporal;
+                    }
+                }
+            }
+
+            string masEncontrado = "";
+
+            if (FO[6] == sc)
+            {
+                masEncontrado = "Substancias coloidales";
+            }
+            else if (FO[6] == em)
+            {
+                masEncontrado = "Exceso de mercurio";
+            }
+            if (FO[6] == rp)
+            {
+                masEncontrado = "Residuos petroquímicos";
+            }
+            else if (FO[6] == s)
+            {
+                masEncontrado = "Sulfatos";
+            }
+            else if (FO[6] == ac)
+            {
+                masEncontrado = "Acido clorhídrico";
+            }
+            else if (FO[6] == f)
+            {
+                masEncontrado = "Fosfato";
+            }
+            else if (FO[6] == o)
+            {
+                masEncontrado = "Óxidos";
+            }
+
+            txtConclusionAgua.Text += $"   - {sector} fue: " + masEncontrado + "\r\n";
+        }
+
 
         private void cmdResolver_Click(object sender, EventArgs e)
         {
+            
             if (aproba1 && aproba2)
             {
                 //Limpiar las listas de animales y agua
                 animales.Clear();
                 agua.Clear();
+                dgvResAgua.Rows.Clear();
+                dgvResAni.Rows.Clear();
+
 
                 CargarLimitesEnListas();
 
-                lblResultado.Text = "Ultimo numero del arreglo: " + Ri[1179];
-                int num_actual = 0;
+                num_actual = 0;
 
-                int animal = 1;
-                int normal = 0;
-                int n;
+                bool[] SectorA = new bool[3];
+                bool[] SectorB = new bool[3];
+                bool[] SectorC = new bool[3];
+                bool[] SectorD = new bool[3];
+
                 //DIA UNO
-                for (int i = 0; i < 20; i++)
-                {
-                    string Salud = LimitesSangreAnimales(Ri[num_actual]);
-                    if ( Salud == "estado de rango normal")
-                    {
-                        normal++;
-                        
-                    }
-
-                    n = resulta.dgvResAni.Rows.Add();
-                    resulta.dgvResAni.Rows[n].Cells[0].Value = i;
-                    resulta.dgvResAni.Rows[n].Cells[1].Value = Salud;
-                    num_actual++;
-                    if (animal >= 5)
-                    {
-                        animal = 1;
-                    }
+                { 
+                //Sector A
+                SectorA[0] = Evaluar(1, "A");
+                //Sector B
+                SectorB[0] = Evaluar(1, "B");
+                //Sector C
+                SectorC[0] = Evaluar(1, "C");
+                //Sector D
+                SectorD[0] = Evaluar(1, "D");
                 }
 
-                if(normal> 16)
-                {
-                    lblResultado.Text = "Dia 1: más del 80% de los animales se encuentran en estado normal\r\n";
-                }
-                else
-                {
-                    lblResultado.Text = "Dia 1: más del 20% de los animales se encuentran en peligro\r\n";
-                }
 
                 //DIA 14
-                normal = 0;
-                for (int i = 0; i < 20; i++)
-                {
-                    string Salud = LimitesSangreAnimales(Ri[num_actual]);
-                    if (Salud == "estado de rango normal")
-                    {
-                        normal++;
-
-                    }
-
-                    n = resulta.dgvResAni.Rows.Add();
-                    resulta.dgvResAni.Rows[n].Cells[0].Value = i;
-                    resulta.dgvResAni.Rows[n].Cells[1].Value = Salud;
-                    num_actual++;
-                    if (animal >= 5)
-                    {
-                        animal = 1;
-                    }
+                { 
+                //Sector A
+                SectorA[1] = Evaluar(14, "A");
+                //Sector B
+                SectorB[1] = Evaluar(14, "B");
+                //Sector C
+                SectorC[1] = Evaluar(14, "C");
+                //Sector D
+                SectorD[1] = Evaluar(14, "D");
                 }
 
-                if (normal > 16)
+
+                //DIA 30
+                { 
+                //Sector A
+                SectorA[2] = Evaluar(30, "A");
+                //Sector B
+                SectorB[2] = Evaluar(30, "B");
+                //Sector C
+                SectorC[2] = Evaluar(30, "C");
+                //Sector D
+                SectorD[2] = Evaluar(30, "D");
+                }
+
+                int resultadoEficiente = 0;
+                string sectoresEficientes = "Los del sector: ";
+
+                if(ConclusionSector(SectorA, "A", lblConclusionSA))
                 {
-                    lblResultado.Text += "Dia 2: más del 80% de los animales se encuentran en estado normal\r\n";
+                    resultadoEficiente++;
+                    sectoresEficientes += "A";
+
+                }
+                if(ConclusionSector(SectorB, "B", lblConclusionSB))
+                {
+                    resultadoEficiente++;
+                    sectoresEficientes += "B,";
+                }
+                if(ConclusionSector(SectorC, "C", lblConclusionSC))
+                {
+                    resultadoEficiente++;
+                    sectoresEficientes += "C,";
+                }
+                if(ConclusionSector(SectorD, "D", lblConclusionSD))
+                {
+                    resultadoEficiente++;
+                    sectoresEficientes += "D";
+                }
+
+                bool calcularAgua;
+
+                if(resultadoEficiente > 2)
+                {
+                    txtConclusionGeneral.Location = new Point(14, 6);
+                    txtConclusionGeneral.Text = "Aunque algunos animales esten resultando afectados\r\n" +
+                                                sectoresEficientes + " parecen adaptarse bien\r\n" +
+                                                "por tanto, NO es INDISPENSABLE cambiar de distribuidor.";
+                    calcularAgua = false;
                 }
                 else
                 {
-                    lblResultado.Text += "Dia 2: más del 20% de los animales se encuentran en peligro\r\n";
+                    txtConclusionGeneral.Location = new Point(14, 19);
+                    txtConclusionGeneral.Text = "ES INDISPENSABLE CAMBIAR de distribuidor.";
+                    calcularAgua = true;
                 }
 
-                //fin de mes
-                normal = 0;
-                for (int i = 0; i < 20; i++)
+                string[] EstadoDelAguaA = new string[280];
+                int pruebasA =0;
+                string[] EstadoDelAguaB = new string[280];
+                int pruebasB = 0;
+                string[] EstadoDelAguaC = new string[280];
+                int pruebasC = 0;
+                string[] EstadoDelAguaD = new string[280];
+                int pruebasD = 0;
+
+                if (calcularAgua)
                 {
-                    string Salud = LimitesSangreAnimales(Ri[num_actual]);
-                    if (Salud == "estado de rango normal")
+                    int renglon;
+                    for (int x = 0; x < 14; x++)
                     {
-                        normal++;
+                        //Agregra nuevo Renglon
+                        renglon = dgvResAgua.Rows.Add();
 
-                    }
+                        //Agregar dia al nuevo renglon
+                        dgvResAgua.Rows[renglon].Cells[0].Value = x+1;//Dia
+                        dgvResAgua.Rows[renglon].Cells[1].Value = "A";//Sector
 
-                    n = resulta.dgvResAni.Rows.Add();
-                    resulta.dgvResAni.Rows[n].Cells[0].Value = i;
-                    resulta.dgvResAni.Rows[n].Cells[1].Value = Salud;
-                    num_actual++;
-                    if (animal >= 5)
-                    {
-                        animal = 1;
-                    }
-                }
-
-                if (normal > 16)
-                {
-                    lblResultado.Text += "Dia 3: más del 80% de los animales se encuentran en estado normal\r\n";
-                }
-                else
-                {
-                    lblResultado.Text += "Dia 3: más del 20% de los animales se encuentran en peligro\r\n";
-                }
-
-
-                if (ResAnimales() != "Normal")
-                {
-                    for (int x = 0; x < 14; x++) 
-                    {
-                        for (int i = 0; i < 60; i++)
+                        //sector A
+                        string prueba="";
+                        string resAgua = "";
+                        for (int i = 0; i < 20; i++)
                         {
-                            LimitesAgua(Ri[num_actual]);
+                            string a = LimitesAgua(Ri[num_actual]);
+                            resAgua += $"Prueba {i+1} - " + a +"\r\n";
+                            prueba += i + 1 + "\r\n";
+                            EstadoDelAguaA[pruebasA] = a;
+                            pruebasA++;
                             num_actual++;
                         }
+                        //imprimir numero de pruebas en el sector A
+                        dgvResAgua.Rows[renglon].Cells[2].Value = resAgua;//No de pruebas
+
+                        
+
+                        //sector B
+                        prueba = "";
+                        resAgua = "";
+                        dgvResAgua.Rows[renglon].Cells[3].Value = "B";//Sector
+                        for (int i = 0; i < 20; i++)
+                        {
+                            string a = LimitesAgua(Ri[num_actual]);
+                            resAgua += $"Prueba {i + 1} - " + a + "\r\n";
+                            prueba += i + 1 + "\r\n";
+                            EstadoDelAguaB[pruebasB] = a;
+                            pruebasB++;
+                            num_actual++;
+                        }
+                        //imprimir numero de pruebas en el sector A
+                        dgvResAgua.Rows[renglon].Cells[4].Value = resAgua;//No de pruebas
+
+                        //sector C
+                        prueba = "";
+                        resAgua = "";
+                        dgvResAgua.Rows[renglon].Cells[5].Value = "C";//Sector
+                        for (int i = 0; i < 20; i++)
+                        {
+                            string a = LimitesAgua(Ri[num_actual]);
+                            resAgua += $"Prueba {i + 1} - " + a + "\r\n";
+                            prueba += i + 1 + "\r\n";
+                            EstadoDelAguaC[pruebasC] = a;
+                            pruebasC++;
+                            num_actual++;
+                        }
+                        //imprimir numero de pruebas en el sector A
+                        dgvResAgua.Rows[renglon].Cells[6].Value = resAgua;//No de pruebas
+
+                        //sector D
+                        prueba = "";
+                        resAgua = "";
+                        dgvResAgua.Rows[renglon].Cells[7].Value = "D";//Sector
+                        for (int i = 0; i < 20; i++)
+                        {
+                            string a = LimitesAgua(Ri[num_actual]);
+                            resAgua += $"Prueba {i + 1} - " + a + "\r\n";
+                            prueba += i + 1 + "\r\n";
+                            EstadoDelAguaD[pruebasD] = a;
+                            pruebasD++;
+                            num_actual++;
+                        }
+                        //imprimir numero de pruebas en el sector A
+                        dgvResAgua.Rows[renglon].Cells[8].Value = resAgua;//No de pruebas
+
                     }
+                    
+                    txtConclusionAgua.Text = "El elemento más encontrado en el sector:\r\n";
+
+                    RecorrerResultadosAgua(EstadoDelAguaA, "A");
+                    RecorrerResultadosAgua(EstadoDelAguaB, "B");
+                    RecorrerResultadosAgua(EstadoDelAguaC, "C");
+                    RecorrerResultadosAgua(EstadoDelAguaD, "D");
+
+                    txtConclusionAgua.Text += "Puede que estos elementos esten dañando la salud de sus animales.";
                 }
-
-
-                lblResultado.Text += "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1] +
-                                    "\r\n El elemento mas encontrado fue: " + ResAgua() +
-                                    "\r\n Los resultados mas repetidos en animales fueron: " + ResAnimales();
-
 
             }
             else
@@ -354,6 +702,11 @@ namespace Generador_de_numeros___Simulacion
                 MessageBox.Show("Debe confirmar primero la distribucion de probabilidad", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+
+            panel7.Location = new Point(28, pnexperimento.Location.Y + 26);  
+
+            panel7.Visible = true;
+            panel8.Visible = true;
 
             GuardarHisto();
         }
@@ -698,7 +1051,12 @@ namespace Generador_de_numeros___Simulacion
             Close();
         }
 
-        
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
 
 
 

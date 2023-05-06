@@ -153,6 +153,16 @@ namespace Generador_de_numeros___Simulacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap la_contaminacion_del_agua__3_ {
+            get {
+                object obj = ResourceManager.GetObject("la-contaminacion-del-agua (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap marca_de_verificacion__1_ {
             get {
                 object obj = ResourceManager.GetObject("marca-de-verificacion (1)", resourceCulture);
