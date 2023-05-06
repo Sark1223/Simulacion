@@ -205,5 +205,11 @@
   <ItemGroup>
     <None Include="Resources\la-contaminacion-del-agua %283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-imagen-animada-0269.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -48,6 +48,8 @@ namespace Generador_de_numeros___Simulacion
         //Areglo para obtener numeros PSEUDOALEARTORIOS
         public float[] Ri = new float[1180];
 
+        bool aproba1 = false, aproba2 = false;
+
 
         //Recibir numeo de la pantalla de inicio
         public void ObtenerNumero(float[] numeros, Semilla g)
@@ -499,7 +501,6 @@ namespace Generador_de_numeros___Simulacion
 
         private void cmdResolver_Click(object sender, EventArgs e)
         {
-            
             if (aproba1 && aproba2)
             {
                 //Limpiar las listas de animales y agua
@@ -694,7 +695,14 @@ namespace Generador_de_numeros___Simulacion
                     RecorrerResultadosAgua(EstadoDelAguaD, "D");
 
                     txtConclusionAgua.Text += "Puede que estos elementos esten dañando la salud de sus animales.";
+                    ImgFlecha.Visible = true;
                 }
+                panel7.Location = new Point(28, pnexperimento.Location.Y + 26);
+
+                panel7.Visible = true;
+                panel8.Visible = true;
+
+                GuardarHisto();
 
             }
             else
@@ -703,12 +711,12 @@ namespace Generador_de_numeros___Simulacion
 
             }
 
-            panel7.Location = new Point(28, pnexperimento.Location.Y + 26);  
+            //panel7.Location = new Point(28, pnexperimento.Location.Y + 26);  
 
-            panel7.Visible = true;
-            panel8.Visible = true;
+            //panel7.Visible = true;
+            //panel8.Visible = true;
 
-            GuardarHisto();
+            //GuardarHisto();
         }
 
         //private void cmdResolver_Click(object sender, EventArgs e)
@@ -1035,16 +1043,16 @@ namespace Generador_de_numeros___Simulacion
 
         private void cmdHistorial_Click(object sender, EventArgs e)
         {
+            this.Hide();
             historial.ShowDialog();
+            this.Show();
         }
-
-
 
         //Metodos de la ventanas -------------------------------------------------------------------------
         private void frmProblema_Load(object sender, EventArgs e)
         {
-            txtAcidez.Focus();
         }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -1056,15 +1064,44 @@ namespace Generador_de_numeros___Simulacion
 
         }
 
+        //Metodo para esconder paneles y esconder botones cuando se cambie el texto
+        private void txtAcoloidales_TextChanged(object sender, EventArgs e)
+        {
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
 
+        //Metodo para esconder paneles 7 y 8
+        private void EsconderPaneles()
+        {
+            panel7.Visible = false;
+            panel8.Visible = false;
+            ImgFlecha.Visible = false;
+        }
 
+        private void CambiarImagenAnimales()
+        {   
+            cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__1_;
+        }
+
+        private void CambiarImagenAgua()
+        {
+            cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__1_;
+        }
+
+        private void txtChanged_Animales(object sender, EventArgs e)
+        {
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false; 
+        }
 
 
         //OBTENCION DE DATOS INGRESADOS POR EL USUARIO -----------------------------------------------------
         float Ani_acidez, Ani_anemia, Ani_normal, Ani_glucosa, Ani_Alcalinindad;
         float Agua_coloidales, Agua_mercurio, Agua_residuos, Agua_sulfato, Agua_acido, Agua_fosfato, Agua_oxidos;
         
-        bool aproba1 = false, aproba2 = false;
         private void cmdIngresarAnimales_Click(object sender, EventArgs e)
         {
             //Recuperacion de datos ingresados por el usuario
@@ -1081,6 +1118,7 @@ namespace Generador_de_numeros___Simulacion
             if(suma == 1)
             {
                 aproba1 = true;
+                cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__2_;
                 //Crear distribucion acumulada
             }
             else
@@ -1117,7 +1155,7 @@ Alto grado de alcalinidad*/
             Agua_fosfato = float.Parse(txtAfosfato.Text) * 0.01F;
             Agua_oxidos = float.Parse(txtAOxidos.Text) * 0.01F;
 
-            suma = (Agua_coloidales + Agua_mercurio + Agua_residuos + 
+            suma = (Agua_coloidales + Agua_mercurio + Agua_residuos +
                 Agua_sulfato + Agua_acido + Agua_fosfato + Agua_oxidos);
 
             txtSuma2.Text = "" + suma;
@@ -1125,6 +1163,7 @@ Alto grado de alcalinidad*/
             if (suma == 1)
             {
                 aproba2 = true;
+                cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__2_;
                 //Crear distribucion acumulada
             }
             else

@@ -121,7 +121,7 @@
     <value>17, 9</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>103</value>
   </metadata>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -400,16 +400,17 @@
   <data name="cmdResolver.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAInSURBVHhe7d2/S1tBAMDx/n+dunRy6iII4uCSpYIgQnGo
-        QxeXUgouTg5dxMlFBzuIUAqCpZr+SFXUokaTVq98z9yjySXZk/t+4EDij+19ubv37vkkSFIPwyApYxgk
-        ZQyDpIxhkJQxDJIyQ8Pw0G6F692tcPr2VWgs18K3ly/C16mnDodjBAfXL9fxycpCuNrZDPfN686VnhsY
-        huanj/EPEQXicHuwH/6cNTrflTRquH65jm/2tsPZ+9fx+iYQ/WRhoCL80q83c+Hv7/POp5LGzbBrvSsM
-        /OCPxemBFZE0flgd/Fya7VoRdIWBehgFqTwsMdh/SKowUA2mFJLKdLH+LlxurMWvYxi4+8BGhHsKUrno
-        AFsJ7Ub9MQwsH1hGSCobMwZmDjEM3NfkFoaksrXqh3HWEMPwfX4yTh8klY3lxNHMs8cwHM8+H/oUlKRy
-        8JRkDANfSBIMg6SMYZCUMQySMlUY2IVkN1KSqjDw1KNHqiWhCgNnJDgrIalsPM/Ec00xDOkxSEllS8cj
-        YhhYRlAJ9xmksqXjETEMuPiwGoekMqX3u6IKA7MFXtRw9+Vz5xNJpeCVC6wa0tGIKgxg4yGdx5ZUBqLA
-        pIC3OCVdYQAzBuKQ3uQiaXyxn8BM4f8oIAsDWFZwl4KKsEvpm52k8cFyIe0nsNnY72R13zAkVIRbF/Xa
-        RHzoweFwjP7gNQvp/8UMMjQMkspkGCRlDIOkjGGQlDEMknqE8A/F3ejSI78YdAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVHhe7Z3PSxRhHIf7+wq0sC0LBPGmMP1yNUTFi+ih
+        Qx0iCukWRFC3yIOnIOpQBwlC8CC77661SqxUZmU/vu3nnXHRfV+9777PA89p3h1P8zDzvr4zpwwAoAPC
+        AAABhAEAAggDAAQQBgAIIAwAEHBiGP7t/7Ldty9t696cfVzMzE1essrYGUTsQnX96jpu3Jmyb29W7O/e
+        bnGlhxwbhr0P78xNDJobL1llNP6HELEbPW3u+nlz5Yv29dVyccUfJQiDKrL9YL4VhAuREyJiL6nr/NOt
+        cfvzpVkUIOdIGBSF+vSwVbL+6EkQsTetzwzb78+NogQdYdCdAlFATFPNPxzQDoOfU+DxATFZ3bUB23n+
+        yPfAh0GrD5pojA1GxHR05UHbb9TyMGjpQrOUsYGImJBZnzWfLuVh0LqmljCiAxExKeuzI3kYalND0QGI
+        mJ7V1l2DD0P16rnoAERMUx+G2AFETFfCgIiBhAERAwkDIgbmk49ZX/QgIqapDwPvWUDEw/owaNtl7CAi
+        pqf+r8mHYefFY6teORsdhIhpub20kIdB+7DZWYmI6sD31dd5GETz2UOrspEKMV2zftu6O+t70A6Dtl5v
+        zo/Ff4CIPW9t8nL7BbHtMAjtw65NsEKBmJp6H8uP9fdFCTrCIH5urPn3PrKxCjEBW48PulM4HAURhEHo
+        saL55L65MhOSiD3pqCYaS9a4fTP6fYloGA5QRbR04W6U4idHxK5TTwP6iJQ+JnUcJ4YBANKEMABAAGEA
+        gADCAAABhAEAOjD7D/0JMAIbLTYEAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="cmdMostrarIntervalos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -597,5 +598,11 @@ Los dos puntos anteriores se repiten por cada sector.</value>
   </metadata>
   <metadata name="rdResAgua.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>479, 8</value>
+  </metadata>
+  <metadata name="rsBtn1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>616, 8</value>
+  </metadata>
+  <metadata name="rdBtn2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>706, 6</value>
   </metadata>
 </root>
