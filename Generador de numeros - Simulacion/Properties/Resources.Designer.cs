@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pruebas_de_laboratorio_Simulacion.Properties {
+namespace Generador_de_numeros___Simulacion.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Pruebas_de_laboratorio_Simulacion.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pruebas_de_laboratorio_Simulacion.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Generador_de_numeros___Simulacion.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
