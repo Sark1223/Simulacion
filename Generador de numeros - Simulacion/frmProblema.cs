@@ -32,7 +32,6 @@ namespace Generador_de_numeros___Simulacion
             public float limSup;
         }
 
-
         //Objeto de clases
         Semilla g;
         Intervals ag;
@@ -42,7 +41,7 @@ namespace Generador_de_numeros___Simulacion
         frmIntervalos frmIntervalos = new frmIntervalos();
         frmHistorial historial = new frmHistorial();
         Resultados resulta = new Resultados();
-        //Inicio inicio = new Inicio();
+        PantallaPrincipal puerquito = new PantallaPrincipal();
 
         //Lista para guardar los intervalos y datos del AGUA y ANIMALES
         List<Intervals> animales = new List<Intervals>();
@@ -703,8 +702,7 @@ namespace Generador_de_numeros___Simulacion
                 panel7.Location = new Point(28, pnexperimento.Location.Y + 26);
                 //pnBotones.Location = new Point(100, panel8.Location.Y + 26);
 
-                button1.Visible = true;
-                button2.Visible = true;
+                panel11.Visible = true;
                 panel7.Visible = true;
                 panel8.Visible = true;
 
@@ -1579,11 +1577,24 @@ namespace Generador_de_numeros___Simulacion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Close();
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
             Environment.Exit(0);
-            Application.Exit();
-            Environment.Exit(0);
-            Application.Exit();
+            //Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            puerquito.ShowDialog();
+            this.Show();
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+            aproba2 = false;
         }
 
         private void CambiarImagenAgua()

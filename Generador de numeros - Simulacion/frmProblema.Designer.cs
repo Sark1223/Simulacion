@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblema));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblema));
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new ns1.BunifuCustomLabel();
             this.panTop = new System.Windows.Forms.Panel();
+            this.btnCerrar = new ns1.BunifuImageButton();
             this.rdTitulo = new ns1.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,6 +98,7 @@
             this.separador = new ns1.BunifuSeparator();
             this.lblConclusionSB = new System.Windows.Forms.Label();
             this.lblConclusionSC = new System.Windows.Forms.Label();
+            this.cmdHistorial = new System.Windows.Forms.PictureBox();
             this.lblConclusionSA = new System.Windows.Forms.Label();
             this.dgvResAni = new System.Windows.Forms.DataGridView();
             this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,6 +109,7 @@
             this.bunifuSeparator4 = new ns1.BunifuSeparator();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dgvResAgua = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,36 +130,35 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.rsBtn1 = new ns1.BunifuElipse(this.components);
             this.rdBtn2 = new ns1.BunifuElipse(this.components);
+            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
             this.errorP1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ImgFlecha = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.cmdHistorial = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdResolver = new ns1.BunifuThinButton2();
             this.cmdIngresarAgua = new ns1.BunifuImageButton();
-            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
-            this.btnCerrar = new ns1.BunifuImageButton();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.pnConclusionGA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).BeginInit();
             this.pnResAgua.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdForma
@@ -168,9 +170,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1809);
+            this.panel1.Location = new System.Drawing.Point(0, 1883);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(916, 6);
+            this.panel1.Size = new System.Drawing.Size(905, 6);
             this.panel1.TabIndex = 45;
             // 
             // lblTitulo
@@ -192,9 +194,24 @@
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(0, 0);
             this.panTop.Name = "panTop";
-            this.panTop.Size = new System.Drawing.Size(916, 32);
+            this.panTop.Size = new System.Drawing.Size(905, 32);
             this.panTop.TabIndex = 26;
             this.panTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(871, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // rdTitulo
             // 
@@ -957,6 +974,17 @@
     "30 dias despues saludable";
             this.lblConclusionSC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cmdHistorial
+            // 
+            this.cmdHistorial.Image = ((System.Drawing.Image)(resources.GetObject("cmdHistorial.Image")));
+            this.cmdHistorial.Location = new System.Drawing.Point(802, 3);
+            this.cmdHistorial.Name = "cmdHistorial";
+            this.cmdHistorial.Size = new System.Drawing.Size(45, 37);
+            this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdHistorial.TabIndex = 74;
+            this.cmdHistorial.TabStop = false;
+            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
+            // 
             // lblConclusionSA
             // 
             this.lblConclusionSA.AutoSize = true;
@@ -1064,8 +1092,6 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button2);
-            this.panel8.Controls.Add(this.button1);
             this.panel8.Controls.Add(this.panel6);
             this.panel8.Controls.Add(this.pictureBox3);
             this.panel8.Controls.Add(this.dgvResAgua);
@@ -1074,7 +1100,7 @@
             this.panel8.Controls.Add(this.pnResAgua);
             this.panel8.Location = new System.Drawing.Point(19, 1099);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(897, 710);
+            this.panel8.Size = new System.Drawing.Size(853, 710);
             this.panel8.TabIndex = 83;
             this.panel8.Visible = false;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
@@ -1086,6 +1112,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(2, 183);
             this.panel6.TabIndex = 97;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.la_contaminacion_del_agua__3_;
+            this.pictureBox3.Location = new System.Drawing.Point(576, 48);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(185, 183);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 95;
+            this.pictureBox3.TabStop = false;
             // 
             // dgvResAgua
             // 
@@ -1255,7 +1291,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 32);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(2, 1777);
+            this.panel9.Size = new System.Drawing.Size(2, 1851);
             this.panel9.TabIndex = 85;
             // 
             // panel10
@@ -1264,7 +1300,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(2, 32);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(2, 1777);
+            this.panel10.Size = new System.Drawing.Size(2, 1851);
             this.panel10.TabIndex = 86;
             // 
             // rsBtn1
@@ -1276,6 +1312,21 @@
             // 
             this.rdBtn2.ElipseRadius = 20;
             this.rdBtn2.TargetControl = this.cmdIngresarAnimales;
+            // 
+            // cmdIngresarAnimales
+            // 
+            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
+            this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
+            this.cmdIngresarAnimales.ImageActive = null;
+            this.cmdIngresarAnimales.Location = new System.Drawing.Point(809, 413);
+            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
+            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
+            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdIngresarAnimales.TabIndex = 64;
+            this.cmdIngresarAnimales.TabStop = false;
+            this.cmdIngresarAnimales.Zoom = 10;
+            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
             // 
             // errorP1
             // 
@@ -1291,27 +1342,6 @@
             this.ImgFlecha.TabIndex = 87;
             this.ImgFlecha.TabStop = false;
             this.ImgFlecha.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.la_contaminacion_del_agua__3_;
-            this.pictureBox3.Location = new System.Drawing.Point(576, 48);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(185, 183);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 95;
-            this.pictureBox3.TabStop = false;
-            // 
-            // cmdHistorial
-            // 
-            this.cmdHistorial.Image = ((System.Drawing.Image)(resources.GetObject("cmdHistorial.Image")));
-            this.cmdHistorial.Location = new System.Drawing.Point(802, 3);
-            this.cmdHistorial.Name = "cmdHistorial";
-            this.cmdHistorial.Size = new System.Drawing.Size(45, 37);
-            this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdHistorial.TabIndex = 74;
-            this.cmdHistorial.TabStop = false;
-            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
             // 
             // pictureBox1
             // 
@@ -1364,21 +1394,6 @@
             this.cmdIngresarAgua.Zoom = 10;
             this.cmdIngresarAgua.Click += new System.EventHandler(this.cmdIngresarAgua_Click);
             // 
-            // cmdIngresarAnimales
-            // 
-            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
-            this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
-            this.cmdIngresarAnimales.ImageActive = null;
-            this.cmdIngresarAnimales.Location = new System.Drawing.Point(809, 413);
-            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
-            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
-            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdIngresarAnimales.TabIndex = 64;
-            this.cmdIngresarAnimales.TabStop = false;
-            this.cmdIngresarAnimales.Zoom = 10;
-            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.estanque;
@@ -1415,41 +1430,41 @@
             this.cmdMostrarIntervalos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdMostrarIntervalos.Click += new System.EventHandler(this.btnIntervalos_Click);
             // 
-            // btnCerrar
+            // panel11
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(871, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.panel11.Controls.Add(this.button2);
+            this.panel11.Controls.Add(this.button1);
+            this.panel11.Location = new System.Drawing.Point(369, 1812);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(258, 71);
+            this.panel11.TabIndex = 100;
+            this.panel11.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(815, 398);
+            this.button1.BackColor = System.Drawing.Color.Tomato;
+            this.button1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(30, 14);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 98;
+            this.button1.Size = new System.Drawing.Size(87, 33);
+            this.button1.TabIndex = 99;
             this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(815, 483);
+            this.button2.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(146, 14);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 99;
-            this.button2.Text = "Repetir";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.button2.Size = new System.Drawing.Size(84, 33);
+            this.button2.TabIndex = 100;
+            this.button2.Text = "Modificar #";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmProblema
             // 
@@ -1458,6 +1473,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(922, 625);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.ImgFlecha);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
@@ -1524,27 +1540,28 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.pnConclusionGA.ResumeLayout(false);
             this.pnConclusionGA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).EndInit();
             this.pnResAgua.ResumeLayout(false);
             this.pnResAgua.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1655,6 +1672,7 @@
         private ns1.BunifuElipse rdBtn2;
         private System.Windows.Forms.PictureBox ImgFlecha;
         private System.Windows.Forms.ErrorProvider errorP1;
+        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     }

@@ -32,6 +32,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void cmdCerrarPantalla_Click(object sender, EventArgs e)
         {
+            Environment.Exit(0);
             Close();
         }
     }
