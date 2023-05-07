@@ -16,17 +16,29 @@ namespace Generador_de_numeros___Simulacion
         {
             InitializeComponent();
         }
-
         private void PantallaPrincipal_Load(object sender, EventArgs e)
         {
             cmdIniciar.Parent = pbIniciar;
             cmdIniciar.BackColor = Color.Transparent;
+            this.Focus();
         }
 
         private void cmdIniciar_Click(object sender, EventArgs e)
         {
             Inicio ini = new Inicio();
             ini.ShowDialog();
+        }
+
+        private void PantallaPrincipal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void PantallaPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
         }
     }
 }

@@ -43,7 +43,7 @@
             this.cmdIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdIniciar.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdIniciar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmdIniciar.Location = new System.Drawing.Point(209, 459);
+            this.cmdIniciar.Location = new System.Drawing.Point(234, 469);
             this.cmdIniciar.Name = "cmdIniciar";
             this.cmdIniciar.Size = new System.Drawing.Size(117, 44);
             this.cmdIniciar.TabIndex = 1;
@@ -79,6 +79,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PantallaPrincipal_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PantallaPrincipal_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pbIniciar)).EndInit();
             this.ResumeLayout(false);
 

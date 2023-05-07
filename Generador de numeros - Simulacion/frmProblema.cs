@@ -48,7 +48,7 @@ namespace Generador_de_numeros___Simulacion
         //Areglo para obtener numeros PSEUDOALEARTORIOS
         public float[] Ri = new float[1180];
 
-        bool aproba1 = false, aproba2 = false;
+        bool aproba1 = false, aproba2 = false, error = false;
 
 
         //Recibir numeo de la pantalla de inicio
@@ -1067,6 +1067,26 @@ namespace Generador_de_numeros___Simulacion
         //Metodo para esconder paneles y esconder botones cuando se cambie el texto
         private void txtAcoloidales_TextChanged(object sender, EventArgs e)
         {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAcoloidales.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAcoloidales, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
             EsconderPaneles();
             CambiarImagenAgua();
             aproba2 = false;
@@ -1080,8 +1100,352 @@ namespace Generador_de_numeros___Simulacion
             ImgFlecha.Visible = false;
         }
 
+        private void txtAmercurio_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAmercurio.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAmercurio, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAresiduos_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAresiduos.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAresiduos, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtASulfato_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtASulfato.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtASulfato, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAAcido_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAAcido.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAAcido, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAfosfato_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAfosfato.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAfosfato, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAOxidos_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAOxidos.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAOxidos, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAcidez_TextChanged_1(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAcidez.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAAcido, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba1 = false;
+        }
+
+        private void txtAnemia_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAnemia.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAnemia, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba1 = false;
+        }
+
+        private void txtNormal_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtNormal.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtNormal, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba1 = false;
+        }
+
+        private void txtGlucosa_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtGlucosa.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtGlucosa, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba1 = false;
+        }
+
+        private void MiraComoYoSiSeValidar(TextBox text)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in text.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(text, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+        }
+        private void txtalcalinidad_TextChanged(object sender, EventArgs e)
+        {
+            MiraComoYoSiSeValidar(txtalcalinidad);
+            //error = false;
+
+            ////ciclo para recorrer caracter por caracter 
+            //foreach (char caracter in txtalcalinidad.Text)
+            //{
+            //    //si alguno de los caracteres es un numero el error es true
+            //    if (char.IsLetter(caracter))
+            //    {
+            //        error = true;
+            //        break;
+            //    }
+            //}
+            //if (error)
+            //{
+            //    errorP1.SetError(txtalcalinidad, "No se admiten letras\nIngresar numeros solamente");
+            //}
+            //else
+            //{
+            //    errorP1.Clear();
+            //}
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba1 = false;
+        }
+
         private void CambiarImagenAnimales()
-        {   
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAAcido.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAAcido, "No se admiten letras\nIngresar numeros solamente");
+            }
+            else
+            {
+                errorP1.Clear();
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
             cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__1_;
         }
 
@@ -1104,83 +1468,91 @@ namespace Generador_de_numeros___Simulacion
         
         private void cmdIngresarAnimales_Click(object sender, EventArgs e)
         {
-            //Recuperacion de datos ingresados por el usuario
-            Ani_acidez = float.Parse(txtAcidez.Text) * 0.01F;
-            Ani_anemia = float.Parse(txtAnemia.Text) * 0.01F;
-            Ani_normal = float.Parse(txtNormal.Text) * 0.01F;
-            Ani_glucosa = float.Parse(txtGlucosa.Text) * 0.01F;
-            Ani_Alcalinindad = float.Parse(txtalcalinidad.Text) * 0.01F;
-
-            float suma = Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad;
-
-            txtSuma1.Text = "" + suma;
-
-            if(suma == 1)
+            if (error)
             {
-                aproba1 = true;
-                cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__2_;
-                //Crear distribucion acumulada
+                MessageBox.Show("Verifique que los datos sean validos");
             }
             else
             {
-                aproba1 = false;
-                if(suma > 1)
+                //Recuperacion de datos ingresados por el usuario
+                Ani_acidez = float.Parse(txtAcidez.Text) * 0.01F;
+                Ani_anemia = float.Parse(txtAnemia.Text) * 0.01F;
+                Ani_normal = float.Parse(txtNormal.Text) * 0.01F;
+                Ani_glucosa = float.Parse(txtGlucosa.Text) * 0.01F;
+                Ani_Alcalinindad = float.Parse(txtalcalinidad.Text) * 0.01F;
+
+                float suma = Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad;
+
+                txtSuma1.Text = "" + suma;
+
+                if (suma == 1)
                 {
-                    MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Verifique los datos", "Error al ingresar datos");
+                    aproba1 = true;
+                    cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__2_;
+                    //Crear distribucion acumulada
                 }
                 else
                 {
-                    MessageBox.Show("La suma de la distribucion es menor a 1, Verifique los datos", "Error al ingresar datos");
+                    aproba1 = false;
+                    if (suma > 1)
+                    {
+                        MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Verifique los datos", "Error al ingresar datos");
+                    }
+                    else
+                    {
+                        MessageBox.Show("La suma de la distribucion es menor a 1, Verifique los datos", "Error al ingresar datos");
+                    }
                 }
+                txtTotal1.Visible = true;
             }
-            txtTotal1.Visible = true;
         }
 
         private void cmdIngresarAgua_Click(object sender, EventArgs e)
         {
-            /*Alto grado de acidez
-Estado de anemia aguda
-Estado en rango normal
-Exceso de glucosa
-Alto grado de alcalinidad*/
-
-            float suma = 0F;
-
-            //Recuperacion de datos ingresados por el usuario
-            Agua_coloidales = float.Parse(txtAcoloidales.Text) * 0.01F;
-            Agua_mercurio = float.Parse(txtAmercurio.Text) * 0.01F;
-            Agua_residuos = float.Parse(txtAresiduos.Text) * 0.01F;
-            Agua_sulfato = float.Parse(txtASulfato.Text) * 0.01F;
-            Agua_acido = float.Parse(txtAAcido.Text) * 0.01F;
-            Agua_fosfato = float.Parse(txtAfosfato.Text) * 0.01F;
-            Agua_oxidos = float.Parse(txtAOxidos.Text) * 0.01F;
-
-            suma = (Agua_coloidales + Agua_mercurio + Agua_residuos +
-                Agua_sulfato + Agua_acido + Agua_fosfato + Agua_oxidos);
-
-            txtSuma2.Text = "" + suma;
-
-            if (suma == 1)
+            if(error)
             {
-                aproba2 = true;
-                cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__2_;
-                //Crear distribucion acumulada
+                MessageBox.Show("Verifique que los datos sean validos");
             }
             else
             {
-                aproba2 = false;
-                if (suma > 1)
+                float suma = 0F;
+
+                //Recuperacion de datos ingresados por el usuario
+                Agua_coloidales = float.Parse(txtAcoloidales.Text) * 0.01F;
+                Agua_mercurio = float.Parse(txtAmercurio.Text) * 0.01F;
+                Agua_residuos = float.Parse(txtAresiduos.Text) * 0.01F;
+                Agua_sulfato = float.Parse(txtASulfato.Text) * 0.01F;
+                Agua_acido = float.Parse(txtAAcido.Text) * 0.01F;
+                Agua_fosfato = float.Parse(txtAfosfato.Text) * 0.01F;
+                Agua_oxidos = float.Parse(txtAOxidos.Text) * 0.01F;
+
+                suma = (Agua_coloidales + Agua_mercurio + Agua_residuos +
+                    Agua_sulfato + Agua_acido + Agua_fosfato + Agua_oxidos);
+
+                txtSuma2.Text = "" + suma;
+
+                if (suma == 1)
                 {
-                    MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Favor de verificar los datos", "Error al ingresar datos");
+                    aproba2 = true;
+                    cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__2_;
+                    //Crear distribucion acumulada
                 }
                 else
                 {
-                    MessageBox.Show("La suma de la distribucion es menor a 1, Favor de verificar los datos", "Error al ingresar datos");
+                    aproba2 = false;
+                    if (suma > 1)
+                    {
+                        MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Favor de verificar los datos", "Error al ingresar datos");
+                    }
+                    else
+                    {
+                        MessageBox.Show("La suma de la distribucion es menor a 1, Favor de verificar los datos", "Error al ingresar datos");
+                    }
                 }
+                txtTotal2.Visible = true;
             }
-            txtTotal2.Visible = true;
         }
-        
+
         private void ValidarAcidez_KeyPress(object sender, KeyPressEventArgs e)
         {
             //MessageBox.Show("Ingresar solo números", "ALERTA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);

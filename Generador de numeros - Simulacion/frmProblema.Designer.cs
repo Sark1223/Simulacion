@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblema));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new ns1.BunifuCustomLabel();
             this.panTop = new System.Windows.Forms.Panel();
+            this.btnCerrar = new ns1.BunifuImageButton();
             this.rdTitulo = new ns1.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,6 +98,7 @@
             this.separador = new ns1.BunifuSeparator();
             this.lblConclusionSB = new System.Windows.Forms.Label();
             this.lblConclusionSC = new System.Windows.Forms.Label();
+            this.cmdHistorial = new System.Windows.Forms.PictureBox();
             this.lblConclusionSA = new System.Windows.Forms.Label();
             this.dgvResAni = new System.Windows.Forms.DataGridView();
             this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,6 +109,7 @@
             this.bunifuSeparator4 = new ns1.BunifuSeparator();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dgvResAgua = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,32 +130,31 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.rsBtn1 = new ns1.BunifuElipse(this.components);
             this.rdBtn2 = new ns1.BunifuElipse(this.components);
+            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
             this.ImgFlecha = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.cmdHistorial = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdResolver = new ns1.BunifuThinButton2();
             this.cmdIngresarAgua = new ns1.BunifuImageButton();
-            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
-            this.btnCerrar = new ns1.BunifuImageButton();
+            this.errorP1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.pnConclusionGA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).BeginInit();
             this.pnResAgua.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             this.SuspendLayout();
             // 
             // rdForma
@@ -191,6 +193,21 @@
             this.panTop.Size = new System.Drawing.Size(905, 32);
             this.panTop.TabIndex = 26;
             this.panTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(871, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // rdTitulo
             // 
@@ -282,7 +299,7 @@
             this.txtAcidez.TabIndex = 1;
             this.txtAcidez.Text = "18";
             this.txtAcidez.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAcidez.TextChanged += new System.EventHandler(this.txtChanged_Animales);
+            this.txtAcidez.TextChanged += new System.EventHandler(this.txtAcidez_TextChanged_1);
             this.txtAcidez.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarAcidez_KeyPress);
             // 
             // txtAAcido
@@ -297,7 +314,7 @@
             this.txtAAcido.TabIndex = 10;
             this.txtAAcido.Text = "12";
             this.txtAAcido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAAcido.TextChanged += new System.EventHandler(this.txtAcoloidales_TextChanged);
+            this.txtAAcido.TextChanged += new System.EventHandler(this.txtAAcido_TextChanged);
             // 
             // txtAmercurio
             // 
@@ -311,7 +328,7 @@
             this.txtAmercurio.TabIndex = 7;
             this.txtAmercurio.Text = "10";
             this.txtAmercurio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAmercurio.TextChanged += new System.EventHandler(this.txtAcoloidales_TextChanged);
+            this.txtAmercurio.TextChanged += new System.EventHandler(this.txtAmercurio_TextChanged);
             // 
             // txtAresiduos
             // 
@@ -325,7 +342,7 @@
             this.txtAresiduos.TabIndex = 8;
             this.txtAresiduos.Text = "25";
             this.txtAresiduos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAresiduos.TextChanged += new System.EventHandler(this.txtAcoloidales_TextChanged);
+            this.txtAresiduos.TextChanged += new System.EventHandler(this.txtAresiduos_TextChanged);
             // 
             // txtASulfato
             // 
@@ -339,7 +356,7 @@
             this.txtASulfato.TabIndex = 9;
             this.txtASulfato.Text = "15";
             this.txtASulfato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtASulfato.TextChanged += new System.EventHandler(this.txtAcoloidales_TextChanged);
+            this.txtASulfato.TextChanged += new System.EventHandler(this.txtASulfato_TextChanged);
             // 
             // txtAcoloidales
             // 
@@ -367,7 +384,7 @@
             this.txtAOxidos.TabIndex = 12;
             this.txtAOxidos.Text = "17";
             this.txtAOxidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAOxidos.TextChanged += new System.EventHandler(this.txtAcoloidales_TextChanged);
+            this.txtAOxidos.TextChanged += new System.EventHandler(this.txtAOxidos_TextChanged);
             // 
             // txtAfosfato
             // 
@@ -381,7 +398,7 @@
             this.txtAfosfato.TabIndex = 11;
             this.txtAfosfato.Text = "16";
             this.txtAfosfato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAfosfato.TextChanged += new System.EventHandler(this.txtAcoloidales_TextChanged);
+            this.txtAfosfato.TextChanged += new System.EventHandler(this.txtAfosfato_TextChanged);
             // 
             // label3
             // 
@@ -535,7 +552,7 @@
             this.txtAnemia.TabIndex = 2;
             this.txtAnemia.Text = "8";
             this.txtAnemia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAnemia.TextChanged += new System.EventHandler(this.txtChanged_Animales);
+            this.txtAnemia.TextChanged += new System.EventHandler(this.txtAnemia_TextChanged);
             // 
             // fijo4
             // 
@@ -562,7 +579,7 @@
             this.txtGlucosa.TabIndex = 4;
             this.txtGlucosa.Text = "17";
             this.txtGlucosa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtGlucosa.TextChanged += new System.EventHandler(this.txtChanged_Animales);
+            this.txtGlucosa.TextChanged += new System.EventHandler(this.txtGlucosa_TextChanged);
             // 
             // fijo3
             // 
@@ -589,7 +606,7 @@
             this.txtNormal.TabIndex = 3;
             this.txtNormal.Text = "35";
             this.txtNormal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNormal.TextChanged += new System.EventHandler(this.txtChanged_Animales);
+            this.txtNormal.TextChanged += new System.EventHandler(this.txtNormal_TextChanged);
             // 
             // fijo5
             // 
@@ -616,7 +633,7 @@
             this.txtalcalinidad.TabIndex = 5;
             this.txtalcalinidad.Text = "22";
             this.txtalcalinidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtalcalinidad.TextChanged += new System.EventHandler(this.txtChanged_Animales);
+            this.txtalcalinidad.TextChanged += new System.EventHandler(this.txtalcalinidad_TextChanged);
             // 
             // txtTotal2
             // 
@@ -929,6 +946,17 @@
     "30 dias despues saludable";
             this.lblConclusionSC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cmdHistorial
+            // 
+            this.cmdHistorial.Image = ((System.Drawing.Image)(resources.GetObject("cmdHistorial.Image")));
+            this.cmdHistorial.Location = new System.Drawing.Point(802, 3);
+            this.cmdHistorial.Name = "cmdHistorial";
+            this.cmdHistorial.Size = new System.Drawing.Size(45, 37);
+            this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdHistorial.TabIndex = 74;
+            this.cmdHistorial.TabStop = false;
+            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
+            // 
             // lblConclusionSA
             // 
             this.lblConclusionSA.AutoSize = true;
@@ -949,28 +977,28 @@
             this.dgvResAni.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAni.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAni.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
             this.dgvResAni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAni.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dia,
             this.a,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle50;
             this.dgvResAni.EnableHeadersVisualStyles = false;
             this.dgvResAni.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAni.Location = new System.Drawing.Point(59, 172);
@@ -1057,6 +1085,16 @@
             this.panel6.Size = new System.Drawing.Size(2, 183);
             this.panel6.TabIndex = 97;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.la_contaminacion_del_agua__3_;
+            this.pictureBox3.Location = new System.Drawing.Point(576, 48);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(185, 183);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 95;
+            this.pictureBox3.TabStop = false;
+            // 
             // dgvResAgua
             // 
             this.dgvResAgua.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -1064,14 +1102,14 @@
             this.dgvResAgua.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAgua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAgua.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle51;
             this.dgvResAgua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAgua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1083,14 +1121,14 @@
             this.Column8,
             this.Column6,
             this.Column9});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle52;
             this.dgvResAgua.EnableHeadersVisualStyles = false;
             this.dgvResAgua.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAgua.Location = new System.Drawing.Point(33, 245);
@@ -1240,43 +1278,38 @@
             // rsBtn1
             // 
             this.rsBtn1.ElipseRadius = 10;
+            this.rsBtn1.TargetControl = this;
             // 
             // rdBtn2
             // 
             this.rdBtn2.ElipseRadius = 20;
             this.rdBtn2.TargetControl = this.cmdIngresarAnimales;
             // 
+            // cmdIngresarAnimales
+            // 
+            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
+            this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
+            this.cmdIngresarAnimales.ImageActive = null;
+            this.cmdIngresarAnimales.Location = new System.Drawing.Point(809, 413);
+            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
+            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
+            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdIngresarAnimales.TabIndex = 64;
+            this.cmdIngresarAnimales.TabStop = false;
+            this.cmdIngresarAnimales.Zoom = 10;
+            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
+            // 
             // ImgFlecha
             // 
             this.ImgFlecha.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.flecha;
-            this.ImgFlecha.Location = new System.Drawing.Point(393, 495);
+            this.ImgFlecha.Location = new System.Drawing.Point(396, 495);
             this.ImgFlecha.Name = "ImgFlecha";
-            this.ImgFlecha.Size = new System.Drawing.Size(90, 92);
+            this.ImgFlecha.Size = new System.Drawing.Size(90, 71);
             this.ImgFlecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgFlecha.TabIndex = 87;
             this.ImgFlecha.TabStop = false;
             this.ImgFlecha.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.la_contaminacion_del_agua__3_;
-            this.pictureBox3.Location = new System.Drawing.Point(576, 48);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(185, 183);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 95;
-            this.pictureBox3.TabStop = false;
-            // 
-            // cmdHistorial
-            // 
-            this.cmdHistorial.Image = ((System.Drawing.Image)(resources.GetObject("cmdHistorial.Image")));
-            this.cmdHistorial.Location = new System.Drawing.Point(802, 3);
-            this.cmdHistorial.Name = "cmdHistorial";
-            this.cmdHistorial.Size = new System.Drawing.Size(45, 37);
-            this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdHistorial.TabIndex = 74;
-            this.cmdHistorial.TabStop = false;
-            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
             // 
             // pictureBox1
             // 
@@ -1329,21 +1362,6 @@
             this.cmdIngresarAgua.Zoom = 10;
             this.cmdIngresarAgua.Click += new System.EventHandler(this.cmdIngresarAgua_Click);
             // 
-            // cmdIngresarAnimales
-            // 
-            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
-            this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
-            this.cmdIngresarAnimales.ImageActive = null;
-            this.cmdIngresarAnimales.Location = new System.Drawing.Point(809, 413);
-            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
-            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
-            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdIngresarAnimales.TabIndex = 64;
-            this.cmdIngresarAnimales.TabStop = false;
-            this.cmdIngresarAnimales.Zoom = 10;
-            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.estanque;
@@ -1380,20 +1398,9 @@
             this.cmdMostrarIntervalos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdMostrarIntervalos.Click += new System.EventHandler(this.btnIntervalos_Click);
             // 
-            // btnCerrar
+            // errorP1
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(871, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.errorP1.ContainerControl = this;
             // 
             // frmProblema
             // 
@@ -1468,26 +1475,27 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.pnConclusionGA.ResumeLayout(false);
             this.pnConclusionGA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).EndInit();
             this.pnResAgua.ResumeLayout(false);
             this.pnResAgua.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1597,5 +1605,6 @@
         private ns1.BunifuElipse rsBtn1;
         private ns1.BunifuElipse rdBtn2;
         private System.Windows.Forms.PictureBox ImgFlecha;
+        private System.Windows.Forms.ErrorProvider errorP1;
     }
 }
