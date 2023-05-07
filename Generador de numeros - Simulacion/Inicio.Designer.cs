@@ -212,7 +212,7 @@
             this.txtSemilla.Size = new System.Drawing.Size(94, 23);
             this.txtSemilla.TabIndex = 0;
             this.txtSemilla.Text = "12";
-            //this.txtSemilla.TextChanged += new System.EventHandler(this.txtSemilla_TextChanged);
+            this.txtSemilla.TextChanged += new System.EventHandler(this.txtSemilla_TextChanged_1);
             this.txtSemilla.Validating += new System.ComponentModel.CancelEventHandler(this.txtSemilla_Validating);
             this.txtSemilla.Validated += new System.EventHandler(this.txtSemilla_Validated);
             // 
@@ -242,7 +242,7 @@
             this.txtA.Size = new System.Drawing.Size(92, 23);
             this.txtA.TabIndex = 1;
             this.txtA.Text = "101";
-            //this.txtA.TextChanged += new System.EventHandler(this.txtA_TextChanged);
+            this.txtA.TextChanged += new System.EventHandler(this.txtA_TextChanged);
             this.txtA.Validating += new System.ComponentModel.CancelEventHandler(this.txtA_Validating);
             this.txtA.Validated += new System.EventHandler(this.txtA_Validated);
             // 
@@ -264,7 +264,7 @@
             this.txtC.Size = new System.Drawing.Size(92, 23);
             this.txtC.TabIndex = 2;
             this.txtC.Text = "221";
-            //this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
+            this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
             this.txtC.Validating += new System.ComponentModel.CancelEventHandler(this.txtC_Validating);
             this.txtC.Validated += new System.EventHandler(this.txtC_Validated);
             // 
@@ -286,7 +286,7 @@
             this.txtM.Size = new System.Drawing.Size(92, 23);
             this.txtM.TabIndex = 3;
             this.txtM.Text = "17001";
-            //this.txtM.TextChanged += new System.EventHandler(this.txtM_TextChanged);
+            this.txtM.TextChanged += new System.EventHandler(this.txtM_TextChanged);
             this.txtM.Validating += new System.ComponentModel.CancelEventHandler(this.txtM_Validating);
             this.txtM.Validated += new System.EventHandler(this.txtM_Validated);
             // 

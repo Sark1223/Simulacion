@@ -211,5 +211,11 @@
   <ItemGroup>
     <None Include="Resources\flecha-imagen-animada-0269.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruzar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

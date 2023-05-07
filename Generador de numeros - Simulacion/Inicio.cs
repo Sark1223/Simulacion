@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
 
@@ -299,7 +300,7 @@ namespace Generador_de_numeros___Simulacion
         bool error = false;
 
 
-        public void Val(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        private void Val(TextBox txt, ErrorProvider er, CancelEventArgs c)
         {
             error = false;
 
@@ -307,7 +308,7 @@ namespace Generador_de_numeros___Simulacion
             foreach (char caracter in txt.Text)
             {
                 //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter) || char.IsWhiteSpace(caracter))
+                if (!char.IsDigit(caracter))
                 {
                     error = true;
                     break;
@@ -318,9 +319,6 @@ namespace Generador_de_numeros___Simulacion
                 c.Cancel = true;
                 txt.Select(0, txt.Text.Length);
                 er.SetError(txt, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
-            }
-            else
-            {
             }
         }
         private void txtSemilla_Validating(object sender, CancelEventArgs e)
@@ -356,6 +354,102 @@ namespace Generador_de_numeros___Simulacion
         private void txtC_Validated(object sender, EventArgs e)
         {
             error1.SetError(txtSemilla, "");
+        }
+
+        private void txtSemilla_TextChanged_1(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtSemilla.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtSemilla, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                error1.SetError(txtSemilla, "");
+            }
+        }
+
+        private void txtA_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtA.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                    if (!char.IsDigit(caracter))
+                    {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtA, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                error1.SetError(txtA, "");
+            }
+        }
+
+        private void txtC_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtC.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtC, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                error1.SetError(txtC, "");
+            }
+        }
+
+        private void txtM_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtM.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                    if (!char.IsDigit(caracter))
+                    {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtM, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                error1.SetError(txtM, "");
+            }
         }
 
         private void txtM_Validated(object sender, EventArgs e)

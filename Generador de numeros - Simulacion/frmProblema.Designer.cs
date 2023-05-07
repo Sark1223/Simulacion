@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblema));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new ns1.BunifuCustomLabel();
             this.panTop = new System.Windows.Forms.Panel();
-            this.btnCerrar = new ns1.BunifuImageButton();
             this.rdTitulo = new ns1.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -98,7 +97,6 @@
             this.separador = new ns1.BunifuSeparator();
             this.lblConclusionSB = new System.Windows.Forms.Label();
             this.lblConclusionSC = new System.Windows.Forms.Label();
-            this.cmdHistorial = new System.Windows.Forms.PictureBox();
             this.lblConclusionSA = new System.Windows.Forms.Label();
             this.dgvResAni = new System.Windows.Forms.DataGridView();
             this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,7 +107,6 @@
             this.bunifuSeparator4 = new ns1.BunifuSeparator();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dgvResAgua = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,31 +127,36 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.rsBtn1 = new ns1.BunifuElipse(this.components);
             this.rdBtn2 = new ns1.BunifuElipse(this.components);
-            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
+            this.errorP1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ImgFlecha = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cmdHistorial = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdResolver = new ns1.BunifuThinButton2();
             this.cmdIngresarAgua = new ns1.BunifuImageButton();
+            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
-            this.errorP1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnCerrar = new ns1.BunifuImageButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.pnConclusionGA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).BeginInit();
             this.pnResAgua.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // rdForma
@@ -166,9 +168,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1827);
+            this.panel1.Location = new System.Drawing.Point(0, 1809);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(905, 6);
+            this.panel1.Size = new System.Drawing.Size(916, 6);
             this.panel1.TabIndex = 45;
             // 
             // lblTitulo
@@ -190,24 +192,9 @@
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(0, 0);
             this.panTop.Name = "panTop";
-            this.panTop.Size = new System.Drawing.Size(905, 32);
+            this.panTop.Size = new System.Drawing.Size(916, 32);
             this.panTop.TabIndex = 26;
             this.panTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(871, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // rdTitulo
             // 
@@ -316,6 +303,7 @@
             this.txtAAcido.TabIndex = 10;
             this.txtAAcido.Text = "12";
             this.txtAAcido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAAcido.TextChanged += new System.EventHandler(this.txtAAcido_TextChanged);
             this.txtAAcido.Validating += new System.ComponentModel.CancelEventHandler(this.txtAAcido_Validating);
             this.txtAAcido.Validated += new System.EventHandler(this.txtAAcido_Validated);
             // 
@@ -331,6 +319,7 @@
             this.txtAmercurio.TabIndex = 7;
             this.txtAmercurio.Text = "10";
             this.txtAmercurio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAmercurio.TextChanged += new System.EventHandler(this.txtAmercurio_TextChanged);
             this.txtAmercurio.Validating += new System.ComponentModel.CancelEventHandler(this.txtAmercurio_Validating);
             this.txtAmercurio.Validated += new System.EventHandler(this.txtAmercurio_Validated);
             // 
@@ -346,6 +335,7 @@
             this.txtAresiduos.TabIndex = 8;
             this.txtAresiduos.Text = "25";
             this.txtAresiduos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAresiduos.TextChanged += new System.EventHandler(this.txtAresiduos_TextChanged);
             this.txtAresiduos.Validating += new System.ComponentModel.CancelEventHandler(this.txtAresiduos_Validating);
             this.txtAresiduos.Validated += new System.EventHandler(this.txtAresiduos_Validated);
             // 
@@ -361,6 +351,7 @@
             this.txtASulfato.TabIndex = 9;
             this.txtASulfato.Text = "15";
             this.txtASulfato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtASulfato.TextChanged += new System.EventHandler(this.txtASulfato_TextChanged);
             this.txtASulfato.Validating += new System.ComponentModel.CancelEventHandler(this.txtASulfato_Validating);
             this.txtASulfato.Validated += new System.EventHandler(this.txtASulfato_Validated);
             // 
@@ -376,6 +367,7 @@
             this.txtAcoloidales.TabIndex = 6;
             this.txtAcoloidales.Text = "5";
             this.txtAcoloidales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAcoloidales.TextChanged += new System.EventHandler(this.txtAcoloidales_TextChanged);
             this.txtAcoloidales.Validating += new System.ComponentModel.CancelEventHandler(this.txtAcoloidales_Validating);
             this.txtAcoloidales.Validated += new System.EventHandler(this.txtAcoloidales_Validated);
             // 
@@ -391,6 +383,7 @@
             this.txtAOxidos.TabIndex = 12;
             this.txtAOxidos.Text = "17";
             this.txtAOxidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAOxidos.TextChanged += new System.EventHandler(this.txtAOxidos_TextChanged);
             this.txtAOxidos.Validating += new System.ComponentModel.CancelEventHandler(this.txtAOxidos_Validating);
             this.txtAOxidos.Validated += new System.EventHandler(this.txtAOxidos_Validated);
             // 
@@ -406,6 +399,7 @@
             this.txtAfosfato.TabIndex = 11;
             this.txtAfosfato.Text = "16";
             this.txtAfosfato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAfosfato.TextChanged += new System.EventHandler(this.txtAfosfato_TextChanged);
             this.txtAfosfato.Validating += new System.ComponentModel.CancelEventHandler(this.txtAfosfato_Validating);
             this.txtAfosfato.Validated += new System.EventHandler(this.txtAfosfato_Validated);
             // 
@@ -561,6 +555,7 @@
             this.txtAnemia.TabIndex = 2;
             this.txtAnemia.Text = "8";
             this.txtAnemia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAnemia.TextChanged += new System.EventHandler(this.txtAnemia_TextChanged);
             this.txtAnemia.Validating += new System.ComponentModel.CancelEventHandler(this.txtAnemia_Validating);
             this.txtAnemia.Validated += new System.EventHandler(this.txtAnemia_Validated);
             // 
@@ -589,6 +584,7 @@
             this.txtGlucosa.TabIndex = 4;
             this.txtGlucosa.Text = "17";
             this.txtGlucosa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGlucosa.TextChanged += new System.EventHandler(this.txtGlucosa_TextChanged);
             this.txtGlucosa.Validating += new System.ComponentModel.CancelEventHandler(this.txtGlucosa_Validating);
             this.txtGlucosa.Validated += new System.EventHandler(this.txtGlucosa_Validated);
             // 
@@ -617,6 +613,7 @@
             this.txtNormal.TabIndex = 3;
             this.txtNormal.Text = "35";
             this.txtNormal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNormal.TextChanged += new System.EventHandler(this.txtNormal_TextChanged);
             this.txtNormal.Validating += new System.ComponentModel.CancelEventHandler(this.txtNormal_Validating);
             this.txtNormal.Validated += new System.EventHandler(this.txtNormal_Validated);
             // 
@@ -645,6 +642,7 @@
             this.txtalcalinidad.TabIndex = 5;
             this.txtalcalinidad.Text = "22";
             this.txtalcalinidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtalcalinidad.TextChanged += new System.EventHandler(this.txtalcalinidad_TextChanged);
             this.txtalcalinidad.Validating += new System.ComponentModel.CancelEventHandler(this.txtalcalinidad_Validating);
             this.txtalcalinidad.Validated += new System.EventHandler(this.txtalcalinidad_Validated);
             // 
@@ -959,17 +957,6 @@
     "30 dias despues saludable";
             this.lblConclusionSC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cmdHistorial
-            // 
-            this.cmdHistorial.Image = ((System.Drawing.Image)(resources.GetObject("cmdHistorial.Image")));
-            this.cmdHistorial.Location = new System.Drawing.Point(802, 3);
-            this.cmdHistorial.Name = "cmdHistorial";
-            this.cmdHistorial.Size = new System.Drawing.Size(45, 37);
-            this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdHistorial.TabIndex = 74;
-            this.cmdHistorial.TabStop = false;
-            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
-            // 
             // lblConclusionSA
             // 
             this.lblConclusionSA.AutoSize = true;
@@ -990,28 +977,28 @@
             this.dgvResAni.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAni.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAni.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvResAni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAni.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dia,
             this.a,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgvResAni.EnableHeadersVisualStyles = false;
             this.dgvResAni.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAni.Location = new System.Drawing.Point(59, 172);
@@ -1077,6 +1064,8 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.button2);
+            this.panel8.Controls.Add(this.button1);
             this.panel8.Controls.Add(this.panel6);
             this.panel8.Controls.Add(this.pictureBox3);
             this.panel8.Controls.Add(this.dgvResAgua);
@@ -1085,7 +1074,7 @@
             this.panel8.Controls.Add(this.pnResAgua);
             this.panel8.Location = new System.Drawing.Point(19, 1099);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(850, 728);
+            this.panel8.Size = new System.Drawing.Size(897, 710);
             this.panel8.TabIndex = 83;
             this.panel8.Visible = false;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
@@ -1098,16 +1087,6 @@
             this.panel6.Size = new System.Drawing.Size(2, 183);
             this.panel6.TabIndex = 97;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.la_contaminacion_del_agua__3_;
-            this.pictureBox3.Location = new System.Drawing.Point(576, 48);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(185, 183);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 95;
-            this.pictureBox3.TabStop = false;
-            // 
             // dgvResAgua
             // 
             this.dgvResAgua.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -1115,14 +1094,14 @@
             this.dgvResAgua.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAgua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAgua.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvResAgua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAgua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1134,14 +1113,14 @@
             this.Column8,
             this.Column6,
             this.Column9});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvResAgua.EnableHeadersVisualStyles = false;
             this.dgvResAgua.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAgua.Location = new System.Drawing.Point(33, 245);
@@ -1276,7 +1255,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 32);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(2, 1795);
+            this.panel9.Size = new System.Drawing.Size(2, 1777);
             this.panel9.TabIndex = 85;
             // 
             // panel10
@@ -1285,7 +1264,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(2, 32);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(2, 1795);
+            this.panel10.Size = new System.Drawing.Size(2, 1777);
             this.panel10.TabIndex = 86;
             // 
             // rsBtn1
@@ -1298,20 +1277,9 @@
             this.rdBtn2.ElipseRadius = 20;
             this.rdBtn2.TargetControl = this.cmdIngresarAnimales;
             // 
-            // cmdIngresarAnimales
+            // errorP1
             // 
-            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
-            this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
-            this.cmdIngresarAnimales.ImageActive = null;
-            this.cmdIngresarAnimales.Location = new System.Drawing.Point(809, 413);
-            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
-            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
-            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdIngresarAnimales.TabIndex = 64;
-            this.cmdIngresarAnimales.TabStop = false;
-            this.cmdIngresarAnimales.Zoom = 10;
-            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
+            this.errorP1.ContainerControl = this;
             // 
             // ImgFlecha
             // 
@@ -1323,6 +1291,27 @@
             this.ImgFlecha.TabIndex = 87;
             this.ImgFlecha.TabStop = false;
             this.ImgFlecha.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.la_contaminacion_del_agua__3_;
+            this.pictureBox3.Location = new System.Drawing.Point(576, 48);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(185, 183);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 95;
+            this.pictureBox3.TabStop = false;
+            // 
+            // cmdHistorial
+            // 
+            this.cmdHistorial.Image = ((System.Drawing.Image)(resources.GetObject("cmdHistorial.Image")));
+            this.cmdHistorial.Location = new System.Drawing.Point(802, 3);
+            this.cmdHistorial.Name = "cmdHistorial";
+            this.cmdHistorial.Size = new System.Drawing.Size(45, 37);
+            this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdHistorial.TabIndex = 74;
+            this.cmdHistorial.TabStop = false;
+            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
             // 
             // pictureBox1
             // 
@@ -1375,6 +1364,21 @@
             this.cmdIngresarAgua.Zoom = 10;
             this.cmdIngresarAgua.Click += new System.EventHandler(this.cmdIngresarAgua_Click);
             // 
+            // cmdIngresarAnimales
+            // 
+            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
+            this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
+            this.cmdIngresarAnimales.ImageActive = null;
+            this.cmdIngresarAnimales.Location = new System.Drawing.Point(809, 413);
+            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
+            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
+            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdIngresarAnimales.TabIndex = 64;
+            this.cmdIngresarAnimales.TabStop = false;
+            this.cmdIngresarAnimales.Zoom = 10;
+            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.estanque;
@@ -1411,9 +1415,41 @@
             this.cmdMostrarIntervalos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdMostrarIntervalos.Click += new System.EventHandler(this.btnIntervalos_Click);
             // 
-            // errorP1
+            // btnCerrar
             // 
-            this.errorP1.ContainerControl = this;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(871, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 20);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(815, 398);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 98;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(815, 483);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 99;
+            this.button2.Text = "Repetir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // frmProblema
             // 
@@ -1421,7 +1457,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(922, 589);
+            this.ClientSize = new System.Drawing.Size(922, 625);
             this.Controls.Add(this.ImgFlecha);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
@@ -1488,27 +1524,27 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.pnConclusionGA.ResumeLayout(false);
             this.pnConclusionGA.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).EndInit();
             this.pnResAgua.ResumeLayout(false);
             this.pnResAgua.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1619,5 +1655,7 @@
         private ns1.BunifuElipse rdBtn2;
         private System.Windows.Forms.PictureBox ImgFlecha;
         private System.Windows.Forms.ErrorProvider errorP1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

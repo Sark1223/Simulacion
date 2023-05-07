@@ -31,8 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
             this.cmdIniciar = new System.Windows.Forms.Button();
-            this.pbIniciar = new System.Windows.Forms.PictureBox();
             this.rdFroma = new ns1.BunifuElipse(this.components);
+            this.cmdCerrarPantalla = new ns1.BunifuImageButton();
+            this.pbIniciar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrarPantalla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIniciar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +53,25 @@
             this.cmdIniciar.UseVisualStyleBackColor = true;
             this.cmdIniciar.Click += new System.EventHandler(this.cmdIniciar_Click);
             // 
+            // rdFroma
+            // 
+            this.rdFroma.ElipseRadius = 10;
+            this.rdFroma.TargetControl = this;
+            // 
+            // cmdCerrarPantalla
+            // 
+            this.cmdCerrarPantalla.BackColor = System.Drawing.Color.Transparent;
+            this.cmdCerrarPantalla.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.cancelar__1_;
+            this.cmdCerrarPantalla.ImageActive = null;
+            this.cmdCerrarPantalla.Location = new System.Drawing.Point(512, 19);
+            this.cmdCerrarPantalla.Name = "cmdCerrarPantalla";
+            this.cmdCerrarPantalla.Size = new System.Drawing.Size(37, 38);
+            this.cmdCerrarPantalla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrarPantalla.TabIndex = 2;
+            this.cmdCerrarPantalla.TabStop = false;
+            this.cmdCerrarPantalla.Zoom = 10;
+            this.cmdCerrarPantalla.Click += new System.EventHandler(this.cmdCerrarPantalla_Click);
+            // 
             // pbIniciar
             // 
             this.pbIniciar.Image = ((System.Drawing.Image)(resources.GetObject("pbIniciar.Image")));
@@ -61,17 +82,13 @@
             this.pbIniciar.TabIndex = 0;
             this.pbIniciar.TabStop = false;
             // 
-            // rdFroma
-            // 
-            this.rdFroma.ElipseRadius = 10;
-            this.rdFroma.TargetControl = this;
-            // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(573, 573);
+            this.Controls.Add(this.cmdCerrarPantalla);
             this.Controls.Add(this.cmdIniciar);
             this.Controls.Add(this.pbIniciar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -79,8 +96,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PantallaPrincipal_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PantallaPrincipal_KeyPress);
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrarPantalla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIniciar)).EndInit();
             this.ResumeLayout(false);
 
@@ -91,5 +107,6 @@
         private System.Windows.Forms.PictureBox pbIniciar;
         private System.Windows.Forms.Button cmdIniciar;
         private ns1.BunifuElipse rdFroma;
+        private ns1.BunifuImageButton cmdCerrarPantalla;
     }
 }

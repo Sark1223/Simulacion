@@ -20,7 +20,8 @@ namespace Generador_de_numeros___Simulacion
         {
             cmdIniciar.Parent = pbIniciar;
             cmdIniciar.BackColor = Color.Transparent;
-            this.Focus();
+            cmdCerrarPantalla.Parent = pbIniciar;
+            cmdCerrarPantalla.BackColor = Color.Transparent;
         }
 
         private void cmdIniciar_Click(object sender, EventArgs e)
@@ -29,16 +30,9 @@ namespace Generador_de_numeros___Simulacion
             ini.ShowDialog();
         }
 
-        private void PantallaPrincipal_KeyPress(object sender, KeyPressEventArgs e)
+        private void cmdCerrarPantalla_Click(object sender, EventArgs e)
         {
-        }
-
-        private void PantallaPrincipal_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Escape)
-            //{
-            //    Close();
-            //}
+            Close();
         }
     }
 }

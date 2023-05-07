@@ -11,6 +11,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using Application = System.Windows.Forms.Application;
 
 namespace Generador_de_numeros___Simulacion
 {
@@ -40,7 +42,7 @@ namespace Generador_de_numeros___Simulacion
         frmIntervalos frmIntervalos = new frmIntervalos();
         frmHistorial historial = new frmHistorial();
         Resultados resulta = new Resultados();
-        Inicio inicio = new Inicio();
+        //Inicio inicio = new Inicio();
 
         //Lista para guardar los intervalos y datos del AGUA y ANIMALES
         List<Intervals> animales = new List<Intervals>();
@@ -699,7 +701,10 @@ namespace Generador_de_numeros___Simulacion
                     ImgFlecha.Visible = true;
                 }
                 panel7.Location = new Point(28, pnexperimento.Location.Y + 26);
+                //pnBotones.Location = new Point(100, panel8.Location.Y + 26);
 
+                button1.Visible = true;
+                button2.Visible = true;
                 panel7.Visible = true;
                 panel8.Visible = true;
 
@@ -1065,15 +1070,15 @@ namespace Generador_de_numeros___Simulacion
 
         }
 
-        private void txtAcidez_TextChanged_1(object sender, EventArgs e)
+        private void Val(TextBox txt, ErrorProvider er, CancelEventArgs c)
         {
             error = false;
 
             //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAcidez.Text)
+            foreach (char caracter in txt.Text)
             {
                 //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
+                if (!char.IsDigit(caracter))
                 {
                     error = true;
                     break;
@@ -1081,15 +1086,10 @@ namespace Generador_de_numeros___Simulacion
             }
             if (error)
             {
-                errorP1.SetError(txtAAcido, "No se admiten letras\nIngresar numeros solamente");
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
             }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba1 = false;
         }
 
         private void txtAcoloidales_Validated(object sender, EventArgs e)
@@ -1104,7 +1104,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtAcoloidales_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtAcoloidales, errorP1, e);
+            Val(txtAcoloidales, errorP1, e);
             EsconderPaneles();
             CambiarImagenAgua();
             aproba2 = false;
@@ -1112,7 +1112,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtAmercurio_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtAmercurio, errorP1, e); 
+            Val(txtAmercurio, errorP1, e); 
             EsconderPaneles();
             CambiarImagenAgua();
             aproba2 = false;
@@ -1120,7 +1120,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtAresiduos_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtAresiduos, errorP1, e);
+            Val(txtAresiduos, errorP1, e);
             EsconderPaneles();
             CambiarImagenAgua();
             aproba2 = false;
@@ -1128,7 +1128,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtASulfato_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtASulfato, errorP1, e);
+            Val(txtASulfato, errorP1, e);
             EsconderPaneles();
             CambiarImagenAgua();
             aproba2 = false;
@@ -1136,7 +1136,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtAAcido_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtAAcido, errorP1, e);
+            Val(txtAAcido, errorP1, e);
             EsconderPaneles();
             CambiarImagenAgua();
             aproba2 = false;
@@ -1144,7 +1144,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtAfosfato_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtAfosfato, errorP1, e);
+            Val(txtAfosfato, errorP1, e);
             EsconderPaneles();
             CambiarImagenAgua();
             aproba2 = false;
@@ -1152,12 +1152,15 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtAOxidos_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtAOxidos, errorP1, e);
+            Val(txtAOxidos, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
         }
 
         private void txtAcidez_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtAcidez, errorP1, e);
+            Val(txtAcidez, errorP1, e);
             EsconderPaneles();
             CambiarImagenAnimales();
             aproba1 = false;
@@ -1165,7 +1168,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtAnemia_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtAnemia, errorP1, e);
+            Val(txtAnemia, errorP1, e);
             EsconderPaneles();
             CambiarImagenAnimales();
             aproba1 = false;
@@ -1173,7 +1176,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtNormal_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtNormal, errorP1, e);
+            Val(txtNormal, errorP1, e);
             EsconderPaneles();
             CambiarImagenAnimales();
             aproba1 = false;
@@ -1181,7 +1184,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtGlucosa_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtGlucosa, errorP1, e);
+            Val(txtGlucosa, errorP1, e);
             EsconderPaneles();
             CambiarImagenAnimales();
             aproba1 = false;
@@ -1189,7 +1192,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void txtalcalinidad_Validating(object sender, CancelEventArgs e)
         {
-            inicio.Val(txtalcalinidad, errorP1, e);
+            Val(txtalcalinidad, errorP1, e);
             EsconderPaneles();
             CambiarImagenAnimales();
             aproba1 = false;
@@ -1250,6 +1253,339 @@ namespace Generador_de_numeros___Simulacion
             errorP1.SetError(txtalcalinidad, "");
         }
 
+        private void txtAcoloidales_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAcoloidales.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAcoloidales, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtAcoloidales, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAmercurio_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAmercurio.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAmercurio, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtAmercurio, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAresiduos_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAresiduos.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAresiduos, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtAresiduos, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtASulfato_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtASulfato.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtASulfato, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtASulfato, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAAcido_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAAcido.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAAcido, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtAAcido, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAfosfato_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAfosfato.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAfosfato, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtAfosfato, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAOxidos_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAOxidos.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAOxidos, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtAOxidos, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAcidez_TextChanged_1(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAcidez.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAcidez, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtAcidez, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtAnemia_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtAnemia.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtAnemia, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtAnemia, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtNormal_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtNormal.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtNormal, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtNormal, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtGlucosa_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtGlucosa.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtGlucosa, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtGlucosa, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtalcalinidad_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtalcalinidad.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                errorP1.SetError(txtalcalinidad, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                errorP1.SetError(txtalcalinidad, "");
+            }
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
+            Environment.Exit(0);
+            Application.Exit();
+            Environment.Exit(0);
+            Application.Exit();
+        }
+
         private void CambiarImagenAgua()
         {
             cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__1_;
@@ -1258,6 +1594,7 @@ namespace Generador_de_numeros___Simulacion
         {
             panel7.Visible = false;
             panel8.Visible = false;
+            ImgFlecha.Visible = false;
         }
 
         private void txtChanged_Animales(object sender, EventArgs e)
@@ -1277,6 +1614,10 @@ namespace Generador_de_numeros___Simulacion
             if (error)
             {
                 MessageBox.Show("Verifique que los datos sean validos");
+            }
+            else if (txtAcidez.Text == "" || txtAnemia.Text == "" || txtNormal.Text == "" || txtGlucosa.Text == "" || txtalcalinidad.Text == "")
+            {
+                MessageBox.Show("Verifique que no haya espacios en blanco");
             }
             else
             {
@@ -1318,6 +1659,14 @@ namespace Generador_de_numeros___Simulacion
             if(error)
             {
                 MessageBox.Show("Verifique que los datos sean validos");
+            }
+            else if (txtAcoloidales.Text == "" || txtAmercurio.Text == "" || txtAresiduos.Text == "" || txtASulfato.Text == "")
+            {
+                MessageBox.Show("Verifique que no haya espacios en blanco");
+            }
+            else if (txtAAcido.Text == "" || txtAfosfato.Text == "" || txtAOxidos.Text == "")
+            {
+                MessageBox.Show("Verifique que no haya espacios en blanco");
             }
             else
             {

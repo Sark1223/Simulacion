@@ -130,8 +130,8 @@
   <data name="marca-de-verificacion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marca-de-verificacion (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="polluelo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\polluelo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dinosaurio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dinosaurio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="la-contaminacion-del-agua (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\la-contaminacion-del-agua (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,6 +142,12 @@
   <data name="vaca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vaca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-cerrar-ventana-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-cerrar-ventana-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha-imagen-animada-0269" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha-imagen-animada-0269.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="la-contaminacion-del-agua (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\la-contaminacion-del-agua (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,8 +157,11 @@
   <data name="icons8-distributed-counter-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-distributed-counter-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-cerrar-ventana-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-cerrar-ventana-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="polluelo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\polluelo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cruzar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cruzar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frecuencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frecuencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,10 +178,7 @@
   <data name="promedio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\promedio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dinosaurio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dinosaurio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha-imagen-animada-0269" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha-imagen-animada-0269.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancelar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
