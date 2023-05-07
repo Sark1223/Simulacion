@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Generador_de_numeros___Simulacion
 {
@@ -297,37 +298,13 @@ namespace Generador_de_numeros___Simulacion
         }
         bool error = false;
 
-        private void txtSemilla_TextChanged(object sender, EventArgs e)
-        {
-            //ForeColor = Color.Black;
-            //error = false;
 
-            ////ciclo para recorrer caracter por caracter 
-            //foreach (char caracter in txtSemilla.Text)
-            //{
-            //    //si alguno de los caracteres es un numero el error es true
-            //    if (char.IsLetter(caracter) || char.IsWhiteSpace(caracter))
-            //    {
-            //        error = true;
-            //        break;
-            //    }
-            //}
-            //if (error)
-            //{
-            //    error1.SetError(txtSemilla, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
-            //}
-            //else
-            //{
-            //    error1.Clear();
-            //}
-        }
-        private void txtA_TextChanged(object sender, EventArgs e)
+        public void Val(TextBox txt, ErrorProvider er, CancelEventArgs c)
         {
-            ForeColor = Color.Black;
             error = false;
 
             //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtA.Text)
+            foreach (char caracter in txt.Text)
             {
                 //si alguno de los caracteres es un numero el error es true
                 if (char.IsLetter(caracter) || char.IsWhiteSpace(caracter))
@@ -338,64 +315,17 @@ namespace Generador_de_numeros___Simulacion
             }
             if (error)
             {
-                //e.Cancel = true;
-                //txtA.Select(0, txtC.Text.Length);
-                error1.SetError(txtA, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
             }
             else
             {
-                //error1.Clear();
             }
         }
-        private void txtC_TextChanged(object sender, EventArgs e)
-        {
-            ForeColor = Color.Black;
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtC.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter) || char.IsWhiteSpace(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                error1.SetError(txtC, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
-            }
-            else
-            {
-                //error1.Clear();
-            }
-        }
-
         private void txtSemilla_Validating(object sender, CancelEventArgs e)
         {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtC.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter) || char.IsWhiteSpace(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                e.Cancel = true;
-                txtSemilla.Select(0, txtSemilla.Text.Length);
-                error1.SetError(txtC, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
-            }
-            else
-            {
-                //error1.Clear();
-            }
+            Val(txtSemilla, error1, e);
         }
 
         private void txtSemilla_Validated(object sender, EventArgs e)
@@ -403,29 +333,35 @@ namespace Generador_de_numeros___Simulacion
             error1.SetError(txtSemilla, "");
         }
 
-        private void txtM_TextChanged(object sender, EventArgs e)
+        private void txtA_Validating(object sender, CancelEventArgs e)
         {
-            ForeColor = Color.Black;
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtM.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter) || char.IsWhiteSpace(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                error1.SetError(txtM, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
-            }
-            else
-            {
-                error1.Clear();
-            }
+            Val(txtA, error1, e);
         }
+
+        private void txtC_Validating(object sender, CancelEventArgs e)
+        {
+            Val(txtC, error1, e);
+        }
+
+        private void txtM_Validating(object sender, CancelEventArgs e)
+        {
+            Val(txtM, error1, e);
+        }
+
+        private void txtA_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtA, "");
+        }
+
+        private void txtC_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtSemilla, "");
+        }
+
+        private void txtM_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtSemilla, "");
+        }
+
     }
 }

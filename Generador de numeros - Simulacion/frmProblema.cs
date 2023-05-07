@@ -40,6 +40,7 @@ namespace Generador_de_numeros___Simulacion
         frmIntervalos frmIntervalos = new frmIntervalos();
         frmHistorial historial = new frmHistorial();
         Resultados resulta = new Resultados();
+        Inicio inicio = new Inicio();
 
         //Lista para guardar los intervalos y datos del AGUA y ANIMALES
         List<Intervals> animales = new List<Intervals>();
@@ -1064,204 +1065,6 @@ namespace Generador_de_numeros___Simulacion
 
         }
 
-        //Metodo para esconder paneles y esconder botones cuando se cambie el texto
-        private void txtAcoloidales_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAcoloidales.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtAcoloidales, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba2 = false;
-        }
-
-        //Metodo para esconder paneles 7 y 8
-        private void EsconderPaneles()
-        {
-            panel7.Visible = false;
-            panel8.Visible = false;
-            ImgFlecha.Visible = false;
-        }
-
-        private void txtAmercurio_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAmercurio.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtAmercurio, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba2 = false;
-        }
-
-        private void txtAresiduos_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAresiduos.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtAresiduos, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba2 = false;
-        }
-
-        private void txtASulfato_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtASulfato.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtASulfato, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba2 = false;
-        }
-
-        private void txtAAcido_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAAcido.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtAAcido, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba2 = false;
-        }
-
-        private void txtAfosfato_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAfosfato.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtAfosfato, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba2 = false;
-        }
-
-        private void txtAOxidos_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAOxidos.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtAOxidos, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba2 = false;
-        }
-
         private void txtAcidez_TextChanged_1(object sender, EventArgs e)
         {
             error = false;
@@ -1289,169 +1092,172 @@ namespace Generador_de_numeros___Simulacion
             aproba1 = false;
         }
 
-        private void txtAnemia_TextChanged(object sender, EventArgs e)
+        private void txtAcoloidales_Validated(object sender, EventArgs e)
         {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAnemia.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtAnemia, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba1 = false;
-        }
-
-        private void txtNormal_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtNormal.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtNormal, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba1 = false;
-        }
-
-        private void txtGlucosa_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtGlucosa.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtGlucosa, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba1 = false;
-        }
-
-        private void MiraComoYoSiSeValidar(TextBox text)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in text.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(text, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
-        }
-        private void txtalcalinidad_TextChanged(object sender, EventArgs e)
-        {
-            MiraComoYoSiSeValidar(txtalcalinidad);
-            //error = false;
-
-            ////ciclo para recorrer caracter por caracter 
-            //foreach (char caracter in txtalcalinidad.Text)
-            //{
-            //    //si alguno de los caracteres es un numero el error es true
-            //    if (char.IsLetter(caracter))
-            //    {
-            //        error = true;
-            //        break;
-            //    }
-            //}
-            //if (error)
-            //{
-            //    errorP1.SetError(txtalcalinidad, "No se admiten letras\nIngresar numeros solamente");
-            //}
-            //else
-            //{
-            //    errorP1.Clear();
-            //}
-            EsconderPaneles();
-            CambiarImagenAgua();
-            aproba1 = false;
+            errorP1.SetError(txtAcoloidales, "");
         }
 
         private void CambiarImagenAnimales()
         {
-            error = false;
+            cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__1_;
+        }
 
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtAAcido.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                errorP1.SetError(txtAAcido, "No se admiten letras\nIngresar numeros solamente");
-            }
-            else
-            {
-                errorP1.Clear();
-            }
+        private void txtAcoloidales_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtAcoloidales, errorP1, e);
             EsconderPaneles();
             CambiarImagenAgua();
             aproba2 = false;
-            cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__1_;
+        }
+
+        private void txtAmercurio_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtAmercurio, errorP1, e); 
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAresiduos_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtAresiduos, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtASulfato_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtASulfato, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAAcido_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtAAcido, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAfosfato_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtAfosfato, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAgua();
+            aproba2 = false;
+        }
+
+        private void txtAOxidos_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtAOxidos, errorP1, e);
+        }
+
+        private void txtAcidez_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtAcidez, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtAnemia_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtAnemia, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtNormal_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtNormal, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtGlucosa_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtGlucosa, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtalcalinidad_Validating(object sender, CancelEventArgs e)
+        {
+            inicio.Val(txtalcalinidad, errorP1, e);
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+        }
+
+        private void txtAmercurio_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtAmercurio, "");
+        }
+
+        private void txtAresiduos_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtAresiduos, "");
+        }
+
+        private void txtASulfato_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtASulfato, "");
+        }
+
+        private void txtAAcido_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtAAcido, "");
+        }
+
+        private void txtAfosfato_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtAfosfato, "");
+        }
+
+        private void txtAOxidos_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtAOxidos, "");
+        }
+
+        private void txtAcidez_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtAcidez, "");
+        }
+
+        private void txtAnemia_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtAnemia, "");
+        }
+
+        private void txtNormal_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtNormal, "");
+        }
+
+        private void txtGlucosa_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtGlucosa, "");
+        }
+
+        private void txtalcalinidad_Validated(object sender, EventArgs e)
+        {
+            errorP1.SetError(txtalcalinidad, "");
         }
 
         private void CambiarImagenAgua()
         {
             cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__1_;
+        }
+        private void EsconderPaneles()
+        {
+            panel7.Visible = false;
+            panel8.Visible = false;
         }
 
         private void txtChanged_Animales(object sender, EventArgs e)

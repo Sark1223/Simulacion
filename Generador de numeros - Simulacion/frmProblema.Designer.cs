@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblema));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new ns1.BunifuCustomLabel();
@@ -301,6 +301,8 @@
             this.txtAcidez.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAcidez.TextChanged += new System.EventHandler(this.txtAcidez_TextChanged_1);
             this.txtAcidez.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarAcidez_KeyPress);
+            this.txtAcidez.Validating += new System.ComponentModel.CancelEventHandler(this.txtAcidez_Validating);
+            this.txtAcidez.Validated += new System.EventHandler(this.txtAcidez_Validated);
             // 
             // txtAAcido
             // 
@@ -314,7 +316,8 @@
             this.txtAAcido.TabIndex = 10;
             this.txtAAcido.Text = "12";
             this.txtAAcido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAAcido.TextChanged += new System.EventHandler(this.txtAAcido_TextChanged);
+            this.txtAAcido.Validating += new System.ComponentModel.CancelEventHandler(this.txtAAcido_Validating);
+            this.txtAAcido.Validated += new System.EventHandler(this.txtAAcido_Validated);
             // 
             // txtAmercurio
             // 
@@ -328,7 +331,8 @@
             this.txtAmercurio.TabIndex = 7;
             this.txtAmercurio.Text = "10";
             this.txtAmercurio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAmercurio.TextChanged += new System.EventHandler(this.txtAmercurio_TextChanged);
+            this.txtAmercurio.Validating += new System.ComponentModel.CancelEventHandler(this.txtAmercurio_Validating);
+            this.txtAmercurio.Validated += new System.EventHandler(this.txtAmercurio_Validated);
             // 
             // txtAresiduos
             // 
@@ -342,7 +346,8 @@
             this.txtAresiduos.TabIndex = 8;
             this.txtAresiduos.Text = "25";
             this.txtAresiduos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAresiduos.TextChanged += new System.EventHandler(this.txtAresiduos_TextChanged);
+            this.txtAresiduos.Validating += new System.ComponentModel.CancelEventHandler(this.txtAresiduos_Validating);
+            this.txtAresiduos.Validated += new System.EventHandler(this.txtAresiduos_Validated);
             // 
             // txtASulfato
             // 
@@ -356,7 +361,8 @@
             this.txtASulfato.TabIndex = 9;
             this.txtASulfato.Text = "15";
             this.txtASulfato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtASulfato.TextChanged += new System.EventHandler(this.txtASulfato_TextChanged);
+            this.txtASulfato.Validating += new System.ComponentModel.CancelEventHandler(this.txtASulfato_Validating);
+            this.txtASulfato.Validated += new System.EventHandler(this.txtASulfato_Validated);
             // 
             // txtAcoloidales
             // 
@@ -370,7 +376,8 @@
             this.txtAcoloidales.TabIndex = 6;
             this.txtAcoloidales.Text = "5";
             this.txtAcoloidales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAcoloidales.TextChanged += new System.EventHandler(this.txtAcoloidales_TextChanged);
+            this.txtAcoloidales.Validating += new System.ComponentModel.CancelEventHandler(this.txtAcoloidales_Validating);
+            this.txtAcoloidales.Validated += new System.EventHandler(this.txtAcoloidales_Validated);
             // 
             // txtAOxidos
             // 
@@ -384,7 +391,8 @@
             this.txtAOxidos.TabIndex = 12;
             this.txtAOxidos.Text = "17";
             this.txtAOxidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAOxidos.TextChanged += new System.EventHandler(this.txtAOxidos_TextChanged);
+            this.txtAOxidos.Validating += new System.ComponentModel.CancelEventHandler(this.txtAOxidos_Validating);
+            this.txtAOxidos.Validated += new System.EventHandler(this.txtAOxidos_Validated);
             // 
             // txtAfosfato
             // 
@@ -398,7 +406,8 @@
             this.txtAfosfato.TabIndex = 11;
             this.txtAfosfato.Text = "16";
             this.txtAfosfato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAfosfato.TextChanged += new System.EventHandler(this.txtAfosfato_TextChanged);
+            this.txtAfosfato.Validating += new System.ComponentModel.CancelEventHandler(this.txtAfosfato_Validating);
+            this.txtAfosfato.Validated += new System.EventHandler(this.txtAfosfato_Validated);
             // 
             // label3
             // 
@@ -552,7 +561,8 @@
             this.txtAnemia.TabIndex = 2;
             this.txtAnemia.Text = "8";
             this.txtAnemia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAnemia.TextChanged += new System.EventHandler(this.txtAnemia_TextChanged);
+            this.txtAnemia.Validating += new System.ComponentModel.CancelEventHandler(this.txtAnemia_Validating);
+            this.txtAnemia.Validated += new System.EventHandler(this.txtAnemia_Validated);
             // 
             // fijo4
             // 
@@ -579,7 +589,8 @@
             this.txtGlucosa.TabIndex = 4;
             this.txtGlucosa.Text = "17";
             this.txtGlucosa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtGlucosa.TextChanged += new System.EventHandler(this.txtGlucosa_TextChanged);
+            this.txtGlucosa.Validating += new System.ComponentModel.CancelEventHandler(this.txtGlucosa_Validating);
+            this.txtGlucosa.Validated += new System.EventHandler(this.txtGlucosa_Validated);
             // 
             // fijo3
             // 
@@ -606,7 +617,8 @@
             this.txtNormal.TabIndex = 3;
             this.txtNormal.Text = "35";
             this.txtNormal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNormal.TextChanged += new System.EventHandler(this.txtNormal_TextChanged);
+            this.txtNormal.Validating += new System.ComponentModel.CancelEventHandler(this.txtNormal_Validating);
+            this.txtNormal.Validated += new System.EventHandler(this.txtNormal_Validated);
             // 
             // fijo5
             // 
@@ -633,7 +645,8 @@
             this.txtalcalinidad.TabIndex = 5;
             this.txtalcalinidad.Text = "22";
             this.txtalcalinidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtalcalinidad.TextChanged += new System.EventHandler(this.txtalcalinidad_TextChanged);
+            this.txtalcalinidad.Validating += new System.ComponentModel.CancelEventHandler(this.txtalcalinidad_Validating);
+            this.txtalcalinidad.Validated += new System.EventHandler(this.txtalcalinidad_Validated);
             // 
             // txtTotal2
             // 
@@ -977,28 +990,28 @@
             this.dgvResAni.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAni.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAni.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle49.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvResAni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAni.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dia,
             this.a,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvResAni.EnableHeadersVisualStyles = false;
             this.dgvResAni.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAni.Location = new System.Drawing.Point(59, 172);
@@ -1102,14 +1115,14 @@
             this.dgvResAgua.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAgua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAgua.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvResAgua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAgua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1121,14 +1134,14 @@
             this.Column8,
             this.Column6,
             this.Column9});
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle52.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvResAgua.EnableHeadersVisualStyles = false;
             this.dgvResAgua.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAgua.Location = new System.Drawing.Point(33, 245);

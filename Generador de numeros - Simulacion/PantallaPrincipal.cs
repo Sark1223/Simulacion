@@ -35,10 +35,10 @@ namespace Generador_de_numeros___Simulacion
 
         private void PantallaPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
-            {
-                Close();
-            }
+            //if (e.KeyCode == Keys.Escape)
+            //{
+            //    Close();
+            //}
         }
     }
 }
