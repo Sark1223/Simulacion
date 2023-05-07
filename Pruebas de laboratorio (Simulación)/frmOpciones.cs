@@ -37,6 +37,8 @@ namespace Generador_de_numeros___Simulacion
         frmPruebas frmPruebas = new frmPruebas();
         frmProblema frmProblema = new frmProblema();
 
+        bool cerrar = false;
+
         public void RecibirNumeros(frmNumeros numeros)
         {
             frmNumeros = numeros;
@@ -86,6 +88,11 @@ namespace Generador_de_numeros___Simulacion
         private void cmdContinuar_Click(object sender, EventArgs e)
         {
             frmProblema.ShowDialog();
+            if(cerrar = true)
+            {
+                this.Close();
+            }
+
         }
     }
 }
