@@ -958,6 +958,10 @@ namespace Generador_de_numeros___Simulacion
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+            EsconderPaneles();
+            CambiarImagenAnimales();
+            aproba1 = false;
+            aproba2 = false;
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
@@ -1485,9 +1489,11 @@ namespace Generador_de_numeros___Simulacion
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //this.Hide();
+            //puerquito.ShowDialog();
+            //this.Show();
             this.Hide();
-            puerquito.ShowDialog();
-            this.Show();
+            Application.Run(new Inicio());
             EsconderPaneles();
             CambiarImagenAnimales();
             aproba1 = false;

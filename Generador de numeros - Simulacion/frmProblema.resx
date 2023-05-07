@@ -126,6 +126,45 @@
   <metadata name="ayuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>101, 56</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmdResolver.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVHhe7Z3PSxRhHIf7+wq0sC0LBPGmMP1yNUTFi+ih
+        Qx0iCukWRFC3yIOnIOpQBwlC8CC77661SqxUZmU/vu3nnXHRfV+9777PA89p3h1P8zDzvr4zpwwAoAPC
+        AAABhAEAAggDAAQQBgAIIAwAEHBiGP7t/7Ldty9t696cfVzMzE1essrYGUTsQnX96jpu3Jmyb29W7O/e
+        bnGlhxwbhr0P78xNDJobL1llNP6HELEbPW3u+nlz5Yv29dVyccUfJQiDKrL9YL4VhAuREyJiL6nr/NOt
+        cfvzpVkUIOdIGBSF+vSwVbL+6EkQsTetzwzb78+NogQdYdCdAlFATFPNPxzQDoOfU+DxATFZ3bUB23n+
+        yPfAh0GrD5pojA1GxHR05UHbb9TyMGjpQrOUsYGImJBZnzWfLuVh0LqmljCiAxExKeuzI3kYalND0QGI
+        mJ7V1l2DD0P16rnoAERMUx+G2AFETFfCgIiBhAERAwkDIgbmk49ZX/QgIqapDwPvWUDEw/owaNtl7CAi
+        pqf+r8mHYefFY6teORsdhIhpub20kIdB+7DZWYmI6sD31dd5GETz2UOrspEKMV2zftu6O+t70A6Dtl5v
+        zo/Ff4CIPW9t8nL7BbHtMAjtw65NsEKBmJp6H8uP9fdFCTrCIH5urPn3PrKxCjEBW48PulM4HAURhEHo
+        saL55L65MhOSiD3pqCYaS9a4fTP6fYloGA5QRbR04W6U4idHxK5TTwP6iJQ+JnUcJ4YBANKEMABAAGEA
+        gADCAAABhAEAOjD7D/0JMAIbLTYEAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="cmdMostrarIntervalos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVHhe7d09SwNBFEZhf26aNBY2NmksbGxsLGwsAgFB
+        hYAoCCKIFjZB0lgoQhAFRQhIQBGueTN3Ezc32T4754EBiR/dHmZmd8c1A4A5hAFAQBgABIQBQEAYAASE
+        AUBQHYafX7O7Z7P9a7OdC7PNE7NGm8FgrOLQ9avreO/K7ObRbPTtF3q0PAz9l/SHFAXF4eHN7OPLvwlg
+        5ej61XXcG5gd3KbrW4FYIIZBFdEv7V6aDUf+IYDaqbjWy2HQD26dLq0IgBrS6mD7vLQiKIdB9SAKQH60
+        xND+g5uFQdXQlAJAno57Zmf9yZcpDLr7oI0I9hSAfKkD2kp4HXoYtHzQMgJA3jRjGM8cUhh0X1O3MADk
+        bfA5mTWkMLS6k+kDgMxpOdHseBjWDyufggKQkUbbw6DHJQFACAOAgDAACAgDgGAahmYn7UYCwDQMeuqR
+        V6oByDQMekdC70oAyJueZ2p1PQz+GCSAzPnrESkMWkbo6Uf2GYC8+esRKQzSvU8DQJ6K813HZmHQbEEH
+        NTy9+wcAsqEjF7Rq8FcjZmEQbTz4+9gAMqEoaFKgU5xcOQyiGYPi4Ce5AKgxHbegmcK/KEgMg2hZobsU
+        qoh2KTnZCagPLReK/QRtNi54s3pxGAqqiE522jhKj00zGIzVHzpmofh/MUtUhwFAlggDgIAwAAgIA4CA
+        MACYY/YHbC/m3cYjag0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value> - Muestras de sangre de 5 animales diferentes al inicio del monitoreo,
+    a las 2 semanas y al mes.
+ - 20 muestras diarias de agua por un lapso de 2 semanas. (En caso de 
+   ser requerido) 
+Los dos puntos anteriores se repiten por cada sector.</value>
+  </data>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -165,38 +204,6 @@
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cmdResolver.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVHhe7Z3PSxRhHIf7+wq0sC0LBPGmMP1yNUTFi+ih
-        Qx0iCukWRFC3yIOnIOpQBwlC8CC77661SqxUZmU/vu3nnXHRfV+9777PA89p3h1P8zDzvr4zpwwAoAPC
-        AAABhAEAAggDAAQQBgAIIAwAEHBiGP7t/7Ldty9t696cfVzMzE1essrYGUTsQnX96jpu3Jmyb29W7O/e
-        bnGlhxwbhr0P78xNDJobL1llNP6HELEbPW3u+nlz5Yv29dVyccUfJQiDKrL9YL4VhAuREyJiL6nr/NOt
-        cfvzpVkUIOdIGBSF+vSwVbL+6EkQsTetzwzb78+NogQdYdCdAlFATFPNPxzQDoOfU+DxATFZ3bUB23n+
-        yPfAh0GrD5pojA1GxHR05UHbb9TyMGjpQrOUsYGImJBZnzWfLuVh0LqmljCiAxExKeuzI3kYalND0QGI
-        mJ7V1l2DD0P16rnoAERMUx+G2AFETFfCgIiBhAERAwkDIgbmk49ZX/QgIqapDwPvWUDEw/owaNtl7CAi
-        pqf+r8mHYefFY6teORsdhIhpub20kIdB+7DZWYmI6sD31dd5GETz2UOrspEKMV2zftu6O+t70A6Dtl5v
-        zo/Ff4CIPW9t8nL7BbHtMAjtw65NsEKBmJp6H8uP9fdFCTrCIH5urPn3PrKxCjEBW48PulM4HAURhEHo
-        saL55L65MhOSiD3pqCYaS9a4fTP6fYloGA5QRbR04W6U4idHxK5TTwP6iJQ+JnUcJ4YBANKEMABAAGEA
-        gADCAAABhAEAOjD7D/0JMAIbLTYEAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="cmdMostrarIntervalos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVHhe7d09SwNBFEZhf26aNBY2NmksbGxsLGwsAgFB
-        hYAoCCKIFjZB0lgoQhAFRQhIQBGueTN3Ezc32T4754EBiR/dHmZmd8c1A4A5hAFAQBgABIQBQEAYAASE
-        AUBQHYafX7O7Z7P9a7OdC7PNE7NGm8FgrOLQ9avreO/K7ObRbPTtF3q0PAz9l/SHFAXF4eHN7OPLvwlg
-        5ej61XXcG5gd3KbrW4FYIIZBFdEv7V6aDUf+IYDaqbjWy2HQD26dLq0IgBrS6mD7vLQiKIdB9SAKQH60
-        xND+g5uFQdXQlAJAno57Zmf9yZcpDLr7oI0I9hSAfKkD2kp4HXoYtHzQMgJA3jRjGM8cUhh0X1O3MADk
-        bfA5mTWkMLS6k+kDgMxpOdHseBjWDyufggKQkUbbw6DHJQFACAOAgDAACAgDgGAahmYn7UYCwDQMeuqR
-        V6oByDQMekdC70oAyJueZ2p1PQz+GCSAzPnrESkMWkbo6Uf2GYC8+esRKQzSvU8DQJ6K813HZmHQbEEH
-        NTy9+wcAsqEjF7Rq8FcjZmEQbTz4+9gAMqEoaFKgU5xcOQyiGYPi4Ce5AKgxHbegmcK/KEgMg2hZobsU
-        qoh2KTnZCagPLReK/QRtNi54s3pxGAqqiE522jhKj00zGIzVHzpmofh/MUtUhwFAlggDgIAwAAgIA4CA
-        MACYY/YHbC/m3cYjag0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAP
@@ -348,13 +355,6 @@
         tvw2kBrFa+6TQbebPxt/V/6A/af8mfmVuQdxFb+a3+4HR8Pu3xoNb31D+SUBADVx8OQvfzZe/gOF1vln
         44/m5/rfyDfkHZNzvZ3m/bNbOp3/D5ilCJpvynj3AAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value> - Muestras de sangre de 5 animales diferentes al inicio del monitoreo,
-    a las 2 semanas y al mes.
- - 20 muestras diarias de agua por un lapso de 2 semanas. (En caso de 
-   ser requerido) 
-Los dos puntos anteriores se repiten por cada sector.</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

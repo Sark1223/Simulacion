@@ -143,6 +143,7 @@
             this.cmdIngresarAgua = new ns1.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel5.SuspendLayout();
@@ -161,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdForma
@@ -226,7 +228,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(60, 428);
+            this.label2.Location = new System.Drawing.Point(42, 387);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 147);
             this.label2.TabIndex = 13;
@@ -240,7 +242,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(465, 401);
+            this.label1.Location = new System.Drawing.Point(447, 360);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(322, 20);
             this.label1.TabIndex = 29;
@@ -253,7 +255,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(493, 428);
+            this.label5.Location = new System.Drawing.Point(475, 387);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(203, 105);
             this.label5.TabIndex = 30;
@@ -267,7 +269,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(32, 401);
+            this.label6.Location = new System.Drawing.Point(14, 360);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(305, 20);
             this.label6.TabIndex = 12;
@@ -279,7 +281,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(336, 314);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(318, 273);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(254, 26);
             this.bunifuCustomLabel1.TabIndex = 11;
@@ -288,7 +290,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
-            this.panel2.Location = new System.Drawing.Point(30, 324);
+            this.panel2.Location = new System.Drawing.Point(12, 283);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(850, 4);
             this.panel2.TabIndex = 10;
@@ -299,7 +301,7 @@
             this.txtAcidez.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcidez.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAcidez.ForeColor = System.Drawing.Color.Black;
-            this.txtAcidez.Location = new System.Drawing.Point(722, 428);
+            this.txtAcidez.Location = new System.Drawing.Point(704, 387);
             this.txtAcidez.Name = "txtAcidez";
             this.txtAcidez.Size = new System.Drawing.Size(56, 22);
             this.txtAcidez.TabIndex = 1;
@@ -316,7 +318,7 @@
             this.txtAAcido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAAcido.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAAcido.ForeColor = System.Drawing.Color.Black;
-            this.txtAAcido.Location = new System.Drawing.Point(293, 511);
+            this.txtAAcido.Location = new System.Drawing.Point(275, 470);
             this.txtAAcido.Name = "txtAAcido";
             this.txtAAcido.Size = new System.Drawing.Size(56, 22);
             this.txtAAcido.TabIndex = 21;
@@ -332,7 +334,7 @@
             this.txtAmercurio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAmercurio.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAmercurio.ForeColor = System.Drawing.Color.Black;
-            this.txtAmercurio.Location = new System.Drawing.Point(293, 449);
+            this.txtAmercurio.Location = new System.Drawing.Point(275, 408);
             this.txtAmercurio.Name = "txtAmercurio";
             this.txtAmercurio.Size = new System.Drawing.Size(56, 22);
             this.txtAmercurio.TabIndex = 7;
@@ -348,7 +350,7 @@
             this.txtAresiduos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAresiduos.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAresiduos.ForeColor = System.Drawing.Color.Black;
-            this.txtAresiduos.Location = new System.Drawing.Point(293, 470);
+            this.txtAresiduos.Location = new System.Drawing.Point(275, 429);
             this.txtAresiduos.Name = "txtAresiduos";
             this.txtAresiduos.Size = new System.Drawing.Size(56, 22);
             this.txtAresiduos.TabIndex = 8;
@@ -364,7 +366,7 @@
             this.txtASulfato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtASulfato.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtASulfato.ForeColor = System.Drawing.Color.Black;
-            this.txtASulfato.Location = new System.Drawing.Point(293, 490);
+            this.txtASulfato.Location = new System.Drawing.Point(275, 449);
             this.txtASulfato.Name = "txtASulfato";
             this.txtASulfato.Size = new System.Drawing.Size(56, 22);
             this.txtASulfato.TabIndex = 9;
@@ -380,7 +382,7 @@
             this.txtAcoloidales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcoloidales.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAcoloidales.ForeColor = System.Drawing.Color.Black;
-            this.txtAcoloidales.Location = new System.Drawing.Point(293, 428);
+            this.txtAcoloidales.Location = new System.Drawing.Point(275, 387);
             this.txtAcoloidales.Name = "txtAcoloidales";
             this.txtAcoloidales.Size = new System.Drawing.Size(56, 22);
             this.txtAcoloidales.TabIndex = 6;
@@ -396,7 +398,7 @@
             this.txtAOxidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAOxidos.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAOxidos.ForeColor = System.Drawing.Color.Black;
-            this.txtAOxidos.Location = new System.Drawing.Point(293, 552);
+            this.txtAOxidos.Location = new System.Drawing.Point(275, 511);
             this.txtAOxidos.Name = "txtAOxidos";
             this.txtAOxidos.Size = new System.Drawing.Size(56, 22);
             this.txtAOxidos.TabIndex = 24;
@@ -412,7 +414,7 @@
             this.txtAfosfato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAfosfato.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAfosfato.ForeColor = System.Drawing.Color.Black;
-            this.txtAfosfato.Location = new System.Drawing.Point(293, 531);
+            this.txtAfosfato.Location = new System.Drawing.Point(275, 490);
             this.txtAfosfato.Name = "txtAfosfato";
             this.txtAfosfato.Size = new System.Drawing.Size(56, 22);
             this.txtAfosfato.TabIndex = 22;
@@ -438,7 +440,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            this.panel3.Location = new System.Drawing.Point(28, 173);
+            this.panel3.Location = new System.Drawing.Point(10, 132);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 2);
             this.panel3.TabIndex = 7;
@@ -446,7 +448,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            this.panel4.Location = new System.Drawing.Point(155, 95);
+            this.panel4.Location = new System.Drawing.Point(137, 54);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(2, 150);
             this.panel4.TabIndex = 5;
@@ -467,7 +469,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(62, 91);
+            this.label7.Location = new System.Drawing.Point(44, 50);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(22, 23);
             this.label7.TabIndex = 6;
@@ -479,7 +481,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(226, 200);
+            this.label8.Location = new System.Drawing.Point(208, 159);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 23);
             this.label8.TabIndex = 9;
@@ -491,7 +493,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(58, 188);
+            this.label9.Location = new System.Drawing.Point(40, 147);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(20, 23);
             this.label9.TabIndex = 8;
@@ -503,7 +505,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(226, 103);
+            this.label10.Location = new System.Drawing.Point(208, 62);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(21, 23);
             this.label10.TabIndex = 4;
@@ -516,7 +518,7 @@
             this.txtTotal1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal1.ForeColor = System.Drawing.Color.Black;
-            this.txtTotal1.Location = new System.Drawing.Point(494, 533);
+            this.txtTotal1.Location = new System.Drawing.Point(476, 492);
             this.txtTotal1.Name = "txtTotal1";
             this.txtTotal1.Size = new System.Drawing.Size(56, 22);
             this.txtTotal1.TabIndex = 37;
@@ -529,7 +531,7 @@
             this.txtSuma1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuma1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtSuma1.ForeColor = System.Drawing.Color.Black;
-            this.txtSuma1.Location = new System.Drawing.Point(714, 532);
+            this.txtSuma1.Location = new System.Drawing.Point(696, 491);
             this.txtSuma1.Name = "txtSuma1";
             this.txtSuma1.ReadOnly = true;
             this.txtSuma1.Size = new System.Drawing.Size(56, 22);
@@ -542,7 +544,7 @@
             this.fijo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fijo1.ForeColor = System.Drawing.Color.Black;
-            this.fijo1.Location = new System.Drawing.Point(719, 428);
+            this.fijo1.Location = new System.Drawing.Point(701, 387);
             this.fijo1.Name = "fijo1";
             this.fijo1.Size = new System.Drawing.Size(20, 22);
             this.fijo1.TabIndex = 31;
@@ -555,7 +557,7 @@
             this.fijo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.fijo2.ForeColor = System.Drawing.Color.Black;
-            this.fijo2.Location = new System.Drawing.Point(719, 448);
+            this.fijo2.Location = new System.Drawing.Point(701, 407);
             this.fijo2.Name = "fijo2";
             this.fijo2.Size = new System.Drawing.Size(20, 22);
             this.fijo2.TabIndex = 32;
@@ -568,7 +570,7 @@
             this.txtAnemia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAnemia.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAnemia.ForeColor = System.Drawing.Color.Black;
-            this.txtAnemia.Location = new System.Drawing.Point(723, 448);
+            this.txtAnemia.Location = new System.Drawing.Point(705, 407);
             this.txtAnemia.Name = "txtAnemia";
             this.txtAnemia.Size = new System.Drawing.Size(56, 22);
             this.txtAnemia.TabIndex = 2;
@@ -584,7 +586,7 @@
             this.fijo4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.fijo4.ForeColor = System.Drawing.Color.Black;
-            this.fijo4.Location = new System.Drawing.Point(719, 491);
+            this.fijo4.Location = new System.Drawing.Point(701, 450);
             this.fijo4.Name = "fijo4";
             this.fijo4.Size = new System.Drawing.Size(20, 22);
             this.fijo4.TabIndex = 34;
@@ -597,7 +599,7 @@
             this.txtGlucosa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGlucosa.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtGlucosa.ForeColor = System.Drawing.Color.Black;
-            this.txtGlucosa.Location = new System.Drawing.Point(721, 491);
+            this.txtGlucosa.Location = new System.Drawing.Point(703, 450);
             this.txtGlucosa.Name = "txtGlucosa";
             this.txtGlucosa.Size = new System.Drawing.Size(56, 22);
             this.txtGlucosa.TabIndex = 4;
@@ -613,7 +615,7 @@
             this.fijo3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.fijo3.ForeColor = System.Drawing.Color.Black;
-            this.fijo3.Location = new System.Drawing.Point(719, 470);
+            this.fijo3.Location = new System.Drawing.Point(701, 429);
             this.fijo3.Name = "fijo3";
             this.fijo3.Size = new System.Drawing.Size(20, 22);
             this.fijo3.TabIndex = 33;
@@ -626,7 +628,7 @@
             this.txtNormal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNormal.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtNormal.ForeColor = System.Drawing.Color.Black;
-            this.txtNormal.Location = new System.Drawing.Point(723, 470);
+            this.txtNormal.Location = new System.Drawing.Point(705, 429);
             this.txtNormal.Name = "txtNormal";
             this.txtNormal.Size = new System.Drawing.Size(56, 22);
             this.txtNormal.TabIndex = 3;
@@ -642,7 +644,7 @@
             this.fijo5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.fijo5.ForeColor = System.Drawing.Color.Black;
-            this.fijo5.Location = new System.Drawing.Point(719, 511);
+            this.fijo5.Location = new System.Drawing.Point(701, 470);
             this.fijo5.Name = "fijo5";
             this.fijo5.Size = new System.Drawing.Size(20, 22);
             this.fijo5.TabIndex = 35;
@@ -655,7 +657,7 @@
             this.txtalcalinidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtalcalinidad.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtalcalinidad.ForeColor = System.Drawing.Color.Black;
-            this.txtalcalinidad.Location = new System.Drawing.Point(721, 511);
+            this.txtalcalinidad.Location = new System.Drawing.Point(703, 470);
             this.txtalcalinidad.Name = "txtalcalinidad";
             this.txtalcalinidad.Size = new System.Drawing.Size(56, 22);
             this.txtalcalinidad.TabIndex = 5;
@@ -671,7 +673,7 @@
             this.txtTotal2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal2.ForeColor = System.Drawing.Color.Black;
-            this.txtTotal2.Location = new System.Drawing.Point(61, 576);
+            this.txtTotal2.Location = new System.Drawing.Point(43, 535);
             this.txtTotal2.Name = "txtTotal2";
             this.txtTotal2.Size = new System.Drawing.Size(56, 22);
             this.txtTotal2.TabIndex = 25;
@@ -684,7 +686,7 @@
             this.txtSuma2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuma2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtSuma2.ForeColor = System.Drawing.Color.Black;
-            this.txtSuma2.Location = new System.Drawing.Point(281, 576);
+            this.txtSuma2.Location = new System.Drawing.Point(263, 535);
             this.txtSuma2.Name = "txtSuma2";
             this.txtSuma2.ReadOnly = true;
             this.txtSuma2.Size = new System.Drawing.Size(56, 22);
@@ -697,7 +699,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(290, 511);
+            this.textBox1.Location = new System.Drawing.Point(272, 470);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(20, 22);
             this.textBox1.TabIndex = 18;
@@ -710,7 +712,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(290, 491);
+            this.textBox2.Location = new System.Drawing.Point(272, 450);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(20, 22);
             this.textBox2.TabIndex = 17;
@@ -723,7 +725,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(290, 470);
+            this.textBox3.Location = new System.Drawing.Point(272, 429);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(20, 22);
             this.textBox3.TabIndex = 16;
@@ -736,7 +738,7 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(290, 449);
+            this.textBox4.Location = new System.Drawing.Point(272, 408);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(20, 22);
             this.textBox4.TabIndex = 15;
@@ -749,7 +751,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(290, 428);
+            this.textBox5.Location = new System.Drawing.Point(272, 387);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(20, 22);
             this.textBox5.TabIndex = 14;
@@ -762,7 +764,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(290, 551);
+            this.textBox6.Location = new System.Drawing.Point(272, 510);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(20, 22);
             this.textBox6.TabIndex = 23;
@@ -775,7 +777,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(290, 531);
+            this.textBox7.Location = new System.Drawing.Point(272, 490);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(20, 22);
             this.textBox7.TabIndex = 19;
@@ -789,7 +791,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label11.Location = new System.Drawing.Point(792, 507);
+            this.label11.Location = new System.Drawing.Point(774, 466);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 14);
             this.label11.TabIndex = 38;
@@ -827,7 +829,7 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(297, 52);
+            this.panel5.Location = new System.Drawing.Point(279, 11);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(584, 243);
             this.panel5.TabIndex = 3;
@@ -844,7 +846,7 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(352, 509);
+            this.label12.Location = new System.Drawing.Point(334, 468);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 14);
             this.label12.TabIndex = 28;
@@ -940,7 +942,7 @@
             this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
             this.cmdIngresarAnimales.ImageActive = null;
-            this.cmdIngresarAnimales.Location = new System.Drawing.Point(814, 470);
+            this.cmdIngresarAnimales.Location = new System.Drawing.Point(796, 429);
             this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
             this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
             this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -980,7 +982,7 @@
             // ImgFlecha
             // 
             this.ImgFlecha.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.flecha;
-            this.ImgFlecha.Location = new System.Drawing.Point(411, 564);
+            this.ImgFlecha.Location = new System.Drawing.Point(393, 523);
             this.ImgFlecha.Name = "ImgFlecha";
             this.ImgFlecha.Size = new System.Drawing.Size(75, 71);
             this.ImgFlecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1008,7 +1010,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Candara Light", 13F);
             this.label17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label17.Location = new System.Drawing.Point(32, 342);
+            this.label17.Location = new System.Drawing.Point(14, 301);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(840, 44);
             this.label17.TabIndex = 88;
@@ -1415,7 +1417,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.cerdo;
-            this.pictureBox1.Location = new System.Drawing.Point(627, 552);
+            this.pictureBox1.Location = new System.Drawing.Point(609, 511);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1440,7 +1442,7 @@
             this.cmdResolver.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
             this.cmdResolver.IdleForecolor = System.Drawing.Color.White;
             this.cmdResolver.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
-            this.cmdResolver.Location = new System.Drawing.Point(535, 600);
+            this.cmdResolver.Location = new System.Drawing.Point(517, 559);
             this.cmdResolver.Margin = new System.Windows.Forms.Padding(5);
             this.cmdResolver.Name = "cmdResolver";
             this.cmdResolver.Size = new System.Drawing.Size(262, 37);
@@ -1454,7 +1456,7 @@
             this.cmdIngresarAgua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdIngresarAgua.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
             this.cmdIngresarAgua.ImageActive = null;
-            this.cmdIngresarAgua.Location = new System.Drawing.Point(375, 472);
+            this.cmdIngresarAgua.Location = new System.Drawing.Point(357, 431);
             this.cmdIngresarAgua.Name = "cmdIngresarAgua";
             this.cmdIngresarAgua.Size = new System.Drawing.Size(39, 34);
             this.cmdIngresarAgua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1466,7 +1468,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.estanque;
-            this.pictureBox2.Location = new System.Drawing.Point(62, 103);
+            this.pictureBox2.Location = new System.Drawing.Point(44, 62);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(186, 117);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1491,13 +1493,72 @@
             this.cmdMostrarIntervalos.IdleFillColor = System.Drawing.Color.White;
             this.cmdMostrarIntervalos.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
             this.cmdMostrarIntervalos.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
-            this.cmdMostrarIntervalos.Location = new System.Drawing.Point(96, 598);
+            this.cmdMostrarIntervalos.Location = new System.Drawing.Point(78, 557);
             this.cmdMostrarIntervalos.Margin = new System.Windows.Forms.Padding(5);
             this.cmdMostrarIntervalos.Name = "cmdMostrarIntervalos";
             this.cmdMostrarIntervalos.Size = new System.Drawing.Size(262, 37);
             this.cmdMostrarIntervalos.TabIndex = 27;
             this.cmdMostrarIntervalos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdMostrarIntervalos.Click += new System.EventHandler(this.btnIntervalos_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.ImgFlecha);
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.pictureBox1);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.cmdResolver);
+            this.panel7.Controls.Add(this.textBox6);
+            this.panel7.Controls.Add(this.textBox7);
+            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.textBox2);
+            this.panel7.Controls.Add(this.textBox3);
+            this.panel7.Controls.Add(this.textBox4);
+            this.panel7.Controls.Add(this.textBox5);
+            this.panel7.Controls.Add(this.txtSuma2);
+            this.panel7.Controls.Add(this.txtTotal2);
+            this.panel7.Controls.Add(this.fijo5);
+            this.panel7.Controls.Add(this.txtalcalinidad);
+            this.panel7.Controls.Add(this.fijo4);
+            this.panel7.Controls.Add(this.txtGlucosa);
+            this.panel7.Controls.Add(this.fijo3);
+            this.panel7.Controls.Add(this.txtNormal);
+            this.panel7.Controls.Add(this.fijo2);
+            this.panel7.Controls.Add(this.txtAnemia);
+            this.panel7.Controls.Add(this.fijo1);
+            this.panel7.Controls.Add(this.txtSuma1);
+            this.panel7.Controls.Add(this.txtTotal1);
+            this.panel7.Controls.Add(this.cmdIngresarAgua);
+            this.panel7.Controls.Add(this.cmdIngresarAnimales);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.panel4);
+            this.panel7.Controls.Add(this.panel3);
+            this.panel7.Controls.Add(this.pictureBox2);
+            this.panel7.Controls.Add(this.txtAOxidos);
+            this.panel7.Controls.Add(this.txtAfosfato);
+            this.panel7.Controls.Add(this.txtAAcido);
+            this.panel7.Controls.Add(this.txtAmercurio);
+            this.panel7.Controls.Add(this.txtAresiduos);
+            this.panel7.Controls.Add(this.txtASulfato);
+            this.panel7.Controls.Add(this.txtAcoloidales);
+            this.panel7.Controls.Add(this.txtAcidez);
+            this.panel7.Controls.Add(this.cmdMostrarIntervalos);
+            this.panel7.Controls.Add(this.bunifuCustomLabel1);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.panel2);
+            this.panel7.Controls.Add(this.panel5);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(4, 32);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(901, 604);
+            this.panel7.TabIndex = 91;
             // 
             // frmProblema
             // 
@@ -1506,67 +1567,17 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(922, 625);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.cmdHistorial);
             this.Controls.Add(this.pnOpciones);
             this.Controls.Add(this.pnResultadoAgua);
-            this.Controls.Add(this.ImgFlecha);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.pnResultadosAnimales);
             this.Controls.Add(this.lblTitleExperimento);
             this.Controls.Add(this.pnexperimento);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.cmdResolver);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.txtSuma2);
-            this.Controls.Add(this.txtTotal2);
-            this.Controls.Add(this.fijo5);
-            this.Controls.Add(this.txtalcalinidad);
-            this.Controls.Add(this.fijo4);
-            this.Controls.Add(this.txtGlucosa);
-            this.Controls.Add(this.fijo3);
-            this.Controls.Add(this.txtNormal);
-            this.Controls.Add(this.fijo2);
-            this.Controls.Add(this.txtAnemia);
-            this.Controls.Add(this.fijo1);
-            this.Controls.Add(this.txtSuma1);
-            this.Controls.Add(this.txtTotal1);
-            this.Controls.Add(this.cmdIngresarAgua);
-            this.Controls.Add(this.cmdIngresarAnimales);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.txtAOxidos);
-            this.Controls.Add(this.txtAfosfato);
-            this.Controls.Add(this.txtAAcido);
-            this.Controls.Add(this.txtAmercurio);
-            this.Controls.Add(this.txtAresiduos);
-            this.Controls.Add(this.txtASulfato);
-            this.Controls.Add(this.txtAcoloidales);
-            this.Controls.Add(this.txtAcidez);
-            this.Controls.Add(this.cmdMostrarIntervalos);
-            this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panTop);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProblema";
@@ -1598,6 +1609,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1713,5 +1726,6 @@
         public System.Windows.Forms.Label lblResultado;
         private ns1.BunifuSeparator bunifuSeparator1;
         private ns1.BunifuSeparator bunifuSeparator4;
+        private System.Windows.Forms.Panel panel7;
     }
 }
