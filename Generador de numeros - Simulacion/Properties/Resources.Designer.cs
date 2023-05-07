@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Generador_de_numeros___Simulacion.Properties {
+namespace Pruebas_de_laboratorio_Simulacion.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Generador_de_numeros___Simulacion.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Generador_de_numeros___Simulacion.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pruebas_de_laboratorio_Simulacion.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,6 +63,16 @@ namespace Generador_de_numeros___Simulacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a_method_to_my_madness {
+            get {
+                object obj = ResourceManager.GetObject("a-method-to-my-madness", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ajolote {
             get {
                 object obj = ResourceManager.GetObject("ajolote", resourceCulture);
@@ -76,6 +86,16 @@ namespace Generador_de_numeros___Simulacion.Properties {
         internal static System.Drawing.Bitmap cancelar__1_ {
             get {
                 object obj = ResourceManager.GetObject("cancelar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerdo {
+            get {
+                object obj = ResourceManager.GetObject("cerdo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace Generador_de_numeros___Simulacion.Properties {
         internal static System.Drawing.Bitmap frecuencia {
             get {
                 object obj = ResourceManager.GetObject("frecuencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gestion_del_tiempo__1_ {
+            get {
+                object obj = ResourceManager.GetObject("gestion-del-tiempo (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

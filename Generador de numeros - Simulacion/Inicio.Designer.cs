@@ -37,12 +37,8 @@
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
             this.lblTitulo = new ns1.BunifuCustomLabel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnCerrar = new ns1.BunifuImageButton();
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.lblLogo = new ns1.BunifuCustomLabel();
-            this.cmdGenerar = new ns1.BunifuThinButton2();
             this.txtSemilla = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,11 +57,15 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
             this.rb10 = new System.Windows.Forms.RadioButton();
+            this.ayuda = new System.Windows.Forms.ToolTip(this.components);
+            this.cmdGenerar = new ns1.BunifuThinButton2();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new ns1.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panTop.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -83,6 +83,7 @@
             this.lblSemilla.Size = new System.Drawing.Size(64, 20);
             this.lblSemilla.TabIndex = 7;
             this.lblSemilla.Text = "Semilla:";
+            this.ayuda.SetToolTip(this.lblSemilla, "\"Xo\" Valor con el que se iniciaran a \r\ncalcular los numeros pseudoaleatorios");
             // 
             // bunifuCustomLabel1
             // 
@@ -105,8 +106,7 @@
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(21, 20);
             this.bunifuCustomLabel2.TabIndex = 11;
             this.bunifuCustomLabel2.Text = "c:";
-            this.toolTip1.SetToolTip(this.bunifuCustomLabel2, "Sugerencia: \r\nIngresar un valor\r\ndivisble entre 200 con un residuo\r\nigual a 21\r\n\r" +
-        "\nEjemplo:\r\nresiduo de 221/200 = 21\r\nresiduo de 421/200 = 21");
+            this.ayuda.SetToolTip(this.bunifuCustomLabel2, "K pertenece a los numero naturales\r\nK mod 200 = 21");
             // 
             // bunifuCustomLabel3
             // 
@@ -118,6 +118,7 @@
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(26, 20);
             this.bunifuCustomLabel3.TabIndex = 12;
             this.bunifuCustomLabel3.Text = "m:";
+            this.ayuda.SetToolTip(this.bunifuCustomLabel3, "Periodo, se recomienda el número primo más grande");
             // 
             // bunifuDragControl1
             // 
@@ -140,30 +141,7 @@
             // error1
             // 
             this.error1.ContainerControl = this;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(275, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(27, 28);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.Cerrar_Click);
-            // 
-            // Logo
-            // 
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(53, 43);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(49, 43);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 11;
-            this.Logo.TabStop = false;
+            this.error1.Icon = ((System.Drawing.Icon)(resources.GetObject("error1.Icon")));
             // 
             // lblLogo
             // 
@@ -175,32 +153,6 @@
             this.lblLogo.Size = new System.Drawing.Size(139, 23);
             this.lblLogo.TabIndex = 6;
             this.lblLogo.Text = "K.E. Laboratory";
-            // 
-            // cmdGenerar
-            // 
-            this.cmdGenerar.ActiveBorderThickness = 1;
-            this.cmdGenerar.ActiveCornerRadius = 20;
-            this.cmdGenerar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(219)))), ((int)(((byte)(245)))));
-            this.cmdGenerar.ActiveForecolor = System.Drawing.Color.White;
-            this.cmdGenerar.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.cmdGenerar.BackColor = System.Drawing.Color.White;
-            this.cmdGenerar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdGenerar.BackgroundImage")));
-            this.cmdGenerar.ButtonText = "&Generar # ";
-            this.cmdGenerar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdGenerar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.cmdGenerar.IdleBorderThickness = 1;
-            this.cmdGenerar.IdleCornerRadius = 20;
-            this.cmdGenerar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.cmdGenerar.IdleForecolor = System.Drawing.Color.Black;
-            this.cmdGenerar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.cmdGenerar.Location = new System.Drawing.Point(81, 373);
-            this.cmdGenerar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.cmdGenerar.Name = "cmdGenerar";
-            this.cmdGenerar.Size = new System.Drawing.Size(149, 47);
-            this.cmdGenerar.TabIndex = 4;
-            this.cmdGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cmdGenerar.Click += new System.EventHandler(this.btnDatos_Click);
             // 
             // txtSemilla
             // 
@@ -292,7 +244,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 430);
             this.panel5.Name = "panel5";
@@ -301,7 +253,7 @@
             // 
             // panTop
             // 
-            this.panTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
             this.panTop.Controls.Add(this.lblTitulo);
             this.panTop.Controls.Add(this.btnCerrar);
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -313,7 +265,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 39);
             this.panel7.Name = "panel7";
@@ -322,7 +274,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(314, 39);
             this.panel8.Name = "panel8";
@@ -387,6 +339,7 @@
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(90, 40);
             this.bunifuCustomLabel4.TabIndex = 21;
             this.bunifuCustomLabel4.Text = "Nivel de \r\nsignificacia:";
+            this.ayuda.SetToolTip(this.bunifuCustomLabel4, "Margen de error aceptable");
             // 
             // rb10
             // 
@@ -405,6 +358,62 @@
             this.rb10.TabIndex = 0;
             this.rb10.Text = "10%";
             this.rb10.UseVisualStyleBackColor = true;
+            // 
+            // ayuda
+            // 
+            this.ayuda.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // cmdGenerar
+            // 
+            this.cmdGenerar.ActiveBorderThickness = 1;
+            this.cmdGenerar.ActiveCornerRadius = 20;
+            this.cmdGenerar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
+            this.cmdGenerar.ActiveForecolor = System.Drawing.Color.White;
+            this.cmdGenerar.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.cmdGenerar.BackColor = System.Drawing.Color.White;
+            this.cmdGenerar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdGenerar.BackgroundImage")));
+            this.cmdGenerar.ButtonText = "&Generar # ";
+            this.cmdGenerar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdGenerar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.cmdGenerar.IdleBorderThickness = 1;
+            this.cmdGenerar.IdleCornerRadius = 20;
+            this.cmdGenerar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
+            this.cmdGenerar.IdleForecolor = System.Drawing.Color.Black;
+            this.cmdGenerar.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.cmdGenerar.Location = new System.Drawing.Point(81, 373);
+            this.cmdGenerar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmdGenerar.Name = "cmdGenerar";
+            this.cmdGenerar.Size = new System.Drawing.Size(149, 47);
+            this.cmdGenerar.TabIndex = 4;
+            this.cmdGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ayuda.SetToolTip(this.cmdGenerar, "Generar números pseudoaleatorios");
+            this.cmdGenerar.Click += new System.EventHandler(this.btnDatos_Click);
+            // 
+            // Logo
+            // 
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(53, 43);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(49, 43);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 11;
+            this.Logo.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(275, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(27, 28);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.ayuda.SetToolTip(this.btnCerrar, "Cerrar pantalla");
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
             // Inicio
             // 
@@ -434,17 +443,18 @@
             this.Controls.Add(this.panTop);
             this.Controls.Add(this.lblSemilla);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,7 +468,6 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel2;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private ns1.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ErrorProvider error1;
         private ns1.BunifuImageButton btnCerrar;
         private ns1.BunifuCustomLabel lblLogo;
@@ -483,5 +492,6 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel4;
         private System.Windows.Forms.RadioButton rb10;
         private System.Windows.Forms.RadioButton rb5;
+        private System.Windows.Forms.ToolTip ayuda;
     }
 }

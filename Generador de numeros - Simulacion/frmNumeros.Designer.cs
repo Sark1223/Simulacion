@@ -34,14 +34,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNumeros));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tblPseudo = new ns1.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panEncabezado = new System.Windows.Forms.Panel();
@@ -53,14 +56,12 @@
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.bunifuElipse2 = new ns1.BunifuElipse(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tblPseudo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -166,6 +167,14 @@
             this.panel1.Size = new System.Drawing.Size(91, 59);
             this.panel1.TabIndex = 6;
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(206)))), ((int)(((byte)(158)))));
+            this.panel9.Location = new System.Drawing.Point(76, 44);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(16, 15);
+            this.panel9.TabIndex = 17;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
@@ -190,6 +199,14 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(45, 37);
             this.panel6.TabIndex = 11;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(206)))), ((int)(((byte)(158)))));
+            this.panel15.Location = new System.Drawing.Point(26, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(19, 37);
+            this.panel15.TabIndex = 21;
             // 
             // panel7
             // 
@@ -279,14 +296,6 @@
             this.panel3.Size = new System.Drawing.Size(63, 15);
             this.panel3.TabIndex = 15;
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(206)))), ((int)(((byte)(158)))));
-            this.panel9.Location = new System.Drawing.Point(76, 44);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(16, 15);
-            this.panel9.TabIndex = 17;
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.MediumSeaGreen;
@@ -339,14 +348,6 @@
             this.panel5.Size = new System.Drawing.Size(31, 19);
             this.panel5.TabIndex = 20;
             // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(206)))), ((int)(((byte)(158)))));
-            this.panel15.Location = new System.Drawing.Point(26, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(19, 37);
-            this.panel15.TabIndex = 21;
-            // 
             // frmNumeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +370,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNumeros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Metodo congruencial mixto";

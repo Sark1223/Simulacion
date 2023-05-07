@@ -40,7 +40,6 @@ namespace Generador_de_numeros___Simulacion
         //Objetos de formas
         frmIntervalos frmIntervalos = new frmIntervalos();
         frmHistorial historial = new frmHistorial();
-        Resultados resulta = new Resultados();
         PantallaPrincipal puerquito = new PantallaPrincipal();
 
         //Lista para guardar los intervalos y datos del AGUA y ANIMALES
@@ -533,7 +532,6 @@ namespace Generador_de_numeros___Simulacion
                 SectorD[0] = Evaluar(1, "D");
                 }
 
-
                 //DIA 14
                 { 
                 //Sector A
@@ -545,7 +543,6 @@ namespace Generador_de_numeros___Simulacion
                 //Sector D
                 SectorD[1] = Evaluar(14, "D");
                 }
-
 
                 //DIA 30
                 { 
@@ -697,14 +694,25 @@ namespace Generador_de_numeros___Simulacion
                     RecorrerResultadosAgua(EstadoDelAguaD, "D");
 
                     txtConclusionAgua.Text += "Puede que estos elementos esten dañando la salud de sus animales.";
-                    ImgFlecha.Visible = true;
+                    
                 }
-                panel7.Location = new Point(28, pnexperimento.Location.Y + 26);
-                //pnBotones.Location = new Point(100, panel8.Location.Y + 26);
 
-                panel11.Visible = true;
-                panel7.Visible = true;
-                panel8.Visible = true;
+                //mostrar flecha
+                ImgFlecha.Location = new Point(411, cmdIngresarAgua.Location.Y + 92);
+                ImgFlecha.Visible = true;
+
+                //Mostrar animales
+                pnResultadosAnimales.Location = new Point(28, pnexperimento.Location.Y + 26);
+                pnResultadosAnimales.Visible = true;
+
+                //Mostrar agua
+                pnResultadoAgua.Location = new Point(28, pnResultadosAnimales.Location.Y + 10 + pnResultadosAnimales.Height);
+                pnResultadoAgua.Visible = true;
+
+                //Mostrar Opciones
+                pnOpciones.Location = new Point(221, pnResultadoAgua.Location.Y + pnResultadoAgua.Height + 10);
+                pnOpciones.Visible = true;
+                
 
                 GuardarHisto();
 
@@ -723,116 +731,6 @@ namespace Generador_de_numeros___Simulacion
             //GuardarHisto();
         }
 
-        //private void cmdResolver_Click(object sender, EventArgs e)
-        //{
-        //    if (aproba1 && aproba2)
-        //    {
-        //        //Limpiar las listas de animales y agua
-        //        animales.Clear();
-        //        agua.Clear();
-
-        //        CargarLimitesEnListas();
-
-        //        lblResultado.Text = "Ultimo numero del arreglo: " + Ri[1179];
-        //        int TotalNumers = Ri.Length;
-        //        int num_actual = 0;
-        //        int dia_agua = 1;
-        //        do
-        //        {
-        //            int animal = 1;
-        //            //DIA UNO
-        //            for (int i = 0; i < 20; i++)
-        //            {
-        //                LimitesSangreAnimales(Ri[num_actual]);
-        //                num_actual++;
-        //                if (animal >= 5)
-        //                {
-        //                    animal = 1;
-        //                }
-        //            }
-
-        //            //DIA 14
-        //            for (int i = 0; i < 20; i++)
-        //            {
-        //                LimitesSangreAnimales(Ri[num_actual]);
-        //                num_actual++;
-        //            }
-
-        //            //fin de mes
-        //            for (int i = 0; i < 20; i++)
-        //            {
-        //                LimitesSangreAnimales(Ri[num_actual]);
-        //                num_actual++;
-        //            }
-
-
-        //            if (ResAnimales() != "Normal")
-        //            {
-
-        //                for (int i = 0; i < 60; i++)
-        //                {
-        //                    LimitesAgua(Ri[num_actual]);
-        //                    num_actual++;
-        //                }
-        //            }
-
-        //            while (num_actual >= 0 && num_actual < 20)
-        //            {
-        //                //txtResAnimales.Text += ""+  LimitesSangreAnimales(Ri[num_actual]+"\r\n");
-        //                num_actual++;
-        //                animal++;
-        //                if (animal >= 5)
-        //                {
-        //                    animal = 1;
-        //                }
-
-        //            }
-
-        //            if (dia_agua <= 14)
-        //            {
-        //                for (int i = 0; i < 60; i++)
-        //                {
-        //                    LimitesAgua(Ri[num_actual]);
-        //                    num_actual++;
-        //                }
-
-        //                if (dia_agua == 14)
-        //                {
-        //                    for (int i = 0; i < 20; i++)
-        //                    {
-        //                        LimitesSangreAnimales(Ri[num_actual]);
-        //                        num_actual++;
-        //                    }
-        //                }
-
-        //                dia_agua++;
-        //            }
-        //            else
-        //            {
-        //                for (int i = 0; i < 20; i++)
-        //                {
-        //                    LimitesSangreAnimales(Ri[num_actual]);
-        //                    num_actual++;
-        //                }
-        //            }
-
-        //        } while (num_actual < 1180);
-        //        lblResultado.Text = "Total numeros: " + num_actual + "  num final: " + Ri[num_actual - 1] +
-        //                            "\r\n El elemento mas encontrado fue: " + ResAgua() +
-        //                            "\r\n Los resultados mas repetidos en animales fueron: " + ResAnimales();
-
-
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Debe confirmar primero la distribucion de probabilidad", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-        //    }
-
-        //    GuardarHisto();
-        //}
-
-        //METODOS DE INTERVALOS ------------------------------------------------------------------------
         private void MostrarIntervalos(object sender, EventArgs e)
         {
             this.Hide();
@@ -986,7 +884,6 @@ namespace Generador_de_numeros___Simulacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            resulta.ShowDialog();
         }
 
 
@@ -1597,15 +1494,26 @@ namespace Generador_de_numeros___Simulacion
             aproba2 = false;
         }
 
+        private void cmdHistorial_MouseHover(object sender, EventArgs e)
+        {
+            cmdHistorial.Size = new Size(55, 51);
+        }
+
+        private void cmdHistorial_MouseLeave(object sender, EventArgs e)
+        {
+            cmdHistorial.Size = new Size(50, 46);
+        }
+
         private void CambiarImagenAgua()
         {
             cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__1_;
         }
         private void EsconderPaneles()
         {
-            panel7.Visible = false;
-            panel8.Visible = false;
+            pnResultadosAnimales.Visible = false;
+            pnResultadoAgua.Visible = false;
             ImgFlecha.Visible = false;
+            pnOpciones.Visible = false;
         }
 
         private void txtChanged_Animales(object sender, EventArgs e)
@@ -1645,6 +1553,10 @@ namespace Generador_de_numeros___Simulacion
 
                 if (suma == 1)
                 {
+                    if(aproba2 == true)
+                    {
+                        cmdResolver.Focus();
+                    }
                     aproba1 = true;
                     cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__2_;
                     //Crear distribucion acumulada
@@ -1699,6 +1611,10 @@ namespace Generador_de_numeros___Simulacion
 
                 if (suma == 1)
                 {
+                    if (aproba1 == true)
+                    {
+                        cmdResolver.Focus();
+                    }
                     aproba2 = true;
                     cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__2_;
                     //Crear distribucion acumulada

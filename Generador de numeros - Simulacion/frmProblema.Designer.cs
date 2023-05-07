@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblema));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new ns1.BunifuCustomLabel();
@@ -83,7 +83,6 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblResultado = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -91,23 +90,36 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblTitleExperimento = new ns1.BunifuCustomLabel();
             this.pnexperimento = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.rdConclusionGA = new ns1.BunifuElipse(this.components);
             this.pnConclusionGA = new System.Windows.Forms.Panel();
             this.txtConclusionGeneral = new System.Windows.Forms.TextBox();
-            this.lblConclusionSD = new System.Windows.Forms.Label();
-            this.separador = new ns1.BunifuSeparator();
-            this.lblConclusionSB = new System.Windows.Forms.Label();
-            this.lblConclusionSC = new System.Windows.Forms.Label();
+            this.rdResAgua = new ns1.BunifuElipse(this.components);
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.rsBtn1 = new ns1.BunifuElipse(this.components);
+            this.rdBtn2 = new ns1.BunifuElipse(this.components);
+            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
+            this.errorP1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ayuda = new System.Windows.Forms.ToolTip(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.ImgFlecha = new System.Windows.Forms.PictureBox();
             this.cmdHistorial = new System.Windows.Forms.PictureBox();
-            this.lblConclusionSA = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.bunifuSeparator4 = new ns1.BunifuSeparator();
+            this.bunifuSeparator1 = new ns1.BunifuSeparator();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.dgvResAni = new System.Windows.Forms.DataGridView();
             this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuSeparator1 = new ns1.BunifuSeparator();
-            this.bunifuSeparator4 = new ns1.BunifuSeparator();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblConclusionSA = new System.Windows.Forms.Label();
+            this.lblConclusionSC = new System.Windows.Forms.Label();
+            this.lblConclusionSB = new System.Windows.Forms.Label();
+            this.separador = new ns1.BunifuSeparator();
+            this.lblConclusionSD = new System.Windows.Forms.Label();
+            this.pnResultadosAnimales = new System.Windows.Forms.Panel();
+            this.pnResultadoAgua = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dgvResAgua = new System.Windows.Forms.DataGridView();
@@ -124,41 +136,31 @@
             this.label16 = new System.Windows.Forms.Label();
             this.pnResAgua = new System.Windows.Forms.Panel();
             this.txtConclusionAgua = new System.Windows.Forms.TextBox();
-            this.rdConclusionGA = new ns1.BunifuElipse(this.components);
-            this.rdResAgua = new ns1.BunifuElipse(this.components);
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.rsBtn1 = new ns1.BunifuElipse(this.components);
-            this.rdBtn2 = new ns1.BunifuElipse(this.components);
-            this.cmdIngresarAnimales = new ns1.BunifuImageButton();
-            this.errorP1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ImgFlecha = new System.Windows.Forms.PictureBox();
+            this.pnOpciones = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdResolver = new ns1.BunifuThinButton2();
             this.cmdIngresarAgua = new ns1.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.pnConclusionGA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).BeginInit();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).BeginInit();
-            this.pnResAgua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).BeginInit();
+            this.pnResultadosAnimales.SuspendLayout();
+            this.pnResultadoAgua.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).BeginInit();
+            this.pnResAgua.SuspendLayout();
+            this.pnOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdForma
@@ -170,7 +172,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1883);
+            this.panel1.Location = new System.Drawing.Point(0, 1964);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(905, 6);
             this.panel1.TabIndex = 45;
@@ -195,7 +197,7 @@
             this.panTop.Location = new System.Drawing.Point(0, 0);
             this.panTop.Name = "panTop";
             this.panTop.Size = new System.Drawing.Size(905, 32);
-            this.panTop.TabIndex = 26;
+            this.panTop.TabIndex = 0;
             this.panTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // btnCerrar
@@ -224,10 +226,10 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(55, 371);
+            this.label2.Location = new System.Drawing.Point(60, 428);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 147);
-            this.label2.TabIndex = 42;
+            this.label2.TabIndex = 13;
             this.label2.Text = "Substancias coloidales\r\nExceso de mercurio\r\nResiduos petroquímicos\r\nSulfatos\r\nAci" +
     "do clorhídrico\r\nFosfato\r\nÓxidos";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,10 +240,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(460, 344);
+            this.label1.Location = new System.Drawing.Point(465, 401);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(322, 20);
-            this.label1.TabIndex = 38;
+            this.label1.TabIndex = 29;
             this.label1.Text = "Resultados de análisis similares en animales";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -251,10 +253,10 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(488, 371);
+            this.label5.Location = new System.Drawing.Point(493, 428);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(203, 105);
-            this.label5.TabIndex = 39;
+            this.label5.TabIndex = 30;
             this.label5.Text = "Alto grado de acidez\r\nEstado de anemia aguda\r\nEstado en rango normal\r\nExceso de g" +
     "lucosa\r\nAlto grado de alcalinidad";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -265,10 +267,10 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(27, 344);
+            this.label6.Location = new System.Drawing.Point(32, 401);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(305, 20);
-            this.label6.TabIndex = 41;
+            this.label6.TabIndex = 12;
             this.label6.Text = "Concentración de contaminantes en agua";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -277,19 +279,19 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(334, 310);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(336, 314);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(254, 26);
-            this.bunifuCustomLabel1.TabIndex = 28;
+            this.bunifuCustomLabel1.TabIndex = 11;
             this.bunifuCustomLabel1.Text = "Distribucion de probabilidad";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
-            this.panel2.Location = new System.Drawing.Point(28, 320);
+            this.panel2.Location = new System.Drawing.Point(30, 324);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(850, 4);
-            this.panel2.TabIndex = 27;
+            this.panel2.TabIndex = 10;
             // 
             // txtAcidez
             // 
@@ -297,7 +299,7 @@
             this.txtAcidez.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcidez.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAcidez.ForeColor = System.Drawing.Color.Black;
-            this.txtAcidez.Location = new System.Drawing.Point(717, 371);
+            this.txtAcidez.Location = new System.Drawing.Point(722, 428);
             this.txtAcidez.Name = "txtAcidez";
             this.txtAcidez.Size = new System.Drawing.Size(56, 22);
             this.txtAcidez.TabIndex = 1;
@@ -314,10 +316,10 @@
             this.txtAAcido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAAcido.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAAcido.ForeColor = System.Drawing.Color.Black;
-            this.txtAAcido.Location = new System.Drawing.Point(288, 454);
+            this.txtAAcido.Location = new System.Drawing.Point(293, 511);
             this.txtAAcido.Name = "txtAAcido";
             this.txtAAcido.Size = new System.Drawing.Size(56, 22);
-            this.txtAAcido.TabIndex = 10;
+            this.txtAAcido.TabIndex = 21;
             this.txtAAcido.Text = "12";
             this.txtAAcido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAAcido.TextChanged += new System.EventHandler(this.txtAAcido_TextChanged);
@@ -330,7 +332,7 @@
             this.txtAmercurio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAmercurio.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAmercurio.ForeColor = System.Drawing.Color.Black;
-            this.txtAmercurio.Location = new System.Drawing.Point(288, 392);
+            this.txtAmercurio.Location = new System.Drawing.Point(293, 449);
             this.txtAmercurio.Name = "txtAmercurio";
             this.txtAmercurio.Size = new System.Drawing.Size(56, 22);
             this.txtAmercurio.TabIndex = 7;
@@ -346,7 +348,7 @@
             this.txtAresiduos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAresiduos.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAresiduos.ForeColor = System.Drawing.Color.Black;
-            this.txtAresiduos.Location = new System.Drawing.Point(288, 413);
+            this.txtAresiduos.Location = new System.Drawing.Point(293, 470);
             this.txtAresiduos.Name = "txtAresiduos";
             this.txtAresiduos.Size = new System.Drawing.Size(56, 22);
             this.txtAresiduos.TabIndex = 8;
@@ -362,7 +364,7 @@
             this.txtASulfato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtASulfato.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtASulfato.ForeColor = System.Drawing.Color.Black;
-            this.txtASulfato.Location = new System.Drawing.Point(288, 433);
+            this.txtASulfato.Location = new System.Drawing.Point(293, 490);
             this.txtASulfato.Name = "txtASulfato";
             this.txtASulfato.Size = new System.Drawing.Size(56, 22);
             this.txtASulfato.TabIndex = 9;
@@ -378,7 +380,7 @@
             this.txtAcoloidales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcoloidales.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAcoloidales.ForeColor = System.Drawing.Color.Black;
-            this.txtAcoloidales.Location = new System.Drawing.Point(288, 371);
+            this.txtAcoloidales.Location = new System.Drawing.Point(293, 428);
             this.txtAcoloidales.Name = "txtAcoloidales";
             this.txtAcoloidales.Size = new System.Drawing.Size(56, 22);
             this.txtAcoloidales.TabIndex = 6;
@@ -394,10 +396,10 @@
             this.txtAOxidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAOxidos.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAOxidos.ForeColor = System.Drawing.Color.Black;
-            this.txtAOxidos.Location = new System.Drawing.Point(288, 495);
+            this.txtAOxidos.Location = new System.Drawing.Point(293, 552);
             this.txtAOxidos.Name = "txtAOxidos";
             this.txtAOxidos.Size = new System.Drawing.Size(56, 22);
-            this.txtAOxidos.TabIndex = 12;
+            this.txtAOxidos.TabIndex = 24;
             this.txtAOxidos.Text = "17";
             this.txtAOxidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAOxidos.TextChanged += new System.EventHandler(this.txtAOxidos_TextChanged);
@@ -410,10 +412,10 @@
             this.txtAfosfato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAfosfato.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAfosfato.ForeColor = System.Drawing.Color.Black;
-            this.txtAfosfato.Location = new System.Drawing.Point(288, 474);
+            this.txtAfosfato.Location = new System.Drawing.Point(293, 531);
             this.txtAfosfato.Name = "txtAfosfato";
             this.txtAfosfato.Size = new System.Drawing.Size(56, 22);
-            this.txtAfosfato.TabIndex = 11;
+            this.txtAfosfato.TabIndex = 22;
             this.txtAfosfato.Text = "16";
             this.txtAfosfato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAfosfato.TextChanged += new System.EventHandler(this.txtAfosfato_TextChanged);
@@ -429,25 +431,25 @@
             this.label3.Location = new System.Drawing.Point(12, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(561, 115);
-            this.label3.TabIndex = 37;
+            this.label3.TabIndex = 3;
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            this.panel3.Location = new System.Drawing.Point(26, 169);
+            this.panel3.Location = new System.Drawing.Point(28, 173);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 2);
-            this.panel3.TabIndex = 33;
+            this.panel3.TabIndex = 7;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            this.panel4.Location = new System.Drawing.Point(153, 91);
+            this.panel4.Location = new System.Drawing.Point(155, 95);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(2, 150);
-            this.panel4.TabIndex = 31;
+            this.panel4.TabIndex = 5;
             // 
             // label4
             // 
@@ -457,7 +459,7 @@
             this.label4.Location = new System.Drawing.Point(4, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(187, 26);
-            this.label4.TabIndex = 36;
+            this.label4.TabIndex = 2;
             this.label4.Text = "Datos del problema:";
             // 
             // label7
@@ -465,10 +467,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(60, 99);
+            this.label7.Location = new System.Drawing.Point(62, 91);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(22, 23);
-            this.label7.TabIndex = 30;
+            this.label7.TabIndex = 6;
             this.label7.Text = "A";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -477,10 +479,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(224, 196);
+            this.label8.Location = new System.Drawing.Point(226, 200);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 23);
-            this.label8.TabIndex = 35;
+            this.label8.TabIndex = 9;
             this.label8.Text = "D";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -489,10 +491,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(56, 196);
+            this.label9.Location = new System.Drawing.Point(58, 188);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(20, 23);
-            this.label9.TabIndex = 34;
+            this.label9.TabIndex = 8;
             this.label9.Text = "C";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -501,10 +503,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(224, 99);
+            this.label10.Location = new System.Drawing.Point(226, 103);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(21, 23);
-            this.label10.TabIndex = 32;
+            this.label10.TabIndex = 4;
             this.label10.Text = "B";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -514,10 +516,10 @@
             this.txtTotal1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal1.ForeColor = System.Drawing.Color.Black;
-            this.txtTotal1.Location = new System.Drawing.Point(489, 476);
+            this.txtTotal1.Location = new System.Drawing.Point(494, 533);
             this.txtTotal1.Name = "txtTotal1";
             this.txtTotal1.Size = new System.Drawing.Size(56, 22);
-            this.txtTotal1.TabIndex = 40;
+            this.txtTotal1.TabIndex = 37;
             this.txtTotal1.Text = "Total: ";
             this.txtTotal1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -527,11 +529,11 @@
             this.txtSuma1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuma1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtSuma1.ForeColor = System.Drawing.Color.Black;
-            this.txtSuma1.Location = new System.Drawing.Point(709, 475);
+            this.txtSuma1.Location = new System.Drawing.Point(714, 532);
             this.txtSuma1.Name = "txtSuma1";
             this.txtSuma1.ReadOnly = true;
             this.txtSuma1.Size = new System.Drawing.Size(56, 22);
-            this.txtSuma1.TabIndex = 13;
+            this.txtSuma1.TabIndex = 36;
             this.txtSuma1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // fijo1
@@ -540,10 +542,10 @@
             this.fijo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fijo1.ForeColor = System.Drawing.Color.Black;
-            this.fijo1.Location = new System.Drawing.Point(714, 371);
+            this.fijo1.Location = new System.Drawing.Point(719, 428);
             this.fijo1.Name = "fijo1";
             this.fijo1.Size = new System.Drawing.Size(20, 22);
-            this.fijo1.TabIndex = 68;
+            this.fijo1.TabIndex = 31;
             this.fijo1.Text = "0.";
             this.fijo1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -553,10 +555,10 @@
             this.fijo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.fijo2.ForeColor = System.Drawing.Color.Black;
-            this.fijo2.Location = new System.Drawing.Point(714, 391);
+            this.fijo2.Location = new System.Drawing.Point(719, 448);
             this.fijo2.Name = "fijo2";
             this.fijo2.Size = new System.Drawing.Size(20, 22);
-            this.fijo2.TabIndex = 22;
+            this.fijo2.TabIndex = 32;
             this.fijo2.Text = "0.";
             this.fijo2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -566,7 +568,7 @@
             this.txtAnemia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAnemia.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtAnemia.ForeColor = System.Drawing.Color.Black;
-            this.txtAnemia.Location = new System.Drawing.Point(718, 391);
+            this.txtAnemia.Location = new System.Drawing.Point(723, 448);
             this.txtAnemia.Name = "txtAnemia";
             this.txtAnemia.Size = new System.Drawing.Size(56, 22);
             this.txtAnemia.TabIndex = 2;
@@ -582,10 +584,10 @@
             this.fijo4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.fijo4.ForeColor = System.Drawing.Color.Black;
-            this.fijo4.Location = new System.Drawing.Point(714, 434);
+            this.fijo4.Location = new System.Drawing.Point(719, 491);
             this.fijo4.Name = "fijo4";
             this.fijo4.Size = new System.Drawing.Size(20, 22);
-            this.fijo4.TabIndex = 24;
+            this.fijo4.TabIndex = 34;
             this.fijo4.Text = "0.";
             this.fijo4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -595,7 +597,7 @@
             this.txtGlucosa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGlucosa.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtGlucosa.ForeColor = System.Drawing.Color.Black;
-            this.txtGlucosa.Location = new System.Drawing.Point(716, 434);
+            this.txtGlucosa.Location = new System.Drawing.Point(721, 491);
             this.txtGlucosa.Name = "txtGlucosa";
             this.txtGlucosa.Size = new System.Drawing.Size(56, 22);
             this.txtGlucosa.TabIndex = 4;
@@ -611,10 +613,10 @@
             this.fijo3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.fijo3.ForeColor = System.Drawing.Color.Black;
-            this.fijo3.Location = new System.Drawing.Point(714, 413);
+            this.fijo3.Location = new System.Drawing.Point(719, 470);
             this.fijo3.Name = "fijo3";
             this.fijo3.Size = new System.Drawing.Size(20, 22);
-            this.fijo3.TabIndex = 23;
+            this.fijo3.TabIndex = 33;
             this.fijo3.Text = "0.";
             this.fijo3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -624,7 +626,7 @@
             this.txtNormal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNormal.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtNormal.ForeColor = System.Drawing.Color.Black;
-            this.txtNormal.Location = new System.Drawing.Point(718, 413);
+            this.txtNormal.Location = new System.Drawing.Point(723, 470);
             this.txtNormal.Name = "txtNormal";
             this.txtNormal.Size = new System.Drawing.Size(56, 22);
             this.txtNormal.TabIndex = 3;
@@ -640,10 +642,10 @@
             this.fijo5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fijo5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.fijo5.ForeColor = System.Drawing.Color.Black;
-            this.fijo5.Location = new System.Drawing.Point(714, 454);
+            this.fijo5.Location = new System.Drawing.Point(719, 511);
             this.fijo5.Name = "fijo5";
             this.fijo5.Size = new System.Drawing.Size(20, 22);
-            this.fijo5.TabIndex = 25;
+            this.fijo5.TabIndex = 35;
             this.fijo5.Text = "0.";
             this.fijo5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -653,7 +655,7 @@
             this.txtalcalinidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtalcalinidad.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtalcalinidad.ForeColor = System.Drawing.Color.Black;
-            this.txtalcalinidad.Location = new System.Drawing.Point(716, 454);
+            this.txtalcalinidad.Location = new System.Drawing.Point(721, 511);
             this.txtalcalinidad.Name = "txtalcalinidad";
             this.txtalcalinidad.Size = new System.Drawing.Size(56, 22);
             this.txtalcalinidad.TabIndex = 5;
@@ -669,10 +671,10 @@
             this.txtTotal2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal2.ForeColor = System.Drawing.Color.Black;
-            this.txtTotal2.Location = new System.Drawing.Point(56, 519);
+            this.txtTotal2.Location = new System.Drawing.Point(61, 576);
             this.txtTotal2.Name = "txtTotal2";
             this.txtTotal2.Size = new System.Drawing.Size(56, 22);
-            this.txtTotal2.TabIndex = 43;
+            this.txtTotal2.TabIndex = 25;
             this.txtTotal2.Text = "Total: ";
             this.txtTotal2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -682,11 +684,11 @@
             this.txtSuma2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuma2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.txtSuma2.ForeColor = System.Drawing.Color.Black;
-            this.txtSuma2.Location = new System.Drawing.Point(276, 519);
+            this.txtSuma2.Location = new System.Drawing.Point(281, 576);
             this.txtSuma2.Name = "txtSuma2";
             this.txtSuma2.ReadOnly = true;
             this.txtSuma2.Size = new System.Drawing.Size(56, 22);
-            this.txtSuma2.TabIndex = 14;
+            this.txtSuma2.TabIndex = 26;
             this.txtSuma2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox1
@@ -695,10 +697,10 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(285, 454);
+            this.textBox1.Location = new System.Drawing.Point(290, 511);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(20, 22);
-            this.textBox1.TabIndex = 19;
+            this.textBox1.TabIndex = 18;
             this.textBox1.Text = "0.";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -708,10 +710,10 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(285, 434);
+            this.textBox2.Location = new System.Drawing.Point(290, 491);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(20, 22);
-            this.textBox2.TabIndex = 18;
+            this.textBox2.TabIndex = 17;
             this.textBox2.Text = "0.";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -721,10 +723,10 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(285, 413);
+            this.textBox3.Location = new System.Drawing.Point(290, 470);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(20, 22);
-            this.textBox3.TabIndex = 17;
+            this.textBox3.TabIndex = 16;
             this.textBox3.Text = "0.";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -734,10 +736,10 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(285, 392);
+            this.textBox4.Location = new System.Drawing.Point(290, 449);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(20, 22);
-            this.textBox4.TabIndex = 16;
+            this.textBox4.TabIndex = 15;
             this.textBox4.Text = "0.";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -747,10 +749,10 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(285, 371);
+            this.textBox5.Location = new System.Drawing.Point(290, 428);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(20, 22);
-            this.textBox5.TabIndex = 15;
+            this.textBox5.TabIndex = 14;
             this.textBox5.Text = "0.";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -760,10 +762,10 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(285, 494);
+            this.textBox6.Location = new System.Drawing.Point(290, 551);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(20, 22);
-            this.textBox6.TabIndex = 21;
+            this.textBox6.TabIndex = 23;
             this.textBox6.Text = "0.";
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -773,10 +775,10 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F);
             this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(285, 474);
+            this.textBox7.Location = new System.Drawing.Point(290, 531);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(20, 22);
-            this.textBox7.TabIndex = 20;
+            this.textBox7.TabIndex = 19;
             this.textBox7.Text = "0.";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -787,24 +789,12 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label11.Location = new System.Drawing.Point(787, 450);
+            this.label11.Location = new System.Drawing.Point(792, 507);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 14);
-            this.label11.TabIndex = 69;
+            this.label11.TabIndex = 38;
             this.label11.Text = "Ingresar datos";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblResultado
-            // 
-            this.lblResultado.AutoSize = true;
-            this.lblResultado.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblResultado.Location = new System.Drawing.Point(233, 7);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(431, 23);
-            this.lblResultado.TabIndex = 72;
-            this.lblResultado.Text = "Estado de salud del Analisis de sangre de los animales";
-            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13
             // 
@@ -814,7 +804,7 @@
             this.label13.Location = new System.Drawing.Point(266, 2);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(92, 26);
-            this.label13.TabIndex = 76;
+            this.label13.TabIndex = 0;
             this.label13.Text = "Problema";
             // 
             // label14
@@ -825,7 +815,7 @@
             this.label14.Location = new System.Drawing.Point(5, 28);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(572, 46);
-            this.label14.TabIndex = 77;
+            this.label14.TabIndex = 1;
             this.label14.Text = "Se desea conocer el impacto que tiene en el ganado, la contaminacion \r\nde los man" +
     "tos freaticos que suerten agua a sus abrebaderos.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -837,10 +827,10 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(295, 48);
+            this.panel5.Location = new System.Drawing.Point(297, 52);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(584, 243);
-            this.panel5.TabIndex = 78;
+            this.panel5.TabIndex = 3;
             // 
             // rdProblema
             // 
@@ -854,10 +844,10 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(347, 452);
+            this.label12.Location = new System.Drawing.Point(352, 509);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 14);
-            this.label12.TabIndex = 79;
+            this.label12.TabIndex = 28;
             this.label12.Text = "Ingresar datos";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -866,38 +856,24 @@
             this.lblTitleExperimento.AutoSize = true;
             this.lblTitleExperimento.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleExperimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
-            this.lblTitleExperimento.Location = new System.Drawing.Point(329, 583);
+            this.lblTitleExperimento.Location = new System.Drawing.Point(338, 654);
             this.lblTitleExperimento.Name = "lblTitleExperimento";
             this.lblTitleExperimento.Size = new System.Drawing.Size(261, 26);
-            this.lblTitleExperimento.TabIndex = 81;
+            this.lblTitleExperimento.TabIndex = 41;
             this.lblTitleExperimento.Text = "Resultados del experiemento";
             // 
             // pnexperimento
             // 
             this.pnexperimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
-            this.pnexperimento.Location = new System.Drawing.Point(23, 595);
+            this.pnexperimento.Location = new System.Drawing.Point(32, 666);
             this.pnexperimento.Name = "pnexperimento";
             this.pnexperimento.Size = new System.Drawing.Size(850, 4);
-            this.pnexperimento.TabIndex = 80;
+            this.pnexperimento.TabIndex = 42;
             // 
-            // panel7
+            // rdConclusionGA
             // 
-            this.panel7.Controls.Add(this.pnConclusionGA);
-            this.panel7.Controls.Add(this.lblConclusionSD);
-            this.panel7.Controls.Add(this.separador);
-            this.panel7.Controls.Add(this.lblConclusionSB);
-            this.panel7.Controls.Add(this.lblConclusionSC);
-            this.panel7.Controls.Add(this.cmdHistorial);
-            this.panel7.Controls.Add(this.lblConclusionSA);
-            this.panel7.Controls.Add(this.dgvResAni);
-            this.panel7.Controls.Add(this.lblResultado);
-            this.panel7.Controls.Add(this.bunifuSeparator1);
-            this.panel7.Controls.Add(this.bunifuSeparator4);
-            this.panel7.Location = new System.Drawing.Point(23, 621);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(850, 472);
-            this.panel7.TabIndex = 82;
-            this.panel7.Visible = false;
+            this.rdConclusionGA.ElipseRadius = 15;
+            this.rdConclusionGA.TargetControl = this.pnConclusionGA;
             // 
             // pnConclusionGA
             // 
@@ -906,7 +882,8 @@
             this.pnConclusionGA.Location = new System.Drawing.Point(174, 370);
             this.pnConclusionGA.Name = "pnConclusionGA";
             this.pnConclusionGA.Size = new System.Drawing.Size(533, 63);
-            this.pnConclusionGA.TabIndex = 95;
+            this.pnConclusionGA.TabIndex = 8;
+            this.ayuda.SetToolTip(this.pnConclusionGA, "Conclusion general del analisis de \r\nsangre de los animales.\r\n");
             // 
             // txtConclusionGeneral
             // 
@@ -919,84 +896,160 @@
             this.txtConclusionGeneral.Name = "txtConclusionGeneral";
             this.txtConclusionGeneral.ReadOnly = true;
             this.txtConclusionGeneral.Size = new System.Drawing.Size(505, 52);
-            this.txtConclusionGeneral.TabIndex = 93;
+            this.txtConclusionGeneral.TabIndex = 0;
             this.txtConclusionGeneral.Text = "aaa";
             this.txtConclusionGeneral.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ayuda.SetToolTip(this.txtConclusionGeneral, "Conclusion general del analisis de \r\nsangre de los animales.");
             // 
-            // lblConclusionSD
+            // rdResAgua
             // 
-            this.lblConclusionSD.AutoSize = true;
-            this.lblConclusionSD.Font = new System.Drawing.Font("Candara Light", 13F);
-            this.lblConclusionSD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblConclusionSD.Location = new System.Drawing.Point(29, 136);
-            this.lblConclusionSD.Name = "lblConclusionSD";
-            this.lblConclusionSD.Size = new System.Drawing.Size(796, 22);
-            this.lblConclusionSD.TabIndex = 87;
-            this.lblConclusionSD.Text = "En el Sector A el ganado: El dia 1 se encontraba enfermo, el dia 14  saludable y " +
-    "30 dias despues saludable";
-            this.lblConclusionSD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rdResAgua.ElipseRadius = 60;
+            this.rdResAgua.TargetControl = this;
             // 
-            // separador
+            // panel9
             // 
-            this.separador.BackColor = System.Drawing.Color.Transparent;
-            this.separador.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.separador.LineThickness = 1;
-            this.separador.Location = new System.Drawing.Point(33, 451);
-            this.separador.Name = "separador";
-            this.separador.Size = new System.Drawing.Size(776, 35);
-            this.separador.TabIndex = 84;
-            this.separador.Transparency = 255;
-            this.separador.Vertical = false;
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 32);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(2, 1932);
+            this.panel9.TabIndex = 1;
             // 
-            // lblConclusionSB
+            // panel10
             // 
-            this.lblConclusionSB.AutoSize = true;
-            this.lblConclusionSB.Font = new System.Drawing.Font("Candara Light", 13F);
-            this.lblConclusionSB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblConclusionSB.Location = new System.Drawing.Point(29, 74);
-            this.lblConclusionSB.Name = "lblConclusionSB";
-            this.lblConclusionSB.Size = new System.Drawing.Size(796, 22);
-            this.lblConclusionSB.TabIndex = 81;
-            this.lblConclusionSB.Text = "En el Sector A el ganado: El dia 1 se encontraba enfermo, el dia 14  saludable y " +
-    "30 dias despues saludable";
-            this.lblConclusionSB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel10.Location = new System.Drawing.Point(2, 32);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(2, 1932);
+            this.panel10.TabIndex = 2;
             // 
-            // lblConclusionSC
+            // rsBtn1
             // 
-            this.lblConclusionSC.AutoSize = true;
-            this.lblConclusionSC.Font = new System.Drawing.Font("Candara Light", 13F);
-            this.lblConclusionSC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblConclusionSC.Location = new System.Drawing.Point(29, 105);
-            this.lblConclusionSC.Name = "lblConclusionSC";
-            this.lblConclusionSC.Size = new System.Drawing.Size(796, 22);
-            this.lblConclusionSC.TabIndex = 80;
-            this.lblConclusionSC.Text = "En el Sector A el ganado: El dia 1 se encontraba enfermo, el dia 14  saludable y " +
-    "30 dias despues saludable";
-            this.lblConclusionSC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rsBtn1.ElipseRadius = 10;
+            this.rsBtn1.TargetControl = this;
+            // 
+            // rdBtn2
+            // 
+            this.rdBtn2.ElipseRadius = 20;
+            this.rdBtn2.TargetControl = this.cmdIngresarAnimales;
+            // 
+            // cmdIngresarAnimales
+            // 
+            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
+            this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
+            this.cmdIngresarAnimales.ImageActive = null;
+            this.cmdIngresarAnimales.Location = new System.Drawing.Point(814, 470);
+            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
+            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
+            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdIngresarAnimales.TabIndex = 64;
+            this.cmdIngresarAnimales.TabStop = false;
+            this.cmdIngresarAnimales.Zoom = 10;
+            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
+            // 
+            // errorP1
+            // 
+            this.errorP1.ContainerControl = this;
+            this.errorP1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorP1.Icon")));
+            // 
+            // ayuda
+            // 
+            this.ayuda.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RosyBrown;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.IndianRed;
+            this.button2.Location = new System.Drawing.Point(298, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 34);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "REGRESAR";
+            this.ayuda.SetToolTip(this.button2, "Regresar a la pantalla de inicio");
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // ImgFlecha
+            // 
+            this.ImgFlecha.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.flecha;
+            this.ImgFlecha.Location = new System.Drawing.Point(411, 564);
+            this.ImgFlecha.Name = "ImgFlecha";
+            this.ImgFlecha.Size = new System.Drawing.Size(75, 71);
+            this.ImgFlecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImgFlecha.TabIndex = 87;
+            this.ImgFlecha.TabStop = false;
+            this.ayuda.SetToolTip(this.ImgFlecha, "Deslice hacia abajo");
+            this.ImgFlecha.Visible = false;
             // 
             // cmdHistorial
             // 
-            this.cmdHistorial.Image = ((System.Drawing.Image)(resources.GetObject("cmdHistorial.Image")));
-            this.cmdHistorial.Location = new System.Drawing.Point(802, 3);
+            this.cmdHistorial.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.gestion_del_tiempo__1_;
+            this.cmdHistorial.Location = new System.Drawing.Point(838, 674);
             this.cmdHistorial.Name = "cmdHistorial";
-            this.cmdHistorial.Size = new System.Drawing.Size(45, 37);
+            this.cmdHistorial.Size = new System.Drawing.Size(55, 51);
             this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmdHistorial.TabIndex = 74;
             this.cmdHistorial.TabStop = false;
+            this.ayuda.SetToolTip(this.cmdHistorial, "Historial de experimentos");
             this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
+            this.cmdHistorial.MouseLeave += new System.EventHandler(this.cmdHistorial_MouseLeave);
+            this.cmdHistorial.MouseHover += new System.EventHandler(this.cmdHistorial_MouseHover);
             // 
-            // lblConclusionSA
+            // label17
             // 
-            this.lblConclusionSA.AutoSize = true;
-            this.lblConclusionSA.Font = new System.Drawing.Font("Candara Light", 13F);
-            this.lblConclusionSA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblConclusionSA.Location = new System.Drawing.Point(29, 43);
-            this.lblConclusionSA.Name = "lblConclusionSA";
-            this.lblConclusionSA.Size = new System.Drawing.Size(796, 22);
-            this.lblConclusionSA.TabIndex = 79;
-            this.lblConclusionSA.Text = "En el Sector A el ganado: El dia 1 se encontraba enfermo, el dia 14  saludable y " +
-    "30 dias despues saludable";
-            this.lblConclusionSA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Candara Light", 13F);
+            this.label17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label17.Location = new System.Drawing.Point(32, 342);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(840, 44);
+            this.label17.TabIndex = 88;
+            this.label17.Text = "Instrucciones: Ingrese la probabilidad deseada, de click en el boton de ingresar " +
+    "datos, y finalmente presione el \r\nboton \"Resolver problema\".";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // bunifuSeparator4
+            // 
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuSeparator4.LineThickness = 1;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(228, 68);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Size = new System.Drawing.Size(247, 35);
+            this.bunifuSeparator4.TabIndex = 3;
+            this.bunifuSeparator4.Transparency = 255;
+            this.bunifuSeparator4.Vertical = false;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(59, 338);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(724, 35);
+            this.bunifuSeparator1.TabIndex = 7;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblResultado.Location = new System.Drawing.Point(222, 7);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(485, 23);
+            this.lblResultado.TabIndex = 0;
+            this.lblResultado.Text = "Estado de salud del Analisis de sangre de los animales";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgvResAni
             // 
@@ -1005,28 +1058,28 @@
             this.dgvResAni.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAni.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAni.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvResAni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAni.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dia,
             this.a,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvResAni.EnableHeadersVisualStyles = false;
             this.dgvResAni.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAni.Location = new System.Drawing.Point(59, 172);
@@ -1036,7 +1089,7 @@
             this.dgvResAni.RowHeadersWidth = 100;
             this.dgvResAni.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvResAni.Size = new System.Drawing.Size(724, 183);
-            this.dgvResAni.TabIndex = 77;
+            this.dgvResAni.TabIndex = 6;
             // 
             // Dia
             // 
@@ -1066,44 +1119,101 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 109;
             // 
-            // bunifuSeparator1
+            // lblConclusionSA
             // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(59, 338);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(724, 35);
-            this.bunifuSeparator1.TabIndex = 78;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
+            this.lblConclusionSA.AutoSize = true;
+            this.lblConclusionSA.Font = new System.Drawing.Font("Candara Light", 13F);
+            this.lblConclusionSA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblConclusionSA.Location = new System.Drawing.Point(29, 43);
+            this.lblConclusionSA.Name = "lblConclusionSA";
+            this.lblConclusionSA.Size = new System.Drawing.Size(796, 22);
+            this.lblConclusionSA.TabIndex = 1;
+            this.lblConclusionSA.Text = "En el Sector A el ganado: El dia 1 se encontraba enfermo, el dia 14  saludable y " +
+    "30 dias despues saludable";
+            this.lblConclusionSA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // bunifuSeparator4
+            // lblConclusionSC
             // 
-            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.bunifuSeparator4.LineThickness = 1;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(228, 68);
-            this.bunifuSeparator4.Name = "bunifuSeparator4";
-            this.bunifuSeparator4.Size = new System.Drawing.Size(247, 35);
-            this.bunifuSeparator4.TabIndex = 84;
-            this.bunifuSeparator4.Transparency = 255;
-            this.bunifuSeparator4.Vertical = false;
+            this.lblConclusionSC.AutoSize = true;
+            this.lblConclusionSC.Font = new System.Drawing.Font("Candara Light", 13F);
+            this.lblConclusionSC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblConclusionSC.Location = new System.Drawing.Point(29, 105);
+            this.lblConclusionSC.Name = "lblConclusionSC";
+            this.lblConclusionSC.Size = new System.Drawing.Size(796, 22);
+            this.lblConclusionSC.TabIndex = 4;
+            this.lblConclusionSC.Text = "En el Sector A el ganado: El dia 1 se encontraba enfermo, el dia 14  saludable y " +
+    "30 dias despues saludable";
+            this.lblConclusionSC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel8
+            // lblConclusionSB
             // 
-            this.panel8.Controls.Add(this.panel6);
-            this.panel8.Controls.Add(this.pictureBox3);
-            this.panel8.Controls.Add(this.dgvResAgua);
-            this.panel8.Controls.Add(this.label15);
-            this.panel8.Controls.Add(this.label16);
-            this.panel8.Controls.Add(this.pnResAgua);
-            this.panel8.Location = new System.Drawing.Point(19, 1099);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(853, 710);
-            this.panel8.TabIndex = 83;
-            this.panel8.Visible = false;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
+            this.lblConclusionSB.AutoSize = true;
+            this.lblConclusionSB.Font = new System.Drawing.Font("Candara Light", 13F);
+            this.lblConclusionSB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblConclusionSB.Location = new System.Drawing.Point(29, 74);
+            this.lblConclusionSB.Name = "lblConclusionSB";
+            this.lblConclusionSB.Size = new System.Drawing.Size(796, 22);
+            this.lblConclusionSB.TabIndex = 2;
+            this.lblConclusionSB.Text = "En el Sector A el ganado: El dia 1 se encontraba enfermo, el dia 14  saludable y " +
+    "30 dias despues saludable";
+            this.lblConclusionSB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // separador
+            // 
+            this.separador.BackColor = System.Drawing.Color.Transparent;
+            this.separador.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.separador.LineThickness = 1;
+            this.separador.Location = new System.Drawing.Point(27, 452);
+            this.separador.Name = "separador";
+            this.separador.Size = new System.Drawing.Size(795, 35);
+            this.separador.TabIndex = 9;
+            this.separador.Transparency = 255;
+            this.separador.Vertical = false;
+            // 
+            // lblConclusionSD
+            // 
+            this.lblConclusionSD.AutoSize = true;
+            this.lblConclusionSD.Font = new System.Drawing.Font("Candara Light", 13F);
+            this.lblConclusionSD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblConclusionSD.Location = new System.Drawing.Point(29, 136);
+            this.lblConclusionSD.Name = "lblConclusionSD";
+            this.lblConclusionSD.Size = new System.Drawing.Size(796, 22);
+            this.lblConclusionSD.TabIndex = 5;
+            this.lblConclusionSD.Text = "En el Sector A el ganado: El dia 1 se encontraba enfermo, el dia 14  saludable y " +
+    "30 dias despues saludable";
+            this.lblConclusionSD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pnResultadosAnimales
+            // 
+            this.pnResultadosAnimales.Controls.Add(this.pnConclusionGA);
+            this.pnResultadosAnimales.Controls.Add(this.lblConclusionSD);
+            this.pnResultadosAnimales.Controls.Add(this.separador);
+            this.pnResultadosAnimales.Controls.Add(this.lblConclusionSB);
+            this.pnResultadosAnimales.Controls.Add(this.lblConclusionSC);
+            this.pnResultadosAnimales.Controls.Add(this.lblConclusionSA);
+            this.pnResultadosAnimales.Controls.Add(this.dgvResAni);
+            this.pnResultadosAnimales.Controls.Add(this.lblResultado);
+            this.pnResultadosAnimales.Controls.Add(this.bunifuSeparator1);
+            this.pnResultadosAnimales.Controls.Add(this.bunifuSeparator4);
+            this.pnResultadosAnimales.Location = new System.Drawing.Point(32, 695);
+            this.pnResultadosAnimales.Name = "pnResultadosAnimales";
+            this.pnResultadosAnimales.Size = new System.Drawing.Size(850, 472);
+            this.pnResultadosAnimales.TabIndex = 43;
+            this.pnResultadosAnimales.Visible = false;
+            // 
+            // pnResultadoAgua
+            // 
+            this.pnResultadoAgua.Controls.Add(this.panel6);
+            this.pnResultadoAgua.Controls.Add(this.pictureBox3);
+            this.pnResultadoAgua.Controls.Add(this.dgvResAgua);
+            this.pnResultadoAgua.Controls.Add(this.label15);
+            this.pnResultadoAgua.Controls.Add(this.label16);
+            this.pnResultadoAgua.Controls.Add(this.pnResAgua);
+            this.pnResultadoAgua.Location = new System.Drawing.Point(29, 1177);
+            this.pnResultadoAgua.Name = "pnResultadoAgua";
+            this.pnResultadoAgua.Size = new System.Drawing.Size(845, 710);
+            this.pnResultadoAgua.TabIndex = 89;
+            this.pnResultadoAgua.Visible = false;
             // 
             // panel6
             // 
@@ -1111,7 +1221,7 @@
             this.panel6.Location = new System.Drawing.Point(760, 48);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(2, 183);
-            this.panel6.TabIndex = 97;
+            this.panel6.TabIndex = 3;
             // 
             // pictureBox3
             // 
@@ -1130,14 +1240,14 @@
             this.dgvResAgua.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAgua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAgua.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvResAgua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAgua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1149,14 +1259,14 @@
             this.Column8,
             this.Column6,
             this.Column9});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvResAgua.EnableHeadersVisualStyles = false;
             this.dgvResAgua.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAgua.Location = new System.Drawing.Point(33, 245);
@@ -1164,8 +1274,8 @@
             this.dgvResAgua.ReadOnly = true;
             this.dgvResAgua.RowHeadersVisible = false;
             this.dgvResAgua.RowHeadersWidth = 100;
-            this.dgvResAgua.Size = new System.Drawing.Size(776, 455);
-            this.dgvResAgua.TabIndex = 77;
+            this.dgvResAgua.Size = new System.Drawing.Size(795, 455);
+            this.dgvResAgua.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1238,7 +1348,7 @@
             this.label15.Location = new System.Drawing.Point(13, 16);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(0, 23);
-            this.label15.TabIndex = 72;
+            this.label15.TabIndex = 1;
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
@@ -1249,7 +1359,7 @@
             this.label16.Location = new System.Drawing.Point(265, 14);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(274, 23);
-            this.label16.TabIndex = 78;
+            this.label16.TabIndex = 0;
             this.label16.Text = "Resultados del Analisis en el agua";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -1260,7 +1370,7 @@
             this.pnResAgua.Location = new System.Drawing.Point(62, 48);
             this.pnResAgua.Name = "pnResAgua";
             this.pnResAgua.Size = new System.Drawing.Size(546, 183);
-            this.pnResAgua.TabIndex = 96;
+            this.pnResAgua.TabIndex = 2;
             // 
             // txtConclusionAgua
             // 
@@ -1273,80 +1383,37 @@
             this.txtConclusionAgua.Name = "txtConclusionAgua";
             this.txtConclusionAgua.ReadOnly = true;
             this.txtConclusionAgua.Size = new System.Drawing.Size(473, 165);
-            this.txtConclusionAgua.TabIndex = 94;
+            this.txtConclusionAgua.TabIndex = 0;
             // 
-            // rdConclusionGA
+            // pnOpciones
             // 
-            this.rdConclusionGA.ElipseRadius = 15;
-            this.rdConclusionGA.TargetControl = this.pnConclusionGA;
+            this.pnOpciones.Controls.Add(this.button2);
+            this.pnOpciones.Controls.Add(this.button1);
+            this.pnOpciones.Location = new System.Drawing.Point(215, 1893);
+            this.pnOpciones.Name = "pnOpciones";
+            this.pnOpciones.Size = new System.Drawing.Size(479, 71);
+            this.pnOpciones.TabIndex = 90;
+            this.pnOpciones.Visible = false;
             // 
-            // rdResAgua
+            // button1
             // 
-            this.rdResAgua.ElipseRadius = 60;
-            this.rdResAgua.TargetControl = this.pnResAgua;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 32);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(2, 1851);
-            this.panel9.TabIndex = 85;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(2, 32);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(2, 1851);
-            this.panel10.TabIndex = 86;
-            // 
-            // rsBtn1
-            // 
-            this.rsBtn1.ElipseRadius = 10;
-            this.rsBtn1.TargetControl = this;
-            // 
-            // rdBtn2
-            // 
-            this.rdBtn2.ElipseRadius = 20;
-            this.rdBtn2.TargetControl = this.cmdIngresarAnimales;
-            // 
-            // cmdIngresarAnimales
-            // 
-            this.cmdIngresarAnimales.BackColor = System.Drawing.Color.Transparent;
-            this.cmdIngresarAnimales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdIngresarAnimales.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
-            this.cmdIngresarAnimales.ImageActive = null;
-            this.cmdIngresarAnimales.Location = new System.Drawing.Point(809, 413);
-            this.cmdIngresarAnimales.Name = "cmdIngresarAnimales";
-            this.cmdIngresarAnimales.Size = new System.Drawing.Size(39, 34);
-            this.cmdIngresarAnimales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdIngresarAnimales.TabIndex = 64;
-            this.cmdIngresarAnimales.TabStop = false;
-            this.cmdIngresarAnimales.Zoom = 10;
-            this.cmdIngresarAnimales.Click += new System.EventHandler(this.cmdIngresarAnimales_Click);
-            // 
-            // errorP1
-            // 
-            this.errorP1.ContainerControl = this;
-            // 
-            // ImgFlecha
-            // 
-            this.ImgFlecha.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.flecha;
-            this.ImgFlecha.Location = new System.Drawing.Point(396, 495);
-            this.ImgFlecha.Name = "ImgFlecha";
-            this.ImgFlecha.Size = new System.Drawing.Size(90, 71);
-            this.ImgFlecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImgFlecha.TabIndex = 87;
-            this.ImgFlecha.TabStop = false;
-            this.ImgFlecha.Visible = false;
+            this.button1.BackColor = System.Drawing.Color.Snow;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.Location = new System.Drawing.Point(43, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "SALIR";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(622, 495);
+            this.pictureBox1.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.cerdo;
+            this.pictureBox1.Location = new System.Drawing.Point(627, 552);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1371,11 +1438,11 @@
             this.cmdResolver.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
             this.cmdResolver.IdleForecolor = System.Drawing.Color.White;
             this.cmdResolver.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(106)))), ((int)(((byte)(75)))));
-            this.cmdResolver.Location = new System.Drawing.Point(530, 543);
+            this.cmdResolver.Location = new System.Drawing.Point(535, 600);
             this.cmdResolver.Margin = new System.Windows.Forms.Padding(5);
             this.cmdResolver.Name = "cmdResolver";
             this.cmdResolver.Size = new System.Drawing.Size(262, 37);
-            this.cmdResolver.TabIndex = 71;
+            this.cmdResolver.TabIndex = 39;
             this.cmdResolver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdResolver.Click += new System.EventHandler(this.cmdResolver_Click);
             // 
@@ -1385,7 +1452,7 @@
             this.cmdIngresarAgua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdIngresarAgua.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.marca_de_verificacion__1_;
             this.cmdIngresarAgua.ImageActive = null;
-            this.cmdIngresarAgua.Location = new System.Drawing.Point(370, 415);
+            this.cmdIngresarAgua.Location = new System.Drawing.Point(375, 472);
             this.cmdIngresarAgua.Name = "cmdIngresarAgua";
             this.cmdIngresarAgua.Size = new System.Drawing.Size(39, 34);
             this.cmdIngresarAgua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1397,7 +1464,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.estanque;
-            this.pictureBox2.Location = new System.Drawing.Point(60, 99);
+            this.pictureBox2.Location = new System.Drawing.Point(62, 103);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(186, 117);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1422,49 +1489,13 @@
             this.cmdMostrarIntervalos.IdleFillColor = System.Drawing.Color.White;
             this.cmdMostrarIntervalos.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
             this.cmdMostrarIntervalos.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
-            this.cmdMostrarIntervalos.Location = new System.Drawing.Point(91, 541);
+            this.cmdMostrarIntervalos.Location = new System.Drawing.Point(96, 598);
             this.cmdMostrarIntervalos.Margin = new System.Windows.Forms.Padding(5);
             this.cmdMostrarIntervalos.Name = "cmdMostrarIntervalos";
             this.cmdMostrarIntervalos.Size = new System.Drawing.Size(262, 37);
-            this.cmdMostrarIntervalos.TabIndex = 44;
+            this.cmdMostrarIntervalos.TabIndex = 27;
             this.cmdMostrarIntervalos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdMostrarIntervalos.Click += new System.EventHandler(this.btnIntervalos_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.button2);
-            this.panel11.Controls.Add(this.button1);
-            this.panel11.Location = new System.Drawing.Point(369, 1812);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(258, 71);
-            this.panel11.TabIndex = 100;
-            this.panel11.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(30, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 33);
-            this.button1.TabIndex = 99;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(146, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 33);
-            this.button2.TabIndex = 100;
-            this.button2.Text = "Modificar #";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmProblema
             // 
@@ -1473,12 +1504,14 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(922, 625);
-            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.cmdHistorial);
+            this.Controls.Add(this.pnOpciones);
+            this.Controls.Add(this.pnResultadoAgua);
             this.Controls.Add(this.ImgFlecha);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pnResultadosAnimales);
             this.Controls.Add(this.lblTitleExperimento);
             this.Controls.Add(this.pnexperimento);
             this.Controls.Add(this.pictureBox1);
@@ -1533,6 +1566,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProblema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProblema";
@@ -1543,25 +1577,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.pnConclusionGA.ResumeLayout(false);
             this.pnConclusionGA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.pnResultadosAnimales.ResumeLayout(false);
+            this.pnResultadosAnimales.PerformLayout();
+            this.pnResultadoAgua.ResumeLayout(false);
+            this.pnResultadoAgua.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAgua)).EndInit();
             this.pnResAgua.ResumeLayout(false);
             this.pnResAgua.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).EndInit();
+            this.pnOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAgua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1623,9 +1657,7 @@
         public System.Windows.Forms.TextBox textBox5;
         public System.Windows.Forms.Label label11;
         public ns1.BunifuThinButton2 cmdResolver;
-        public System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.PictureBox cmdHistorial;
-        private System.Windows.Forms.Panel panel7;
         private ns1.BunifuCustomLabel lblTitleExperimento;
         private System.Windows.Forms.Panel pnexperimento;
         public System.Windows.Forms.Label label12;
@@ -1633,24 +1665,23 @@
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.Label label14;
         private ns1.BunifuElipse rdProblema;
-        private System.Windows.Forms.Panel panel8;
-        public System.Windows.Forms.DataGridView dgvResAgua;
-        public System.Windows.Forms.Label label15;
-        public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.Label lblConclusionSA;
-        private ns1.BunifuSeparator bunifuSeparator1;
-        public System.Windows.Forms.Label lblConclusionSD;
-        public System.Windows.Forms.Label lblConclusionSB;
-        public System.Windows.Forms.Label lblConclusionSC;
-        private ns1.BunifuSeparator bunifuSeparator4;
-        public System.Windows.Forms.DataGridView dgvResAni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn a;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private ns1.BunifuElipse rdConclusionGA;
-        private System.Windows.Forms.Panel pnConclusionGA;
-        private System.Windows.Forms.TextBox txtConclusionGeneral;
+        private ns1.BunifuElipse rdResAgua;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private ns1.BunifuElipse rsBtn1;
+        private ns1.BunifuElipse rdBtn2;
+        private System.Windows.Forms.PictureBox ImgFlecha;
+        private System.Windows.Forms.ErrorProvider errorP1;
+        private System.Windows.Forms.ToolTip ayuda;
+        public System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel pnOpciones;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnResultadoAgua;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.DataGridView dgvResAgua;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -1660,20 +1691,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.TextBox txtConclusionAgua;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel pnResAgua;
-        private ns1.BunifuElipse rdResAgua;
+        private System.Windows.Forms.TextBox txtConclusionAgua;
+        private System.Windows.Forms.Panel pnResultadosAnimales;
+        private System.Windows.Forms.Panel pnConclusionGA;
+        private System.Windows.Forms.TextBox txtConclusionGeneral;
+        public System.Windows.Forms.Label lblConclusionSD;
         private ns1.BunifuSeparator separador;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
-        private ns1.BunifuElipse rsBtn1;
-        private ns1.BunifuElipse rdBtn2;
-        private System.Windows.Forms.PictureBox ImgFlecha;
-        private System.Windows.Forms.ErrorProvider errorP1;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label lblConclusionSB;
+        public System.Windows.Forms.Label lblConclusionSC;
+        public System.Windows.Forms.Label lblConclusionSA;
+        public System.Windows.Forms.DataGridView dgvResAni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn a;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        public System.Windows.Forms.Label lblResultado;
+        private ns1.BunifuSeparator bunifuSeparator1;
+        private ns1.BunifuSeparator bunifuSeparator4;
     }
 }

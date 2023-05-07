@@ -55,7 +55,7 @@
             // 
             // rdFroma
             // 
-            this.rdFroma.ElipseRadius = 10;
+            this.rdFroma.ElipseRadius = 20;
             this.rdFroma.TargetControl = this;
             // 
             // cmdCerrarPantalla
@@ -74,7 +74,7 @@
             // 
             // pbIniciar
             // 
-            this.pbIniciar.Image = ((System.Drawing.Image)(resources.GetObject("pbIniciar.Image")));
+            this.pbIniciar.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.a_method_to_my_madness;
             this.pbIniciar.Location = new System.Drawing.Point(-3, -6);
             this.pbIniciar.Name = "pbIniciar";
             this.pbIniciar.Size = new System.Drawing.Size(576, 588);
@@ -92,6 +92,7 @@
             this.Controls.Add(this.cmdIniciar);
             this.Controls.Add(this.pbIniciar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaPrincipal";
