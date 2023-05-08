@@ -87,12 +87,13 @@ namespace Generador_de_numeros___Simulacion
 
         private void cmdContinuar_Click(object sender, EventArgs e)
         {
-            frmProblema.pnexperimento.Location = new Point(39, frmProblema.panel7.Location.Y + frmProblema.panel7.Height + 36);
+            frmProblema.panel8.Location = new Point(21, frmProblema.panel7.Location.Y + frmProblema.panel7.Height + 1);
             frmProblema.cmdHistorial.Location = new Point(838, frmProblema.panel7.Location.Y + frmProblema.panel7.Height + 49);
             frmProblema.txtAcoloidales.Focus();
-
             if (frmProblema.ShowDialog() == DialogResult.Retry)
             {
+                frmProblema.txtAcoloidales.Focus();
+                frmProblema.cmdHistorial.Location = new Point(838, frmProblema.panel7.Location.Y + frmProblema.panel7.Height + 49);
                 this.Hide();
             }
 

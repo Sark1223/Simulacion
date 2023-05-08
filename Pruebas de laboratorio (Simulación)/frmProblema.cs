@@ -698,7 +698,7 @@ namespace Generador_de_numeros___Simulacion
                     
                 }
 
-                pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
+                //pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
                 cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
 
                 //mostrar flecha
@@ -958,9 +958,9 @@ namespace Generador_de_numeros___Simulacion
         //Metodos de la ventanas -------------------------------------------------------------------------
         private void frmProblema_Load(object sender, EventArgs e)
         {
-            pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
-            cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
-            txtAcoloidales.Focus();
+            //pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
+            //cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
+            //txtAcoloidales.Focus();
         }
 
 
@@ -969,6 +969,7 @@ namespace Generador_de_numeros___Simulacion
             Close();
             EsconderPaneles();
             CambiarImagenAnimales();
+            CambiarImagenAgua();
             aproba1 = false;
             aproba2 = false;
         }
@@ -1504,6 +1505,8 @@ namespace Generador_de_numeros___Simulacion
             //this.Show();
             try
             {
+                cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
+                txtAcoloidales.Focus();
                 this.Hide();
                 //Application.Run(new Inicio());
 
@@ -1515,6 +1518,10 @@ namespace Generador_de_numeros___Simulacion
                 aproba2 = false;
 
                 CambiarImagenAgua();
+                //pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
+                //cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
+                cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
+                txtAcoloidales.Focus();
             }
             catch(Exception ex)
             {

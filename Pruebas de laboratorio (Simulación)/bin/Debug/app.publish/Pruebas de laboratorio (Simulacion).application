@@ -7,7 +7,7 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Pruebas de laboratorio (Simulacion).exe.manifest" size="5953">
+    <dependentAssembly dependencyType="install" codebase="Application Files\Pruebas de laboratorio (Simulacion)_1_0_0_1\Pruebas de laboratorio (Simulacion).exe.manifest" size="5953">
       <assemblyIdentity name="Pruebas de laboratorio (Simulacion).exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
