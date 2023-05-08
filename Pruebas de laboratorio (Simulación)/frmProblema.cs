@@ -41,6 +41,7 @@ namespace Generador_de_numeros___Simulacion
         frmIntervalos frmIntervalos = new frmIntervalos();
         frmHistorial historial = new frmHistorial();
         PantallaPrincipal puerquito = new PantallaPrincipal();
+        //frmOpciones op = new frmOpciones();
 
         //Lista para guardar los intervalos y datos del AGUA y ANIMALES
         List<Intervals> animales = new List<Intervals>();
@@ -139,83 +140,83 @@ namespace Generador_de_numeros___Simulacion
             }
         }
         
-        //Resultados Del problema
-        private string ResAgua()
-        {
-            int resultado = 0;
-            string Componente = "";
+        ////Resultados Del problema
+        //private string ResAgua()
+        //{
+        //    int resultado = 0;
+        //    string Componente = "";
 
-            if(op_coloidales > resultado)
-            {
-                resultado = op_coloidales;
-                Componente = "Coloidales";
-            }
-            if (op_mercurio > resultado)
-            {
-                resultado = op_mercurio;
-                Componente = "Mercurio";
-            }
-            if (op_residuos > resultado)
-            {
-                resultado = op_residuos;
-                Componente = "Residuos";
-            }
-            if (op_sulfato > resultado)
-            {
-                resultado = op_sulfato;
-                Componente = "Sulfato";
-            }
-            if (op_acido > resultado)
-            {
-                resultado = op_acido;
-                Componente = "Acido";
-            }
-            if (op_fosfato > resultado)
-            {
-                resultado = op_fosfato;
-                Componente = "Fosfato";
-            }
-            if (op_oxidos > resultado)
-            {
-                resultado = op_oxidos;
-                Componente = "Oxido";
-            }
+        //    if(op_coloidales > resultado)
+        //    {
+        //        resultado = op_coloidales;
+        //        Componente = "Coloidales";
+        //    }
+        //    if (op_mercurio > resultado)
+        //    {
+        //        resultado = op_mercurio;
+        //        Componente = "Mercurio";
+        //    }
+        //    if (op_residuos > resultado)
+        //    {
+        //        resultado = op_residuos;
+        //        Componente = "Residuos";
+        //    }
+        //    if (op_sulfato > resultado)
+        //    {
+        //        resultado = op_sulfato;
+        //        Componente = "Sulfato";
+        //    }
+        //    if (op_acido > resultado)
+        //    {
+        //        resultado = op_acido;
+        //        Componente = "Acido";
+        //    }
+        //    if (op_fosfato > resultado)
+        //    {
+        //        resultado = op_fosfato;
+        //        Componente = "Fosfato";
+        //    }
+        //    if (op_oxidos > resultado)
+        //    {
+        //        resultado = op_oxidos;
+        //        Componente = "Oxido";
+        //    }
 
-            return Componente;
-        }
-        private string ResAnimales()
-        {
-            int resultado = 0;
-            string Componente = "";
+        //    return Componente;
+        //}
+        //private string ResAnimales()
+        //{
+        //    int resultado = 0;
+        //    string Componente = "";
 
-            if (op_ani_acidez > resultado)
-            {
-                resultado = op_ani_acidez;
-                Componente = "Acides";
-            }
-            if (op_ani_anemia > resultado)
-            {
-                resultado = op_ani_anemia;
-                Componente = "Anemia";
-            }
-            if (op_ani_normal > resultado)
-            {
-                resultado = op_ani_normal;
-                Componente = "Normal";
-            }
-            if (op_ani_glucosa > resultado)
-            {
-                resultado = op_ani_glucosa;
-                Componente = "Sulfato";
-            }
-            if (op_ani_alcalinidad > resultado)
-            {
-                resultado = op_ani_alcalinidad;
-                Componente = "Acido";
-            }
+        //    if (op_ani_acidez > resultado)
+        //    {
+        //        resultado = op_ani_acidez;
+        //        Componente = "Acides";
+        //    }
+        //    if (op_ani_anemia > resultado)
+        //    {
+        //        resultado = op_ani_anemia;
+        //        Componente = "Anemia";
+        //    }
+        //    if (op_ani_normal > resultado)
+        //    {
+        //        resultado = op_ani_normal;
+        //        Componente = "Normal";
+        //    }
+        //    if (op_ani_glucosa > resultado)
+        //    {
+        //        resultado = op_ani_glucosa;
+        //        Componente = "Sulfato";
+        //    }
+        //    if (op_ani_alcalinidad > resultado)
+        //    {
+        //        resultado = op_ani_alcalinidad;
+        //        Componente = "Acido";
+        //    }
 
-            return Componente;
-        }
+        //    return Componente;
+        //}
 
         private bool ConclusionSector(bool[] sector, string X, System.Windows.Forms.Label label)
         {
@@ -697,12 +698,16 @@ namespace Generador_de_numeros___Simulacion
                     
                 }
 
+                pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
+                cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
+
                 //mostrar flecha
                 ImgFlecha.Location = new Point(411, cmdIngresarAgua.Location.Y + 92);
                 ImgFlecha.Visible = true;
 
+
                 //Mostrar animales
-                pnResultadosAnimales.Location = new Point(28, pnexperimento.Location.Y + 26);
+                pnResultadosAnimales.Location = new Point(28, panel7.Location.Y +panel7.Height + 55);
                 pnResultadosAnimales.Visible = true;
 
                 //Mostrar agua
@@ -953,6 +958,8 @@ namespace Generador_de_numeros___Simulacion
         //Metodos de la ventanas -------------------------------------------------------------------------
         private void frmProblema_Load(object sender, EventArgs e)
         {
+            pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
+            cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
             txtAcoloidales.Focus();
         }
 
@@ -1001,6 +1008,7 @@ namespace Generador_de_numeros___Simulacion
         private void CambiarImagenAnimales()
         {
             cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__1_;
+            txtSuma1.Clear();
         }
 
         private void txtAcoloidales_Validating(object sender, CancelEventArgs e)
@@ -1498,11 +1506,15 @@ namespace Generador_de_numeros___Simulacion
             {
                 this.Hide();
                 //Application.Run(new Inicio());
+
+                //op.cer = true;
                 
                 EsconderPaneles();
                 CambiarImagenAnimales();
                 aproba1 = false;
                 aproba2 = false;
+
+                CambiarImagenAgua();
             }
             catch(Exception ex)
             {
@@ -1524,6 +1536,7 @@ namespace Generador_de_numeros___Simulacion
         private void CambiarImagenAgua()
         {
             cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__1_;
+            txtSuma2.Clear();
         }
         private void EsconderPaneles()
         {

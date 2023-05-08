@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblema));
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -858,7 +858,7 @@
             this.lblTitleExperimento.AutoSize = true;
             this.lblTitleExperimento.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleExperimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
-            this.lblTitleExperimento.Location = new System.Drawing.Point(338, 654);
+            this.lblTitleExperimento.Location = new System.Drawing.Point(327, 660);
             this.lblTitleExperimento.Name = "lblTitleExperimento";
             this.lblTitleExperimento.Size = new System.Drawing.Size(261, 26);
             this.lblTitleExperimento.TabIndex = 41;
@@ -867,7 +867,7 @@
             // pnexperimento
             // 
             this.pnexperimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
-            this.pnexperimento.Location = new System.Drawing.Point(32, 666);
+            this.pnexperimento.Location = new System.Drawing.Point(39, 672);
             this.pnexperimento.Name = "pnexperimento";
             this.pnexperimento.Size = new System.Drawing.Size(850, 4);
             this.pnexperimento.TabIndex = 42;
@@ -963,6 +963,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
@@ -970,11 +971,11 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.IndianRed;
-            this.button2.Location = new System.Drawing.Point(298, 14);
+            this.button2.Location = new System.Drawing.Point(251, 14);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 34);
+            this.button2.Size = new System.Drawing.Size(197, 34);
             this.button2.TabIndex = 1;
-            this.button2.Text = "REGRESAR";
+            this.button2.Text = "NUEVOS NÚMEROS";
             this.ayuda.SetToolTip(this.button2, "Regresar a la pantalla de inicio");
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -994,7 +995,7 @@
             // cmdHistorial
             // 
             this.cmdHistorial.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.gestion_del_tiempo__1_;
-            this.cmdHistorial.Location = new System.Drawing.Point(838, 674);
+            this.cmdHistorial.Location = new System.Drawing.Point(838, 685);
             this.cmdHistorial.Name = "cmdHistorial";
             this.cmdHistorial.Size = new System.Drawing.Size(55, 51);
             this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1061,28 +1062,28 @@
             this.dgvResAni.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAni.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAni.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvResAni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAni.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dia,
             this.a,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAni.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvResAni.EnableHeadersVisualStyles = false;
             this.dgvResAni.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAni.Location = new System.Drawing.Point(59, 172);
@@ -1198,7 +1199,7 @@
             this.pnResultadosAnimales.Controls.Add(this.lblResultado);
             this.pnResultadosAnimales.Controls.Add(this.bunifuSeparator1);
             this.pnResultadosAnimales.Controls.Add(this.bunifuSeparator4);
-            this.pnResultadosAnimales.Location = new System.Drawing.Point(32, 695);
+            this.pnResultadosAnimales.Location = new System.Drawing.Point(24, 699);
             this.pnResultadosAnimales.Name = "pnResultadosAnimales";
             this.pnResultadosAnimales.Size = new System.Drawing.Size(850, 472);
             this.pnResultadosAnimales.TabIndex = 43;
@@ -1212,7 +1213,7 @@
             this.pnResultadoAgua.Controls.Add(this.label15);
             this.pnResultadoAgua.Controls.Add(this.label16);
             this.pnResultadoAgua.Controls.Add(this.pnResAgua);
-            this.pnResultadoAgua.Location = new System.Drawing.Point(29, 1177);
+            this.pnResultadoAgua.Location = new System.Drawing.Point(22, 1177);
             this.pnResultadoAgua.Name = "pnResultadoAgua";
             this.pnResultadoAgua.Size = new System.Drawing.Size(845, 710);
             this.pnResultadoAgua.TabIndex = 89;
@@ -1243,14 +1244,14 @@
             this.dgvResAgua.BackgroundColor = System.Drawing.Color.White;
             this.dgvResAgua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvResAgua.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvResAgua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResAgua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1262,14 +1263,14 @@
             this.Column8,
             this.Column6,
             this.Column9});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvResAgua.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvResAgua.EnableHeadersVisualStyles = false;
             this.dgvResAgua.GridColor = System.Drawing.Color.IndianRed;
             this.dgvResAgua.Location = new System.Drawing.Point(33, 245);
@@ -1357,11 +1358,11 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label16.Location = new System.Drawing.Point(265, 14);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(274, 23);
+            this.label16.Size = new System.Drawing.Size(308, 23);
             this.label16.TabIndex = 0;
             this.label16.Text = "Resultados del Analisis en el agua";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1392,7 +1393,7 @@
             // 
             this.pnOpciones.Controls.Add(this.button2);
             this.pnOpciones.Controls.Add(this.button1);
-            this.pnOpciones.Location = new System.Drawing.Point(215, 1893);
+            this.pnOpciones.Location = new System.Drawing.Point(246, 1893);
             this.pnOpciones.Name = "pnOpciones";
             this.pnOpciones.Size = new System.Drawing.Size(479, 71);
             this.pnOpciones.TabIndex = 90;
@@ -1575,9 +1576,9 @@
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.pnResultadosAnimales);
             this.Controls.Add(this.lblTitleExperimento);
-            this.Controls.Add(this.pnexperimento);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panTop);
+            this.Controls.Add(this.pnexperimento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProblema";
@@ -1627,9 +1628,9 @@
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label1;
-        private ns1.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        public ns1.BunifuCustomLabel bunifuCustomLabel1;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.PictureBox pictureBox1;
         public ns1.BunifuThinButton2 cmdMostrarIntervalos;
         public System.Windows.Forms.TextBox txtAOxidos;
         public System.Windows.Forms.TextBox txtAfosfato;
@@ -1639,17 +1640,17 @@
         public System.Windows.Forms.TextBox txtASulfato;
         public System.Windows.Forms.TextBox txtAcoloidales;
         public System.Windows.Forms.TextBox txtAcidez;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label7;
-        private ns1.BunifuImageButton cmdIngresarAnimales;
-        private ns1.BunifuImageButton cmdIngresarAgua;
+        public ns1.BunifuImageButton cmdIngresarAnimales;
+        public ns1.BunifuImageButton cmdIngresarAgua;
         public System.Windows.Forms.TextBox txtSuma1;
         public System.Windows.Forms.TextBox txtTotal1;
         public System.Windows.Forms.TextBox fijo1;
@@ -1672,9 +1673,9 @@
         public System.Windows.Forms.TextBox textBox5;
         public System.Windows.Forms.Label label11;
         public ns1.BunifuThinButton2 cmdResolver;
-        private System.Windows.Forms.PictureBox cmdHistorial;
-        private ns1.BunifuCustomLabel lblTitleExperimento;
-        private System.Windows.Forms.Panel pnexperimento;
+        public System.Windows.Forms.PictureBox cmdHistorial;
+        public ns1.BunifuCustomLabel lblTitleExperimento;
+        public System.Windows.Forms.Panel pnexperimento;
         public System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label13;
@@ -1690,12 +1691,12 @@
         private System.Windows.Forms.ErrorProvider errorP1;
         private System.Windows.Forms.ToolTip ayuda;
         public System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel pnOpciones;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel pnResultadoAgua;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Panel pnOpciones;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Panel pnResultadoAgua;
+        public System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.DataGridView dgvResAgua;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1726,6 +1727,6 @@
         public System.Windows.Forms.Label lblResultado;
         private ns1.BunifuSeparator bunifuSeparator1;
         private ns1.BunifuSeparator bunifuSeparator4;
-        private System.Windows.Forms.Panel panel7;
+        public System.Windows.Forms.Panel panel7;
     }
 }

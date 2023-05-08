@@ -37,7 +37,7 @@ namespace Generador_de_numeros___Simulacion
         frmPruebas frmPruebas = new frmPruebas();
         frmProblema frmProblema = new frmProblema();
 
-        bool cerrar = false;
+        public bool cer = false;
 
         public void RecibirNumeros(frmNumeros numeros)
         {
@@ -87,10 +87,13 @@ namespace Generador_de_numeros___Simulacion
 
         private void cmdContinuar_Click(object sender, EventArgs e)
         {
-            frmProblema.ShowDialog();
-            if(cerrar = true)
+            frmProblema.pnexperimento.Location = new Point(39, frmProblema.panel7.Location.Y + frmProblema.panel7.Height + 36);
+            frmProblema.cmdHistorial.Location = new Point(838, frmProblema.panel7.Location.Y + frmProblema.panel7.Height + 49);
+            frmProblema.txtAcoloidales.Focus();
+
+            if (frmProblema.ShowDialog() == DialogResult.Retry)
             {
-                this.Close();
+                this.Hide();
             }
 
         }
