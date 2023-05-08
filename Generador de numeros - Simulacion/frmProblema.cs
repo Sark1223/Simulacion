@@ -884,6 +884,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Application.Exit();
         }
 
 
