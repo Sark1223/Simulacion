@@ -100,10 +100,10 @@
             this.rdBtn2 = new ns1.BunifuElipse(this.components);
             this.cmdIngresarAnimales = new ns1.BunifuImageButton();
             this.errorP1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmdHistorial = new System.Windows.Forms.PictureBox();
             this.ayuda = new System.Windows.Forms.ToolTip(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.ImgFlecha = new System.Windows.Forms.PictureBox();
-            this.cmdHistorial = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.bunifuSeparator4 = new ns1.BunifuSeparator();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
@@ -151,8 +151,8 @@
             this.pnConclusionGA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).BeginInit();
             this.pnResultadosAnimales.SuspendLayout();
             this.pnResultadoAgua.SuspendLayout();
@@ -958,6 +958,21 @@
             this.errorP1.ContainerControl = this;
             this.errorP1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorP1.Icon")));
             // 
+            // cmdHistorial
+            // 
+            this.errorP1.SetIconAlignment(this.cmdHistorial, System.Windows.Forms.ErrorIconAlignment.TopRight);
+            this.cmdHistorial.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.gestion_del_tiempo__1_;
+            this.cmdHistorial.Location = new System.Drawing.Point(831, 688);
+            this.cmdHistorial.Name = "cmdHistorial";
+            this.cmdHistorial.Size = new System.Drawing.Size(50, 51);
+            this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdHistorial.TabIndex = 74;
+            this.cmdHistorial.TabStop = false;
+            this.ayuda.SetToolTip(this.cmdHistorial, "Historial de experimentos");
+            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
+            this.cmdHistorial.MouseLeave += new System.EventHandler(this.cmdHistorial_MouseLeave);
+            this.cmdHistorial.MouseHover += new System.EventHandler(this.cmdHistorial_MouseHover);
+            // 
             // ayuda
             // 
             this.ayuda.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
@@ -993,21 +1008,6 @@
             this.ImgFlecha.TabStop = false;
             this.ayuda.SetToolTip(this.ImgFlecha, "Deslice hacia abajo");
             this.ImgFlecha.Visible = false;
-            // 
-            // cmdHistorial
-            // 
-            this.errorP1.SetIconAlignment(this.cmdHistorial, System.Windows.Forms.ErrorIconAlignment.TopRight);
-            this.cmdHistorial.Image = global::Generador_de_numeros___Simulacion.Properties.Resources.gestion_del_tiempo__1_;
-            this.cmdHistorial.Location = new System.Drawing.Point(831, 688);
-            this.cmdHistorial.Name = "cmdHistorial";
-            this.cmdHistorial.Size = new System.Drawing.Size(50, 51);
-            this.cmdHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdHistorial.TabIndex = 74;
-            this.cmdHistorial.TabStop = false;
-            this.ayuda.SetToolTip(this.cmdHistorial, "Historial de experimentos");
-            this.cmdHistorial.Click += new System.EventHandler(this.cmdHistorial_Click);
-            this.cmdHistorial.MouseLeave += new System.EventHandler(this.cmdHistorial_MouseLeave);
-            this.cmdHistorial.MouseHover += new System.EventHandler(this.cmdHistorial_MouseHover);
             // 
             // label17
             // 
@@ -1207,6 +1207,7 @@
             this.pnResultadosAnimales.Size = new System.Drawing.Size(867, 472);
             this.pnResultadosAnimales.TabIndex = 43;
             this.pnResultadosAnimales.Visible = false;
+            this.pnResultadosAnimales.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // pnResultadoAgua
             // 
@@ -1563,6 +1564,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(901, 604);
             this.panel7.TabIndex = 91;
+            this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // panel8
             // 
@@ -1573,6 +1575,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(901, 57);
             this.panel8.TabIndex = 92;
+            this.panel8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // frmProblema
             // 
@@ -1607,8 +1610,8 @@
             this.pnConclusionGA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIngresarAnimales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdHistorial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgFlecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResAni)).EndInit();
             this.pnResultadosAnimales.ResumeLayout(false);
             this.pnResultadosAnimales.PerformLayout();

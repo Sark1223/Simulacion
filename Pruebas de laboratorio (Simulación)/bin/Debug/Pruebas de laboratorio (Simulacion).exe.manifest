@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Pruebas de laboratorio (Simulacion).exe" size="941056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Pruebas de laboratorio (Simulacion).exe" size="943104">
       <assemblyIdentity name="Pruebas de laboratorio (Simulacion)" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>T0jOgTC+7tkNU1yuW9I3Nu6fDFLAimsZuFb8G9rBSkA=</dsig:DigestValue>
+        <dsig:DigestValue>wTpl2xdVPxp1dgGjmCp1hzE9cu6kko/Jni8xZXh1qKM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -80,6 +80,11 @@ namespace Generador_de_numeros___Simulacion
                 //Compartir objeto con numeros 
                 opciones.RecibirNumerosPrueba(problema);
 
+                numeros.txtSemilla.Text =txtSemilla.Text;
+                numeros.txtA.Text = txtA.Text;
+                numeros.txtC.Text = txtC.Text;
+                numeros.txtM.Text = txtM.Text;
+
                 this.Hide();
                 opciones.ShowDialog();
                 this.Show();
@@ -288,7 +293,7 @@ namespace Generador_de_numeros___Simulacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio,pero pueden ser modificados", "ATENCION");
+            MessageBox.Show("Los valores que se muestran en la pantalla son los que se recomiendan para el ejercicio, pero pueden ser modificados", "ATENCION");
             rb5.Checked = true;
         }
 

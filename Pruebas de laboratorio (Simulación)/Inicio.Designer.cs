@@ -49,6 +49,7 @@
             this.txtM = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panTop = new System.Windows.Forms.Panel();
+            this.btnCerrar = new ns1.BunifuImageButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.bunifuDragControl2 = new ns1.BunifuDragControl(this.components);
@@ -60,12 +61,11 @@
             this.ayuda = new System.Windows.Forms.ToolTip(this.components);
             this.cmdGenerar = new ns1.BunifuThinButton2();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new ns1.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.panTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -263,6 +263,21 @@
             this.panTop.TabIndex = 16;
             this.panTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(275, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(27, 28);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabStop = false;
+            this.ayuda.SetToolTip(this.btnCerrar, "Cerrar pantalla");
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.Cerrar_Click);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
@@ -336,9 +351,9 @@
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
             this.bunifuCustomLabel4.Location = new System.Drawing.Point(9, -3);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(90, 40);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(99, 40);
             this.bunifuCustomLabel4.TabIndex = 21;
-            this.bunifuCustomLabel4.Text = "Nivel de \r\nsignificacia:";
+            this.bunifuCustomLabel4.Text = "Nivel de \r\nsignificancia:";
             this.ayuda.SetToolTip(this.bunifuCustomLabel4, "Margen de error aceptable");
             // 
             // rb10
@@ -400,21 +415,6 @@
             this.Logo.TabIndex = 11;
             this.Logo.TabStop = false;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(275, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(27, 28);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.TabStop = false;
-            this.ayuda.SetToolTip(this.btnCerrar, "Cerrar pantalla");
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.Cerrar_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,10 +451,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

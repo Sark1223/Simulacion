@@ -336,7 +336,7 @@ namespace Generador_de_numeros___Simulacion
                     w++;
                 }
 
-                EstadoAnimal += $"Animal {i+1} - {Salud}\r\n";
+                EstadoAnimal += $"({Ri[num_actual]}) Animal {i+1} - {Salud}\r\n";
                 num_actual++;
             }
 
@@ -738,9 +738,9 @@ namespace Generador_de_numeros___Simulacion
 
         private void MostrarIntervalos(object sender, EventArgs e)
         {
-            this.Hide();
-            frmIntervalos.ShowDialog();
-            this.Show();
+            //this.Hide();
+            frmIntervalos.Show();
+            //this.Show();
         }
 
         public void RellenarListaAnimales()
