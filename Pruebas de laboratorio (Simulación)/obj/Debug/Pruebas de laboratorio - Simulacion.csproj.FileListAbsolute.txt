@@ -47,3 +47,27 @@ C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simul
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Generador de numeros - Simulacion\obj\Debug\Pruebas de laboratorio (Simulacion).application
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Generador de numeros - Simulacion\obj\Debug\Pruebas de laboratorio (Simulacion).exe
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Generador de numeros - Simulacion\obj\Debug\Pruebas de laboratorio (Simulacion).pdb
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).exe.config
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).exe.manifest
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).application
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).exe
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).pdb
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.AssemblyReference.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmHistorial.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmIntervalos.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmNumeros.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmOpciones.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmProblema.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmPruebas.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.Inicio.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.PantallaPrincipal.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.Properties.Resources.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.GenerateResource.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.CoreCompileInputs.cache
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).TrustInfo.xml
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).exe.manifest
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).application
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.CopyComplete
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).exe
+C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).pdb

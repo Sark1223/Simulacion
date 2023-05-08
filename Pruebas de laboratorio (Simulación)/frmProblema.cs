@@ -953,6 +953,7 @@ namespace Generador_de_numeros___Simulacion
         //Metodos de la ventanas -------------------------------------------------------------------------
         private void frmProblema_Load(object sender, EventArgs e)
         {
+            txtAcoloidales.Focus();
         }
 
 
@@ -1385,7 +1386,7 @@ namespace Generador_de_numeros___Simulacion
             }
             if (error)
             {
-                errorP1.SetError(txtAnemia, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+                errorP1.SetError(txtAnemia, "No se admiten letras ni espacios en blanco.\nIngrese números solamente");
             }
             else
             {
@@ -1412,7 +1413,7 @@ namespace Generador_de_numeros___Simulacion
             }
             if (error)
             {
-                errorP1.SetError(txtNormal, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+                errorP1.SetError(txtNormal, "No se admiten letras ni espacios en blanco.\nIngrese números solamente");
             }
             else
             {
@@ -1493,12 +1494,21 @@ namespace Generador_de_numeros___Simulacion
             //this.Hide();
             //puerquito.ShowDialog();
             //this.Show();
-            this.Hide();
-            Application.Run(new Inicio());
-            EsconderPaneles();
-            CambiarImagenAnimales();
-            aproba1 = false;
-            aproba2 = false;
+            try
+            {
+                this.Hide();
+                //Application.Run(new Inicio());
+                
+                EsconderPaneles();
+                CambiarImagenAnimales();
+                aproba1 = false;
+                aproba2 = false;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+            
         }
 
         private void cmdHistorial_MouseHover(object sender, EventArgs e)
@@ -1537,51 +1547,68 @@ namespace Generador_de_numeros___Simulacion
         
         private void cmdIngresarAnimales_Click(object sender, EventArgs e)
         {
-            if (error)
+            try
             {
-                MessageBox.Show("Verifique que los datos sean validos");
-            }
-            else if (txtAcidez.Text == "" || txtAnemia.Text == "" || txtNormal.Text == "" || txtGlucosa.Text == "" || txtalcalinidad.Text == "")
-            {
-                MessageBox.Show("Verifique que no haya espacios en blanco");
-            }
-            else
-            {
-                //Recuperacion de datos ingresados por el usuario
-                Ani_acidez = float.Parse(txtAcidez.Text) * 0.01F;
-                Ani_anemia = float.Parse(txtAnemia.Text) * 0.01F;
-                Ani_normal = float.Parse(txtNormal.Text) * 0.01F;
-                Ani_glucosa = float.Parse(txtGlucosa.Text) * 0.01F;
-                Ani_Alcalinindad = float.Parse(txtalcalinidad.Text) * 0.01F;
-
-                float suma = Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad;
-
-                txtSuma1.Text = "" + suma;
-
-                if (suma == 1)
+                if (error)
                 {
-                    if(aproba2 == true)
-                    {
-                        cmdResolver.Focus();
-                    }
-                    aproba1 = true;
-                    cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__2_;
-                    //Crear distribucion acumulada
+                    MessageBox.Show("Verifique que los datos sean validos");
+                }
+                else if (txtAcidez.Text == "" || txtAnemia.Text == "" || txtNormal.Text == "" || txtGlucosa.Text == "" || txtalcalinidad.Text == "")
+                {
+                    MessageBox.Show("Verifique que no haya espacios en blanco");
                 }
                 else
                 {
-                    aproba1 = false;
-                    if (suma > 1)
+                    //Recuperacion de datos ingresados por el usuario
+                    Ani_acidez = (float)Math.Round(float.Parse(txtAcidez.Text) * 0.01F, 2);
+                    Ani_anemia = (float)Math.Round(float.Parse(txtAnemia.Text) * 0.01F, 2);
+                    Ani_normal = (float)Math.Round(float.Parse(txtNormal.Text) * 0.01F, 2);
+                    Ani_glucosa = (float)Math.Round(float.Parse(txtGlucosa.Text) * 0.01F, 2);
+                    Ani_Alcalinindad = (float)Math.Round(float.Parse(txtalcalinidad.Text) * 0.01F, 2);
+
+                    //Math.Round(Ani_acidez = float.Parse(txtAcidez.Text) * 0.01F, 2);
+
+                    //Ani_acidez = float.Parse(txtAcidez.Text);
+                    //Ani_anemia = float.Parse(txtAnemia.Text);
+                    //Ani_normal = float.Parse(txtNormal.Text);
+                    //Ani_glucosa = float.Parse(txtGlucosa.Text) * 0.01F;
+                    //Ani_Alcalinindad = float.Parse(txtalcalinidad.Text) * 0.01F;
+
+                    float suma = Ani_acidez + Ani_anemia + Ani_normal + Ani_glucosa + Ani_Alcalinindad;
+
+                    txtSuma1.Text = "" + suma;
+
+                    if (suma == 1)
                     {
-                        MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Verifique los datos", "Error al ingresar datos");
+                        //if(aproba2 == true)
+                        //{
+                        //    cmdResolver.Focus();
+                        //}
+                        cmdResolver.Focus();
+                        aproba1 = true;
+                        cmdIngresarAnimales.Image = Properties.Resources.marca_de_verificacion__2_;
+                        //Crear distribucion acumulada
                     }
                     else
                     {
-                        MessageBox.Show("La suma de la distribucion es menor a 1, Verifique los datos", "Error al ingresar datos");
+                        aproba1 = false;
+                        if (suma > 1)
+                        {
+                            MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Verifique los datos", "Error al ingresar datos");
+                        }
+                        else
+                        {
+                            MessageBox.Show("La suma de la distribucion es menor a 1, Verifique los datos", "Error al ingresar datos");
+                        }
                     }
+                    txtTotal1.Visible = true;
                 }
-                txtTotal1.Visible = true;
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(""+ex,"Verifique los dtos ingresados");
+            }
+            
         }
 
         private void cmdIngresarAgua_Click(object sender, EventArgs e)
@@ -1603,13 +1630,13 @@ namespace Generador_de_numeros___Simulacion
                 float suma = 0F;
 
                 //Recuperacion de datos ingresados por el usuario
-                Agua_coloidales = float.Parse(txtAcoloidales.Text) * 0.01F;
-                Agua_mercurio = float.Parse(txtAmercurio.Text) * 0.01F;
-                Agua_residuos = float.Parse(txtAresiduos.Text) * 0.01F;
-                Agua_sulfato = float.Parse(txtASulfato.Text) * 0.01F;
-                Agua_acido = float.Parse(txtAAcido.Text) * 0.01F;
-                Agua_fosfato = float.Parse(txtAfosfato.Text) * 0.01F;
-                Agua_oxidos = float.Parse(txtAOxidos.Text) * 0.01F;
+                Agua_coloidales = (float)Math.Round(float.Parse(txtAcoloidales.Text) * 0.01F, 2);
+                Agua_mercurio = (float)Math.Round(float.Parse(txtAmercurio.Text) * 0.01F, 2);
+                Agua_residuos = (float)Math.Round(float.Parse(txtAresiduos.Text) * 0.01F, 2);
+                Agua_sulfato = (float)Math.Round(float.Parse(txtASulfato.Text) * 0.01F, 2);
+                Agua_acido =(float)Math.Round(float.Parse(txtAAcido.Text) * 0.01F, 2);
+                Agua_fosfato = (float)Math.Round(float.Parse(txtAfosfato.Text) * 0.01F, 2);
+                Agua_oxidos = (float)Math.Round(float.Parse(txtAOxidos.Text) * 0.01F, 2);
 
                 suma = (Agua_coloidales + Agua_mercurio + Agua_residuos +
                     Agua_sulfato + Agua_acido + Agua_fosfato + Agua_oxidos);
@@ -1618,10 +1645,12 @@ namespace Generador_de_numeros___Simulacion
 
                 if (suma == 1)
                 {
-                    if (aproba1 == true)
-                    {
-                        cmdResolver.Focus();
-                    }
+                    //if(aproba1 == true)
+                    //{
+                    //    cmdResolver.Focus();
+                    //}
+
+                    cmdResolver.Focus();
                     aproba2 = true;
                     cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__2_;
                     //Crear distribucion acumulada
