@@ -311,6 +311,7 @@ namespace Generador_de_numeros___Simulacion
             string[] EstadosNegativosArg = new string[5];
             string EstadosNegativos = "Se encontraron:";
             int w = 0;
+            string numero="";
             //Se agrega una nueva fila cada que cambia de sector
             fila = dgvResAni.Rows.Add();
             
@@ -336,12 +337,14 @@ namespace Generador_de_numeros___Simulacion
                     w++;
                 }
 
-                EstadoAnimal += $"({Ri[num_actual]}) Animal {i+1} - {Salud}\r\n";
+                numero+= $"{Ri[num_actual]:N2}\r\n";
+                EstadoAnimal += $"Animal {i+1} - {Salud}\r\n";
                 num_actual++;
             }
 
             //Imprime los Resultados de todos los animales
-            dgvResAni.Rows[fila].Cells[2].Value = EstadoAnimal;
+            dgvResAni.Rows[fila].Cells[2].Value = numero;
+            dgvResAni.Rows[fila].Cells[3].Value = EstadoAnimal;
 
             //Evaluar Resultados de salud de los animales
             int aa = 0, eg = 0, eaa = 0, aga = 0;
@@ -391,14 +394,14 @@ namespace Generador_de_numeros___Simulacion
             
             if(sano >= 3)
             {
-                dgvResAni.Rows[fila].Cells[3].Value = "Aunque "+EstadosNegativos + 
+                dgvResAni.Rows[fila].Cells[4].Value = "Aunque "+EstadosNegativos + 
                                                    "\r\nel 50% o más del ganado esta SALUDABLES.";
               
                 return true;
             }
             else
             {
-                dgvResAni.Rows[fila].Cells[3].Value = "Los animales estan en PELIGRO\r\n" + 
+                dgvResAni.Rows[fila].Cells[4].Value = "Los animales estan en PELIGRO\r\n" + 
                                                     EstadosNegativos +
                                                     "\r\nmás del 50% del ganado puede morir.";
                 return false;
@@ -563,7 +566,7 @@ namespace Generador_de_numeros___Simulacion
                 if(ConclusionSector(SectorA, "A", lblConclusionSA))
                 {
                     resultadoEficiente++;
-                    sectoresEficientes += "A";
+                    sectoresEficientes += "A,";
 
                 }
                 if(ConclusionSector(SectorB, "B", lblConclusionSB))
@@ -608,115 +611,136 @@ namespace Generador_de_numeros___Simulacion
                 string[] EstadoDelAguaD = new string[280];
                 int pruebasD = 0;
 
-                if (calcularAgua)
+                int renglon;
+                for (int x = 0; x < 14; x++)
                 {
-                    int renglon;
-                    for (int x = 0; x < 14; x++)
+                    //Agregra nuevo Renglon
+                    renglon = dgvResAgua.Rows.Add();
+
+                    //Agregar dia al nuevo renglon
+                    dgvResAgua.Rows[renglon].Cells[0].Value = x + 1;//Dia
+                    dgvResAgua.Rows[renglon].Cells[1].Value = "A";//Sector
+
+                    //sector A
+                    string prueba = "";
+                    string resAgua = "";
+                    for (int i = 0; i < 20; i++)
                     {
-                        //Agregra nuevo Renglon
-                        renglon = dgvResAgua.Rows.Add();
-
-                        //Agregar dia al nuevo renglon
-                        dgvResAgua.Rows[renglon].Cells[0].Value = x+1;//Dia
-                        dgvResAgua.Rows[renglon].Cells[1].Value = "A";//Sector
-
-                        //sector A
-                        string prueba="";
-                        string resAgua = "";
-                        for (int i = 0; i < 20; i++)
-                        {
-                            string a = LimitesAgua(Ri[num_actual]);
-                            resAgua += $"Prueba {i+1} - " + a +"\r\n";
-                            prueba += i + 1 + "\r\n";
-                            EstadoDelAguaA[pruebasA] = a;
-                            pruebasA++;
-                            num_actual++;
-                        }
-                        //imprimir numero de pruebas en el sector A
-                        dgvResAgua.Rows[renglon].Cells[2].Value = resAgua;//No de pruebas
-
-                        
-
-                        //sector B
-                        prueba = "";
-                        resAgua = "";
-                        dgvResAgua.Rows[renglon].Cells[3].Value = "B";//Sector
-                        for (int i = 0; i < 20; i++)
-                        {
-                            string a = LimitesAgua(Ri[num_actual]);
-                            resAgua += $"Prueba {i + 1} - " + a + "\r\n";
-                            prueba += i + 1 + "\r\n";
-                            EstadoDelAguaB[pruebasB] = a;
-                            pruebasB++;
-                            num_actual++;
-                        }
-                        //imprimir numero de pruebas en el sector A
-                        dgvResAgua.Rows[renglon].Cells[4].Value = resAgua;//No de pruebas
-
-                        //sector C
-                        prueba = "";
-                        resAgua = "";
-                        dgvResAgua.Rows[renglon].Cells[5].Value = "C";//Sector
-                        for (int i = 0; i < 20; i++)
-                        {
-                            string a = LimitesAgua(Ri[num_actual]);
-                            resAgua += $"Prueba {i + 1} - " + a + "\r\n";
-                            prueba += i + 1 + "\r\n";
-                            EstadoDelAguaC[pruebasC] = a;
-                            pruebasC++;
-                            num_actual++;
-                        }
-                        //imprimir numero de pruebas en el sector A
-                        dgvResAgua.Rows[renglon].Cells[6].Value = resAgua;//No de pruebas
-
-                        //sector D
-                        prueba = "";
-                        resAgua = "";
-                        dgvResAgua.Rows[renglon].Cells[7].Value = "D";//Sector
-                        for (int i = 0; i < 20; i++)
-                        {
-                            string a = LimitesAgua(Ri[num_actual]);
-                            resAgua += $"Prueba {i + 1} - " + a + "\r\n";
-                            prueba += i + 1 + "\r\n";
-                            EstadoDelAguaD[pruebasD] = a;
-                            pruebasD++;
-                            num_actual++;
-                        }
-                        //imprimir numero de pruebas en el sector A
-                        dgvResAgua.Rows[renglon].Cells[8].Value = resAgua;//No de pruebas
-
+                        string a = LimitesAgua(Ri[num_actual]);
+                        resAgua += $"({Ri[num_actual]:N2}) Prueba {i + 1} - " + a + "\r\n";
+                        prueba += i + 1 + "\r\n";
+                        EstadoDelAguaA[pruebasA] = a;
+                        pruebasA++;
+                        num_actual++;
                     }
-                    
-                    txtConclusionAgua.Text = "El elemento más encontrado en el sector:\r\n";
+                    //imprimir numero de pruebas en el sector A
+                    dgvResAgua.Rows[renglon].Cells[2].Value = resAgua;//No de pruebas
 
-                    RecorrerResultadosAgua(EstadoDelAguaA, "A");
-                    RecorrerResultadosAgua(EstadoDelAguaB, "B");
-                    RecorrerResultadosAgua(EstadoDelAguaC, "C");
-                    RecorrerResultadosAgua(EstadoDelAguaD, "D");
 
-                    txtConclusionAgua.Text += "Puede que estos elementos esten dañando la salud de sus animales.";
-                    
+
+                    //sector B
+                    prueba = "";
+                    resAgua = "";
+                    dgvResAgua.Rows[renglon].Cells[3].Value = "B";//Sector
+                    for (int i = 0; i < 20; i++)
+                    {
+                        string a = LimitesAgua(Ri[num_actual]);
+                        resAgua += $"({Ri[num_actual]:N2}) Prueba {i + 1} - " + a + "\r\n";
+                        prueba += i + 1 + "\r\n";
+                        EstadoDelAguaB[pruebasB] = a;
+                        pruebasB++;
+                        num_actual++;
+                    }
+                    //imprimir numero de pruebas en el sector A
+                    dgvResAgua.Rows[renglon].Cells[4].Value = resAgua;//No de pruebas
+
+                    //sector C
+                    prueba = "";
+                    resAgua = "";
+                    dgvResAgua.Rows[renglon].Cells[5].Value = "C";//Sector
+                    for (int i = 0; i < 20; i++)
+                    {
+                        string a = LimitesAgua(Ri[num_actual]);
+                        resAgua += $"({Ri[num_actual]:N2}) Prueba {i + 1} - " + a + "\r\n";
+                        prueba += i + 1 + "\r\n";
+                        EstadoDelAguaC[pruebasC] = a;
+                        pruebasC++;
+                        num_actual++;
+                    }
+                    //imprimir numero de pruebas en el sector A
+                    dgvResAgua.Rows[renglon].Cells[6].Value = resAgua;//No de pruebas
+
+                    //sector D
+                    prueba = "";
+                    resAgua = "";
+                    dgvResAgua.Rows[renglon].Cells[7].Value = "D";//Sector
+                    for (int i = 0; i < 20; i++)
+                    {
+                        string a = LimitesAgua(Ri[num_actual]);
+                        resAgua += $"({Ri[num_actual]:N2}) Prueba {i + 1} - " + a + "\r\n";
+                        prueba += i + 1 + "\r\n";
+                        EstadoDelAguaD[pruebasD] = a;
+                        pruebasD++;
+                        num_actual++;
+                    }
+                    //imprimir numero de pruebas en el sector A
+                    dgvResAgua.Rows[renglon].Cells[8].Value = resAgua;//No de pruebas
+
                 }
 
-                //pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
-                cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
+                txtConclusionAgua.Text = "El elemento más encontrado en el sector:\r\n";
 
-                //mostrar flecha
-                ImgFlecha.Location = new Point(411, cmdIngresarAgua.Location.Y + 92);
-                ImgFlecha.Visible = true;
+                RecorrerResultadosAgua(EstadoDelAguaA, "A");
+                RecorrerResultadosAgua(EstadoDelAguaB, "B");
+                RecorrerResultadosAgua(EstadoDelAguaC, "C");
+                RecorrerResultadosAgua(EstadoDelAguaD, "D");
+
+                txtConclusionAgua.Text += "Puede que estos elementos esten dañando la salud de sus animales.";
+
+                if (calcularAgua)
+                {
+                    //pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
+                    cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
+
+                    //mostrar flecha
+                    ImgFlecha.Location = new Point(411, cmdIngresarAgua.Location.Y + 92);
+                    ImgFlecha.Visible = true;
 
 
-                //Mostrar animales
-                pnResultadosAnimales.Location = new Point(28, panel7.Location.Y +panel7.Height + 55);
-                pnResultadosAnimales.Visible = true;
+                    //Mostrar animales
+                    pnResultadosAnimales.Location = new Point(28, panel7.Location.Y + panel7.Height + 55);
+                    pnResultadosAnimales.Visible = true;
 
-                //Mostrar agua
-                pnResultadoAgua.Location = new Point(28, pnResultadosAnimales.Location.Y + 10 + pnResultadosAnimales.Height);
-                pnResultadoAgua.Visible = true;
+                    //Mostrar agua
+                    pnResultadoAgua.Location = new Point(28, pnResultadosAnimales.Location.Y + 10 + pnResultadosAnimales.Height);
+                    pnResultadoAgua.Visible = true;
 
-                //Mostrar Opciones
-                pnOpciones.Location = new Point(221, pnResultadoAgua.Location.Y + pnResultadoAgua.Height + 10);
-                pnOpciones.Visible = true;
+                    //Mostrar Opciones
+                    pnOpciones.Location = new Point(221, pnResultadoAgua.Location.Y + pnResultadoAgua.Height + 10);
+                    pnOpciones.Visible = true;
+
+                }
+                else
+                {
+                    //pnexperimento.Location = new Point(39, panel7.Location.Y + panel7.Height + 36);
+                    cmdHistorial.Location = new Point(838, panel7.Location.Y + panel7.Height + 49);
+
+                    //mostrar flecha
+                    ImgFlecha.Location = new Point(411, cmdIngresarAgua.Location.Y + 92);
+                    ImgFlecha.Visible = true;
+
+
+                    //Mostrar animales
+                    pnResultadosAnimales.Location = new Point(28, panel7.Location.Y + panel7.Height + 55);
+                    pnResultadosAnimales.Visible = true;
+
+
+                    //Mostrar Opciones
+                    pnOpciones.Location = new Point(221, pnResultadosAnimales.Location.Y + 10 + pnResultadosAnimales.Height);
+                    pnOpciones.Visible = true;
+                }
+
+                
                 
 
                 GuardarHisto();
