@@ -122,6 +122,7 @@
             this.label46 = new System.Windows.Forms.Label();
             this.lblResFrecuencia = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.pnCasos.SuspendLayout();
@@ -130,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -606,7 +608,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 295);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(2, 288);
+            this.panel7.Size = new System.Drawing.Size(2, 305);
             this.panel7.TabIndex = 26;
             // 
             // panel8
@@ -615,16 +617,17 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(654, 295);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(4, 288);
+            this.panel8.Size = new System.Drawing.Size(4, 305);
             this.panel8.TabIndex = 27;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(120)))), ((int)(((byte)(172)))));
+            this.panel11.Controls.Add(this.label19);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(2, 580);
+            this.panel11.Location = new System.Drawing.Point(2, 573);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(652, 3);
+            this.panel11.Size = new System.Drawing.Size(652, 27);
             this.panel11.TabIndex = 28;
             // 
             // panel13
@@ -1110,11 +1113,22 @@
             this.label15.TabIndex = 67;
             this.label15.Text = "Datos para la prueba:";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(138, 2);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(399, 21);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "EQUIPO: Dinamita.   @Karla Santos @Edwin Villada";
+            // 
             // frmPruebas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 583);
+            this.ClientSize = new System.Drawing.Size(658, 600);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.lblResFrecuencia);
             this.Controls.Add(this.label43);
@@ -1168,6 +1182,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.ResumeLayout(false);
@@ -1269,5 +1285,6 @@
         public System.Windows.Forms.TextBox txtFO1;
         public System.Windows.Forms.TextBox txtFE2;
         public System.Windows.Forms.TextBox txtFE1;
+        private System.Windows.Forms.Label label19;
     }
 }

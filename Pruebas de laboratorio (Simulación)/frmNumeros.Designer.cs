@@ -70,6 +70,7 @@
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.lblSemilla = new ns1.BunifuCustomLabel();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblPseudo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -77,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel11.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -327,7 +329,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(469, 38);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(3, 412);
+            this.panel10.Size = new System.Drawing.Size(3, 440);
             this.panel10.TabIndex = 17;
             // 
             // panel13
@@ -336,16 +338,17 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel13.Location = new System.Drawing.Point(0, 38);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(2, 412);
+            this.panel13.Size = new System.Drawing.Size(2, 440);
             this.panel13.TabIndex = 18;
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel14.Controls.Add(this.label19);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(2, 447);
+            this.panel14.Location = new System.Drawing.Point(2, 454);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(467, 3);
+            this.panel14.Size = new System.Drawing.Size(467, 24);
             this.panel14.TabIndex = 19;
             // 
             // panel5
@@ -452,12 +455,23 @@
             this.lblSemilla.TabIndex = 25;
             this.lblSemilla.Text = "Semilla:";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(55, 2);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(354, 19);
+            this.label19.TabIndex = 29;
+            this.label19.Text = "EQUIPO: Dinamita.   @Karla Santos @Edwin Villada";
+            // 
             // frmNumeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(151)))));
-            this.ClientSize = new System.Drawing.Size(472, 450);
+            this.ClientSize = new System.Drawing.Size(472, 478);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -495,6 +509,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel11.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,6 +553,7 @@
         public ns1.BunifuCustomLabel bunifuCustomLabel2;
         public ns1.BunifuCustomLabel bunifuCustomLabel1;
         public ns1.BunifuCustomLabel lblSemilla;
+        private System.Windows.Forms.Label label19;
     }
 }
 

@@ -41,8 +41,10 @@
             this.cmdContinuar = new ns1.BunifuThinButton2();
             this.cmdVerPruebas = new ns1.BunifuThinButton2();
             this.cmdVerNumeros = new ns1.BunifuThinButton2();
+            this.label19 = new System.Windows.Forms.Label();
             this.panTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panTop
@@ -106,10 +108,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(148)))), ((int)(((byte)(168)))));
+            this.panel1.Controls.Add(this.label19);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 209);
+            this.panel1.Location = new System.Drawing.Point(0, 206);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(490, 5);
+            this.panel1.Size = new System.Drawing.Size(490, 23);
             this.panel1.TabIndex = 28;
             // 
             // txtPruevasSuperadas
@@ -230,11 +233,22 @@
             this.cmdVerNumeros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdVerNumeros.Click += new System.EventHandler(this.VerNumeros_Click);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(67, 2);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(354, 19);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "EQUIPO: Dinamita.   @Karla Santos @Edwin Villada";
+            // 
             // frmOpciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 214);
+            this.ClientSize = new System.Drawing.Size(490, 229);
             this.Controls.Add(this.txtPruevasSuperadas);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdCancelar);
@@ -251,6 +265,8 @@
             this.Text = "frmOpciones";
             this.panTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +285,6 @@
         public ns1.BunifuThinButton2 cmdVerNumeros;
         public System.Windows.Forms.TextBox txtMesajeDatos;
         public System.Windows.Forms.TextBox txtPruevasSuperadas;
+        private System.Windows.Forms.Label label19;
     }
 }

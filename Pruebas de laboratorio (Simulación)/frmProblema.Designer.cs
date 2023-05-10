@@ -109,6 +109,11 @@
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.lblResultado = new System.Windows.Forms.Label();
             this.dgvResAni = new System.Windows.Forms.DataGridView();
+            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblConclusionSA = new System.Windows.Forms.Label();
             this.lblConclusionSC = new System.Windows.Forms.Label();
             this.lblConclusionSB = new System.Windows.Forms.Label();
@@ -141,11 +146,8 @@
             this.cmdMostrarIntervalos = new ns1.BunifuThinButton2();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.panTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel5.SuspendLayout();
@@ -176,10 +178,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(84)))), ((int)(((byte)(142)))));
+            this.panel1.Controls.Add(this.label19);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1964);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(905, 6);
+            this.panel1.Size = new System.Drawing.Size(905, 31);
             this.panel1.TabIndex = 45;
             // 
             // lblTitulo
@@ -1100,6 +1103,41 @@
             this.dgvResAni.Size = new System.Drawing.Size(724, 183);
             this.dgvResAni.TabIndex = 6;
             // 
+            // Dia
+            // 
+            this.Dia.HeaderText = "Dia";
+            this.Dia.Name = "Dia";
+            this.Dia.ReadOnly = true;
+            this.Dia.Width = 59;
+            // 
+            // a
+            // 
+            this.a.HeaderText = "Sector";
+            this.a.Name = "a";
+            this.a.ReadOnly = true;
+            this.a.Width = 84;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "#";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 47;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Resultado";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 105;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Conclusion";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 109;
+            // 
             // lblConclusionSA
             // 
             this.lblConclusionSA.AutoSize = true;
@@ -1551,40 +1589,16 @@
             this.panel8.TabIndex = 92;
             this.panel8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
-            // Dia
+            // label19
             // 
-            this.Dia.HeaderText = "Dia";
-            this.Dia.Name = "Dia";
-            this.Dia.ReadOnly = true;
-            this.Dia.Width = 59;
-            // 
-            // a
-            // 
-            this.a.HeaderText = "Sector";
-            this.a.Name = "a";
-            this.a.ReadOnly = true;
-            this.a.Width = 84;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "#";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 47;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Resultado";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 105;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Conclusion";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 109;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(267, 5);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(407, 21);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "EQUIPO: Dinamita.   @Karla Santos   @Edwin Villada";
             // 
             // frmProblema
             // 
@@ -1610,6 +1624,8 @@
             this.Text = "frmProblema";
             this.Load += new System.EventHandler(this.frmProblema_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -1755,5 +1771,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label19;
     }
 }

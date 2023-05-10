@@ -61,7 +61,9 @@
             this.ayuda = new System.Windows.Forms.ToolTip(this.components);
             this.cmdGenerar = new ns1.BunifuThinButton2();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.panTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel6.SuspendLayout();
@@ -245,10 +247,11 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
+            this.panel5.Controls.Add(this.label19);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 430);
+            this.panel5.Location = new System.Drawing.Point(0, 415);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(318, 4);
+            this.panel5.Size = new System.Drawing.Size(318, 19);
             this.panel5.TabIndex = 15;
             // 
             // panTop
@@ -284,7 +287,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 39);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(3, 391);
+            this.panel7.Size = new System.Drawing.Size(3, 376);
             this.panel7.TabIndex = 17;
             // 
             // panel8
@@ -293,7 +296,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(314, 39);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(4, 391);
+            this.panel8.Size = new System.Drawing.Size(4, 376);
             this.panel8.TabIndex = 18;
             // 
             // bunifuDragControl2
@@ -396,7 +399,7 @@
             this.cmdGenerar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(210)))), ((int)(((byte)(30)))));
             this.cmdGenerar.IdleForecolor = System.Drawing.Color.Black;
             this.cmdGenerar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.cmdGenerar.Location = new System.Drawing.Point(81, 373);
+            this.cmdGenerar.Location = new System.Drawing.Point(81, 360);
             this.cmdGenerar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.cmdGenerar.Name = "cmdGenerar";
             this.cmdGenerar.Size = new System.Drawing.Size(149, 47);
@@ -414,6 +417,17 @@
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 11;
             this.Logo.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label19.Location = new System.Drawing.Point(17, 1);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(281, 16);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "EQUIPO: Dinamita.   @Karla Santos @Edwin Villada";
             // 
             // Inicio
             // 
@@ -449,6 +463,8 @@
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panTop.ResumeLayout(false);
             this.panTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -493,5 +509,6 @@
         private System.Windows.Forms.RadioButton rb10;
         private System.Windows.Forms.RadioButton rb5;
         private System.Windows.Forms.ToolTip ayuda;
+        private System.Windows.Forms.Label label19;
     }
 }
