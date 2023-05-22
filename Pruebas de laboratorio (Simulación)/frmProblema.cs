@@ -1564,6 +1564,11 @@ namespace Generador_de_numeros___Simulacion
             cmdHistorial.Size = new Size(50, 46);
         }
 
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void CambiarImagenAgua()
         {
             cmdIngresarAgua.Image = Properties.Resources.marca_de_verificacion__1_;
@@ -1704,11 +1709,11 @@ namespace Generador_de_numeros___Simulacion
                     aproba2 = false;
                     if (suma > 1)
                     {
-                        MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Favor de verificar los datos", "Error al ingresar datos");
+                        MessageBox.Show("La suma de la distribucion de probabilidad supera el 1, Verifique los datos", "Error al ingresar datos");
                     }
                     else
                     {
-                        MessageBox.Show("La suma de la distribucion es menor a 1, Favor de verificar los datos", "Error al ingresar datos");
+                        MessageBox.Show("La suma de la distribucion es menor a 1, Verifique los datos", "Error al ingresar datos");
                     }
                 }
                 txtTotal2.Visible = true;

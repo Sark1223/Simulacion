@@ -71,3 +71,28 @@ C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Sim
 C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.CopyComplete
 C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).exe
 C:\Users\perro\OneDrive\Documentos\GitHub\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).pdb
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).exe.config
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).exe.manifest
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).application
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).exe
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Pruebas de laboratorio (Simulacion).pdb
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.AssemblyReference.cache
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmHistorial.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmIntervalos.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmNumeros.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmOpciones.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmProblema.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.frmPruebas.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.Inicio.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.PantallaPrincipal.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Generador_de_numeros___Simulacion.Properties.Resources.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.GenerateResource.cache
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.CoreCompileInputs.cache
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).TrustInfo.xml
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).exe.manifest
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).application
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio - Simulacion.csproj.CopyComplete
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).exe
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\SimulacionProyecto\SimulacionPE\Simulacion\Pruebas de laboratorio (Simulación)\obj\Debug\Pruebas de laboratorio (Simulacion).pdb
