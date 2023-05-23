@@ -877,11 +877,9 @@ namespace Generador_de_numeros___Simulacion
 
                 CargarLimitesEnListas();
 
-                int n = 0;
-                int m = 0;
                 for (int i = 0; i < animales.Count; i++)
                 {
-                    n = frmIntervalos.tblAnimales.Rows.Add();
+                    int n = frmIntervalos.tblAnimales.Rows.Add();
                     frmIntervalos.tblAnimales.Rows[n].Cells[0].Value = animales[i].nombre;
                     frmIntervalos.tblAnimales.Rows[n].Cells[1].Value = animales[i].distribucion;
                     frmIntervalos.tblAnimales.Rows[n].Cells[2].Value = animales[i].limInf;
@@ -889,13 +887,14 @@ namespace Generador_de_numeros___Simulacion
                 }
                 for (int i = 0; i < agua.Count; i++)
                 {
-                    m = frmIntervalos.tblAgua.Rows.Add();
+                    int m = frmIntervalos.tblAgua.Rows.Add();
                     frmIntervalos.tblAgua.Rows[m].Cells[0].Value = agua[i].nombre;
                     frmIntervalos.tblAgua.Rows[m].Cells[1].Value = agua[i].distribucion;
                     frmIntervalos.tblAgua.Rows[m].Cells[2].Value = agua[i].limInf;
                     frmIntervalos.tblAgua.Rows[m].Cells[3].Value = agua[i].limSup;
                 }
-                MostrarIntervalos(sender, e);
+
+                frmIntervalos.ShowDialog();
             }
             else if (aproba1 == false && aproba2)
             {
